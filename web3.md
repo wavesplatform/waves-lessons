@@ -73,7 +73,6 @@ Actually, it implies an astronomical value (~2^**256**) of computations required
 ![](./_static/curve.png)
 
 Seed phrases usually look like a random list of words (usually 15 or 16), for example: ‘couple remind obey mind core window talk maid small crisp card sure valve position sword’.
- 
 
 ## Managing keys
 
@@ -86,4 +85,4 @@ Many blockchains have browser extensions as secure key storage and as a tool to 
 3. When apps request something, the user sees it and can approve or reject it.
 4. If he approves it, the transaction goes to the blockchain network.
 
-Well, let’s summarize this lesson and the most important things we’ve learned. We we’ve talked about the Web’s evolution, about Web 1, 2 and 3 and their differences. We can describe Web3 as a fully decentralized web with new models of interaction for users, based on trustless infrastructure. We also talked about digital signatures and how they affect user experience with Web3 services. In the next lessons, we will start exploring the technical aspects of Web3: decentralization, blockchains and their consensus algorithms.
+Well, let’s summarize this lesson and the most important things we’ve learned. We’ve talked about the Web’s evolution, about Web 1, 2 and 3 and their differences. We can describe Web3 as a fully decentralized web with new models of interaction for users, based on trustless infrastructure. We also talked about digital signatures and how they affect user experience with Web3 services. In the next lessons, we will start exploring the technical aspects of Web3: decentralization, blockchains and their consensus algorithms.
