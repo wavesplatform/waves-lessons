@@ -1,6 +1,8 @@
-# Web3
+# Lesson I-1. Web3
 
-Before we go into some more technical details, let's talk about some of the basic aspects of the web, its history, and the future.
+In this lesson, we'll discuss some basic aspects of the web, its history, and the future. We'll also talk about technical aspects of web3: account keys and digital signatures.
+
+Duration: 7 min
 
 - [Short history of Web evolution](#short-history-of-web-evolution)
 - [Web services now and Web3 architecture](#web-services-now-and-web3-architecture)
@@ -23,7 +25,7 @@ Web 3.0 is the future of the Internet, but what will this future look like?
 
 We can see that the internet is becoming more and more intelligent over time. A large number of users are communicating, creating and sharing content. The complexity of these users’ behavior is also increasing dramatically. There are many challenges too, especially concerning data breaches and privacy. So we believe that the future of the internet should be decentralized, secure and user-centric. It will also make use of the benefits of major emerging technologies like the Internet of Things, Artificial Intelligence, Big Data, Virtual and Augmented Reality.
 
-![](./_static/web3.png)
+![](./images/web3.png)
 
 
 ## Web services now and Web3 architecture
@@ -40,7 +42,7 @@ Once the user interacts with the UI components of the web page – for example, 
 
 The server processes the request and returns as a response HTML, XML, or JSON data. The JavaScript in a browser uses this data to change the client’s application state and view.
 
-![](./_static/web3-2.png)
+![](./images/web3-2.png)
 
 Web3 works in a different way. Of course, a Web3 app also requires HTML and JavaScript code to run in a browser. So, the logic of server and client are still needed.
 
@@ -50,7 +52,7 @@ A “Read” request is created when a user interacts with a client application.
 
 All updates to the blockchain network must be submitted using transactions. The blockchain network determines that a transaction is valid only if a valid digital signature is provided. You may not be familiar with digital signatures, so let’s dive deeper into it.
 
-![](./_static/web3-3.png)
+![](./images/web3-3.png)
 
 ## Digital signatures
 
@@ -58,7 +60,7 @@ Imagine that Bob creates two keys, a **private** and a **public** key. These key
 
 When Bob creates a message or transaction, he signs it using his private key. Bob must keep his private key secret. But Bob can share the public key with anyone who will validate the signed message or transaction. Anyone with Bob’s public key is able to verify that a certain transaction was signed by Bob’s private key – **verifying that Bob was the only one able to create and sign that message/transaction.**
 
-![](./_static/keys.png)
+![](./images/keys.png)
 
 This is known as asymmetric cryptography.
 
@@ -70,7 +72,7 @@ All these transformations are **one-directional**. The opposite direction is ver
 
 Actually, it implies an astronomical value (~2^**256**) of computations required!
 
-![](./_static/curve.png)
+![](./images/curve.png)
 
 Seed phrases usually look like a random list of words (usually 15 or 16), for example: ‘couple remind obey mind core window talk maid small crisp card sure valve position sword’.
 

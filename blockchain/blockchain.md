@@ -1,4 +1,8 @@
-# Blockchain, transactions, nodes, consensus
+# Lesson I-2. Blockchain, transactions, nodes, consensus
+
+In this lesson, we'll explain the basic concepts of blockchain: blocks, transactions, nodes, and consensus, and how they are related.
+
+Duration: 5 min
 
 - [Blockchain](#blockchain)
 - [Transaction](#transaction)
@@ -15,7 +19,7 @@ What is a blockchain? Basically, it’s just a data structure with specific rule
 
 This sequence (or chain) of blocks is a blockchain. This unique data structure makes the blockchain **immutable** and protects it from mutations or malicious changes. If something is changed in block A, all subsequent blocks will be invalid and must be created again.
 
-![](./_static/blockchain.png)
+![](./images/blockchain.png)
 
 ## Transaction
 
@@ -31,11 +35,11 @@ What is a node? The blockchain network consists of nodes. A node is a computer t
 
 Let’s imagine that we have hundreds and thousands of copies of this data distributed on different computers across many different countries and continents. Now, to change the block history we have to rewrite the blocks on a majority of these copies. That is why you might have heard that blockchain is able to ensure data is **immutable** for a long time.
 
-![](./_static/nodes.png)
+![](./images/nodes.png)
 
 The problem is that different machines are able to generate different chains of blocks – either deliberately or by accident. So the copies of the blockchain they hold may not be the same. This phenomenon is called a **fork**.
 
-![](./_static/fork.png)
+![](./images/fork.png)
 
 To keep exactly the same data across different machines, all participants have to reach a **consensus** for each new block. The network participants must agree on **who** is responsible for the generation of a new block, and whether that block is **valid**. The participant who created the block is called a block miner, block generator or block producer. The block generation process is called mining.
 
@@ -68,6 +72,6 @@ Blockchain has several important properties:
 - **Decentralization.** There is no the main storage server. All records are copied and stored in different places. When new information is added, it appears in all copies after verification.
 - **Reliability.** Any attempts to make unauthorized changes will be rejected because of inconsistency with other copies. No one has the power to manipulate or destroy the data.
 - **Transparency.** Each participant can read data and track all transactions.
-- **Pseudo-anonymity.** Anyone can track transactions, but cannot identify the sender or recipient. To sign a transaction, only a private key is required, which itself is not associated with a person.
+- **Pseudo-anonymity.** Anyone can track transactions, but cannot identify the sender or recipient. To sign a transaction, only a private key is required, which itself is not associated with a person. Everything is anonymous unless you state that a certain public address belongs to you or someone you know.
 
 In this lesson, we talked about the basics of blockchain — transactions, blocks, consensus mechanisms like proof-of-work and proof-of-stake, and delegated and leased versions of proof of stake. In the next lesson, we'll give some insights into how all these blockchain properties are used in Web3 services.
