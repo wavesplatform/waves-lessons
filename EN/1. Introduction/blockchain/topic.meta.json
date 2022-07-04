@@ -1,0 +1,17 @@
+{
+    "ID": "878d78ef-b799-4b73-9c09-19dc04293e85",
+    "Title": "Blockchain",
+    "Description": "This lesson will explain the basics of blockchain and how it works.",
+    "lnum": 1.1,
+    "doclnk": "https://docs.waves.tech/en/blockchain/",
+    "hashtags": [
+    "blockchain",
+    "pow",
+    "pos",
+    "poa",
+    "consensus",
+    "transaction",
+    "node"
+    ]
+    
+}
