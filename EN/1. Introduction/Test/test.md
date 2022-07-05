@@ -93,3 +93,6 @@ Random video insertion.<br>
 /@video
 https://www.youtube.com/watch?v=BwDCVvYAiT0
 /@video
+
+
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
