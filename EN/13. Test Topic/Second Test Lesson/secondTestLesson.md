@@ -1,4 +1,4 @@
-# Second Test Lesson #
+# First Test Lesson #
 
 This is the very first test lesson.<br>
 Here we will insert test videos, images, and code blocks.
@@ -25,14 +25,16 @@ Welcome to the 1st Chapter!
 
 ### 1st Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
-It is the first nested chapter.
+It is the first nested chapter.<br>
+![Rock](./images/elixir.png)<br>
 
 #### 1st Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 3rd Semi-chapter of the 1st semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.
+Here we're diving one level deeper within the same semi-chapter.<br>
+[![Watch the first video](https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
 
 ### 2nd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
@@ -42,20 +44,135 @@ It is the second nested chapter.
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.
+Here we're diving one level deeper within the same semi-chapter.<br>
+
+Nested code example (a few languages in a row):<br>
+```java
+package com.wavesplatform.wavesj;
+ 
+import java.net.URI;
+ 
+import java.net.URISyntaxException;
+ 
+public enum Profile {
+ 
+     MAINNET("https://nodes.wavesnodes.com/%22),
+ 
+     TESTNET("https://nodes-testnet.wavesnodes.com/%22),
+ 
+     STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
+ 
+     LOCAL("http://127.0.0.1:6869/%22);
+ 
+private final URI uri;
+ 
+   Profile(String url) {
+ 
+       try {
+ 
+          this.uri = new URI(url);
+ 
+      } catch (URISyntaxException e) {
+ 
+         throw new RuntimeException(e);
+ 
+   }
+ 
+} public URI uri() { return uri; } }
+```
+```ride
+# An example of writing data as a result of a script
+ 
+# with protection against changing the value through the script
+ 
+{-# STDLIB_VERSION 5 #-}
+ 
+{-# CONTENT_TYPE DAPP #-}
+ 
+{-# SCRIPT_TYPE ACCOUNT #-}
+ 
+@Callable(i)
+ 
+func storeData(
+ 
+  newKey: String,
+ 
+  newValue: Int
+ 
+) = {
+ 
+ let slot = getInteger(this, newKey) # Read value by key
+ 
+ if (isDefined(slot)) then { # Checking the value
+ 
+    throw("key already exists") # Stop the script and throw an exception if the key is used
+ 
+} else {
+ 
+  [ IntegerEntry(newKey, newValue), # Writing data to a key-value store
+ 
+  StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique
+ 
+  ]
+ 
+  }
+ 
+}
+```
+
+
 #### 3rd Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 
 ### 3rd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
-It is the third nested chapter.
+It is the third nested chapter.<br>
+[![Watch the second video](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/02/dotnet7-preview1.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
 
 ## 2nd Chapter ##
-Welcome to the 2nd Chapter!
+Welcome to the 2nd Chapter!<br>
+[![Watch the third video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/34Na4j8AVgA)
+<br>Here it is a separated JAVA code injected:<br>
+
+```java
+package com.wavesplatform.wavesj;
+ 
+import java.net.URI;
+ 
+import java.net.URISyntaxException;
+ 
+public enum Profile {
+ 
+     MAINNET("https://nodes.wavesnodes.com/%22),
+ 
+     TESTNET("https://nodes-testnet.wavesnodes.com/%22),
+ 
+     STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
+ 
+     LOCAL("http://127.0.0.1:6869/%22);
+ 
+private final URI uri;
+ 
+   Profile(String url) {
+ 
+       try {
+ 
+          this.uri = new URI(url);
+ 
+      } catch (URISyntaxException e) {
+ 
+         throw new RuntimeException(e);
+ 
+   }
+ 
+} public URI uri() { return uri; } }
+```
+
 
 ---
 
 ## 3rd Chapter ##
-Welcome to the 3rd Chapter!
+Welcome to the 3rd Chapter!<br>
+![cake](./images/shrek.jpeg)<br>
