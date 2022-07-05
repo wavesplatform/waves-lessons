@@ -1,17 +1,18 @@
-# Lesson I-2. Blockchain, transactions, nodes, consensus
+# Blockchain, transactions, nodes, consensus
 
 In this lesson, we'll explain the basic concepts of blockchain: blocks, transactions, nodes, and consensus, and how they are related.
 
 Duration: 5 min
 
-- [Blockchain](#blockchain)
-- [Transaction](#transaction)
-- [Nodes](#nodes)
-- [Types of consensus](#types-of-consensus)
-  - [Proof of Work (PoW)](#proof-of-work-pow)
-  - [Proof of Stake (PoS)](#proof-of-stake-pos)
-  - [Proof of Authority (PoA)](#proof-of-authority-poa)
-- [Why blockchain is great](#why-blockchain-is-great)
+- [Blockchain, transactions, nodes, consensus](#blockchain-transactions-nodes-consensus)
+  - [Blockchain](#blockchain)
+  - [Transaction](#transaction)
+  - [Nodes](#nodes)
+  - [Types of consensus](#types-of-consensus)
+    - [Proof of Work (PoW)](#proof-of-work-pow)
+    - [Proof of Stake (PoS)](#proof-of-stake-pos)
+    - [Proof of Authority (PoA)](#proof-of-authority-poa)
+  - [Why blockchain is great](#why-blockchain-is-great)
 
 ## Blockchain
 
