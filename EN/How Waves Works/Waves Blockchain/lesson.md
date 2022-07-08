@@ -1,4 +1,4 @@
-# Description of The Waves Blockchain #
+# Waves Blockchain #
 
 In this lesson, we will learn about the Waves blockchain.
 
