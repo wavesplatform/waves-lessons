@@ -1,4 +1,4 @@
-# Nodes Of The Waves Network #
+# Waves Nodes #
 
 In this lesson, we will talk about nodes of the Waves network.
 
