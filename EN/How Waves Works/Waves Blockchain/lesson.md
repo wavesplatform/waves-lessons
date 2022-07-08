@@ -33,6 +33,7 @@ At the end of this lesson, we will get to know about the [Waves Blockchain Platf
 ---
 
 ## Transactions ##
+
 A transaction is an action on the [blockchain]() made on behalf of an account.<br>
 In the real world, a familiar to us example would be transferring money from one bank account to another.<br>
 This transaction would necessarily include such details as:
@@ -171,8 +172,6 @@ Below there are 2 examples of transactions that can be made with the Waves block
 
 ## Blocks ##
 
----
-
 The second major essence in the blockchain is blocks.<br>
 It is an abstraction over transactions.<br>
 <br>
@@ -224,8 +223,6 @@ This bond makes it impossible to falsify even a small piece of data, as it would
 
 ## Blockchain ##
 
----
-
 All the blocks don't exist by themselves, and they all are a part of the big sequence of blocks.<br>
 This sequence of blocks is called a blockchain.<br>
 On this picture, you may see a representation of this idea (from left to the right):<br>
@@ -240,8 +237,6 @@ See more about [Nodes]().
 ---
 
 ## Waves Blockchain Platform ##
-
----
 
 Waves is a blockchain platform for issuing cryptographic tokens and conducting crowdfunding campaigns.<br>
 The company offers everyone an open blockchain protocol that works with decentralized solutions.
@@ -274,48 +269,10 @@ Multiple infrastructure tools were created and presented to the blockchain commu
 - [Plugins]() for development in multiple IDEs;
 - [API]() for RESTful interaction with blockchain nodes.<br><br>
 
-Since then, the Waves blockchain platform became ultimately popular, scoring millions of devoted users.<br>
+Since then, the Waves blockchain platform became ultimately popular, scoring over a million of devoted users.<br>
 You can also get the best experience, enjoying all the advantages of the Waves blockchain.<br>
 
-In the next lesson, we will concentrate on how on [nodes of the Waves network]() work and the benefits of having one.
+In the next lesson, we will concentrate on how on [nodes of the Waves network]() function and the benefits of having one.
 
 
 <br><br><br>
---- 
-REFERENCE TO THE FIRST CHAPTER
-### <ins> Security </ins> ###
-When we use credit cards or cash, we have a risk of our money being stolen.<br>
-A malefactor can get access to our resources and use them.<br>
-With blockchain transactions, it is hardly possible.<br>
-
-Every transaction has to be "signed" with a "private key" of an account.<br>
-This signature proves the account ownership and permits actions with the account.<br>
-A private key is an encrypted seed phrase that was either randomly generated or written manually by a user.<br>
-For example, this 15 words phrase would be a seed phrase:<br>
-` document category board choice select volcano alter aspect pluck target final average crucial fiscal scissors `<br>
-With the help of base58 encryption, this phrase would turn into a private key:<br>
-` GdAeEvdeqSphGkKQfovRMLXNmZg3pHGePZaNtg5naykK `.<br>
-It is almost impossible to decode that ` GdAeEvdeqSphGkKQfovRMLXNmZg3pHGePZaNtg5naykK ` is equal to our example seed-phrase.<br>
-A malefactor may try to guess the seed to reveal the private key, but even a difference with one symbol totally changes the private key.<br>
-The probability of generating two identical seed phrases is 1/2048<sup>15</sup>.<br>
-
-More about [account creation](https://docs.waves.tech/en/blockchain/account/create).
-
-### <ins> Decentralization </ins> ###
-If we imagine a typical centralized system, it can be the very bank once again.<br>
-All the information about banking accounts, transactions, all the client data - everything is stored centralized in that specific bank.<br>
-In blockchain, all the data is decentralized.<br>
-The data is stored in multiple nodes, where there is no one controlling point.<br>
-You can read more about nodes [here](#link_about_the_nodes).
-
-### <ins> Immutability </ins> ###
-
-Once a transaction is created, it cannot be changed.
-This unchangeability makes it impossible to falsify the data stored on nodes in the network.
-The 
-
-
-
-<br>
-REFERENCE TO THE FIRST CHAPTER
----
