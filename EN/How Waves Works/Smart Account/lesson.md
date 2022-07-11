@@ -122,9 +122,10 @@ import com.wavesplatform.wavesj.info.TransactionInfo;
 Base64String script = node.compileScript("{-# SCRIPT_TYPE ACCOUNT #-} true").script();
 SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
    
-// Sending the transaction to the node and displaying information about it
+// Sending the transaction to the node
 node.waitForTransaction(node.broadcast(tx).id());
 
+// Displaying information about the transaction
 TransactionInfo commonInfo = node.getTransactionInfo(tx.id());
 SetScriptTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SetScriptTransactionInfo.class);
 
