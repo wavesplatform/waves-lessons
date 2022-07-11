@@ -1,0 +1,15 @@
+{
+    "guid": "d27d8a55-8570-49a5-8b6c-9f1036fe7b83",
+    "title": "Smart Asset",
+    "description": "This lesson will answer the question 'What is a smart asset?', demonstrate usage examples, and show how to set an account script.",
+    "number": 4,
+    "doclink": "https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset",
+    "hashtags": [
+        "smart contract",
+        "smart asset",
+        "asset script",
+        "asset",
+        "dApp",
+        "smart account"
+    ]
+}

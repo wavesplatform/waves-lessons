@@ -1,6 +1,6 @@
 # Smart Asset #
 
-This lesson will answer the question "What is a smart asset?".
+This lesson will answer the question "What is a smart asset?", demonstrate usage examples, and show how to set an account script.<br>
 
 Duration: <span></span> min
 
@@ -8,7 +8,7 @@ Duration: <span></span> min
  - [Usage Examples](#usage-example)
    - [Token Usage Freeze](#token-usage-freeze)
    - [Unburnable Token](#unburnable-token)
- - [Setting An Account Script](#setting-an-account-script)
+ - [Setting An Assets Script](#setting-an-asset-script)
    - [Requirements](#requirements)
    - [Limitations](#limitations)
    - [Writting A Smart-Asset Script](#writting-a-smart-asset-script)
@@ -85,8 +85,8 @@ More about [Burn Transaction](https://docs.waves.tech/en/blockchain/transaction-
 
 ## Setting An Asset Script ##
 
-The Waves offers a great comfortable tool for operating with smart contracts, called [Waves IDE](https://waves-ide.com/).<br>
-From now on, we will use the Waves IDE when demonstrating the work with smart contracts.<br>
+<!-- The Waves offers a great comfortable tool for operating with smart contracts, called [Waves IDE](https://waves-ide.com/).<br>
+From now on, we will use the Waves IDE when demonstrating the work with smart contracts.<br> -->
 
 ### Requirements ###
 To create a smart-asset, it is necessary:
@@ -110,15 +110,13 @@ There are 2 major limitations when working with smart-asset creation is
 
 ### Writting A Smart-Asset Script ###
 
-<!-- #### `Set asset script transaction` #### -->
-
 Трансформируем написанный скрипт в кодировку base64.<br>
 Запустим транзакцию создания [тестового токена](#issue-transaction).<br>
 Установим скрипт в кодировке base64 на токен с помощью транзакции установки скритпа.
 
 
 ```Java
-// Необходимые импортирования
+// Necessary imports
 import com.wavesplatform.transactions.common.AssetId;
 import com.wavesplatform.transactions.common.Base64String;
 import com.wavesplatform.transactions.IssueTransaction;
@@ -127,9 +125,11 @@ import com.wavesplatform.wavesj.info.IssueTransactionInfo;
 import com.wavesplatform.wavesj.info.TransactionInfo;
 import com.wavesplatform.wavesj.info.SetAssetScriptTransactionInfo;
 
-// Реализация через builder
+// Transforming a Ride-script to the base64 string
 Base64String script = node.compileScript("{-# SCRIPT_TYPE ASSET #-} true")
         .script();
+
+// Creation of a token and installation of the compiled script on it
 AssetId assetId = node.waitForTransaction(
         node.broadcast(IssueTransaction.builder("Asset", 1000, 2)
         .script(script)
@@ -137,8 +137,10 @@ AssetId assetId = node.waitForTransaction(
         .tx().assetId();
 SetAssetScriptTransaction tx = SetAssetScriptTransaction.builder(assetId, script).getSignedWith(alice);
 
-// Отправка транзакции на ноду и вывод на экране информации о ней
+// Sending transaction to the node
 node.waitForTransaction(node.broadcast(tx).id());
+
+// Displaying the information about the transaction
 TransactionInfo commonInfo = node.getTransactionInfo(tx.id());
 SetAssetScriptTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SetAssetScriptTransactionInfo.class);
 
@@ -158,10 +160,19 @@ System.out.println("height:" + txInfo.height());
 System.out.println("applicationStatus:" + txInfo.applicationStatus());
 
 ```
+```js
+```
+```php
+```
+```csharp
+```
+```go
+```
+```python
+```
 
-
-**Описание аргументов**
-| Наименование поля | Описание | Пример |
+**Paramaters Description**
+| Field | Description | Example |
 | ----------- | ----------- | ----------- |
-| assetId | Token ID in base58. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
-| script | Cкомпилированный скрипт ассета, до 8192 байт, в кодировке base64. | base64:AQa3b8tH |
+| assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
+| script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
