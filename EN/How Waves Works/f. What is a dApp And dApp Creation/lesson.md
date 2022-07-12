@@ -3,6 +3,9 @@
 - [DApp Definition]()
 - [Usage Examples]()
 - [Setting A DApp Script]()
+  - [DApp Structure](#dapp-structure)
+  - [Limitations](#limitations)
+  - [Setting A DApp Script](#seting-a-dapp-script)
 
 ---
 
@@ -31,6 +34,7 @@ The script makes all necessary actions, calculations, and finds out it is a uniq
 Since all the script conditions were true (a unique user within the first 10 reward claimers), the dApp credited 1 SAMPLE to that account.<br>
 <br>
 Let's recap the dApp definition, a dApp is a Waves account with an attached script that allows to invoke the script externally.<br>
+Read more about [dApp](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp).
 
 
 ---
@@ -41,7 +45,8 @@ Results of dApp usage can be completely diverse, depending on the creativity of 
 However, there are certain limits of what those dApp callable functions are capable of:
 
 - Editing [data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage) entries;
-- Working with [tokens](#tokenreference);<br>(Transfering, Issuing, Reissuing, Burning)
+- Working with [tokens](#tokenreference);<br>(Transfering, Issuing, Reissuing, Burning);
+- Reading [blockchain data](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp#data-accessible-by-dapp);
 - Setting [sponsorship](https://docs.waves.tech/en/ride/structures/script-actions/sponsor-fee).
 
 
@@ -79,35 +84,42 @@ There are 2 necessary elements:
     It is necessary that a dApp would have at least one callable function.<br>
     Also, you may write multiple callable functions within one dApp.<br>
 
-    The callable function should be marked with the @Callable(i) annotation, where i is an Invocation structure that contains invoke script transaction fields that are available to the callable function.
+    The callable function should be marked with the `@Callable(i)` annotation.<br>
+    The `i` is an [Invocation](https://docs.waves.tech/en/ride/structures/common-structures/invocation) structure that contains invoke script transaction fields available to the callable function.
 
-    Below will be an example
-    
-    - Transfers 1 WAVES to an account that called it and records the request information in the account data storage. 
-    - If the same account tries to call the function again, the callable function does nothing.
+    Below you can see an example of a callable function.<br>
+    It transfers 1 WAVES to an account that invoked it.<br>
+    Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).<br>
+    As well, it contains one condition: if the same account tries to invoke once again, the callable function does nothing.<br>
 
     <br>
 
     ```
     @Callable(i)
     func faucet () = {
-    let isKnownCaller =  match getBoolean(this, toBase58String(i.caller.bytes)) {
-        case hist: Boolean =>
-            hist
-        case _ =>
-            false
+        let isKnownCaller =  match getBoolean(this, toBase58String(i.caller.bytes)) {
+            case hist: Boolean =>
+                hist
+            case _ =>
+                false
+        }
+        if (!isKnownCaller) then 
+            (
+            [
+                BooleanEntry(toBase58String(i.caller.bytes), true),
+                ScriptTransfer(i.caller, 100000000, unit)
+            ],
+            unit
+            )
+        else ([],unit)
     }
-    if (!isKnownCaller) then 
-        (
-           [
-               BooleanEntry(toBase58String(i.caller.bytes), true),
-               ScriptTransfer(i.caller, 100000000, unit)
-           ],
-           unit
-        )
-    else ([],unit)
-}
-
     ```
 
-### Requirements ###
+There are 2 optional elements:
+
+- **<ins>Verifier function</ins>**:<br>
+- **<ins>Script context</ins>**:<br>
+
+### Limitations ###
+
+### Seting A DApp Script ###
