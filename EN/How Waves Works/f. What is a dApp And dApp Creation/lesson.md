@@ -1,8 +1,4 @@
-# DApp #
-
-In this lesson, we will concentrate on the dApp definition and its example of usage.<br>
-
-Duration: <span></span> min
+# What is a dApp And dApp Creation #
 
 - [DApp Definition]()
 - [Usage Examples]()

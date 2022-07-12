@@ -16,14 +16,14 @@ There were no social networks like Facebook, e-commerce websites like Amazon, or
 Web pages were mostly “read-only” services. Universities and big companies were the main content creators, and pages were static only, without any way to interact with them.<br>
 We call this Web 1.0.
  
-**`Web 1.0 – the “read-only” internet`**
+**Web 1.0 – the “read-only” internet**
 
 Internet adoption and penetration grew extremely fast, and in the mid-2000s new interactive web services started to appear — forums, social networks and many other platforms for user-generated content.<br>
 The Web became a “read” and “write” service.<br>
 Pages became interactive and dynamic.<br>
 We still live in the era of Web 2.0.<br>
 
-**`Web 2.0 – user-generated content and p2p interactions`**
+**Web 2.0 – user-generated content and p2p interactions**
 
 Web 3.0 is the future of the Internet, but what will this future look like?<br>
 

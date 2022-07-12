@@ -1,8 +1,4 @@
-# Smart Account #
-
-In this lesson, we will talk about smart accounts, their usage examples, and how to set an account script.<br>
-
-Duration: <span></span> min
+# What is A Smart Account And Setting Account Script #
 
  - [Smart-Account Definition](#smart-account-definition)
  - [Usage Examples](#usage-examples)

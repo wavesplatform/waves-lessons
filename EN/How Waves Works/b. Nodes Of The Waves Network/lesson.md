@@ -1,8 +1,4 @@
-# Waves Nodes #
-
-In this lesson, we will talk about nodes of the Waves network.
-
-Duration: <span></span> min
+# Nodes Of The Waves Network #
 
   - [Node Description](#node-description)
     - [Validating Node](#validating-node)

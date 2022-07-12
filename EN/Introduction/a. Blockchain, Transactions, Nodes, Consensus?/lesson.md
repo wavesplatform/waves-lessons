@@ -64,7 +64,6 @@ The block generation process is called mining.<br>
 ---
 
 ## Types of consensus ##
-
 There are actually many types of consensus algorithms with different advantages and disadvantages.<br>
 
 

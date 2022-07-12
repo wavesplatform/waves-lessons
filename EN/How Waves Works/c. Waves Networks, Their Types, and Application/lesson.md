@@ -1,8 +1,4 @@
-# Waves Networks #
-
-This lesson will be dedicated to Waves networks.
-
-Duration: <span></span> min
+# Waves Networks, Their Types, and Application #
 
  - [Network Description](#network-description)
  - [Mainnet, Testnet, Stagenet](#mainnet-testnet-stagenet)
@@ -29,16 +25,16 @@ This space allows all the nodes to be connected to each other, forming condition
 
 In our platform, there are 3 different networks:
 
-- **Mainnet**:<br>
+- **<ins>Mainnet</ins>**:<br>
   The main Waves network where tokens have real value.<br> 
   Block generators and lessors receive rewards for block generation and leasing respectively.<br>
   You can also check some statistics regarding the nodes launched on Mainnet [here](https://new.wavesexplorer.com/nodes).
-- **Testnet**:<br>
+- **<ins>Testnet</ins>**:<br>
   The network is intended for testing purposes.<br>
   Testnet is a clone of Mainnet, yet it is a testing environment.<br>
   There is no necessity of using real funds, and it is possible to generate free WAVES tokens.<br>
   Check out the [Faucet](https://testnet.wavesexplorer.com/faucet) to top up the account balance on Testnet.
-- **Stagenet**:<br>
+- **<ins>Stagenet</ins>**:<br>
   The experimental network.<br>
   All the new features are firstly tested on Stagenet before being deployed to both Mainnet and Testnet.<br>
   If you would like to be the first one to test experimental features, Stagenet is the correct place.<br>

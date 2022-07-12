@@ -1,8 +1,4 @@
-# Smart Asset #
-
-This lesson will answer the question "What is a smart asset?", demonstrate usage examples, and show how to set an account script.<br>
-
-Duration: <span></span> min
+# What Is A Smart Asset And How To Create It #
 
  - [Smart Asset Description](#smart-asset-description)
  - [Usage Examples](#usage-example)
