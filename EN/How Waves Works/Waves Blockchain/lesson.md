@@ -45,7 +45,7 @@ However, blockchain transactions are not totally the same as bank transactions.<
 The difference with blockchain transactions is that they are:
 * [More secure]();
 * [Decentralized]();
-* [Immutabile]();
+* [Immutable]();
 * [Transparent]();
 * [Of reduced costs]().
 
