@@ -1,10 +1,5 @@
 # First Test Lesson #
 
-This is the very first test lesson.<br>
-Here we will insert test videos, images, and code blocks.
-
-Duration: 1 min
-
   - [1st Chapter](#1st-chapter)
     - [1st Semi-chapter of the 1st Chapter](#1st-semi-chapter-of-the-1st-chapter)
       - [1st Semi-chapter of the 1st semi-chapter](#1st-semi-chapter-of-the-1st-semi-chapter)
