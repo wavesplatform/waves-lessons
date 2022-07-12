@@ -13,7 +13,7 @@ Duration: <span></span> min
 
 ## Node Description ##
 
-A node is a host that is conencted to the blockchain [network]() using the [Waves Node](https://github.com/wavesplatform/Waves) application.<br>
+A node is a host that is connected to the blockchain [network]() using the [Waves Node](https://github.com/wavesplatform/Waves) application.<br>
 In other words, it is a computer, a local machine in one big network that:<br>
 - Is keeping the actual [blockchain copy](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying);<br>
 - Is participating in the block [validation]() process;<br>
