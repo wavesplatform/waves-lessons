@@ -11,7 +11,7 @@ Duration: <span></span> min
  - [Setting An Assets Script](#setting-an-asset-script)
    - [Requirements](#requirements)
    - [Limitations](#limitations)
-   - [Writting A Smart-Asset Script](#writting-a-smart-asset-script)
+   - [Writting A Smart Asset Script](#writting-a-smart-asset-script)
 
 --- 
 
@@ -40,7 +40,7 @@ There are 3 different possible results of the asset script invokation:
   An error of the script compliation has occured, the transaction was declined.<br>
   No fee will be charged and the transaction will not appear in the blockchain.<br>
 
-Read more about [Smart Asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset#asset-script).
+Read more about [Smart Asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset).
 
 ---
 
@@ -89,7 +89,7 @@ More about [Burn Transaction](https://docs.waves.tech/en/blockchain/transaction-
 From now on, we will use the Waves IDE when demonstrating the work with smart contracts.<br> -->
 
 ### Requirements ###
-To create a smart-asset, it is necessary:
+To create a smart asset, it is necessary:
 
 - Send an [Issue Transaction](https://docs.waves.tech/en/blockchain/transaction-type/issue-transaction) of version 2 or higher;
 - Include a script in base64 encoding in the issue transaction.
@@ -97,18 +97,18 @@ To create a smart-asset, it is necessary:
 Please, note the minimum fee for this transaction is 1 WAVES.<br>
 
 ### Limitations ###
-There are 2 major limitations when working with smart-asset creation is
+There are 2 major limitations when working with smart asset creation is
 
 - **<ins>Inability to change asset type:</ins>**<br>
   Creation of a smart asset is possible at the moment of a token creation.<br>
   If you create a token with no script attached to it, it will not be possible to attach a script to it later.<br>
-  Similarly, if a token is created as a smart-asset, it will always stay a smart asset with a possiblity to change the script at any time.<br>
+  Similarly, if a token is created as a smart asset, it will always stay a smart asset with a possiblity to change the script at any time.<br>
   In case you don't have any ready scripts, you can write a simple script that always returns `true` and change it later.<br> 
 - **<ins>A smart asset cannot be sponsored:</ins>**<br>
   Read more about [Fee in Sponsored Asset](https://docs.waves.tech/en/blockchain/transaction/transaction-fee#fee-in-sponsored-asset).
 
 
-### Writting A Smart-Asset Script ###
+### Writting A Smart Asset Script ###
 
 Трансформируем написанный скрипт в кодировку base64.<br>
 Запустим транзакцию создания [тестового токена](#issue-transaction).<br>
