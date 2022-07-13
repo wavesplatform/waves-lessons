@@ -92,7 +92,13 @@ Generally, there are 3 different types of transactions in the Waves blockchain:
 
 For this moment, it is not necessary to study all of the transaction types.<br>
 Later, in the chapter [Operations with transactions](), this topic will be elaborated on in detail.<br>
-As for now, it is enough to understand that a transaction is an action that is made by an account.
+As for now, it is enough to understand that a transaction is an action that is made by an account.<br>
+<br>
+Once there is any transaction, it is sent to a [node]() of a [network]() from an account.<br>
+This recipient node shares this transaction with other nodes within this network.<br>
+The other nodes will continue sharing this transaction until all the nodes of the network receive it.<br>
+Read more about [Nodes Of The Waves Network]().
+
 
 Below there are 2 examples of transactions that can be made with the Waves blockchain:<br>
 - `Transfer Transaction`:
@@ -188,8 +194,7 @@ On this picture, you may see a representation of this idea (from left to the rig
 <img src="https://miro.medium.com/max/977/1*mNdCyhj2WRSzmgTOVztaUg.png">
 <br>
 <br>
-Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes.<br>
-See more about [Nodes]().
+Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes in the network.<br>
 <br>
 
 In the next lesson, we will concentrate on how on [nodes of the Waves network]() function and the benefits of having one.
