@@ -1,11 +1,11 @@
 # What is a dApp And dApp Creation #
 
-- [DApp Definition]()
-- [Usage Examples]()
-- [Setting A DApp Script]()
-  - [DApp Structure](#dapp-structure)
-  - [Limitations](#limitations)
-  - [Setting A DApp Script](#seting-a-dapp-script)
+ - [DApp Definition](#dapp-definition)
+ - [Usage Examples](#usage-examples)
+ - [Setting A DApp Script](#seting-a-dapp-script)
+   - [DApp Structure](#dapp-structure)
+   - [Limitations](#limitations)
+   - [Setting A DApp Script](#seting-a-dapp-script)
 
 ---
 
@@ -90,7 +90,7 @@ There are 2 necessary elements:
     Below you can see an example of a callable function.<br>
     It transfers 1 WAVES to an account that invoked it.<br>
     Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).<br>
-    As well, it contains one condition: if the same account tries to invoke once again, the callable function does nothing.<br>
+    As well, it contains one condition: if the same account tries to invoke the script once again, the callable function does nothing.<br>
 
     <br>
 
@@ -137,9 +137,9 @@ There are 2 optional elements:
     A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.<br>
     Waves already created necessary functions and variables that you may use within your dApp.<br>
     If you declare a variable or a function within a certain callable function, they will be available only within that callable function.<br>
-    In case you would like to declare a global variable or a global function, make sure you write the code in the global scope.<br>
+    In case you would like to declare a global variable or a global function, make sure you write the code in the global dApp scope.<br>
 
-    For example, the [assetInfo function](https://docs.waves.tech/en/ride/functions/built-in-functions/#account-data-storage-functions:~:text=assetInfo(ByteVector)%3A%20Asset,15) requests information about the token by its ID.
+    For example, the [assetInfo function](https://docs.waves.tech/en/ride/functions/built-in-functions/#account-data-storage-functions:~:text=assetInfo(ByteVector)%3A%20Asset,15) requests information about the token by its ID.<br>
     After this, [isDefined function](https://docs.waves.tech/en/ride/functions/built-in-functions/#string-functions:~:text=isDefined%28T%7CUnit,1) checks that a token with this ID exists on the blockchain.
 
     ```
@@ -161,9 +161,9 @@ There are 2 ways of making your account a dApp using:
 
 - [Waves IDE](https://waves-ide.com/):
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed in account;
-    2. Click "+" in the right corner of the script, select "dApp script":
+    2. Click "+" in the right corner of the IDE, select "dApp script":
     ![](./images/dApp_setup_1.png)
-    3. Wrtie the Ride script code and click "Deploy":
+    3. Write the Ride script code and click "Deploy":
     ![](./images/dapp_setup_2.png)
     4. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.<br>
     After this, publish the dApp script.<br>
