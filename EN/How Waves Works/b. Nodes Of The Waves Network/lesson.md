@@ -78,7 +78,7 @@ For every node holder, there are 2 ways to earn funds with the Waves blockchain:
 - By [block generation](#generating-node);
 - By being a [lessor](https://docs.waves.tech/en/blockchain/transaction-type/lease-transaction).
 
-In the topic [Mining And Earning On It]() we will explain the process of node installation and how to start mining.<br>
+In the topic [Mining And Earning On It]() we will explain the process of [node installation]() and [how to start mining]().<br>
 As a quick preview, we will mention the minimal:
 
 - System requirements:<br>

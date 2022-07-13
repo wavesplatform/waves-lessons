@@ -23,7 +23,8 @@ This space allows all the nodes to be connected to each other, forming condition
 
 ## Mainnet, Testnet, Stagenet ##
 
-In our platform, there are 3 different networks:
+In our platform, there are 3 different networks within the Waves blockchain.<br>
+All of the nodes are united within a network they are connected to:
 
 - **<ins>Mainnet</ins>**:<br>
   The main Waves network where tokens have real value.<br> 
@@ -87,11 +88,15 @@ The topic of the Waves Explorer will be covered in the [Infrastructure Products 
 ### Network API ###
 
 With the API service, it is possible to interact with the blockchain.<br>
-There are 3 different APIs with each of the networks:
+There are 3 different APIs with each of the networks.<br>
+All of them are accessible via the Swagger User Interface:
 
 - [Mainnet](https://nodes.wavesnodes.com/api-docs/index.html)
 - [Testnet](https://nodes-testnet.wavesnodes.com/api-docs/index.html)
 - [Stagenet](https://nodes-stagenet.wavesnodes.com/api-docs/index.html)
+
+Please, note that depending on the load of all the nodes, the Swagger tool connects you automatically to a random node that isn't overloaded.<br>
+Therefore, at different times, different nodes' APIs may be opened in the Swagger interface.<br>
 
 Using the API, it is possible to fetch some data of the blockchain or make an action on it.<br>
 For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/index.html#/node/getNodeVersion) to get the current Waves node version.<br>

@@ -106,69 +106,60 @@ There are 2 major limitations when working with smart asset creation is
 
 ### Writting A Smart Asset Script ###
 
-Трансформируем написанный скрипт в кодировку base64.<br>
-Запустим транзакцию создания [тестового токена](#issue-transaction).<br>
-Установим скрипт в кодировке base64 на токен с помощью транзакции установки скритпа.
+There are two major steps to install a smart asset script:
+1. Prepare the ride script you would like to install on an asset:
+    ```
+    {-# STDLIB_VERSION 6 #-}
+    {-# CONTENT_TYPE EXPRESSION #-}
+    {-# SCRIPT_TYPE ASSET #-}
 
+    func trueReturner () = {
+        return true
+    }
+    ```
+2. Afterward, it would be necessary to prepare a script in your native programming language that would:<br>
 
-```Java
-// Necessary imports
-import com.wavesplatform.transactions.common.AssetId;
-import com.wavesplatform.transactions.common.Base64String;
-import com.wavesplatform.transactions.IssueTransaction;
-import com.wavesplatform.transactions.SetAssetScriptTransaction;
-import com.wavesplatform.wavesj.info.IssueTransactionInfo;
-import com.wavesplatform.wavesj.info.TransactionInfo;
-import com.wavesplatform.wavesj.info.SetAssetScriptTransactionInfo;
+    - Create an asset;
+    - Attach a smart account script to it;
+    - Send the transaction to the node.
 
-// Transforming a Ride-script to the base64 string
-Base64String script = node.compileScript("{-# SCRIPT_TYPE ASSET #-} true")
-        .script();
+    Here is how to make this:<br>
+    ```Java
+    // Necessary imports
+    import com.wavesplatform.transactions.common.AssetId;
+    import com.wavesplatform.transactions.common.Base64String;
+    import com.wavesplatform.transactions.IssueTransaction;
+    import com.wavesplatform.transactions.SetAssetScriptTransaction;
 
-// Creation of a token and installation of the compiled script on it
-AssetId assetId = node.waitForTransaction(
-        node.broadcast(IssueTransaction.builder("Asset", 1000, 2)
-        .script(script)
-        .getSignedWith(alice)).id(), IssueTransactionInfo.class)
-        .tx().assetId();
-SetAssetScriptTransaction tx = SetAssetScriptTransaction.builder(assetId, script).getSignedWith(alice);
+    // Transforming the ride script to a base64 string
+    // Make sure to insert your ride script between the brackets below
+    Base64String script = node.compileScript("INSERT YOUR DAPP SCRIPT HERE")
+            .script();
 
-// Sending transaction to the node
-node.waitForTransaction(node.broadcast(tx).id());
+    // Creation of a token and installation of the compiled script on it
+    AssetId assetId = node.waitForTransaction(
+            node.broadcast(IssueTransaction.builder("Asset", 1000, 2)
+            .script(script)
+            .getSignedWith(alice)).id(), IssueTransactionInfo.class)
+            .tx().assetId();
+    SetAssetScriptTransaction tx = SetAssetScriptTransaction.builder(assetId, script).getSignedWith(alice);
 
-// Displaying the information about the transaction
-TransactionInfo commonInfo = node.getTransactionInfo(tx.id());
-SetAssetScriptTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SetAssetScriptTransactionInfo.class);
+    // Sending transaction to the node
+    node.waitForTransaction(node.broadcast(tx).id());
+    ```
+    ```js
+    ```
+    ```php
+    ```
+    ```csharp
+    ```
+    ```go
+    ```
+    ```python
+    ```
 
-System.out.println("type:" + txInfo.tx().type());
-System.out.println("id:" + txInfo.tx().id());
-System.out.println("fee:" + txInfo.tx().fee().value());
-System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
-System.out.println("timestamp:" + txInfo.tx().timestamp());
-System.out.println("version:" + txInfo.tx().version());
-System.out.println("chainId:" + txInfo.tx().chainId());
-System.out.println("sender:" + txInfo.tx().sender().address().encoded());
-System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
-System.out.println("proofs:" + txInfo.tx().proofs());
-System.out.println("assetId:" + txInfo.tx().assetId().encoded());
-System.out.println("script:" + txInfo.tx().script().encoded());
-System.out.println("height:" + txInfo.height());
-System.out.println("applicationStatus:" + txInfo.applicationStatus());
-
-```
-```js
-```
-```php
-```
-```csharp
-```
-```go
-```
-```python
-```
-
-**Paramaters Description**
-| Field | Description | Example |
-| ----------- | ----------- | ----------- |
-| assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
-| script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
+    **Paramaters Description**
+    | Field | Description | Example |
+    | ----------- | ----------- | ----------- |
+    | assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
+    | script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
