@@ -161,12 +161,12 @@ There are 2 ways of making your account a dApp using:
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
     2. Click "+" in the right corner of the IDE, select "dApp script":
     ![](./images/dApp_setup_1.png)
-    1. Write the Ride script code and click "Deploy":
+    3. Write the Ride script code and click "Deploy":
     ![](./images/dapp_setup_2.png)
-    1. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.<br>
+    4. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.<br>
     After this, publish the dApp script.<br>
     ![](./images/dapp_setup_3.png)
-    1. As a result of a succesful operation, you will see a similar notification:<br>
+    5. As a result of a succesful operation, you will see a similar notification:<br>
     ![](./images/dapp_setup_success.png)
   
 - [Client libraries](#XII.Libraries):<br>
@@ -208,8 +208,15 @@ There are 2 ways of making your account a dApp using:
             WriteSet([DataEntry((callerAddress + "_q"), question), DataEntry((callerAddress + "_a"), answer)])
             }
         ```
-    2. Use your native programming language to send this transaction to the node.<br>
-        Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction).<br>
+    2. se your native programming language to:
+         -  Insert the ride script as an arguement of the compileScript function;
+         -  Send this transaction to the node.<br>
+            (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
+        
+        <br>
+         
+         This is how it can be done:<br>
+         
         ```Java
         // Necessary imports
         import com.wavesplatform.transactions.common.Base64String;

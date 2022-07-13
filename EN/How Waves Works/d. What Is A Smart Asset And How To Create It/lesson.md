@@ -106,7 +106,7 @@ There are 2 major limitations when working with smart asset creation is
 
 ### Writting A Smart Asset Script ###
 
-There are two major steps to install a smart asset script:
+There are two major steps to installing a smart asset script:
 1. Prepare the ride script you would like to install on an asset:
     ```
     {-# STDLIB_VERSION 6 #-}

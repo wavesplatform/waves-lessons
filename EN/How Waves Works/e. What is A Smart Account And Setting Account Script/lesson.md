@@ -103,55 +103,71 @@ The transaction fee for setting the script is 0.01 WAVES.
 Any account may have only one script attached to it.<br>
 “Detaching” a script from a smart account or replacing it with a new one is possible only if the "old" script doesn't forbid it. <br>
 
-### Set Script Transaction ###       
-Set script transaction attaches an [account script](https://docs.waves.tech/en/ride/script/script-types/account-script) to the sender's account.<br>
-More about [Set Script Transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
+### Set Script Transaction ###
 
-```Java
-// Necessary imports
-import com.wavesplatform.transactions.common.Base64String;
-import com.wavesplatform.transactions.SetScriptTransaction;
-import com.wavesplatform.wavesj.info.SetScriptTransactionInfo;
-import com.wavesplatform.wavesj.info.TransactionInfo;
+There are 2 major ways of smart account script installation:
+- [Waves IDE](#wavesidechapterreference):
+    1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
+    2. Click "+" in the right corner of the IDE, select "Account script":
+    ![](./images/smartac_1.png)
+    3. Write the Ride script code and click "Deploy":
+    ![](./images/smartac_2.png)
+    4. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.<br>
+      After this, publish the smart account script.<br>
+      ![](./images/smartac_3.png)
+    5. As a result of a succesful operation, you will see a similar notification:<br>
+      ![](./images/smartac_4.png)
 
-// Writing an account script to base64 and setting the script on the "alice" address 
-Base64String script = node.compileScript("{-# SCRIPT_TYPE ACCOUNT #-} true").script();
-SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
-   
-// Sending the transaction to the node
-node.waitForTransaction(node.broadcast(tx).id());
+  
+- [Client libraries](#XII.Libraries):<br>
+    1. Prepare your smart account ride script:
+         ```
+         {-# STDLIB_VERSION 5 #-}
+         {-# CONTENT_TYPE EXPRESSION #-}
+         {-# SCRIPT_TYPE ACCOUNT #-}
 
-// Displaying information about the transaction
-TransactionInfo commonInfo = node.getTransactionInfo(tx.id());
-SetScriptTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SetScriptTransactionInfo.class);
+         sigVerify(tx.bodyBytes, tx.proofs[0], tx.senderPublicKey)
+         ```
+    2. Use your native programming language to:
+         -  Insert the ride script as an arguement of the compileScript function;
+         -  Send this transaction to the node.<br>
+            (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
+            
+         <br>
+         
+         This is how it can be done:<br> 
 
-System.out.println("type:" + txInfo.tx().type());
-System.out.println("id:" + txInfo.tx().id());
-System.out.println("fee:" + txInfo.tx().fee().value());
-System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
-System.out.println("timestamp:" + txInfo.tx().timestamp());
-System.out.println("version:" + txInfo.tx().version());
-System.out.println("chainId:" + txInfo.tx().chainId());
-System.out.println("sender:" + txInfo.tx().sender().address().encoded());
-System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
-System.out.println("proofs:" + txInfo.tx().proofs());
-System.out.println("script:" + txInfo.tx().script().encoded());
-System.out.println("height:" + txInfo.height());
-System.out.println("applicationStatus:" + txInfo.applicationStatus());
-```
-```js
-```
-```php
-```
-```csharp
-```
-```go
-```
-```python
-```
+         ```Java
+         // Necessary imports
+         import com.wavesplatform.transactions.common.Base64String;
+         import com.wavesplatform.transactions.SetScriptTransaction;
 
-**Parameters Description**
-| Field | Description | Example |
-| ----------- | ----------- | ----------- |
-| script | Compiled script, base64 encoded.<br>Account script up to 8192 bytes.<br>null — delete script| [Example](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction#json-representation:~:text=%22script%22%3A,%22base64%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%3D%3D%22)|
+         // Transforming the ride script to a base64 string
+         // Make sure to insert your ride script between the brackets below
+         Base64String script = node.compileScript("{-# SCRIPT_TYPE ACCOUNT #-} true").script();
+         SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
+            
+         // Sending the transaction to the node
+         node.waitForTransaction(node.broadcast(tx).id());
+         ```
+         ```js
+         ```
+         ```php
+         ```
+         ```csharp
+         ```
+         ```go
+         ```
+         ```python
+         ```
+
+         **Parameters Description**
+         | Field | Description | Example |
+         | ----------- | ----------- | ----------- |
+         | script | Compiled script, base64 encoded.<br>Account script up to 8192 bytes.<br>null — delete script| [Example](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction#json-representation:~:text=%22script%22%3A,%22base64%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%3D%3D%22)|
+
+         <br>
+
+          More about [Set Script Transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
+
 
