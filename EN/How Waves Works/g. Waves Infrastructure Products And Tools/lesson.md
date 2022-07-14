@@ -75,14 +75,74 @@ Secondly, some clients may experience troubles with proving the payment complete
 <br>
 
 The second option is what the Signer is about.<br>
-It helps us to integrate a service 
-
+It helps us to integrate payments with WAVES to our platform.<br>
+A client will be able to log in to his account and approve the payment right away.<br>
 
 Read more about [Signer](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/client-libraries/signer).
 
 ### Waves IDE ###
 
+[Waves IDE](https://waves-ide.com/) is an environment for working with smart contracts written in [Ride](#ridetopic).<br>
+Ride is a programming language intended for smart contracts development, testing, and deployment.<br>
+In the Waves IDE, you can work with [dApps](#dapptopic), [smart accounts](#smartacctopic), and [smart assets](#smartassettopic).<br>
+
+This is a demonstration of the Waves IDE user interface:
+<br><br>
+![waves_ide](./images/waveside.png)
+<br><br>
+
+It is possible to switch between different networks within the IDE, be it a default network or a custom one.<br><br>
+![](./images/waveside_nodes.png)
+<br><br>
+
+As well you can check libraries that contain code examples and even a series of short tutorials:<br><br>
+![](./images/waveside_libs.png)
+<br><br>
+
+Read more about [Waves IDE](https://docs.waves.tech/en/building-apps/smart-contracts/tools/waves-ide).
+
 ### Node REST API ###
+
+The Waves node REST API is the main interface for interacting with the Waves blockchain.<br>
+The API provides public endpoints and also private endpoints that require authorization using an API key.<br>
+
+The Waves team supports node pools with public API endpoints accessible to anyone:
+- [Mainnet](https://nodes.wavesnodes.com)
+- [Testnet](https://nodes-testnet.wavesnodes.com)
+- [Stagenet](https://nodes-stagenet.wavesnodes.com)
+
+With the help of the Swagger user interface, you can work
+**Public methods**
+- `Reading blockchain data`:
+    * Account information
+    * Data about tokens
+    * Transactions
+    * Blocks
+    * Leasing
+    * Other
+- `Working with transactions`:
+    * Send signed transactions
+    * Transaction validation
+    * Checking the status of transactions
+- `Working with utilities`:
+    * Obtaining an address from a public key
+    * Check the validity of the address
+    * Generate random seed
+    * Calculate hashes
+<br>
+
+**Private Methods**
+- `Manage accounts in the wallet of the node`.
+- `Signing a transaction on behalf of accounts from the node wallet`.
+- `Node management: stop, rollback, connect to other nodes`.
+- `Obtaining debug information`.
+
+
+
+
+
+The Waves team does not provide the API key for public nodes.<br>
+If you want to use private endpoints, start [your own node](https://docs.waves.tech/en/waves-node/private-waves-network).
 
 ### Software Development Kits ###
 
