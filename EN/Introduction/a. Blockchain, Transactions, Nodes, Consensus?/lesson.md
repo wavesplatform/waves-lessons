@@ -117,12 +117,19 @@ Blockchain has several important properties:
 - **<ins>Reliability:</ins>**<br>
   Any attempts to make unauthorized changes will be rejected because of inconsistency with other copies.<br>
   No one has the power to manipulate or destroy the data.<br>
+- **<ins>Immutability</ins>:**<br>
+  Once a transaction got into the blockchain, its data cannot be manipulated, edited or deleted.<br>
 - **<ins>Transparency</ins>:**<br>
   Each participant can read data and track all transactions.<br>
 - **<ins>Pseudo-anonymity</ins>:**<br>
   Anyone can track transactions, but cannot identify the sender or recipient.<br>
   To sign a transaction, only a private key is required, which itself is not associated with a person.<br>
   Everything is anonymous unless you state that a certain public address belongs to you or someone you know.<br>
+- **<ins>Reduced costs</ins>:**<br>
+  If we use any systems for funds transfers like SWIFT, we pay big comission for the transfer.<br>
+  Private companies charge us with big payments for the usage of their service.<br>
+  Fees in the blockchain are many times less, since there is no mediator that keeps the profit to himself.<br>
 
 In this lesson, we talked about the basics of blockchain — transactions, blocks, consensus mechanisms like proof-of-work and proof-of-stake, and delegated and leased versions of proof of stake.<br>
-In the next lesson, we'll give some insights into how all these blockchain properties are used in Web3 services.
+<br>
+In the next lesson, we'll give some insights into how all these blockchain properties are used in [Web3 services]().

@@ -130,4 +130,5 @@ Well, let’s summarize this lesson and the most important things we’ve learne
 We’ve talked about the Web’s evolution, about Web 1, 2 and 3 and their differences.<br>
 We can describe Web3 as a fully decentralized web with new models of interaction for users, based on trustless infrastructure.<br>
 We also talked about digital signatures and how they affect user experience with Web3 services.<br>
-In the next lessons, we will start exploring the technical aspects of Web3: decentralization, blockchains and their consensus algorithms.
+<br>
+The next topic will be an [introduction to the Waves platform](), slowly you'll start receiving more practical material along with theory.<br>

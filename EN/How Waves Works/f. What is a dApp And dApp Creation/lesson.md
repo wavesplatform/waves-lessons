@@ -251,6 +251,9 @@ There are 2 ways of making your account a dApp using:
         Read more about [Operations with transactions - Set Account Script Transaction](#Operationswithtransactions-SetAccountScriptTransaction).
     
 
-     1. Once the transaction is sent to the node successfully, the account will become a dApp.
+    3. Once the transaction is sent to the node successfully, the account will become a dApp.
 
 
+<br>
+
+The next lesson will give more information about multiple products and tools of the [Waves infrastructure]().

@@ -103,4 +103,6 @@ For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/
 <br>
 ![](./images/api_response.png)
 <br>
-The API features will be explained in more detail in the [Infrastructure Products and tools]() chapter.
+The API features will be explained in more detail in the [Infrastructure Products and tools]() chapter.<br>
+<br>
+The topic of the next lesson will be [smart assets and how to create one]().

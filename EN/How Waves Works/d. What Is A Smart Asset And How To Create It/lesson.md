@@ -163,3 +163,9 @@ There are two major steps to installing a smart asset script:
     | ----------- | ----------- | ----------- |
     | assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
     | script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
+
+
+<br>
+
+
+In the next lesson, we will talk about another type of smart contracts, called [smart account]().

@@ -170,4 +170,6 @@ There are 2 major ways of smart account script installation:
 
           More about [Set Script Transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
 
+<br>
 
+The next lesson will be dedicated to [dApp](), another type of an account script.

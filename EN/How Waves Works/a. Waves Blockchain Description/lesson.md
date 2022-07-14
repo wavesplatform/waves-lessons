@@ -73,12 +73,12 @@ This transaction would necessarily include such details as:
 * **<ins>Sender account</ins>**;
 * **<ins>Recipient account</ins>**;
 * **<ins>Details about the transfer</ins>**.<br>
-  (amount, commissions, etc)
+  (currency, amount, commissions, etc)
 
 However, blockchain transactions are not totally the same as bank transactions.<br>
 The difference with blockchain transactions is that they are:
-* [More secure]();
 * [Decentralized]();
+* [More secure]();
 * [Immutable]();
 * [Transparent]();
 * [Of reduced costs]().
@@ -92,7 +92,7 @@ Generally, there are 3 different types of transactions in the Waves blockchain:
 
 For this moment, it is not necessary to study all of the transaction types.<br>
 Later, in the chapter [Operations with transactions](), this topic will be elaborated on in detail.<br>
-As for now, it is enough to understand that a transaction is an action that is made by an account.<br>
+The essence of all transactions in the blockchain is an operation with an account or/and an asset.<br>
 <br>
 Once there is any transaction, it is sent to a [node]() of a [network]() from an account.<br>
 This recipient node shares this transaction with other nodes within this network.<br>
