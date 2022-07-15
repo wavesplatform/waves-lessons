@@ -135,25 +135,25 @@ For example, you can get the current node status:<br><br>
 
 ### Software Development Kits ###
 
-Specially for developers wishing to integrate the Waves blockchain service into their own service, there is a great opportunity.<br>
+Specially for developers wishing to interact with the Waves blockchain, there is a great opportunity<br>
 We created multiple libraries in different programming languages that allow you to:
 
 - **<ins>Work with cryptography</ins>**:<br> 
     Generation of private/public keys and wallet addresses.<br>
-- **<ins>Working with transactions</ins>**:<br>
+- **<ins>Work with transactions</ins>**:<br>
     Creating, signing, and broadcasting transactions.<br> 
-- **<ins>Interaction with the Waves node</ins>**:<br>
+- **<ins>Interact with the Waves node</ins>**:<br>
     Reading blockchain data, node interaction, and working with cryptography.<br>
     
 The list of supported languages:
-- JavaScript
-- Java
-- GoLang
-- Python 
-- Php
-- C#
-- Rust
-- C++
+- [JavaScript]()
+- [Java]()
+- [GoLang]()
+- [Python]() 
+- [PHP]()
+- [C#]()
+- [Rust]()
+- [C++]()
 
 Read more about [client libraries](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/client-libraries).
 
