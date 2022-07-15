@@ -23,7 +23,7 @@ There are 6 major instruments that are absolutely free to use:
 - **<ins>[Signer]()</ins>**<br>
     A TypeScript/JavaScript library featuring signing and broadcasting transactions on users behalf.<br> 
 - **<ins>[Waves IDE](#waves-ide)</ins>**<br>
-    Online environment for developing and testing [Ride](#ridetopic) smart contracts.
+    Online environment for developing, testing, and deploying [Ride](#ridetopic) smart contracts.
 - **<ins>[Node REST API](#node-rest-api)</ins>**<br>
     Main interface for interacting with the Waves blockchain within different [networks](#networktopic).
 - **<ins>[Software Development Kits](#software-development-kits)</ins>**<br>
@@ -71,11 +71,11 @@ In case we want to receive WAVES to our cryptowallet, we have 2 options:
 
 As we may have guessed, the first option is an outdated method.<br>
 It puts our business at risk, as some clients can change their minds to order due to payment complexity.<br>
-Secondly, some clients may experience troubles with proving the payment completed.<br>
+Secondly, some clients may experience troubles with proving the payment completion.<br>
 <br>
 
 The second option is what the Signer is about.<br>
-It helps us to integrate payments with WAVES to our platform.<br>
+It helps us to integrate payments with WAVES to a platform.<br>
 A client will be able to log in to his account and approve the payment right away.<br>
 
 Read more about [Signer](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/client-libraries/signer).
@@ -111,40 +111,51 @@ The Waves team supports node pools with public API endpoints accessible to anyon
 - [Testnet](https://nodes-testnet.wavesnodes.com)
 - [Stagenet](https://nodes-stagenet.wavesnodes.com)
 
-With the help of the Swagger user interface, you can work
-**Public methods**
-- `Reading blockchain data`:
-    * Account information
-    * Data about tokens
-    * Transactions
-    * Blocks
-    * Leasing
-    * Other
-- `Working with transactions`:
-    * Send signed transactions
-    * Transaction validation
-    * Checking the status of transactions
-- `Working with utilities`:
-    * Obtaining an address from a public key
-    * Check the validity of the address
-    * Generate random seed
-    * Calculate hashes
+With the help of the Swagger user interface, you can work with:<br>
+**<ins>Public methods</ins>**:<br>
+  - `Reading blockchain data`: Information about accounts, transactions, tokens, blocks, etc.
+  - `Working with transactions`: Broadcasting and validating transactions, checking their statuses.
+  - `Working with utilities`: Random seed generation, checking validity of an address, etc. 
 <br>
-
-**Private Methods**
-- `Manage accounts in the wallet of the node`.
-- `Signing a transaction on behalf of accounts from the node wallet`.
-- `Node management: stop, rollback, connect to other nodes`.
-- `Obtaining debug information`.
-
-
-
-
 
 The Waves team does not provide the API key for public nodes.<br>
 If you want to use private endpoints, start [your own node](https://docs.waves.tech/en/waves-node/private-waves-network).
 
+**<ins>Private Methods</ins>** (only for node owners):<br>
+- `Managing accounts in the node wallet`.
+- `Signing transactions`: signing on behalf of the node wallet accounts.
+- `Node management`: stop, rollback, connect to other nodes.
+- `Getting debug information`.
+
+<br>
+
+For example, you can get the current node status:<br><br>
+![](./images/restapi.png)
+<br><br>
+
 ### Software Development Kits ###
+
+Specially for developers wishing to integrate the Waves blockchain service into their own service, there is a great opportunity.<br>
+We created multiple libraries in different programming languages that allow you to:
+
+- **<ins>Work with cryptography</ins>**:<br> 
+    Generation of private/public keys and wallet addresses.<br>
+- **<ins>Working with transactions</ins>**:<br>
+    Creating, signing, and broadcasting transactions.<br> 
+- **<ins>Interaction with the Waves node</ins>**:<br>
+    Reading blockchain data, node interaction, and working with cryptography.<br>
+    
+The list of supported languages:
+- JavaScript
+- Java
+- GoLang
+- Python 
+- Php
+- C#
+- Rust
+- C++
+
+Read more about [client libraries](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/client-libraries).
 
 ### IDE Plugins ###
 
