@@ -43,5 +43,4 @@ At the current moment, the reward amount is 6 WAVES.<br>
 It may change with [voting](https://docs.waves.tech/en/blockchain/mining/mining-reward#voting), both decreasing or increasing.<br>
 
 
-
 The next lesson will cover the [requirements] for deployment a node and block generation.<br>
