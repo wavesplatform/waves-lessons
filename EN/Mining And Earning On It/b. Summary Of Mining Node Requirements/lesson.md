@@ -49,9 +49,7 @@ The table below can demonstrate with examples the meaning of these 2 requirement
 | Requirement Description | Example|
 | :----- | :----- |
 | **<ins>Generating balance</ins>** is the balance of your account that:<br>- Deductes all the funds you leased to some accounts;<br>- Adds all the funds any other accounts leased to your account.<br><br>| For instance, our imaginary balance is 1005 WAVES:<br>- 700 of them were our own WAVES;<br>- 200 of them we leased to our friend Alex;<br>- 505 of them we received by our friend Diana in lease.<br><br>700 - 200 + 505 = 1005 WAVES, our generating balance. |
-| **<ins>Last 1000 blocks</ins>** is the last 1000 blocks from the current blockchain height. | Let's assume the current blockchain height is 3,211,000 blocks.<br>For us, it would be necessary to have the generating balance, starting from the moment, when it was the block 3,210,000,<br>up to the current blockchain height, i.e. 3,211,000 blocks.<br>
-
-<br>
+| **<ins>Last 1000 blocks</ins>** is the last 1000 blocks from the current blockchain height. | Let's assume the current blockchain height is 3,211,000 blocks.<br>For us, it would be necessary to have the generating balance, starting from the moment, when it was the block 3,210,000,<br>up to the current blockchain height, i.e. 3,211,000 blocks.
 
 ---
 
@@ -60,10 +58,11 @@ The table below can demonstrate with examples the meaning of these 2 requirement
 Depending on your operating system, there are different ways of node deployment.<br>
 For every OS, there will be 2 ways of node installation:
 - Docker container;
-- Package installation.s
+- Package installation.
 
 Below you may find links to instructions of how to make it with your OS:<br>
 - [Ubuntu]()
 - [MacOS]()
 - [Windows]()
 
+After a node is installed, we can go on with [node configuration and starting mining]().<br>
