@@ -1,10 +1,29 @@
 # Ubuntu Node Installation #
 
+  - [Node Structure](#node-structures)
   - [Prerequisites](#prerequisites)
   - [Node Installation](#node-installation)
     - [Docker Installation](#docker-installation)
     - [Waves Package Installation](#waves-package-installations)
 
+---
+
+## Node Structure ##
+
+To make all of our steps of node installation clear, it is better, to begin with, a node structure explanation.<br>
+Understanding the structure of the node will shed some light on major essences that the node interacts with.<br>
+
+Under the bonnet, every node has:
+- **<ins>Blockchain database</ins>**:<br>
+    All the nodes of the Waves blockchain are intended to ensure [decentralization]().<br>
+    Therefore, an indentical copy of all the blockchain data needs to be stored in every single node.<br>
+- **<ins>Configuration file</ins>**:<br>
+    A configuration file is a set of instructions of how a node should be working.<br>
+    In the configuration file, we can define multiple parameters, for instance, which [network]() to connect to.
+
+![](./images/nodestr.png)
+
+---
 
 ## Prerequisites ##
 
@@ -22,6 +41,8 @@ Here is how you can encode a seed phrase to Base58:<br>
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
     ![](./images/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.<br>
+
+---
 
 ## Node Installation ##
 
@@ -45,18 +66,35 @@ Follow the steps below to install a Waves node:
     ```
     docker pull wavesplatform/wavesnode
     ```
-3. Run a docker container with such parameters as:
-    - Seed of the account Base58 encoded;
-    - Password of your wallet.
+3. Create folders where you would like to store the blockchain copy and a configuration file.<br>
+
+    ```
+    sudo mkdir -p /opt/waves-node/{data,conf}
+    ```
+    This command will create 2 folders (data, conf) within `/opt/waves-node` directory.
+4. Run a docker container.<br>
+   Within this docker container, it is necessary to:
+    - Create [docker volumes](https://docs.docker.com/storage/volumes/) to "connect" the data we store locally on our host with the storage of the container.<br>
+      Do it for both directories that store the blockchain data (`opt/waves-node/data`) and the configuration file (`/opt/waves-node/conf`).<br>
+      It will "link" the data from your host to the container's storage to `/var/lib/waves` for the blockchain data and `/etc/waves` for the configuration file.<br>
+      In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.<br>
+      <!-- The reason why we are doing it is that we risk to lose all the data if everything is stored within the container's storage only.<br> -->
+    - [Map](https://docs.docker.com/config/containers/container-networking/) the container port to the localhost port.
+    - Insert the [Base58 encoded string of the wallet seed](#prerequisites).
+    - Type a password that would be stored locally on your host to protect your encoded seed.
+
     ```
      docker run -d \
+     -v /opt/waves-node/data:/var/lib/waves \
+     -v /opt/waves-node/conf:/etc/waves \
      --name my-waves-node \
      -p 6869:6869 \
      -e WAVES_WALLET_SEED="insert your account seed Base58 encoded that you saved earlier" \
-     -e WAVES_WALLET_PASSWORD="insert your account password" \
+     -e WAVES_WALLET_PASSWORD="type a password" \
      wavesplatform/wavesnode:latest
     ```
-4. To make sure everything is working properly, we can check logs.<br>
+
+5. To make sure everything is working properly, we can check logs.<br>
     Copy the ID of the running docker container after running the command:
     
     ```
@@ -129,7 +167,7 @@ Follow the steps below to install a Waves node:
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
     | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
-    | seed | The 15-words seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 6. Edit and save the configuration file.<br>
     We may remove all the parameters except the password and the seed of the wallet.<br>
     Set a password and insert a seed Base58 encoded string.<br>

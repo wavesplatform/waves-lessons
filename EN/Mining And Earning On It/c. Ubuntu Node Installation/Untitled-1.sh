@@ -53,6 +53,15 @@ wavesplatform/wavesnode:latest
      -e WAVES_WALLET_PASSWORD="Lancelot77)" \
      wavesplatform/wavesnode:latest
 
+    docker run -d \
+     -v /docker/waves/waves-data:/var/lib/waves \
+     -v /docker/waves/waves-config:/etc/waves \
+     --name my-waves-node \
+     -p 6869:6869 \
+     -e WAVES_WALLET_SEED="K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV2Jj1UgdEzr2dF98PChALCzbkF3Ni1cBFKanXErzuBdJaeFc2etFDBLjdov47qsfTx5bHxx5Uv" \
+     -e WAVES_WALLET_PASSWORD="Lancelot77)" \
+     wavesplatform/wavesnode:latest
+
 http://127.0.0.1:6869/
 
 -----

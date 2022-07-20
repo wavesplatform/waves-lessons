@@ -128,7 +128,7 @@ Follow the steps below to install a Waves node:
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
     | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
-    | seed | The 15-words seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 6. Edit and save the configuration file.<br>
     We may remove all the parameters except the password and the seed of the wallet.<br>
     Set a password and insert a seed Base58 encoded string.<br>
