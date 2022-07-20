@@ -54,7 +54,7 @@ There are 2 necessary elements:
     - Type of the script is dApp;
     - The script will be assigned to an account (not an asset).
     
-    ```
+    ```ride
     {-# STDLIB_VERSION 6 #-}
     {-# CONTENT_TYPE DAPP #-}
     {-# SCRIPT_TYPE ACCOUNT #-}
@@ -75,7 +75,7 @@ There are 2 necessary elements:
 
     <br>
 
-    ```
+    ```ride
     @Callable(i)
     func faucet () = {
         let isKnownCaller =  match getBoolean(this, toBase58String(i.caller.bytes)) {
@@ -105,7 +105,7 @@ There are 2 optional elements:
     In the example below the verifier function allows transfer transactions and denies orders and other transaction types.<br>
     The [match](https://docs.waves.tech/en/ride/operators/match-case) operator is used to specify verification rules depending on the order/transaction type.<br>
 
-    ```
+    ```ride
     @Verifier(tx)
     func verify() = {
         match tx {
@@ -171,7 +171,7 @@ There are 2 ways of making your account a dApp using:
   
 - [Client libraries](#XII.Libraries):<br>
     1. Prepare your [dApp script](https://docs.waves.tech/en/building-apps/smart-contracts/writing-dapps):<br>
-        ```
+        ```ride
         {-# STDLIB_VERSION 3 #-}
         {-# SCRIPT_TYPE ACCOUNT #-}
         {-# CONTENT_TYPE DAPP #-}
@@ -217,6 +217,8 @@ There are 2 ways of making your account a dApp using:
          
          This is how it can be done:<br>
          
+        ```js
+        ```
         ```Java
         // Necessary imports
         import com.wavesplatform.transactions.common.Base64String;
@@ -231,8 +233,6 @@ There are 2 ways of making your account a dApp using:
         
         // Broadcasting the transaction to the node
         node.waitForTransaction(node.broadcast(tx).id());
-        ```
-        ```js
         ```
         ```php
         ```

@@ -47,7 +47,7 @@ In the topic [Programming on RIDE]() basics of the language will be described.
 ### `Selling Or Buying Only BTC` ###
 
 An account with the script below can make sales transactions only in relation to BTC:<br>
-```
+```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
 {-# SCRIPT_TYPE ACCOUNT #-}
@@ -70,7 +70,7 @@ The script below allows making purchases from your account only:
 - With a given price;
 - With the WAVES token.
 
-```
+```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
 {-# SCRIPT_TYPE ACCOUNT #-}
@@ -137,6 +137,8 @@ There are 2 major ways of smart account script installation:
          
          This is how it can be done:<br> 
 
+         ```js
+         ```
          ```Java
          // Necessary imports
          import com.wavesplatform.transactions.common.Base64String;
@@ -149,8 +151,6 @@ There are 2 major ways of smart account script installation:
             
          // Sending the transaction to the node
          node.waitForTransaction(node.broadcast(tx).id());
-         ```
-         ```js
          ```
          ```php
          ```

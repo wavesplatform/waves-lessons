@@ -51,7 +51,7 @@ In the topic [Programming on RIDE]() basics of the language will be described.<b
 
 Once there is a certain height of the blockchain (1610000 blocks), disable all operations with the smart asset. 
 
-```
+```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
 {-# SCRIPT_TYPE ASSET #-}
@@ -64,7 +64,7 @@ height >= targetHeight
 
 Make the asset unburnable, i.e. impossible to have the token amount reduced or the token to be destroyed.<br>
 
-```
+```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
 {-# SCRIPT_TYPE ASSET #-}
@@ -108,7 +108,7 @@ There are 2 major limitations when working with smart asset creation is
 
 There are two major steps to installing a smart asset script:
 1. Prepare the ride script you would like to install on an asset:
-    ```
+    ```ride
     {-# STDLIB_VERSION 6 #-}
     {-# CONTENT_TYPE EXPRESSION #-}
     {-# SCRIPT_TYPE ASSET #-}
@@ -124,6 +124,8 @@ There are two major steps to installing a smart asset script:
     - Send the transaction to the node.
 
     Here is how to make this:<br>
+    ```js
+    ```
     ```Java
     // Necessary imports
     import com.wavesplatform.transactions.common.AssetId;
@@ -146,8 +148,6 @@ There are two major steps to installing a smart asset script:
 
     // Sending transaction to the node
     node.waitForTransaction(node.broadcast(tx).id());
-    ```
-    ```js
     ```
     ```php
     ```
