@@ -94,8 +94,7 @@ Follow the steps below to install a Waves node:
     Please, note, if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.<br>
     The node Installation is supported in both the 8th and the 11th versions.<br>
     ```
-    sudo apt-get update
-    sudo apt-get install openjdk-8-jre
+    brew cask install adoptopenjdk/openjdk/adoptopenjdk8
     ```
 
     Now check the JDK version with the following command:<br>
