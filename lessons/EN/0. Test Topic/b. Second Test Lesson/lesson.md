@@ -20,16 +20,16 @@ Welcome to the 1st Chapter!
 
 ### 1st Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
-It is the first nested chapter.<br>
-![Rock](./images/elixir.png)<br>
+It is the first nested chapter.    
+![Rock](./images/elixir.png)    
 
 #### 1st Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 3rd Semi-chapter of the 1st semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.<br>
-Watch the first video<br>
+Here we're diving one level deeper within the same semi-chapter.    
+Watch the first video    
 [![Watch the first video](https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
 
 ### 2nd Semi-chapter of the 1st Chapter ###
@@ -40,9 +40,9 @@ It is the second nested chapter.
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.<br>
+Here we're diving one level deeper within the same semi-chapter.    
 
-Nested code example (a few languages in a row):<br>
+Nested code example (a few languages in a row):    
 ```java
 package com.wavesplatform.wavesj;
  
@@ -122,17 +122,17 @@ Here we're diving one level deeper within the same semi-chapter.
 
 ### 3rd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
-It is the third nested chapter.<br>
-Watch the second video<br>
+It is the third nested chapter.    
+Watch the second video    
 [![Watch the second video](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/02/dotnet7-preview1.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ---
 
 ## 2nd Chapter ##
-Welcome to the 2nd Chapter!<br>
-Watch the third video<br>
+Welcome to the 2nd Chapter!    
+Watch the third video    
 [![Watch the third video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/34Na4j8AVgA)
-<br>Here it is a separated JAVA code injected:<br>
+    Here it is a separated JAVA code injected:    
 
 ```java
 package com.wavesplatform.wavesj;
@@ -172,5 +172,5 @@ private final URI uri;
 ---
 
 ## 3rd Chapter ##
-Welcome to the 3rd Chapter!<br>
-![cake](./images/shrek.jpeg)<br>
+Welcome to the 3rd Chapter!    
+![cake](./images/shrek.jpeg)    
