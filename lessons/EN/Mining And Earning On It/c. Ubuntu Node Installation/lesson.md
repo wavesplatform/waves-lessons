@@ -4,6 +4,7 @@
   - [Prerequisites](#prerequisites)
   - [Node Installation](#node-installation)
     - [Docker Installation](#docker-installation)
+    - [Deb Package Installation](#deb-package-installation)
     - [Waves Package Installation](#waves-package-installations)
 
 ---
@@ -50,6 +51,8 @@ To install a node, you may use:
 - <ins>[Docker](#docker-installation)</ins>:  
   Out-of-the-box solution easy to launch.  
   It is a ready container with minimum configurations you can run to have your own Waves node.
+- <ins>[Deb Package](#deb-package-installation)</ins>:  
+  The deb package for Ubuntu/Debian users easy to install and use.
 - <ins>[Waves Package](#waves-package-installation-s)</ins>:  
   For advanced users, it is possible to use the package.  
   Using the package is the way to set up a node with multiple configurations. 
@@ -124,6 +127,85 @@ Follow the steps below to install a Waves node:
 
 All done! You have a working node deployed within your docker container!  
 In the next lesson, [node configuration](), we will learn how to setup a configuration file of your node.  
+
+
+### Deb Package Installation ###
+
+Multiple Ubuntu/Debian users may install a node with deb-package.<br>
+Follow the steps below to install a Waves node:
+1. Download the [latest waves deb package](https://github.com/wavesplatform/Waves/releases), `waves_<version number>_all.deb`.
+2. Install it with the following command:
+
+    ```
+    sudo dpkg -i waves_<version number>_all.deb
+    ```
+    For example:  
+    
+    ```
+    sudo dpkg -i waves_1.4.7_all.deb
+    ```
+
+3.  Study the minimum configuration parameters.  
+    It will be necessary to edit the configuration file to run a node.  
+    The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
+    Within this lesson, we don't have a goal to configure them all, as we have the lesson [Node Configurations]() dedicated to it.  
+    As of now, it would be enough to run a node with minimum parameters.  
+
+    | Parameter | Description | Example |
+    | :---- | :---- | :---- |
+    | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
+    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+4. Edit and save the configuration file.  
+    The node configuration file is embedded into the package and unpacked to the folder:    
+    `/usr/share/waves/conf/waves.conf` with symlink to `/etc/waves/waves.conf`  
+
+    To edit the file, run the command:
+
+    ```
+    sudo nano /usr/share/waves/conf/waves.conf 
+    ```
+
+    We may remove all the parameters except the password and the seed of the wallet.  
+    Set a password and insert a seed Base58 encoded string.  
+    It may look something as in the code below:  
+
+    ```
+    waves {
+
+    wallet {
+            # Password to protect wallet file
+            password = "RandomPassword_"
+
+            # Wallet seed as BASE58 string
+            seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+        }
+    }
+    ```
+5. Start a node:
+
+    ```
+    sudo systemctl start waves.service
+    ```
+6. Enable autoload on start:
+
+    ```
+    sudo systemctl enable waves.service
+    ```
+7. Check Waves app logs in journald storage:  
+
+    ```
+    journalctl -u waves.service -f
+    ```
+
+    Please, note it may take a few moments to deploy a node.  
+    Once you see logs about the height of the blockchain, it means everything is working properly:  
+    
+    ```
+    INFO [appender-22] c.w.s.BlockchainUpdaterImpl - New height: 100
+    ```
+Congratulations! You have a working Waves node!  
+In the next lesson, [node configuration](), we will learn how to setup a configuration file of your node.  
+
 
 ### Waves Package Installation ###
 
@@ -209,7 +291,7 @@ Follow the steps below to install a Waves node:
     Once you see logs about the height of the blockchain, it means everything is working properly:
 
     ```
-    INFO [appender-22] c.w.s.BlockchainUpdaterImpl - New height: 5100
+    INFO [appender-22] c.w.s.BlockchainUpdaterImpl - New height: 100
     ```
     
 Congratulations!  

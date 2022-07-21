@@ -4,7 +4,6 @@
   - [Prerequisites](#prerequisites)
   - [Node Installation](#node-installation)
     - [Docker Installation](#docker-installation)
-    - [Deb Package Installation]()
     - [Waves Package Installation](#waves-package-installations)
  
 
