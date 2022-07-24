@@ -12,7 +12,7 @@
 ## Node Structure ##
 
 To make all of our steps of node installation clear, it is better, to begin with, a node structure explanation.  
-Understanding the structure of the node will shed some light on major essences that the node interacts with.  
+Understanding the structure of the node will shed some light on major essences that a node interacts with.  
 
 Under the bonnet, every node has:
 - **<ins>Blockchain database</ins>**:  
@@ -69,7 +69,7 @@ Follow the steps below to install a Waves node:
     ```
     docker pull wavesplatform/wavesnode
     ```
-3. Create folders to store the blockchain copy and a configuration file.  
+3. Create folders to store the blockchain copy and a configuration file:
 
     ```
     sudo mkdir -p /opt/waves-node/{data,conf}
@@ -85,7 +85,7 @@ Follow the steps below to install a Waves node:
       In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.  
     - [Map](https://docs.docker.com/config/containers/container-networking/) the container port to the localhost port.
     - Insert the [Base58 encoded string of the wallet seed](#prerequisites).
-    - Type a password that would be stored locally on your host to protect your encoded seed.
+    - Type a password that would be stored locally on your host to protect the `wallet.dat` file.
 
     ```
      docker run -d \
@@ -154,7 +154,7 @@ Follow the steps below to install a Waves node:
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
     | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
-    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> If you don’t have any existing wallet, you may comment this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log. |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 4. Edit and save the configuration file.  
     The node configuration file is embedded into the package and unpacked to the folder:    
     `/usr/share/waves/conf/waves.conf` with symlink to `/etc/waves/waves.conf`  
@@ -165,14 +165,14 @@ Follow the steps below to install a Waves node:
     sudo nano /usr/share/waves/conf/waves.conf 
     ```
 
-    We may remove all the parameters except the password and the seed of the wallet.  
+    We may remove all the modules (blockchain, rest-api, network) except the wallet module and parameters of the seed and the password.  
     Set a password and insert a seed Base58 encoded string.  
     It may look something as in the code below:  
 
     ```
     waves {
 
-    wallet {
+        wallet {
             # Password to protect wallet file
             password = "RandomPassword_"
 
@@ -258,9 +258,9 @@ Follow the steps below to install a Waves node:
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
     | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
-    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> If you don’t have any existing wallet, you may comment this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log. |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 7. Edit and save the configuration file.  
-    We may remove all the parameters except the password and the seed of the wallet.  
+    We may remove all the modules (blockchain, rest-api, network) except the wallet module and parameters of the seed and the password.   
     Set a password and insert a seed Base58 encoded string.  
     It may look something as in the code below:  
 
