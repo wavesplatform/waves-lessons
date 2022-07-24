@@ -2,8 +2,17 @@
 
 
   - [Node Configuration File Description](#node-configuration-file-description)
-  - [Settings Parameters In The Configuration File](#working-with-the-configuration-file)
-
+  - [Parameters In The Configuration File](#working-with-the-configuration-file)
+  - [Ubuntu Node Configuration](#ubuntu-node-configuration)
+    - [Deb Package Configuration](#deb-package-configuration)
+    - [Docker Configuration](#docker-configuration)
+    - [Waves Package Configuration](#waves-package-configuration)
+  - [MacOS Node Configuration]()
+    - [Docker Configuration](#docker-configuration)
+    - [Waves Package Configuration](#waves-package-configuration)
+  - [Windows Node Configuration]()
+    - [Docker Configuration](#docker-configuration)
+    - [Waves Package Configuration](#waves-package-configuration)
 
 ---
 
@@ -20,7 +29,7 @@ A configuration file is a way of setting up instructions of a how a node should 
   
 ---
 
-## Setting Parameters In The Configuration File ##
+## Parameters In The Configuration File ##
 
 The essential node parameters are wrapped within the `Waves` configuration section.  
 There we can define what modules we would like to configure.  
@@ -62,7 +71,6 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Wallet parameters:  
     | Name | Description | Example |
     | :---- | :---- | :---- |
-    | file | Sets the path to the wallet file.<br>By default, if no parameter is passed, the `wallet.dat` file is stored in `/var/lib/waves/wallet`.  | `/var/lib/waves/wallet` | 
     | password | Sets the password string to protect the wallet file. | RandomPassword_ |
     | seed | Connects your wallet to your node via the wallet seed Base58 econded.<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in REST API using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
@@ -139,33 +147,112 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside, otherwise your node will connect to P2P network using only outgoing connections.<br>If this the port is used by other application, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
 
      Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
+  
 
-Here is the example of the node configuration with all the modules above included:
+## Ubuntu Node Configuration ##
 
-```
-waves {
+### Deb Package Configuration ###
 
-    wallet{
-        password = "RandomPassword_"
-        seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+Follow the instructions below for setting up configurations:
+
+1. Go to the directory with the configuration file:
+   
+   ```
+   sudo cd /usr/share/waves/conf/waves.conf 
+   ```
+
+2.  In the previous lesson, we already added the `waves.wallet` module.  
+    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
+    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+
+    ```
+    waves {
+
+        wallet {
+            password = "RandomPassword_"
+            seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+        }
+
+        blockchain {
+            type = MAINNET
+        }
+
+        rest-api {
+            enable = yes
+            bind-address = "127.0.0.1"
+            port = 6869
+            api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
+        
+
+        network {
+            node-name = "default-node-name"
+            bind-address = "0.0.0.0"
+            port = 6868
+        }
+
     }
+    ```
+3. Save the file and deploy a node once again.
 
-    blockchain {
-        type = MAINNET
+### Docker Configuration ###
+
+1. Once a node has been deployed, a configuration file gets automatically created.  
+   Run the command below to start editing the configuration file:
+   
+   ```
+   sudo nano /opt/waves-node/conf/waves.conf
+   ```
+2. In the previous lesson, we already added the `waves.wallet` module.  
+    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
+    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+
+    ```
+    waves {
+
+        wallet {
+            password = "RandomPassword_"
+            seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+        }
+
+        blockchain {
+            type = MAINNET
+        }
+
+        rest-api {
+            enable = yes
+            bind-address = "127.0.0.1"
+            port = 6869
+            api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
+        
+
+        network {
+            node-name = "default-node-name"
+            bind-address = "0.0.0.0"
+            port = 6868
+        }
+
     }
+    ```
+3. Save the file and deploy a node once again by restarting a container.  
+    Firslty, check the current container's id:  
 
-    rest-api {
-        enable = yes
-        bind-address = "127.0.0.1"
-        port = 6869
-        api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
-    }
+    ```
+    docker ps
+    ```
 
-    network {
-        node-name = "default-node-name"
-        bind-address = "0.0.0.0"
-        port = 6868
-    }
+    The container ID may look like this:
+    
+    ```
+    CONTAINER ID 
+    c3f7dacea0d4
+    ```
 
-}
-```
+    Restart the container:
+    
+    ```
+    docker container restart c3f7dacea0d4
+    ```
+
+### Waves Package Configuration ###
