@@ -106,9 +106,9 @@ Follow the steps below to install a Waves node:
 1. Install Java (OpenJDK 8).  
     Please, note, if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.  
     The node Installation is supported in both the 8th and the 11th versions.  
-    Install OpenJDK8 from this [link](https://access.redhat.com/documentation/en-us/openjdk/8/html/installing_and_using_openjdk_8_for_windows/openjdk8-windows-installation-options).  
+    Install OpenJDK8 as mentioned in the [documentation](https://access.redhat.com/documentation/en-us/openjdk/8/html/installing_and_using_openjdk_8_for_windows/openjdk8-windows-installation-options).  
 
-    Now check the JDK version with the following command:  
+    Check the JDK version with the following command:  
     
     ```
     java -version
@@ -125,20 +125,12 @@ Follow the steps below to install a Waves node:
 2. Create folders to store the blockchain copy and a configuration file.  
 
     ```
-    sudo mkdir -p /opt/waves-node/{data,conf}
-    sudo chown -R $(whoami) /opt/waves-node/
+     md C:\wavesnode\data C:\wavesnode\conf
     ```
-    This command will create 2 folders (data, conf) within `/opt/waves-node` directory.  
-    After this, we give access to the current user logged in the system to writing and reading in the folders.  
-    
-3. Download the [latest version](https://github.com/wavesplatform/Waves/releases) of `waves-all-<version number>.jar` to the folder `/opt/waves`.
-4. Download the [sample](https://github.com/wavesplatform/Waves/blob/master/node/waves-sample.conf) configuration file to `/opt/waves/conf`.  
-5. Launch the terminal, move to the folder, and open the configuration file in the editor:  
-   ```
-   cd /opt/waves/conf
-   sudo nano waves-sample.conf
-   ```
-6. Study the minimum parameters.  
+
+3. Download the [latest version](https://github.com/wavesplatform/Waves/releases) of `waves-all-<version number>.jar` to the folder `C:\wavesnode`.
+4. Download the [sample](https://github.com/wavesplatform/Waves/blob/master/node/waves-sample.conf) configuration file to `C:\wavesnode\conf`.  
+5. Study the minimum parameters.  
     It will be necessary to edit the configuration file to run a node.  
     The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
     Within this lesson, we don't have a goal to configure them all, as we have the lesson [Node Configurations]() dedicated to it.  
@@ -148,7 +140,8 @@ Follow the steps below to install a Waves node:
     | :---- | :---- | :---- |
     | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
     | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
-7. Edit and save the configuration file.  
+6. Edit and save the configuration file.  
+    Open `waves-sample.conf` in the directory `C:\wavesnode\conf`.  
     We may remove all the parameters except the password and the seed of the wallet.  
     Set a password and insert a seed Base58 encoded string.  
     It may look something as in the code below:  
@@ -165,18 +158,18 @@ Follow the steps below to install a Waves node:
         }
     }
     ```
-8. Run the script in the current directory to deploy a node.  
+7. Run the script in the current directory to deploy a node.  
     Replace {*} with the actual file name.
     ```
-    cd /opt/waves
+    cd C:\wavesnode
     java -jar {*}.jar ./conf/{*}.conf
     ```
     For example:
     ```
     cd /opt/waves
-    java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
+    java -jar waves-all-1.4.7.jar .\conf\waves-sample.conf
     ```
-9. Please, note it may take a few moments to deploy a node.  
+8. Please, note it may take a few moments to deploy a node.  
     Once you see logs about the height of the blockchain, it means everything is working properly:
 
     ```
