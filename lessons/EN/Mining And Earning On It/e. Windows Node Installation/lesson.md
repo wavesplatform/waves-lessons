@@ -62,66 +62,40 @@ Feel free to use either of them.
 
 Running a Waves docker container is the easiest way to install a node.  
 Follow the steps below to install a Waves node:
-1. Install [Docker](https://docs.docker.com/desktop/install/windows-install/) on Windows if it wasn't yet installed.
+1. Install [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) on Windows if it wasn't yet installed.
 2. Pull the latest [docker image](https://hub.docker.com/r/wavesplatform/wavesnode) of the node:
     ```
     docker pull wavesplatform/wavesnode
     ```
-3. Create folders to store the blockchain copy and a configuration file.  
+3. Create folders to store the blockchain copy and a configuration file:
 
     ```
-    C:\waves-node\data,conf
+    md C:\wavesnode\data C:\wavesnode\conf
     ```
-    This command will create 2 folders (data, conf) within `C:\waves-node\waves-node` directory.  
-4. Run a docker container.  
-   Within this docker container, it is necessary to:
-    - Create [docker volumes](https://docs.docker.com/storage/volumes/) to "connect" the data we store locally on our host with the storage of the container.  
-      Do it for both directories that store the blockchain data (`C:\waves-node\waves-node\data`) and the configuration file (`C:\waves-node\waves-node\conf`).  
-      It will "link" the data from your host to the container's storage to `/var/lib/waves` for the blockchain data and `/etc/waves` for the configuration file.  
-      In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.  
-      <!-- The reason why we are doing it is that we risk to lose all the data if everything is stored within the container's storage only.   -->
-    - [Map](https://docs.docker.com/config/containers/container-networking/) the container port to the localhost port.
-    - Insert the [Base58 encoded string of the wallet seed](#prerequisites).
-    - Type a password that would be stored locally on your host to protect your encoded seed.
+4. Open the Docker Desktop app in the "Images" section and click "Run":
+    ![](./images/dockerwin.png)
+5. The app will require you to fill in settings of the container that is about to run:
+    | ![](./images/dockerwin1.png) | ![](./images/dockerwin2.png) | 
+    | :-----: | :-----: |
 
-    ```
-     docker run -d \
-     -v /opt/waves-node/data:/var/lib/waves \
-     -v /opt/waves-node/conf:/etc/waves \
-     --name my-waves-node \
-     -p 6869:6869 \
-     -e WAVES_WALLET_SEED="insert your account seed Base58 encoded that you saved earlier" \
-     -e WAVES_WALLET_PASSWORD="type a password" \
-     wavesplatform/wavesnode:latest
-    ```
+    It will be necessary to fill the following fields:
 
-5. To make sure everything is working properly, we can check logs.  
-    Copy the ID of the running docker container after running the command:
-    
-    ```
-    docker ps
-    ```
-    It may look something like this:   
-    ```
-    CONTAINER ID 
-    c3f7dacea0d4
-    ```
-
-    Write the command to see the logs of the running container with the container ID:
-
-    ```
-    docker logs c3f7dacea0d4
-    ```
-
+    | Field Name | Description | Example |
+    | :----- | :----- | :----- |
+    | Container Name | Gives a name to a Docker container. | wavesnode |
+    | Host Port | The port that will enable the REST API service on your localhos, for example, 127.0.0.1:6869.<br>In the next lesson, [Node Configuration](), we will configure REST API of your node.  | 6869 |
+    | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data we store locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.| Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
+6.  Grant access to the folders.  
+    A notification regarding access request to `C:\wavesnode\data` and `C:\wavesnode\conf` may pop up.  
+7.  In the "Containers" section, make sure the status of the container is "Running". 
+8.  Click on the container name:
+    ![](./images/dockerwin3.png)
     You will see multiple lines of logs.  
     Please, note it may take a few moments to deploy a node.  
+    ![](./images/dockerwin4.png)
     Once you see notifications about the height of the blockchain, it means everything is working properly:
 
-    ```
-    INFO [appender-25] c.w.s.BlockchainUpdaterImpl - New height: 100
-    ```
     
-
 All done! You have a working node deployed within your docker container!  
 In the next lesson, [node configuration](), we will learn how to setup a configuration file of your node.  
 

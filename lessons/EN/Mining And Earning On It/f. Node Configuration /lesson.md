@@ -299,3 +299,117 @@ Follow the instructions below for setting up configurations:
     ```
 3. Save the file and deploy a node once again.
 
+---
+
+## MacOS Node Configuration ##
+
+
+### Docker Node Configuration ###
+
+1. Once a node has been deployed, a configuration file gets automatically created.  
+   Run the command below to start editing the configuration file:
+   
+   ```
+   sudo nano /opt/waves-node/conf/waves.conf
+   ```
+2.  Edit the configuration file.  
+    In the previous lesson, we already added the `waves.wallet` module.  
+    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
+    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+
+    ```
+    waves {
+
+        wallet {
+            password = "RandomPassword_"
+            seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+        }
+
+        blockchain {
+            type = MAINNET
+        }
+
+        rest-api {
+            enable = yes
+            bind-address = "127.0.0.1"
+            port = 6869
+            api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
+        
+
+        network {
+            node-name = "default-node-name"
+            bind-address = "0.0.0.0"
+            port = 6868
+        }
+
+    }
+    ```
+3. Save the file and deploy a node once again by restarting a container.  
+    Firslty, check the current container's id:  
+
+    ```
+    docker ps
+    ```
+
+    The container ID may look like this:
+    
+    ```
+    CONTAINER ID 
+    c3f7dacea0d4
+    ```
+
+    Restart the container:
+    
+    ```
+    docker container restart c3f7dacea0d4
+    ```
+
+### Waves Package Configuration ###
+
+1. Go to the directory with the configuration file:
+   
+   ```
+   sudo cd /opt/waves-node/conf
+   ```
+2. Edit the configuration file.  
+   In the previous lesson, we already added the `waves.wallet` module.  
+   Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+   Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
+   You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+
+    ```
+    waves {
+
+        wallet {
+            password = "RandomPassword_"
+            seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
+        }
+
+        blockchain {
+            type = MAINNET
+        }
+
+        rest-api {
+            enable = yes
+            bind-address = "127.0.0.1"
+            port = 6869
+            api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
+        
+
+        network {
+            node-name = "default-node-name"
+            bind-address = "0.0.0.0"
+            port = 6868
+        }
+
+    }
+    ```
+3. Save the file and deploy a node once again.
+
+
+## MacOS Node Configuration ##
+
+### Docker Node Configuration ###
+
+### Waves Package Configuration ###
