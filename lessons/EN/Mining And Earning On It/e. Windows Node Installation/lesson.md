@@ -6,20 +6,19 @@
     - [Docker Installation](#docker-installation)
     - [Waves Package Installation](#waves-package-installations)
  
-
 ---
 
 ## Node Structure ##
 
-To make all of our steps of node installation clear, it is better, to begin with, a node structure explanation.  
+To clarify all of our node installation steps, it is better, to begin with, a node structure explanation.  
 Understanding the structure of the node will shed some light on major essences that the node interacts with.  
 
 Under the bonnet, every node has:
 - **<ins>Blockchain database</ins>**:  
     All the nodes of the Waves blockchain are intended to ensure [decentralization]().  
-    Therefore, an indentical copy of all the blockchain data needs to be stored in every single node.  
+    Therefore, an identical copy of all the blockchain data must be stored in every node.  
 - **<ins>Configuration file</ins>**:  
-    A configuration file is a set of instructions of how a node should be working.  
+    A configuration file is a set of instructions on how a node should work.  
     In the configuration file, we can define multiple parameters, for instance, which [network]() to connect to.
 
 ![](./images/nodestr.png)
@@ -28,7 +27,7 @@ Under the bonnet, every node has:
 
 ## Prerequisites ##
 
-Before starting installation, make sure your Waves account has a [generating balance]() at least 1000 WAVES.  
+Before starting the installation, make sure your Waves account has a [generating balance]() at least 1000 WAVES.  
 Also, it would be necessary to keep on hand a Base58 encoded string of the seed phrase of your account.  
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
@@ -49,7 +48,7 @@ Here is how you can encode a seed phrase to Base58:
 
 To install a node, you may use:
 - <ins>[Docker](#docker-installation)</ins>:  
-  Out-of-the-box solution easy to launch.  
+  It is an out-of-the-box solution easy to launch.  
   It is a ready container with minimum configurations you can run to have your own Waves node.
 - <ins>[Waves Package](#waves-package-installation-s)</ins>:  
   For advanced users, it is possible to use the package.  
@@ -74,8 +73,8 @@ Follow the steps below to install a Waves node:
     ```
 4. Open the Docker Desktop app in the "Images" section and click "Run":
     ![](./images/dockerwin.png)
-5. The app will require you to fill in settings of the container that is about to run:
-    | ![](./images/dockerwin1.png) | ![](./images/dockerwin2.png) | 
+5. The app will require you to fill in the settings of the container that is about to run:
+    | ![](./images/dockerwin1.png) | ![](./images/dockerwin2.jpeg) | 
     | :-----: | :-----: |
 
     It will be necessary to fill the following fields:
@@ -83,9 +82,9 @@ Follow the steps below to install a Waves node:
     | Field Name | Description | Example |
     | :----- | :----- | :----- |
     | Container Name | Gives a name to a Docker container. | wavesnode |
-    | Host Port | The port that will enable the REST API service on your localhos, for example, 127.0.0.1:6869.<br>In the next lesson, [Node Configuration](), we will configure REST API of your node.  | 6869 |
-    | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data we store locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.| Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
-    | Environment Variables<br>Variable<br>WAVES_WALLET_PASSWORD | The password you are setting up locally on your host.<br>This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `RandomPassword_` |
+    | Host Port | The port that will enable the REST API service on your localhost, for example, 127.0.0.1:6869.<br>In the next lesson, [Node Configuration](), we will configure REST API of your node.  | 6869 |
+    | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data stored locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.| Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
+    | Environment Variables<br>Variable<br>WAVES_WALLET_PASSWORD | The password you are setting up locally on your host.<br>This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose access to the account. | `RandomPassword_` |
     | Environment Variables<br>Variable<br>WAVES_WALLET_SEED | The seed phrase of your Waves account encoded to Base58 string. | `DCvnnTiVt77TybcCoqVogG2`|
 6.  Grant access to the folders.  
     A notification regarding access request to `C:\wavesnode\data` and `C:\wavesnode\conf` may pop up.  
@@ -99,14 +98,14 @@ Follow the steps below to install a Waves node:
 
     
 All done! You have a working node deployed within your docker container!  
-In the next lesson, [node configuration](), we will learn how to setup a configuration file of your node.  
+In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
 ### Waves Package Installation ###
 
 Waves node installation via package is a more advanced way of node deployment.  
 Follow the steps below to install a Waves node:
 1. Install Java (OpenJDK 8).  
-    Please, note, if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.  
+    Please, note, that if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.  
     The node Installation is supported in both the 8th and the 11th versions.  
     Install OpenJDK8 as mentioned in the [documentation](https://access.redhat.com/documentation/en-us/openjdk/8/html/installing_and_using_openjdk_8_for_windows/openjdk8-windows-installation-options).  
 
@@ -140,8 +139,8 @@ Follow the steps below to install a Waves node:
 
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
-    | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose the access to the account. | `password = "RandomPassword_"` |
-    | seed | The seed phrase of your Waves account encoded to Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose access to the account. | `password = "RandomPassword_"` |
+    | seed | The seed phrase of your Waves account encoded to the Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 6. Edit and save the configuration file.  
     Open `waves-sample.conf` in the directory `C:\wavesnode\conf`.  
     We may remove all the parameters except the password and the seed of the wallet.  
@@ -155,20 +154,20 @@ Follow the steps below to install a Waves node:
             # Password to protect wallet file
             password = "RandomPassword_"
 
-            # Wallet seed as BASE58 string
+            # Wallet seed as a BASE58 string
             seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
         }
     }
     ```
 7. Run the script in the current directory to deploy a node.  
-    Replace {*} with the actual file name.
+    Replace {*} with the actual file name:
     ```
     cd C:\wavesnode
-    java -jar {*}.jar ./conf/{*}.conf
+    java -jar {*}.jar .\conf\{*}.conf
     ```
     For example:
     ```
-    cd /opt/waves
+    cd C:\wavesnode
     java -jar waves-all-1.4.7.jar .\conf\waves-sample.conf
     ```
 8. Please, note it may take a few moments to deploy a node.  
@@ -181,4 +180,4 @@ Follow the steps below to install a Waves node:
 Congratulations!  
 You would have a working node deployed!
     
-In the next lesson, [node configuration](), we will learn how to setup a configuration file of your node.  
+In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
