@@ -259,8 +259,8 @@ Follow the instructions below for setting up configurations:
    sudo nano /opt/waves-node/conf/waves.conf
    ```
 2.  Edit the configuration file.  
-    [In the previous lesson](), we deployed a docker container with the Base58 encoded seed and the password as environment variables.
-    It looked something like this but with your own seed and password.  
+    [In the previous lesson](), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
+    It looked something like this but with your own seed and password: 
     
     ```
     -e WAVES_WALLET_SEED="K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV" \
@@ -268,11 +268,13 @@ Follow the instructions below for setting up configurations:
     ```
     
     As of now, we will write these details in the configuration file within the `waves.wallet` module.  
-    Make sure to add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.  
+    Make sure to add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.    
+
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
-    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+    In the chapter [API Key Of Your Node](#api-key-of-your-node), an instruction of how to generate the api key hash was given.  
+    Insert the api key hash in the `rest-api.api-key-hash` parameter.
       
-    After the edit, the `waves.conf` file can look like this:  
+    After the edit, the `waves.conf` file can look something like this:  
 
     ```
     waves {
@@ -309,13 +311,26 @@ Follow the instructions below for setting up configurations:
     For example, you can try a:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods don't require any additional authorization.  
-        This method, `/addresses/`, will return the address of your node wallet.  
-        For example: 
+        For example, `/addresses/` method, will return the address of your node wallet.  
         ![](./images/swaggadd.png) 
-    - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig)  
-        All private methods require authorization with 
-        This method, `/configInfo`, will return configurations of the currently running node. 
-
+    - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
+        All private methods require authorization with api key and api key hash.    
+        Kindly note that the API key hash that you inserted in the configuration file is not equal to the API key.  
+        The API key hash is the random string you typed in the [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) method.  
+        In case you do not remember what API key and API key hash are, please, check [API Key Of Your Node](#api-key-of-your-node).  
+          
+        To authorize for private method usage:
+        1. Click "Authorize":
+            ![](./images/swagg6.png)
+        2. Enter your API key (not the API hash) and click "Authorize":
+            ![](./images/swagg7.png)
+            Please, note the API key on the screen is an example.  
+            You need to use your own API key.
+        3. Click "Close":
+            ![](./images/swagg8.png)
+        4. Now you can use private methods of your node.  
+            For example, [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
+            ![](./images/swagg9.png)   
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
