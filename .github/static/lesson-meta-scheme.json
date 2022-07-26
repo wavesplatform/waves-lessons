@@ -19,6 +19,9 @@
     },
     "doclink": {
       "$ref": "#/definitions/url"
+    },
+    "hashtags": {
+      "$ref": "#/definitions/hashtags"
     }
   },
   "definitions": {
@@ -33,14 +36,21 @@
     "url": {
       "type": "string",
       "pattern": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "hashtags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/nonEmptyString"
+      }
     }
   },
   "required": [
     "guid",
-    "topicGuid",
     "title",
     "description",
-    "lessonNum",
-    "doclink"
+    "number",
+    "doclink",
+    "hashtags"
   ]
 }
