@@ -172,21 +172,25 @@ There you can access different methods that will allow you:
 
 These methods can be:
 - **<ins>Public</ins>**:  
-    Available to everyone.  
-    These methods can be invoked by everyone, and they do not operate with any private data of the node owner.
-- **<ins>Private</ins>**:
-    Available only to node owners.
+    Methods available to everyone. Public methods do not:
+    - Operate with any private data of the node owner;
+    - Invoke any methods that would make an action with any node, like stopping a node or connecting to a peer.  
+  
+    For example, [`/blocks/height`](https://nodes.wavesnodes.com/api-docs/index.html#/blocks/getHeight) is a method that checks current height of the blockchain.  
+    This information is not private and do not make any action with a node, therefore it doesn't require any additional authorization. 
+- **<ins>Private</ins>**:  
+    Methods available only to node owners.  
+    These methods can be invoked only by node owners via API key and API key hash authorization.  
+    For example, [`/debug/configInfo`](https://nodes.wavesnodes.com/api-docs/index.html#/debug/getConfig) is a method that checks the configuration of the currently running node.
 
-
-As we mentioned in the REST API blockchain module description, the module has `api-key-hash` parameter.  
-
-
-Here is how you can generate the API Key:
+The chapter goal is to get these API key and API key hash to be able to operate with private methods of your node.  
+Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interfance.
 2. Click "Try it out":  
     ![](./images/swagg1.png)  
-3. Enter a random string value and click "Execute":
+3. Enter any random string value and click "Execute":
     ![](./images/swagg2.png)  
+    Please, do not use example in the screenshot, as it is given for demonstration purpose only.
 4. In the response section below, you will receive a hash:
     ![](./images/swagg3.png)  
 5. Save both the original phrase you entered (api key) and the hash (api key hash) of it as we will use them for interaction with private node methods in this lesson.
