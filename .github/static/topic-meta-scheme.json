@@ -11,8 +11,20 @@
     "description": {
       "$ref": "#/definitions/nonEmptyString"
     },
+    "number": {
+      "type": "integer"
+    },
     "hashtags": {
       "$ref": "#/definitions/hashtags"
+    },
+    "ref1": {
+      "$ref": "#/definitions/uuidOrEmptyString"
+    },
+    "ref2": {
+      "$ref": "#/definitions/uuidOrEmptyString"
+    },
+    "ref3": {
+      "$ref": "#/definitions/uuidOrEmptyString"
     }
   },
   "definitions": {
@@ -30,12 +42,20 @@
       "items": {
         "$ref": "#/definitions/nonEmptyString"
       }
+    },
+    "uuidOrEmptyString": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     }
   },
   "required": [
     "guid",
     "title",
     "description",
-    "hashtags"
+    "number",
+    "hashtags",
+    "ref1",
+    "ref2",
+    "ref3"
   ]
 }
