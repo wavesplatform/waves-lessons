@@ -11,8 +11,20 @@
     "description": {
       "$ref": "#/definitions/nonEmptyString"
     },
+    "number": {
+      "type": "integer"
+    },
     "hashtags": {
       "$ref": "#/definitions/hashtags"
+    },
+    "ref1": {
+      "$ref": "#/definitions/uuid"
+    },
+    "ref2": {
+      "$ref": "#/definitions/uuid"
+    },
+    "ref3": {
+      "$ref": "#/definitions/uuid"
     }
   },
   "definitions": {
@@ -36,6 +48,10 @@
     "guid",
     "title",
     "description",
-    "hashtags"
+    "number",
+    "hashtags",
+    "ref1",
+    "ref2",
+    "ref3"
   ]
 }
