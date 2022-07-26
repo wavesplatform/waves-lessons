@@ -90,27 +90,16 @@ Follow the steps below to install a Waves node:
     Within this docker container, we:
     - Create [docker volumes](https://docs.docker.com/storage/volumes/) to "connect" the data we store locally on our host with the storage of the container.  
       Do it for both directories that store the blockchain data (`opt/waves-node/data`) and the configuration file (`/opt/waves-node/conf`).  
-      It will "link" the data from your host to the container's storage to `/var/lib/waves` for the blockchain data and `/etc/waves` for the configuration file.  
-      In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.  
+      It will "link" the data from your host to the container's storage to `/var/lib/waves` for the blockchain data and `/etc/waves` for the configuration file.   
+      In case your docker container gets accidentally deleted, your node configurations and the blockchain copy will not be lost.  
+      You will be able to deploy a node once again with the stored locally data, so the progress will be resumed right from where it has been stopped.
     - [Map](https://docs.docker.com/config/containers/container-networking/) the container port to the localhost port.
     - Insert the [Base58 encoded string of the wallet seed](#prerequisites).
     - Type a password that would be stored locally on your host to protect the `wallet.dat` file.
-5. To make sure everything is working properly, we can check logs.  
-    Copy the ID of the running docker container after running the command:
+5. To make sure everything is working properly, check logs of the running docker container:
     
     ```
-    docker ps
-    ```
-    It may look something like this:   
-    ```
-    CONTAINER ID 
-    c3f7dacea0d4
-    ```
-
-    Write the command to see the logs of the running container with the container ID:
-
-    ```
-    docker logs c3f7dacea0d4
+    docker logs waves-node
     ```
 
     You will see multiple lines of logs.  
@@ -175,8 +164,8 @@ Follow the steps below to install a Waves node:
 
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
-    | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose access to the account. | `password = "RandomPassword_"` |
-    | seed | The seed phrase of your Waves account encoded to a Base58 string.<br>If you don’t have an existing wallet, you may comment this parameter out and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.  |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | password | The password you are setting up locally on your host.<br> This password will encode your seed Base58 string within the `wallet.dat` file. | `password = "RandomPassword_"` |
+    | seed | The seed phrase of your Waves account [encoded to a Base58 string](#prerequisites).<br>If you don’t have an existing wallet, you may comment this parameter out and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.  |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 7. Edit and save the configuration file.  
     We may remove all the modules (blockchain, rest-api, network) except the wallet module and parameters of the seed and the password.  
     Set a password and insert a seed Base58 encoded string.  

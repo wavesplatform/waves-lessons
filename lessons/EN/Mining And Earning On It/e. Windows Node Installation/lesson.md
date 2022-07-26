@@ -83,8 +83,8 @@ Follow the steps below to install a Waves node:
     | :----- | :----- | :----- |
     | Container Name | Gives a name to a Docker container. | wavesnode |
     | Host Port | The port that will enable the REST API service on your localhost, for example, 127.0.0.1:6869.<br>In the next lesson, [Node Configuration](), we will configure REST API of your node.  | 6869 |
-    | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data stored locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case you would stop or restart the container, the blockchain copy and the configuration file will be cached locally on your computer, so no data will be lost after re-start.| Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
-    | Environment Variables<br>Variable<br>WAVES_WALLET_PASSWORD | The password you are setting up locally on your host.<br>This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose access to the account. | `RandomPassword_` |
+    | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data stored locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case your docker container gets accidentally deleted, your node configurations and the blockchain copy will not be lost.<br>You will be able to deploy a node once again with the stored locally data, so the progress will be resumed right from where it has been stopped. | Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
+    | Environment Variables<br>Variable<br>WAVES_WALLET_PASSWORD | The password you are setting up locally on your host.<br>This password will encode your seed Base58 string within the `wallet.dat` file. | `RandomPassword_` |
     | Environment Variables<br>Variable<br>WAVES_WALLET_SEED | The seed phrase of your Waves account encoded to Base58 string. | `DCvnnTiVt77TybcCoqVogG2`|
 6.  Grant access to the folders.  
     A notification regarding access request to `C:\wavesnode\data` and `C:\wavesnode\conf` may pop up.  
@@ -139,8 +139,8 @@ Follow the steps below to install a Waves node:
 
     | Parameter | Description | Example |
     | :---- | :---- | :---- |
-    | password | The password you are setting up locally on your host.<br> This password will be stored locally within the `wallet.dat` file.<br>Please, save this password to not to lose access to the account. | `password = "RandomPassword_"` |
-    | seed | The seed phrase of your Waves account encoded to the Base58 string. <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
+    | password | The password you are setting up locally on your host.<br> This password will encode your seed Base58 string within the `wallet.dat` file. | `password = "RandomPassword_"` |
+    | seed | The seed phrase of your Waves account [encoded to the Base58 string](#prerequisites). <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 6. Edit and save the configuration file.  
     Open `waves-sample.conf` in the directory `C:\wavesnode\conf`.  
     We may remove all the parameters except the password and the seed of the wallet.  
