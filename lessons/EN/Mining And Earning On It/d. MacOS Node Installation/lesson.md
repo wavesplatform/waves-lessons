@@ -174,7 +174,7 @@ Follow the steps below to install a Waves node:
     ```
     waves {
 
-    wallet {
+        wallet {
             # Password to protect wallet file
             password = "RandomPassword_"
 

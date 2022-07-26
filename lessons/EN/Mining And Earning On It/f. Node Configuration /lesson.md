@@ -33,7 +33,7 @@ A configuration file is a way of setting up instructions of a how a node should 
 
 All the node modules are wrapped within the `Waves` configuration section.  
 There we can define what modules we would like to configure.  
-In the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf), we have 4 of them included (wallet, blockchain, rest-api, network):  
+In the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf), we have 4 of them included (`wallet`, `blockchain`, `rest-api`, `network`):  
 
 ```
 waves {
@@ -114,15 +114,13 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     }
     ```
 
-    Right after the node is deployed, you would be able to access the REST API by `127.0.0.1:6869` address in your browser.  
-
     REST API parameters:  
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note, it's not recommended to change the default value.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
-    | api-key-hash | Hash of the API key to access private endpoints.<br>To generate the API key, please, check details in the [article](https://docs.waves.tech/en/waves-node/node-api/api-key2). | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
+    | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
     Read more about [REST API Settings](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
 - **<ins>[Network](https://docs.waves.tech/en/waves-node/node-configuration#network-settings)</ins>**  
@@ -147,7 +145,51 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside, otherwise your node will connect to P2P network using only outgoing connections.<br>If this the port is used by other application, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
 
      Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
-  
+
+## API Key Of Your Node ##  
+
+After the REST API module configured and node deployed, you will be able to access the Swagger interface for blockchain interaction.  
+There you can access different methods that will allow you:
+- Read the blockchain data:
+    - `Account data`  
+        (balances, data storage entries, aliases, scripts assigned)
+    - `Token data`  
+        (parameters, distribution by accounts)
+    - `Active leases`
+    - `Blocks`
+    - `Transactions`
+    - `Other data`  
+        (feature activation status, block reward voting status, etc.)
+- Operate with transactions: 
+    - `Broadcast signed transactions`
+    - `Validate transactions`
+    - `Check status of transactions`
+- Use utilities:
+    -  `Generate an address from a public key`
+    -  `Generate a random seed`
+    -  `Calculate hashes` 
+    -  `Etc`
+
+These methods can be:
+- **<ins>Public</ins>**:  
+    Available to everyone.  
+    These methods can be invoked by everyone, and they do not operate with any private data of the node owner.
+- **<ins>Private</ins>**:
+    Available only to node owners.
+
+
+As we mentioned in the REST API blockchain module description, the module has `api-key-hash` parameter.  
+
+
+Here is how you can generate the API Key:
+1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interfance.
+2. Click "Try it out":  
+    ![](./images/swagg1.png)  
+3. Enter a random string value and click "Execute":
+    ![](./images/swagg2.png)  
+4. In the response section below, you will receive a hash:
+    ![](./images/swagg3.png)  
+5. Save both the original phrase you entered (api key) and the hash (api key hash) of it as we will use them for interaction with private node methods in this lesson.
 
 ## Ubuntu Node Configuration ##
 
@@ -162,7 +204,7 @@ Follow the instructions below for setting up configurations:
    ```
 
 2.  Edit the configuration file.  
-    In the previous lesson, we already added the `waves.wallet` module.  
+    [In the previous lesson](), we already added the `waves.wallet` module.  
     Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
     You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
@@ -200,6 +242,9 @@ Follow the instructions below for setting up configurations:
     ```
     sudo systemctl restart waves.service
     ```
+4. Check 
+
+
 
 ### Docker Configuration ###
 
@@ -210,14 +255,23 @@ Follow the instructions below for setting up configurations:
    sudo nano /opt/waves-node/conf/waves.conf
    ```
 2.  Edit the configuration file.  
-    In the previous lesson, we already added the `waves.wallet` module.  
-    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    [In the previous lesson](), we deployed a docker container with the Base58 encoded seed and the password as environment variables.
+    It looked something like this but with your own seed and password.  
+    
+    ```
+    -e WAVES_WALLET_SEED="K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV" \
+    -e WAVES_WALLET_PASSWORD="RandomPassword_"
+    ```
+    
+    As of now, we will write these details in the configuration file within the `waves.wallet` module.  
+    Make sure to add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.  
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
     You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+      
+    After the edit, the `waves.conf` file can look like this:  
 
     ```
     waves {
-
         wallet {
             password = "RandomPassword_"
             seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"
@@ -229,17 +283,16 @@ Follow the instructions below for setting up configurations:
 
         rest-api {
             enable = yes
-            bind-address = "127.0.0.1"
+            bind-address = "0.0.0.0"
             port = 6869
             api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
-        
+        }
 
         network {
             node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
-
     }
     ```
 3. Save the file and deploy a node once again by restarting a container:
@@ -247,6 +300,21 @@ Follow the instructions below for setting up configurations:
     ```
     docker container restart waves-node
     ```
+4. Check the [REST API interface](http://localhost:6869/api-docs/index.html) of your deployed node.  
+    There you would be able to see multiple methods to interact with your node.  
+    For example, you can try a:
+    - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
+        All public methods don't require any additional authorization.  
+        This method, `/addresses/`, will return the address of your node wallet.  
+        For example: 
+        ![](./images/swaggadd.png) 
+    - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig)  
+        All private methods require authorization with 
+        This method, `/configInfo`, will return configurations of the currently running node. 
+
+      
+    Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
+
 
 ### Waves Package Configuration ###
 
@@ -256,10 +324,10 @@ Follow the instructions below for setting up configurations:
    sudo cd /opt/waves-node/conf
    ```
 2. Edit the configuration file.  
-   In the previous lesson, we already added the `waves.wallet` module.  
-   Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
-   Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
-   You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
+    [In the previous lesson](), we already added the `waves.wallet` module.  
+    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
+    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
 
     ```
     waves {
@@ -292,14 +360,14 @@ Follow the instructions below for setting up configurations:
     Replace {*} with the actual file name:
 
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar {*}.jar ./conf/{*}.conf
     ```
 
     For example:
 
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
     ```
 ---
@@ -315,8 +383,8 @@ Follow the instructions below for setting up configurations:
    ```
    sudo nano /opt/waves-node/conf/waves.conf
    ```
-2.  Edit the configuration file.  
-    In the previous lesson, we already added the `waves.wallet` module.  
+2. Edit the configuration file.  
+    [In the previous lesson](), we already added the `waves.wallet` module.  
     Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
     You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
@@ -362,7 +430,7 @@ Follow the instructions below for setting up configurations:
    sudo cd /opt/waves-node/conf
    ```
 2. Edit the configuration file.  
-   In the previous lesson, we already added the `waves.wallet` module.  
+   [In the previous lesson](), we already added the `waves.wallet` module.  
    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
@@ -398,14 +466,14 @@ Follow the instructions below for setting up configurations:
     Replace {*} with the actual file name:
 
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar {*}.jar ./conf/{*}.conf
     ```
 
     For example:
     
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
     ```
 
@@ -416,7 +484,7 @@ Follow the instructions below for setting up configurations:
 
 1. Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`)
 2. Edit the configuration file.  
-   In the previous lesson, we already added the `waves.wallet` module.  
+   [In the previous lesson](), we already added the `waves.wallet` module.  
    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
@@ -450,13 +518,13 @@ Follow the instructions below for setting up configurations:
     ```
 3. Restart the docker container:
     
-    ![](./images/wavesdocker.png)
+    ![](./images/noderestart.png)
 
 ### Waves Package Configuration ###
 
 1. Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`)
 2. Edit the configuration file.  
-   In the previous lesson, we already added the `waves.wallet` module.  
+   [In the previous lesson](), we already added the `waves.wallet` module.  
    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
    You can [generate the API key](https://docs.waves.tech/en/waves-node/node-api/api-key#set-api-key) and insert it in the `rest-api.api-key-hash` parameter.
@@ -488,4 +556,17 @@ Follow the instructions below for setting up configurations:
 
     }
     ```
-3. Save the file and deploy a node once again.
+3. Save the file and deploy a node once again.  
+    Replace {*} with the actual file name:  
+
+    ```
+    cd C:\wavesnode
+    java -jar {*}.jar .\conf\{*}.conf
+    ```
+
+    For example:  
+
+    ```
+    cd C:\wavesnode
+    java -jar waves-all-1.4.7.jar .\conf\waves-sample.conf
+    ```
