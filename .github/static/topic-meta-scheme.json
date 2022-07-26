@@ -18,13 +18,13 @@
       "$ref": "#/definitions/hashtags"
     },
     "ref1": {
-      "$ref": "#/definitions/uuid"
+      "$ref": "#/definitions/uuidOrEmptyString"
     },
     "ref2": {
-      "$ref": "#/definitions/uuid"
+      "$ref": "#/definitions/uuidOrEmptyString"
     },
     "ref3": {
-      "$ref": "#/definitions/uuid"
+      "$ref": "#/definitions/uuidOrEmptyString"
     }
   },
   "definitions": {
@@ -42,6 +42,10 @@
       "items": {
         "$ref": "#/definitions/nonEmptyString"
       }
+    },
+    "uuidOrEmptyString": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     }
   },
   "required": [
