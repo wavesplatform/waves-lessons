@@ -2,7 +2,7 @@
 
 
   - [Node Configuration File Description](#node-configuration-file-description)
-  - [Parameters In The Configuration File](#working-with-the-configuration-file)
+  - [Modules In The Configuration File](#modules-in-the-configuration-file)
   - [Ubuntu Node Configuration](#ubuntu-node-configuration)
     - [Deb Package Configuration](#deb-package-configuration)
     - [Docker Configuration](#docker-configuration)
@@ -18,9 +18,9 @@
 
 ## Node Configuration File Description ##
 
-As we previosuly mentioned in the [Node Structure]() chapter, every node has a:
-- Configuration file;
-- Blockchain copy.
+As we previosuly mentioned in the [Node Structure]() chapter, every node has:
+- A configuration file;
+- The blockchain copy.
   
 Within this lesson, we are going to work with the configuration file of node.  
 In the [next lesson](), we will talk about node synchronization with the Waves blockchain.  
@@ -29,11 +29,11 @@ A configuration file is a way of setting up instructions of a how a node should 
   
 ---
 
-## Parameters In The Configuration File ##
+## Modules In The Configuration File ##
 
-The essential node parameters are wrapped within the `Waves` configuration section.  
+All the node modules are wrapped within the `Waves` configuration section.  
 There we can define what modules we would like to configure.  
-In the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf), we have 4 modules included (wallet, blockchain, rest-api, network):  
+In the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf), we have 4 of them included (wallet, blockchain, rest-api, network):  
 
 ```
 waves {
@@ -57,7 +57,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 - **<ins>[Wallet](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings)</ins>**  
     Built in node wallet parameters.  
     In the wallet module, you can configure parameters of the [wallet built in the Waves node](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet).  
-    [Previously](), we defined the seed of the wallet Base58 encoded and set a password to protect the `wallet.dat` file:
+    [Previously](), we defined the seed of the wallet Base58 encoded and set a password to encode the seed in `wallet.dat` file:
     
     ```
     waves {
@@ -71,8 +71,8 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Wallet parameters:  
     | Name | Description | Example |
     | :---- | :---- | :---- |
-    | password | Sets the password string to protect the wallet file. | RandomPassword_ |
-    | seed | Connects your wallet to your node via the wallet seed Base58 econded.<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in REST API using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
+    | password | This password will encode your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
+    | seed | Connects your wallet to your node via the [wallet seed Base58 econded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in REST API using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
     Read more about [Wallet Settings](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings).
 - **<ins>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</ins>**  
@@ -132,7 +132,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     ```
     waves {
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
@@ -142,7 +142,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Network parameters:  
     | Name | Description | Example |
     | :---- | :---- | :---- |
-    | node-name | Sets the name of your node visible to other participants of the P2P network.<br>The name is transmitted during initial handshake. | default-node-name | 
+    | node-name | Sets the name of your node visible to other participants of the P2P network.<br>The name is transmitted during initial handshake. | waves-node | 
     | bind-address | Sets the IP address of local network interface on which Waves Node will accept incoming connections.<br>By default, node binds to 0.0.0.0 that means that it will listen on all available network adapters. | 0.0.0.0 | 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside, otherwise your node will connect to P2P network using only outgoing connections.<br>If this the port is used by other application, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
 
@@ -187,14 +187,19 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
 
     }
     ```
-3. Save the file and deploy a node once again.
+3. Save the file and deploy a node once again.  
+    To restart the node, use the command below:  
+
+    ```
+    sudo systemctl restart waves.service
+    ```
 
 ### Docker Configuration ###
 
@@ -230,31 +235,17 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
 
     }
     ```
-3. Save the file and deploy a node once again by restarting a container.  
-    Firslty, check the current container's id:  
-
-    ```
-    docker ps
-    ```
-
-    The container ID may look like this:
+3. Save the file and deploy a node once again by restarting a container:
     
     ```
-    CONTAINER ID 
-    c3f7dacea0d4
-    ```
-
-    Restart the container:
-    
-    ```
-    docker container restart c3f7dacea0d4
+    docker container restart waves-node
     ```
 
 ### Waves Package Configuration ###
@@ -290,15 +281,27 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
 
     }
     ```
-3. Save the file and deploy a node once again.
+3. Save the file and deploy a node once again:  
+    Replace {*} with the actual file name:
 
+    ```
+    cd /opt/waves
+    java -jar {*}.jar ./conf/{*}.conf
+    ```
+
+    For example:
+
+    ```
+    cd /opt/waves
+    java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
+    ```
 ---
 
 ## MacOS Node Configuration ##
@@ -338,31 +341,17 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
 
     }
     ```
-3. Save the file and deploy a node once again by restarting a container.  
-    Firslty, check the current container's id:  
-
-    ```
-    docker ps
-    ```
-
-    The container ID may look like this:
+3. Save the file and deploy a node once again by restarting a container:
     
     ```
-    CONTAINER ID 
-    c3f7dacea0d4
-    ```
-
-    Restart the container:
-    
-    ```
-    docker container restart c3f7dacea0d4
+    docker container restart waves-node
     ```
 
 ### Waves Package Configuration ###
@@ -398,14 +387,27 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
 
     }
     ```
-3. Save the file and deploy a node once again.
+3.  Save the file and deploy a node once again:  
+    Replace {*} with the actual file name:
+
+    ```
+    cd /opt/waves
+    java -jar {*}.jar ./conf/{*}.conf
+    ```
+
+    For example:
+    
+    ```
+    cd /opt/waves
+    java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
+    ```
 
 
 ## Windows Node Configuration ##
@@ -439,7 +441,7 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }
@@ -479,7 +481,7 @@ Follow the instructions below for setting up configurations:
         
 
         network {
-            node-name = "default-node-name"
+            node-name = "waves-node"
             bind-address = "0.0.0.0"
             port = 6868
         }

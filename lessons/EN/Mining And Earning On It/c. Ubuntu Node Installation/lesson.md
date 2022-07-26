@@ -5,7 +5,7 @@
   - [Node Installation](#node-installation)
     - [Docker Installation](#docker-installation)
     - [Deb Package Installation](#deb-package-installation)
-    - [Waves Package Installation](#waves-package-installations)
+    - [Waves Package Installation](#waves-package-installation)
 
 ---
 
@@ -232,11 +232,11 @@ Follow the steps below to install a Waves node:
     The first command will create 2 folders (data, conf) within `/opt/waves-node` directory.  
     After this, we give access to the current user logged in the system to write and read in these folders.  
     
-3. Download the [latest version](https://github.com/wavesplatform/Waves/releases) of `waves-all-<version number>.jar` to the folder `/opt/waves`.
-4. Download the [sample](https://github.com/wavesplatform/Waves/blob/master/node/waves-sample.conf) configuration file to `/opt/waves/conf`.  
+3. Download the [latest version](https://github.com/wavesplatform/Waves/releases) of `waves-all-<version number>.jar` to the folder `/opt/waves-node`.
+4. Download the [sample](https://github.com/wavesplatform/Waves/blob/master/node/waves-sample.conf) configuration file to `/opt/waves-node/conf`.  
 5. Move to the folder and open the configuration file in the editor:  
    ```
-   sudo cd /opt/waves/conf
+   sudo cd /opt/waves-node/conf
    sudo nano waves-sample.conf
    ```
 6. Study the minimum parameters.  
@@ -270,12 +270,12 @@ Follow the steps below to install a Waves node:
     Replace {*} with the actual file name:
     
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar {*}.jar ./conf/{*}.conf
     ```
     For example:
     ```
-    cd /opt/waves
+    cd /opt/waves-node
     java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
     ```
 9. Please, note it may take a few moments to deploy a node.  
