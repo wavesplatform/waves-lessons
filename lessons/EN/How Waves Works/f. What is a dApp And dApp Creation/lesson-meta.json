@@ -1,0 +1,14 @@
+{
+    "guid": "2da2634f-3fd6-4f4e-b50f-68f9c78541e5",
+    "title": "What is a dApp And dApp Creation",
+    "description": "This lesson will describe what a dApp is and how to install one",
+    "number": 6,
+    "doclink": "https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp",
+    "hashtags": [
+        "smart account",
+        "smart contract",
+        "dApp",
+        "account script",
+        "decentralized app"
+    ]
+}
