@@ -1,0 +1,46 @@
+{
+  "title": "Lesson Meta Schema",
+  "type": "object",
+  "properties": {
+    "guid": {
+      "$ref": "#/definitions/uuid"
+    },
+    "topicGuid": {
+      "$ref": "#/definitions/uuid"
+    },
+    "title": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "description": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "lessonNum": {
+      "type": "integer"
+    },
+    "doclink": {
+      "$ref": "#/definitions/url"
+    }
+  },
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    }
+  },
+  "required": [
+    "guid",
+    "topicGuid",
+    "title",
+    "description",
+    "lessonNum",
+    "doclink"
+  ]
+}

@@ -1,0 +1,57 @@
+name: Validate lessons
+
+on:
+  pull_request:
+
+jobs:
+  lesson_meta_existence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check lesson-meta.json existance
+        shell: bash
+        run: chmod +x ./.github/scripts/check-lesson-meta-existance.sh && ./.github/scripts/check-lesson-meta-existance.sh
+
+  topic_meta_existence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check topic-meta.json existance
+        shell: bash
+        run: chmod +x ./.github/scripts/check-topic-meta-existance.sh && ./.github/scripts/check-topic-meta-existance.sh
+
+  lesson_meta_validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+      - run: npm install -g ajv-cli
+      - run: ajv validate -s ./.github/static/lesson-meta-scheme.json -d "./lessons/*/*/*/lesson-meta.json"
+
+  topic_meta_validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+      - run: npm install -g ajv-cli
+      - run: ajv validate -s ./.github/static/topic-meta-scheme.json -d "./lessons/*/*/topic-meta.json"
+
+
+#jobs:
+#  validate:
+#    runs-on: ubuntu-latest
+#    container:
+#      image: 'from our docker registry'
+#      credentials:
+#        username: 'user'
+#        password: 'pwd'
+#      env:
+#        GIT_URL: ${{ github.server_url }}/${{ github.repository }}
+#        HEAD_BRANCH_NAME: ${{ github.head_ref }}
+#    steps:
+#      - name: Validate
+#        shell: bash
+#        run: echo head branch $HEAD_BRANCH_NAME and
+

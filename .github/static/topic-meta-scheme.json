@@ -1,0 +1,41 @@
+{
+  "title": "Topic Meta Schema",
+  "type": "object",
+  "properties": {
+    "guid": {
+      "$ref": "#/definitions/uuid"
+    },
+    "title": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "description": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "hashtags": {
+      "$ref": "#/definitions/hashtags"
+    }
+  },
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "hashtags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/nonEmptyString"
+      }
+    }
+  },
+  "required": [
+    "guid",
+    "title",
+    "description",
+    "hashtags"
+  ]
+}
