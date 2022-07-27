@@ -38,6 +38,8 @@ If your node generates a block, you receive a [reward](#rewards-for-blocks-gener
 
 ## Rewards For Blocks Generation ##
 
+
+
 The reward for block generation is not static.  
 At the current moment, the reward amount is 6 WAVES.  
 It may change with [voting](https://docs.waves.tech/en/blockchain/mining/mining-reward#voting), both decreasing or increasing.  
