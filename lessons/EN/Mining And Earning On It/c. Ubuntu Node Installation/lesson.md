@@ -92,7 +92,7 @@ Follow the steps below to install a Waves node:
 
     Within this docker container, we:
     - Create [docker volumes](https://docs.docker.com/storage/volumes/) to "connect" the data we store locally on our host with the storage of the container.  
-      Do it for both directories that store the blockchain data (`opt/waves-node/data`) and the configuration file (`/opt/waves-node/conf`).  
+      Do it for both directories that store the blockchain data (`/opt/waves-node/data`) and the configuration file (`/opt/waves-node/conf`).  
       It will "link" the data from your host to the container's storage to `/var/lib/waves` for the blockchain data and `/etc/waves` for the configuration file.  
       In case your docker container gets accidentally deleted, your node configurations and the blockchain copy will not be lost.  
       You will be able to deploy a node once again with the stored locally data, so the progress will be resumed right from where it has been stopped.  
