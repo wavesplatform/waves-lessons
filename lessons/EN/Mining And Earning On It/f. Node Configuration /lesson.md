@@ -71,13 +71,13 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Wallet parameters:  
     | Name | Description | Example |
     | :---- | :---- | :---- |
-    | password | This password will encode your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
-    | seed | Connects your wallet to your node via the [wallet seed Base58 econded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in REST API using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
+    | password | Random password a user sets. Encodes your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
+    | seed | Connects your wallet to your node via the [wallet seed Base58 econded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in [REST API]() using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
     Read more about [Wallet Settings](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings).
 - **<ins>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</ins>**  
     Blockchain parameters.  
-    In the blockchain section, you can select the blockchain type.  
+    In the blockchain module, you can select the blockchain type.  
     Since we are aimed at mining and receiving rewards for block generation, we will use the MAINNET type.  
 
     ```
@@ -98,7 +98,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Node API parameters.  
     The Waves node REST API is the main interface for blockchain interaction.  
     The API has both public (available for everyone) and private (avaialable only via aurthorization) endpoints.  
-    For example, you may check the swagger REST API interface for the [MAINNET network](https://nodes.wavesnodes.com/).  
+    You may check the swagger REST API interface for the [MAINNET network](https://nodes.wavesnodes.com/) to get an idea how it looks like.  
 
     Once this parameters is configured, you may get access to the REST API service of your personal node directly:  
 
@@ -158,8 +158,7 @@ There you can access different methods that will allow you:
     - `Active leases`
     - `Blocks`
     - `Transactions`
-    - `Other data`  
-        (feature activation status, block reward voting status, etc.)
+    - `Etc`
 - Operate with transactions: 
     - `Broadcast signed transactions`
     - `Validate transactions`
@@ -193,7 +192,7 @@ Here is how you can do it:
     Please, do not use example in the screenshot, as it is given for demonstration purpose only.
 4. In the response section below, you will receive a hash:
     ![](./images/swagg3.png)  
-5. Save both the original phrase you entered (api key) and the hash (api key hash) of it as we will use them for interaction with private node methods in this lesson.
+5. Save both the original phrase you entered (API key) and the hash (API key hash) of it as we will use them for interaction with private node methods in this lesson.
 
 ## Ubuntu Node Configuration ##
 
@@ -271,8 +270,8 @@ Follow the instructions below for setting up configurations:
     Make sure to add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.    
 
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
-    In the chapter [API Key Of Your Node](#api-key-of-your-node), an instruction of how to generate the api key hash was given.  
-    Insert the api key hash in the `rest-api.api-key-hash` parameter.
+    In the chapter [API Key Of Your Node](#api-key-of-your-node), an instruction of how to generate the API key hash was given.  
+    Insert the API key hash in the `rest-api.api-key-hash` parameter.
       
     After the edit, the `waves.conf` file can look something like this:  
 
@@ -314,7 +313,7 @@ Follow the instructions below for setting up configurations:
         For example, `/addresses/` method, will return the address of your node wallet.  
         ![](./images/swaggadd.png) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
-        All private methods require authorization with api key and api key hash.    
+        All private methods require authorization with API key and API key hash.    
         Kindly note that the API key hash that you inserted in the configuration file is not equal to the API key.  
         The API key hash is the random string you typed in the [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) method.  
         In case you do not remember what API key and API key hash are, please, check [API Key Of Your Node](#api-key-of-your-node).  
