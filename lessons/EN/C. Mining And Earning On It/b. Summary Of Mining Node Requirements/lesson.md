@@ -31,23 +31,16 @@ To deploy a node there are no other requirements but the requirements for comput
 <!-- Every generating node should have an account attached to it.
 Generating account is an account that node uses for signing generated blocks. -->
 
-To have a generating node, it is necessary to satisfy 2 general conditions:
-- Have the node's account generating balance at least 1000 WAVES for the last 1000 blocks.  
-(Below an illustrative example will be given)
-- Node's account is not a [smart account]() or [dApp]().  
-By default, any created account is a regular account that is not a smart account or dApp, unless an account script was attached.  
-  
-
-Let's give an example of a node that is ready for mining.  
-It can be a laptop with a 2+ CPU cores, 4+GB of RAM, and 100+ GB of SSD.  
-There we have a regular [account](https://docs.waves.tech/en/blockchain/account/create) created and attached to the node.  
-The generating balance of this account is 1000 WAVES for the last 1000 blocks.  
-The table below can demonstrate with examples the meaning of these 2 requirements:
+To have a generating node, you need to have the node's account generating balance at least 1000 WAVES for the last 1000 blocks:    
 
 | Requirement Description | Example|
 | :----- | :----- |
 | **<ins>Generating balance</ins>** is the balance of your account that:<br>- Deductes all the funds you leased to some accounts;<br>- Adds all the funds any other accounts leased to your account.<br><br>| For instance, our imaginary balance is 1005 WAVES:<br>- 700 of them were our own WAVES;<br>- 200 of them we leased to our friend Alex;<br>- 505 of them we received by our friend Diana in lease.<br><br>700 - 200 + 505 = 1005 WAVES, our generating balance. |
 | **<ins>Last 1000 blocks</ins>** is the last 1000 blocks from the current blockchain height. | Let's assume the current blockchain height is 3,211,000 blocks.<br>For us, it would be necessary to have the generating balance, starting from the moment, when it was the block 3,210,000,<br>up to the current blockchain height, i.e. 3,211,000 blocks.
+  
+Let's give an example of a node that is ready for mining.  
+It can be a laptop with a 2+ CPU cores, 4+GB of RAM, and 100+ GB of SSD.   
+The generating balance of this account is 1000 WAVES for the last 1000 blocks.  
 
 ---
 
