@@ -12,7 +12,7 @@ A network is a way of connecting different hosts into one space.
 At home, we may have different devices connected to one WI-FI router, forming a net.  
 All of those devices would be considered members of the home network.  
 
-<img width="700px" src="https://cdn.consumidormoderno.com.br/wp-content/uploads/2021/02/market-network.jpg">
+![](./images/network.jpeg)  
 
 Likewise, with the Waves network, there is a space where independent [nodes]() are connected to one network.  
 This space allows all the nodes to be connected to each other, forming conditions for [decentralization]().  

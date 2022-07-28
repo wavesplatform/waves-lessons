@@ -135,10 +135,9 @@ There are 2 major ways of smart account script installation:
          
          This is how it can be done:   
 
-         ```js
-         ```
-         ```Java
-         // Necessary imports
+         <CodeBlock content={[
+            {language: "javascript", code: ''}, 
+            {language: "java", code: '// Necessary imports
          import com.wavesplatform.transactions.common.Base64String;
          import com.wavesplatform.transactions.SetScriptTransaction;
 
@@ -148,16 +147,12 @@ There are 2 major ways of smart account script installation:
          SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
             
          // Sending the transaction to the node
-         node.waitForTransaction(node.broadcast(tx).id());
-         ```
-         ```php
-         ```
-         ```csharp
-         ```
-         ```go
-         ```
-         ```python
-         ```
+         node.waitForTransaction(node.broadcast(tx).id());'},
+            {language: "php", code: ''},
+            {language: "csharp", code: ''},
+            {language: "go", code: ''},
+            {language: "python", code: ''}
+         ]}/>
 
          **Parameters Description**
          | Field | Description | Example |
