@@ -1,5 +1,3 @@
-# What Is A Smart Asset And How To Create It #
-
  - [Smart Asset Description](#smart-asset-description)
  - [Usage Examples](#usage-example)
    - [Token Usage Freeze](#token-usage-freeze)

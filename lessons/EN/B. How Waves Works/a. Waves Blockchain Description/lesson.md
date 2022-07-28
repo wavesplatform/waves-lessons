@@ -1,5 +1,3 @@
-# Waves Blockchain Description #
-
   - [Intro](#intro)
   - [Overview](#overview)
   - [Waves Blockchain Platform](#waves-blockchain-platform)

@@ -1,5 +1,3 @@
-# Blockchain Synchronization #
-
 <!-- Block validation
 Validation of transactions, signatures
 Fork

@@ -1,5 +1,3 @@
-# Waves Networks, Their Types, and Application #
-
  - [Network Description](#network-description)
  - [Mainnet, Testnet, Stagenet](#mainnet-testnet-stagenet)
  - [Useful Network Resources](#useful-network-resources)

@@ -1,4 +1,3 @@
-# First Test Lesson #
 
   - [1st Chapter](#1st-chapter)
     - [1st Semi-chapter of the 1st Chapter](#1st-semi-chapter-of-the-1st-chapter)

@@ -1,5 +1,3 @@
-# Getting to Know Web 3.0 #
-
   - [Short history of Web evolution](#short-history-of-web-evolution)
   - [Web services now and Web3 architecture](#web-services-now-and-web3-architecture)
   - [Digital signatures](#digital-signatures)

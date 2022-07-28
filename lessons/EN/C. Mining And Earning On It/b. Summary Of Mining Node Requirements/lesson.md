@@ -1,5 +1,3 @@
-# Summary Of Mining Node Requirements #
-
  - [Prerequisites](#prerequisites)
    - [Node Requirements](#node-requirements)
    - [Block Generation Requirements](#block-generation-requirements)

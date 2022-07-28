@@ -1,5 +1,3 @@
-# What is a dApp And dApp Creation #
-
  - [DApp Definition](#dapp-definition)
    - [DApp Structure](#dapp-structure)
  - [Usage Examples](#usage-examples)

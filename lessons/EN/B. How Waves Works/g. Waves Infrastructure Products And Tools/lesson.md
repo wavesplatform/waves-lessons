@@ -1,5 +1,3 @@
-# Waves Infrastructure Products And Tools #
-
  - [Waves Toolset](#waves-toolset)
    - [Waves Explorer](#waves-explorer)
    - [Signer](#signer)

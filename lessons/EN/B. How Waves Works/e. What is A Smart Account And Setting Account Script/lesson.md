@@ -1,5 +1,3 @@
-# What is A Smart Account And Setting Account Script #
-
  - [Smart-Account Definition](#smart-account-definition)
  - [Usage Examples](#usage-examples)
    - [Selling Or Buying Only BTC](#selling-or-buying-only-btc)

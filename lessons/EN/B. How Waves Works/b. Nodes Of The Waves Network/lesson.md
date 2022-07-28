@@ -1,5 +1,3 @@
-# Nodes Of The Waves Network #
-
   - [Node Description](#node-description)
     - [Validating Node](#validating-node)
     - [Generating Node](#generating-node)

@@ -1,5 +1,3 @@
-# Mining And Earning On It #
-
  - [Module Intro](#module-intro)
  - [Miner Node Definition](#miner-node-definition)
  - [Rewards For Block Generation](#rewards-for-blocks-generation)

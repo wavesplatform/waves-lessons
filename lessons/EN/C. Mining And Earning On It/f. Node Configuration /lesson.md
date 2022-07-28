@@ -1,6 +1,3 @@
-# Node Configuration # 
-
-
   - [Node Configuration File Description](#node-configuration-file-description)
   - [Modules In The Configuration File](#modules-in-the-configuration-file)
   - [Ubuntu Node Configuration](#ubuntu-node-configuration)

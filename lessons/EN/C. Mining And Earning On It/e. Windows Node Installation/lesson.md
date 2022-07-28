@@ -1,5 +1,3 @@
-# Windows Node Installation #
-
   - [Node Structure](#node-structures)
   - [Prerequisites](#prerequisites)
   - [Node Installation](#node-installation)
