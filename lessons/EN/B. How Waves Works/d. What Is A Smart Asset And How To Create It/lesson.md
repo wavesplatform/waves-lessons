@@ -119,9 +119,10 @@ There are two major steps to installing a smart asset script:
     - Send the transaction to the node.
 
     Here is how to make this:  
-    <CodeBlock content={[
-      {language: "javascript", code: ''}, 
-      {language: "java", code: '// Necessary imports
+    ```js
+    ```
+    ```Java
+    // Necessary imports
     import com.wavesplatform.transactions.common.AssetId;
     import com.wavesplatform.transactions.common.Base64String;
     import com.wavesplatform.transactions.IssueTransaction;
@@ -141,13 +142,17 @@ There are two major steps to installing a smart asset script:
     SetAssetScriptTransaction tx = SetAssetScriptTransaction.builder(assetId, script).getSignedWith(alice);
 
     // Sending transaction to the node
-    node.waitForTransaction(node.broadcast(tx).id());'},
-      {language: "php", code: ''},
-      {language: "csharp", code: ''},
-      {language: "go", code: ''},
-      {language: "python", code: ''}      
-    ]}/>
-      
+    node.waitForTransaction(node.broadcast(tx).id());
+    ```
+    ```php
+    ```
+    ```csharp
+    ```
+    ```go
+    ```
+    ```python
+    ```
+
     **Paramaters Description**
     | Field | Description | Example |
     | ----------- | ----------- | ----------- |

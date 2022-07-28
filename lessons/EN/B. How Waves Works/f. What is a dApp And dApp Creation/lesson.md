@@ -216,10 +216,10 @@ There are 2 ways of making your account a dApp using:
           
          
          This is how it can be done:  
-
-         <CodeBlock content={[
-            {language: "javascript", code: ''}, 
-            {language: "java", code: '// Necessary imports
+        ```js
+        ```
+        ```Java
+        // Necessary imports
         import com.wavesplatform.transactions.common.Base64String;
         import com.wavesplatform.transactions.SetScriptTransaction;
 
@@ -231,13 +231,17 @@ There are 2 ways of making your account a dApp using:
         SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
         
         // Broadcasting the transaction to the node
-        node.waitForTransaction(node.broadcast(tx).id());'},
-            {language: "php", code: ''},
-            {language: "csharp", code: ''},
-            {language: "go", code: ''},
-            {language: "python", code: ''}
-        ]}/>
-          
+        node.waitForTransaction(node.broadcast(tx).id());
+        ```
+        ```php
+        ```
+        ```csharp
+        ```
+        ```go
+        ```
+        ```python
+        ```
+
         **Parameters Description**
         | Field | Description | Example |
         | ----------- | ----------- | ----------- |
