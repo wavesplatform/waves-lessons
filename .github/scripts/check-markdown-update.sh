@@ -1,11 +1,10 @@
-URL="https://{$1}/sync"
-echo "$URL"
+URL="https://$1/sync"
+echo "sending GET $URL"
 RESPONSE=$(curl -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
-STATUSCODE=$(jq '.status' <<<"$RESPONSE")
+STATUS=$(jq '.status' <<<"$RESPONSE")
 echo "response: $RESPONSE"
-echo "status code: $STATUSCODE"
-if test "$STATUSCODE" -ne 200; then
+if test "$STATUS" -ne "success"; then
   exit 1
 fi
