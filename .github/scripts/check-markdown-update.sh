@@ -3,7 +3,7 @@ echo "sending GET $URL"
 RESPONSE=$(curl -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
-STATUS=$(jq '.status' <<<"$RESPONSE")
+STATUS=$(jq -r '.status' <<<"$RESPONSE")
 echo "status: $STATUS"
 echo "response: $RESPONSE"
 if [ "$STATUS" != "success" ]; then
