@@ -76,9 +76,11 @@ To install a node, you may use:
    For advanced users, it is also possible to use the jar-package.  
 
 All these ways are going to give you a fully working node.  
-You can choose any way that is more convenient to you.
+You can choose any of these ways that is more convenient to you.
   
-### Docker Installation ###
+### Docker Deployment ###
+
+#### Installation ####
 
 Running a Waves docker container is the recommended way to install a node.  
 Follow the steps below to install a Waves node:
@@ -136,8 +138,13 @@ Follow the steps below to install a Waves node:
 All done! You have a working node deployed within your docker container!  
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
+#### Configuration ####
 
-### Deb Package Installation ###
+#### Synchronization ####
+
+### Deb Package Deployment ###
+
+#### Installation ####
 
 Multiple Ubuntu/Debian users may install a node with deb-package.<br>
 Follow the steps below to install a Waves node:
@@ -214,8 +221,13 @@ Follow the steps below to install a Waves node:
 Congratulations! You have a working Waves node!  
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
+#### Configuration ####
 
-### Waves Package Installation ###
+#### Synchronization ####
+
+### Waves Package Deployment ###
+
+#### Installation ####
 
 Waves node installation via package is a more advanced way of node deployment.  
 Follow the steps below to install a Waves node:
@@ -307,3 +319,7 @@ Congratulations!
 You would have a working node deployed!
     
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
+
+#### Configuration ####
+
+#### Synchronization ####

@@ -47,7 +47,7 @@ Here is how you can encode a seed phrase to Base58:
 
 ---
 
-## Node Installation ##
+## MacOS Node Deployment ##
 
 Node deployment process consists of 3 major steps:
 - **<ins>Node installation</ins>**  
@@ -72,8 +72,9 @@ To install a node, you may use:
 All these ways are going to give you a fully working node.  
 You can choose any way that is more convenient to you.
   
-### Docker Installation ###
+### Docker Deployment ###
 
+#### Installation ####
 Running a Waves docker container is the recommended way to install a node.  
 Follow the steps below to install a Waves node:
 1. Install [Docker](https://docs.docker.com/desktop/install/mac-install/) on macOS if it wasn't yet installed.
@@ -129,8 +130,13 @@ Follow the steps below to install a Waves node:
 All done! You have a working node deployed within your docker container!  
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
-### Waves Package Installation ###
+#### Configuration ####
 
+#### Synchronization ####
+
+### Waves Package Deployment ###
+
+#### Installation ####
 Waves node installation via package is a more advanced way of node deployment.  
 Follow the steps below to install a Waves node:
 1. Install Java (OpenJDK 8).  
@@ -221,3 +227,7 @@ Congratulations!
 You would have a working node deployed!
     
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
+
+#### Configuration ####
+
+#### Synchronization ####
