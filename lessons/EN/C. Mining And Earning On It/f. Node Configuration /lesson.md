@@ -11,9 +11,11 @@
     - [Docker Configuration](#docker-configuration-2)
     - [Waves Package Configuration](#waves-package-configuration-2)
 
+
+
 ---
 
-## Node Configuration File Description ##
+##### Node Configuration File Description #####
 
 As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
@@ -24,9 +26,8 @@ In the [next lesson](), we will talk about node synchronization with the Waves b
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
----
 
-## Modules In The Configuration File ##
+##### Modules In The Configuration File #####
 
 All the node modules are wrapped within the `Waves` configuration section.  
 There we can define what modules we would like to configure.  
@@ -143,7 +144,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
      Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
 
-## API Key Of Your Node ##  
+##### API Key Of Your Node #####  
 
 After the REST API module is configured and node deployed, you will be able to access the Swagger interface for blockchain interaction.  
 There you can access different methods that will allow you:
@@ -191,9 +192,10 @@ Here is how you can do it:
     ![](./images/swagg3.png)  
 5. Save both the original phrase you entered (API key) and the hash (API key hash) of it as we will use them for interaction with private node methods in this lesson.
 
+
 ## Ubuntu Node Configuration ##
 
-### Docker Configuration ###
+<!-- ### Docker Configuration File  ###
 
 Follow the instructions below for setting up configurations:
 1. Once a node has been deployed, a configuration file gets automatically created.  
@@ -279,9 +281,9 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
 
-### Deb Package Configuration ###
+<!-- ### Deb Package Configuration ###
 
 Follow the instructions below for setting up configurations:
 
@@ -362,9 +364,9 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
 
-### Waves Package Configuration ###
+<!-- ### Waves Package Configuration ###
 
 Follow the instructions below for setting up configurations:
 1. Edit the configuration file:  
@@ -454,12 +456,12 @@ Follow the instructions below for setting up configurations:
 
 In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
 
----
+--- -->
 
 ## MacOS Node Configuration ##
 
 
-### Docker Configuration ###
+<!-- ### Docker Configuration ###
 Follow the instructions below for setting up configurations:
 
 1. Once a node has been deployed, a configuration file gets automatically created.  
@@ -545,9 +547,9 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).     
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
 
-### Waves Package Configuration ###
+<!-- ### Waves Package Configuration ###
 
 Follow the instructions below for setting up configurations:
 1. Edit the configuration file:  
@@ -635,11 +637,11 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
 
 ## Windows Node Configuration ##
 
-### Docker Configuration ###
+<!-- ### Docker Configuration File Setup ###
 
 Follow the instructions below for setting up configurations:
 1.  Once a node has been deployed, a configuration file gets automatically created.   
@@ -714,9 +716,9 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
 
-### Waves Package Configuration ###
+<!-- ### Waves Package Configuration File Setup ###
 
 Follow the instructions below for setting up configurations:
 1. Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`)
@@ -800,4 +802,4 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/). 
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.   -->
