@@ -51,9 +51,7 @@ For every OS, there will be 2 ways of node installation:
 - Docker container;
 - Package installation.
 
-Below you may find links to instructions of how to make it with your OS:  
+Please, select your OS to find out how to deploy a node with it:  
 - [Ubuntu]()
 - [MacOS]()
 - [Windows]()
-
-After a node is installed, we can go on with [node configuration and starting mining]().  

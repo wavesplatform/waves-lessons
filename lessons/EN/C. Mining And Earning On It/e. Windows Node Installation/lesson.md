@@ -1,8 +1,14 @@
   - [Node Structure](#node-structures)
   - [Prerequisites](#prerequisites)
-  - [Node Installation](#node-installation)
-    - [Docker Installation](#docker-installation)
-    - [Waves Package Installation](#waves-package-installations)
+  - [Windows Node Deployment]()
+    - [Docker Deployment]()
+      - [Installation]()
+      - [Configuration]()
+      - [Synchronization]()
+    - [Waves Package Deployment]()
+      - [Installation]()
+      - [Configuration]()
+      - [Synchronization]()
  
 ---
 
@@ -44,20 +50,32 @@ Here is how you can encode a seed phrase to Base58:
 
 ## Node Installation ##
 
+Node deployment process consists of 3 major steps:
+- **<ins>Node installation</ins>**  
+    Firstly, we need to install our node.  
+    Within this step, all necessary directories and files in them will be installed on your host.  
+    You will deploy your own Waves node with minimum parameters.
+- **<ins>Node configuration</ins>**  
+    Secondly, the installed node needs to be configured.  
+    We will work on the configuration file that defines how your node would work.
+- **<ins>Blockchain synchronization</ins>**  
+    After that, it is necessary to synchronize the node with the current blockchain state.  
+    A newly installed node doesn't have all the blockchain data downloaded yet.  
+    The goal of this step is to upload the current blockchain data to our node.
+
 To install a node, you may use:
 - <ins>[Docker](#docker-installation)</ins>:  
-  It is an out-of-the-box solution easy to launch.  
-  It is a ready container with minimum configurations you can run to have your own Waves node.
+  That is an out-of-the-box solution easy to launch.  
+  We recommend this option to run your own Waves node.
 - <ins>[Waves Package](#waves-package-installation-s)</ins>:  
-  For advanced users, it is possible to use the package.  
-  Using the package is the way to set up a node with multiple configurations. 
+   For advanced users, it is also possible to use the jar-package.  
 
-Both ways are going to give you a fully working node.  
-Feel free to use either of them.
+All these ways are going to give you a fully working node.  
+You can choose any way that is more convenient to you.
   
 ### Docker Installation ###
 
-Running a Waves docker container is the easiest way to install a node.  
+Running a Waves docker container is the recommended way to install a node.  
 Follow the steps below to install a Waves node:
 1. Install [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) on Windows if it wasn't yet installed.
 2. Pull the latest [docker image](https://hub.docker.com/r/wavesplatform/wavesnode) of the node:
