@@ -14,7 +14,5 @@ jobs:
         shell: bash
         run: |
           chmod +x ./.github/scripts/check-markdown-update.sh && \
-          ./.github/scripts/check-markdown-update.sh \ 
-          'scanner-dev.waves.tech' \ 
-          'secret'
+          ./.github/scripts/check-markdown-update.sh 'scanner-dev.waves.tech' 'secret'
 #          ${{ secrets.LESSONS_SECRET_FOR_SYNC_DEV }}
