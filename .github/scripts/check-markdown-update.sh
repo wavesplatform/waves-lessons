@@ -1,4 +1,6 @@
-RESPONSE=$(curl -X 'GET' "https://{$1}/sync" \
+URL="https://{$1}/sync"
+echo "$URL"
+RESPONSE=$(curl -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
 STATUSCODE=$(jq '.status' <<<"$RESPONSE")
