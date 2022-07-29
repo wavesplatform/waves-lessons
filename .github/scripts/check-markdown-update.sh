@@ -5,6 +5,7 @@ RESPONSE=$(curl -X 'GET' "$URL" \
   -H "secret: $2")
 STATUS=$(jq '.status' <<<"$RESPONSE")
 echo "response: $RESPONSE"
-if test "$STATUS" -ne "success"; then
+if [ "$STATUS" != "success" ]; then
+  echo "failed to sync repository files"
   exit 1
 fi
