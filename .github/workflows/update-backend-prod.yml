@@ -14,7 +14,4 @@ jobs:
         shell: bash
         run: |
           chmod +x ./.github/scripts/check-markdown-update.sh && \
-          ./.github/scripts/check-markdown-update.sh \
-#          todo add prod url
-          'scanner-dev.waves.tech' \ 
-          ${{ secrets.LESSONS_SECRET_FOR_SYNC_PROD }}
+          ./.github/scripts/check-markdown-update.sh 'need prod url' ${{ secrets.LESSONS_SECRET_FOR_SYNC_PROD }}
