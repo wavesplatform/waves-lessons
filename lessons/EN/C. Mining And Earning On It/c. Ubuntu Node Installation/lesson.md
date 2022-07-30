@@ -1,25 +1,9 @@
-<!-- - [Node Structure](#node-structures)
-- [Prerequisites](#prerequisites)
-- [Ubuntu Node Deployment]()
-- [Docker Deployment]()
-    - [Installation]()
-    - [Configuration]()
-    - [Synchronization]()
-- [Deb Package Deployment]()
-    - [Installation]()
-    - [Configuration]()
-    - [Synchronization]()
-- [Waves Package Deployment]()
-    - [Installation]()
-    - [Configuration]()
-    - [Synchronization]() -->
-
 - [Node Structure](#node-structure)
 - [Prerequisites](#prerequisites)
 - [Ubuntu Node Deployment](#ubuntu-node-deployment)
   - [Docker Deployment](#docker-deployment)
     - [Installation](#installation)
-    - [Configuration](#configuration)
+    - [Node Configuration](#node-configuration)
       - [Node Configuration File Description](#node-configuration-file-description)
       - [Modules In The Configuration File](#modules-in-the-configuration-file)
       - [API Key Of Your Node](#api-key-of-your-node)
@@ -27,7 +11,7 @@
     - [Synchronization](#synchronization)
   - [Deb Package Deployment](#deb-package-deployment)
     - [Installation](#installation-1)
-    - [Configuration](#configuration-1)
+    - [Node Configuration](#node-configuration-1)
       - [Node Configuration File Description](#node-configuration-file-description-1)
       - [Modules In The Configuration File](#modules-in-the-configuration-file-1)
       - [API Key Of Your Node](#api-key-of-your-node-1)
@@ -35,7 +19,7 @@
     - [Synchronization](#synchronization-1)
   - [Waves Package Deployment](#waves-package-deployment)
     - [Installation](#installation-2)
-    - [Configuration](#configuration-2)
+    - [Node Configuration](#node-configuration-2)
       - [Node Configuration File Description](#node-configuration-file-description-2)
       - [Modules In The Configuration File](#modules-in-the-configuration-file-2)
       - [API Key Of Your Node](#api-key-of-your-node-2)
@@ -165,9 +149,9 @@ Follow the steps below to install a Waves node:
     
 
 All done! You have a working node deployed within your docker container!  
-In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
+In the next lesson, [node configuration](#configuration), we will learn how to set up a configuration file of your node.  
 
-#### Configuration ####
+#### Node Configuration ####
 
 ##### Node Configuration File Description #####
 
@@ -259,7 +243,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     waves {
         rest-api {
             enable = yes
-            bind-address = "127.0.0.1"
+            bind-address = "0.0.0.0"
             port = 6869
             api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
         }
@@ -270,7 +254,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 0.0.0.0 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
@@ -517,7 +501,7 @@ Follow the steps below to install a Waves node:
 Congratulations! You have a working Waves node!  
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
-#### Configuration ####
+#### Node Configuration ####
 
 ##### Node Configuration File Description #####
 
@@ -620,7 +604,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use 127.0.0.1 address when deploying a node with deb package.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
@@ -877,7 +861,7 @@ You would have a working node deployed!
     
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
-#### Configuration ####
+#### Node Configuration ####
 
 ##### Node Configuration File Description #####
 
@@ -980,7 +964,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use 127.0.0.1 address when deploying a node with waves package.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 

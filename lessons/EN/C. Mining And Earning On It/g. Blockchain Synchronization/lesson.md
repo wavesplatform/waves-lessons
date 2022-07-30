@@ -10,7 +10,7 @@ Threetypes of blockchain upload:
 - [Blockchain Synchronization Process Description]()
 - [Fork Of Blockchain]()
 - [Blockchain Synchronization]()
-  - [Ubuntu Synchronization]()
+  <!-- - [Ubuntu Synchronization]()
     - [Deb Package Synchronization]()
     - [Docker Synchronization]()
     - [Waves Package Synchronization]()
@@ -19,5 +19,9 @@ Threetypes of blockchain upload:
     - [Waves Package Synchronization]()
   - [Windows Synchronization]()
     - [Docker Synchronization]()
-    - [Waves Package Synchronization]()
+    - [Waves Package Synchronization]() -->
 - [Node Rollback]()
+
+
+
+

@@ -222,7 +222,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     waves {
         rest-api {
             enable = yes
-            bind-address = "127.0.0.1"
+            bind-address = "0.0.0.0"
             port = 6869
             api-key-hash = "CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv"
         }
@@ -233,7 +233,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use 0.0.0.0 address when deploying a node with Docker. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
@@ -596,7 +596,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, note that it is necessary to use:<br>- 0.0.0.0 address if you are deploying a node with Docker;<br>- 127.0.0.1 address if you deploy a node with deb package or waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use 127.0.0.1 address when deploying a node with waves package. <br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
