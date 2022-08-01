@@ -91,22 +91,56 @@ For example,
 ## Docker synchronization ##
 
 Follow the steps below to synchronize the current blockchain with your node:  
-1. Remove all the
+1. Go to the directory with the blockchain data of the node:
+  
+    ```
+    cd /opt/waves-node/data
+    ```
+2. Remove all the data within the directory:
+  
+    ```
+    sudo rm -rf *
+    ```
+3. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `/opt/waves-node/data` directory.  
+    Please, note that the archive size is approximately 70 GB.
+4. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `/opt/waves-node/data` directory.  
+    This file is intended for testing the blockchain archive checksum hash. 
+5. Install the sha1sum utility:
+    
+    ```
+    brew install md5sha1sum
+    ```
+6. Run the sha1sum utility to compare the checksum of the (`blockchain_last.tar`) and (`blockchain_last.tar.SHA1SUM`) files.  
+    Firstly, run the command with the `blockchain_last.tar` file in the `/opt/waves-node/data` directory:  
 
+    ```
+    sha1sum blockchain_last.tar
+    ```
+    The output can look like this:
+    
+    ```
+    3c044f284026b40761638e915147c9fa6e5ff156  blockchain_last.tar
+    ```
+    
+    After this, read the content of the `blockchain_last.tar.SHA1SUM` file:  
 
+    ```
+    cat blockchain_last.tar.SHA1SUM 
+    ```
 
+    The oupoot can look like this:
 
+    ```
+    3c044f284026b40761638e915147c9fa6e5ff156  /opt/blockchain/blockchain_last.tar
+    ```
+    
+    The hash of the `blockchain_last.tar` file has to match with the content inside of the `blockchain_last.tar.SHA1SUM` file.  
+    In our example, we receive the hash `3c044f284026b40761638e915147c9fa6e5ff156` after running both commands.
+7. Restart the node:
 
+    ```
+    docker container restart waves-node
+    ```
 
-
-1. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data.
-2. Download this 
-http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM
-3. Install sha1sum
-```brew install md5sha1sum```
-4. sha1sum tar and cat sha1sum file if they do match - perfect
-5. rm * in /opt/waves-node/data
-6. untar the tar to /data
-7. restart the node and wait 1-3 days
 
 
