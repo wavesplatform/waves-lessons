@@ -1,11 +1,4 @@
-<!-- Block validation
-Validation of transactions, signatures
-Fork
-Import Export
-Don't mix existing data with imported
-- Blockchain  -->
-
-- [Blockchain Synchronization Process Description]()
+<!-- - [Blockchain Synchronization Process Description]()
 - [Fork Of Blockchain]()
 - [Blockchain Synchronization]()
   <!-- - [Ubuntu Synchronization]()
@@ -18,11 +11,27 @@ Don't mix existing data with imported
   - [Windows Synchronization]()
     - [Docker Synchronization]()
     - [Waves Package Synchronization]() -->
-- [Node Rollback]()
+<!-- - [Node Rollback]()
+- [Export/Import]() -->
 
+- [Blockchain Synchronization Process Description]()
+- [MacOS](#macos)
+  - [Docker Synchronization](#docker-synchronization)
+  - [Waves Package Synchronization](#waves-package-synchronization)
+- [Ubuntu](#ubuntu)
+  - [Docker Synchronization](#docker-synchronization-1)
+  - [Deb Package Synchronization](#deb-package-synchronization)
+  - [Waves Package Synchronization](#waves-package-synchronization-1)
+- [Windows](#windows)
+  - [Docker Synchronization](#docker-synchronization-2)
+  - [Waves Package Synchronization](#waves-package-synchronization-2)
+- [Fork Of Blockchain](#fork-of-blockchain)
+- [Node Rollback](#node-rollback)
+  
+  
 ## Blockchain Synchronization Process Description ##
 
-Before blockchain synchronization, it is necessary to understand how blockchain gets formed.  
+Before we begin blockchain synchronization, it is necessary to understand how blockchain gets formed.  
 Let's recap what we discussed in the lesson, [Waves Blockchain Description]().  
 The smallest blockchain component is a transaction that may include various data (account address, sum, operation type, etc).  
 All transactions are wrapped in blocks, where each block has a maximum capacity of how many transactions it may include.  
