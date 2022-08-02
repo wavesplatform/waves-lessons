@@ -308,7 +308,8 @@ merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
 Welcome to the 3rd Chapter!  
 ![cake](./images/download.jpeg)  
 
-
+NEW IMAGE
+[![IMAGE ALT TEXT HERE](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDErGIJzYKrDTrQHzawz4LkDOwAt8K2fPHJ0BPmnbYAnWnoDcHxvt2GbH_eKQCVFtbo4&usqp=CAU)](https://www.youtube.com/watch?v=FMRXfttxLoo)
 
 Here is an example of ride code:
 
