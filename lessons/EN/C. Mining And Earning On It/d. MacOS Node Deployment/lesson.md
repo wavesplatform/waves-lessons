@@ -461,26 +461,21 @@ However, if you wish to speed up this process, within this lesson we will concen
 ##### Docker Blockchain Synchronization #####
 
 Follow the steps below to synchronize the current blockchain with your node:  
-1. Go to the directory with the blockchain data of the node:
+1. Remove all the data within the directory that contains the blockchain data of the node:
   
     ```
-    cd /opt/waves-node/data
+    sudo rm -rf /opt/waves-node/data/*
     ```
-2. Remove all the data within the directory:
-  
-    ```
-    sudo rm -rf *
-    ```
-3. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `/opt/waves-node/data` directory.  
+2. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `/opt/waves-node/data` directory.  
     Please, note that the archive size is approximately 70 GB.
-4. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `/opt/waves-node/data` directory.  
+3. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `/opt/waves-node/data` directory.  
     This file is intended for testing the blockchain archive checksum hash. 
-5. Install the sha1sum utility:
+4. Install the sha1sum utility:
     
     ```
     brew install md5sha1sum
     ```
-6. Run the sha1sum utility to compare the checksum of the `blockchain_last.tar` and `blockchain_last.tar.SHA1SUM` files.  
+5. Run the sha1sum utility to compare the checksum of the `blockchain_last.tar` and `blockchain_last.tar.SHA1SUM` files.  
     Firstly, run the command with the `blockchain_last.tar` file in the `/opt/waves-node/data` directory:  
 
     ```
@@ -506,12 +501,12 @@ Follow the steps below to synchronize the current blockchain with your node:
     
     The hash of the `blockchain_last.tar` file has to match with the content inside of the `blockchain_last.tar.SHA1SUM` file.  
     In our example, we receive the hash `3c044f284026b40761638e915147c9fa6e5ff156` after running both commands.
-7. Restart the node:
+6. Restart the node:
 
     ```
     docker container restart waves-node
     ```
-8. Check the logs of the running container:  
+7. Check the logs of the running container:  
   
     ```
     docker logs waves-node
@@ -942,26 +937,21 @@ However, if you wish to speed up this process, within this lesson we will concen
 ##### Waves Package Blockchain Synchronization #####
 
 Follow the steps below to synchronize the current blockchain with your node:  
-1. Go to the directory with the blockchain data of the node:
+1. Remove all the data within the directory that contains the blockchain data of the node:
   
     ```
-    cd /opt/waves-node/data
+    sudo rm -rf /opt/waves-node/data/*
     ```
-2. Remove all the data within the directory:
-  
-    ```
-    sudo rm -rf *
-    ```
-3. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `/opt/waves-node/data` directory.  
+2. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `/opt/waves-node/data` directory.  
     Please, note that the archive size is approximately 70 GB.
-4. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `/opt/waves-node/data` directory.  
+3. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `/opt/waves-node/data` directory.  
     This file is intended for testing the blockchain archive checksum hash. 
-5. Install the sha1sum utility:
+4. Install the sha1sum utility:
     
     ```
     brew install md5sha1sum
     ```
-6. Run the sha1sum utility to compare the checksum of the `blockchain_last.tar` and `blockchain_last.tar.SHA1SUM` files.  
+5. Run the sha1sum utility to compare the checksum of the `blockchain_last.tar` and `blockchain_last.tar.SHA1SUM` files.  
     Firstly, run the command with the `blockchain_last.tar` file in the `/opt/waves-node/data` directory:  
 
     ```
@@ -987,7 +977,7 @@ Follow the steps below to synchronize the current blockchain with your node:
     
     The hash of the `blockchain_last.tar` file has to match with the content inside of the `blockchain_last.tar.SHA1SUM` file.  
     In our example, we receive the hash `3c044f284026b40761638e915147c9fa6e5ff156` after running both commands.
-7. Restart the node.
+6. Restart the node.
     Replace {*} with the actual file name:
 
     ```
@@ -1000,7 +990,7 @@ Follow the steps below to synchronize the current blockchain with your node:
     cd /opt/waves-node
     java -jar waves-all-1.4.7.jar ./conf/waves-sample.conf
     ```
-8. Check the logs of the running node.
+7. Check the logs of the running node.
     You will see the height of the blockchain increasing rapidly:  
     
     ```
