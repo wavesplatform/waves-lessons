@@ -170,6 +170,7 @@ Once you receive a notifcation of a new node version release, follow the steps b
     ```
     docker logs waves-node
     ```
+    It may take a few moments before 
     Messages regarding increasing blockchain height mean that everything is completed succesfully:  
     
     ```
