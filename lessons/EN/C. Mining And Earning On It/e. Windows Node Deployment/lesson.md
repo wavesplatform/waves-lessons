@@ -121,11 +121,11 @@ Follow the steps below to install a Waves node:
 8.  Click on the container name:
     ![](./images/dockerwin3.png)
     You will see multiple lines of logs.  
-    Please, note it may take a few moments to deploy a node.  
+    Please, note it may take a few moments to deploy a node. 
+    Once you see notifications about the height of the blockchain, it means everything is working properly:  
     ![](./images/dockerwin4.png)
-    Once you see notifications about the height of the blockchain, it means everything is working properly:
+   
 
-    
 All done! You have a working node deployed within your docker container!  
 In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
 
