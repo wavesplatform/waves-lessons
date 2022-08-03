@@ -1,13 +1,13 @@
- - [DApp Definition](#dapp-definition)
-   - [DApp Structure](#dapp-structure)
- - [Usage Examples](#usage-examples)
- - [Setting A DApp Script](#seting-a-dapp-script)
-   - [Limitations](#limitations)
-   - [DApp Script Installation](#dapp-script-installation)
+- [DApp definition](#dapp-definition)
+  - [DApp structure](#dapp-structure)
+- [Usage examples](#usage-examples)
+- [Setting a dApp script](#setting-a-dapp-script)
+  - [Limitations](#limitations)
+  - [DApp script installation](#dapp-script-installation)
 
 ---
 
-## DApp Definition ##
+## DApp definition ##
 
 A dApp is a Waves account with an attached script.  
 In the previous chapter, [What is A Smart Account And Setting Account Script](), we discussed the differences between a regular and a [smart account](#smartaccountdefinition).  
@@ -35,7 +35,7 @@ Since all the script conditions were true (a unique user within the first 10 rew
 Let's recap the dApp definition, a dApp is a Waves account with an attached script that allows invoking the script externally.  
 Read more about [dApp](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp).
 
-### DApp Structure ###
+### DApp structure ###
 
 The structure of a dApp may seem a bit more complex than smart account's, so we will dedicate a chapter to it.  
 Below you can see a basic structure of dApp.  
@@ -129,7 +129,7 @@ There are 2 optional elements:
 
 ---
 
-## Usage Examples ##
+## Usage examples ##
 
 Results of dApp usage can be completely diverse, depending on the creativity of a developer.  
 However, there are certain limits of what those dApp callable functions are capable of:
@@ -143,7 +143,7 @@ However, there are certain limits of what those dApp callable functions are capa
 
 ---
 
-## Setting A DApp Script ##
+## Setting a dApp script ##
 
 ### Limitations ###
 
@@ -152,7 +152,7 @@ A dApp script cannot exceed 160 Kbytes.
 [Complexity](https://docs.waves.tech/en/ride/base-concepts/complexity) of each callable function of dApp script cannot be more than 52,000.  
 See the full list of possible [limitations](https://docs.waves.tech/en/ride/limits/).
 
-### DApp Script Installation ###
+### DApp script installation ###
 
 Keep in mind that the fee for the dApp Script installation is 0.01 WAVES.  
 There are 2 ways of making your account a dApp using:

@@ -1,11 +1,11 @@
-  - [Intro](#intro)
-  - [Overview](#overview)
-  - [Waves Blockchain Platform](#waves-blockchain-platform)
-    - [Principles Of Work](#principles-of-work)
-    - [Waves History](#waves-history)
-  - [Transactions](#transactions)
-  - [Blocks](#blocks)
-  - [Blockchain](#blockchain)
+- [Intro](#intro)
+- [Overview](#overview)
+- [Waves blockchain platform](#waves-blockchain-platform)
+  - [Principles of work](#principles-of-work)
+  - [Waves history](#waves-history)
+- [Transactions](#transactions)
+- [Blocks](#blocks)
+- [Blockchain](#blockchain)
 
 
 ---
@@ -27,14 +27,12 @@ At the end of the lesson, you will discover how all [blocks]() form into a chain
 
 ---
 
-## Waves Blockchain Platform ##
+## Waves blockchain platform ##
 
 Waves is a [blockchain](#blockchain) platform for issuing cryptographic tokens and conducting crowdfunding campaigns.  
 The company offers everyone an open blockchain protocol that works with [decentralized](#decentralizationfirstchapter) solutions.
 
-  
-
-### Principles Of Work ###
+### Principles of work ###
 The platform operates on the basis of the [LPoS consensus]().  
 It is a modification of the [Proof-of-stake consensus]().  
 The difference between PoS and LPoS is that LPoS has the ability for users to transfer their balances to mining nodes.  
@@ -48,7 +46,7 @@ All our users may create, promote, and use their own [custom tokens](#issueandas
 Waves has its own token, called "Waves", which can be used as a payment currency and reward for block generation and commissions
     
 
-### Waves History ###
+### Waves history ###
 The story of the company has begun in 2016.  
 With the help of the crowdfunding platform, the company received approximately 30,000 BTC for its further development.  
 A year later, there was launched a decentralized exchange platform within the Waves project.  

@@ -1,15 +1,15 @@
- - [Smart Asset Description](#smart-asset-description)
- - [Usage Examples](#usage-example)
-   - [Token Usage Freeze](#token-usage-freeze)
-   - [Unburnable Token](#unburnable-token)
- - [Setting An Assets Script](#setting-an-asset-script)
-   - [Requirements](#requirements)
-   - [Limitations](#limitations)
-   - [Writting A Smart Asset Script](#writting-a-smart-asset-script)
+- [Smart asset description](#smart-asset-description)
+- [Usage examples](#usage-examples)
+  - [`Token usage freeze`](#token-usage-freeze)
+  - [`Unburnable token`](#unburnable-token)
+- [Setting an asset script](#setting-an-asset-script)
+  - [Requirements](#requirements)
+  - [Limitations](#limitations)
+  - [Writting a smart asset script](#writting-a-smart-asset-script)
 
 --- 
 
-## Smart Asset Description ##
+## Smart asset description ##
 
 On the Waves platform, it is possible to issue your own token.  
 You can give it a name, promote it, making the token a valuable currency.  
@@ -38,14 +38,14 @@ Read more about [Smart Asset](https://docs.waves.tech/en/building-apps/smart-con
 
 ---
 
-## Usage Examples ##
+## Usage examples ##
 
 All of the possible usage scenarios depend on the ingenuity of the asset creator.  
 We will demonstrate a very few basic examples for the sake of simplicity.  
 These examples will be writen in the [Ride programming language](https://docs.waves.tech/en/ride/).  
 In the topic [Programming on RIDE]() basics of the language will be described.  
 
-### `Token Usage Freeze` ###
+### `Token usage freeze` ###
 
 Once there is a certain height of the blockchain (1610000 blocks), disable all operations with the smart asset. 
 
@@ -58,7 +58,7 @@ let targetHeight = 1610000
 height >= targetHeight
 ```
 
-### `Unburnable Token` ###
+### `Unburnable token` ###
 
 Make the asset unburnable, i.e. impossible to have the token amount reduced or the token to be destroyed.  
 
@@ -77,7 +77,7 @@ More about [Burn Transaction](https://docs.waves.tech/en/blockchain/transaction-
 
 ---
 
-## Setting An Asset Script ##
+## Setting an asset script ##
 
 ### Requirements ###
 To create a smart asset, it is necessary:
@@ -99,7 +99,7 @@ There are 2 major limitations when working with smart asset creation is
   Read more about [Fee in Sponsored Asset](https://docs.waves.tech/en/blockchain/transaction/transaction-fee#fee-in-sponsored-asset).
 
 
-### Writting A Smart Asset Script ###
+### Writting a smart asset script ###
 
 There are two major steps to installing a smart asset script:
 1. Prepare the ride script you would like to install on an asset:

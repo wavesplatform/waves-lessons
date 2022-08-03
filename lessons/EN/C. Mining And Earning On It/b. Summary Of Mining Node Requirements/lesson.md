@@ -1,8 +1,7 @@
- - [Prerequisites](#prerequisites)
-   - [Node Requirements](#node-requirements)
-   - [Block Generation Requirements](#block-generation-requirements)
- - [Getting Started](#getting-started)
-
+- [Prerequisites](#prerequisites)
+  - [Node requirements](#node-requirements)
+  - [Block generation requirements](#block-generation-requirements)
+- [Getting started](#getting-started)
 
 ---
 
@@ -15,7 +14,7 @@ These requirements would be enough to have a validating node connected to the Wa
 
 ---
 
-### Node Requirements ###
+### Node requirements ###
 
 To deploy a node there are no other requirements but the requirements for computer capacity:  
 
@@ -26,7 +25,7 @@ To deploy a node there are no other requirements but the requirements for comput
 
 ---
 
-### Block Generation Requirements ###
+### Block generation requirements ###
 
 To have a generating node, you need to have the node's account generating balance at least 1000 WAVES for the last 1000 blocks:    
 
@@ -41,7 +40,7 @@ The generating balance of this account is 1000 WAVES for the last 1000 blocks.
 
 ---
 
-## Getting Started ##
+## Getting started ##
 
 Depending on your operating system, there are different ways of node deployment.  
 For every OS, there will be 2 ways of node installation:

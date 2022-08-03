@@ -1,12 +1,12 @@
- - [Network Description](#network-description)
- - [Mainnet, Testnet, Stagenet](#mainnet-testnet-stagenet)
- - [Useful Network Resources](#useful-network-resources)
-   - [Waves Explorer](#waves-explorer)
-   - [Network API](#network-api)
+- [Network description](#network-description)
+- [Mainnet, Testnet, Stagenet](#mainnet-testnet-stagenet)
+- [Useful network resources](#useful-network-resources)
+  - [Waves explorer](#waves-explorer)
+  - [Network API](#network-api)
 
 ---
 
-## Network Description ##
+## Network description ##
 
 A network is a way of connecting different hosts into one space.  
 At home, we may have different devices connected to one WI-FI router, forming a net.  
@@ -59,7 +59,7 @@ Read about it in the [Mining and earning on it]() chapter.
 
 ---
 
-## Useful Network Resources ##
+## Useful network resources ##
 
 Since Waves has a large infrastructure, it has many different tools that function with the aforementioned networks.  
 In the lesson [Waves Infrastructure Products And Tools](), all of them will be explained in detail.
@@ -68,7 +68,7 @@ Nevertheless, there are 2 services that it is worth mentioning:
 - [Waves Explorer](#waves-explorer)
 - [Swagger API](#network-api)
 
-### Waves Explorer ###
+### Waves explorer ###
 
 [Waves Explorer](https://new.wavesexplorer.com/) is a service that allows browsing the Waves blockchain data.  
 For example, if we made a money transfer to our friend, such a transaction can be checked via Waves Explorer.  

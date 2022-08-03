@@ -1,10 +1,10 @@
- - [Module Intro](#module-intro)
- - [Generating Node Definition](#miner-node-definition)
- - [Rewards For Block Generation](#rewards-for-blocks-generation)
+- [Module intro](#module-intro)
+- [Generating node definition](#generating-node-definition)
+- [Rewards for blocks generation](#rewards-for-blocks-generation)
 
 ---
 
-## Module Intro ##
+## Module intro ##
 
 This module will open the door to the world of mining with Waves.  
 Firstly we will define what a [mining node](#miner-node-definition) is and discover what nodes can do.  
@@ -14,7 +14,7 @@ By the end of this module, you would be able to deploy your own node and be able
 
 ---
 
-## Generating Node Definition ##
+## Generating node definition ##
 
 In the lesson [Nodes Of The Waves Network](), we gave a definition to node and described major features of it.  
 Let's  recap what we have just learned about it with a few short sentences.  
@@ -35,7 +35,7 @@ If your node generates a block, you receive a [reward](#rewards-for-blocks-gener
 
 ---
 
-## Rewards For Blocks Generation ##
+## Rewards for blocks generation ##
 
 The reward for block generation is not static.  
 At the current moment, the reward amount is 6 WAVES.  

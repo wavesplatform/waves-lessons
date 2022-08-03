@@ -1,9 +1,9 @@
-  - [Short history of Web evolution](#short-history-of-web-evolution)
-  - [Web services now and Web3 architecture](#web-services-now-and-web3-architecture)
-  - [Digital signatures](#digital-signatures)
-  - [Managing keys](#managing-keys)
+- [Short history of web evolution](#short-history-of-web-evolution)
+- [Web services now and web3 architecture](#web-services-now-and-web3-architecture)
+- [Digital signatures](#digital-signatures)
+- [Managing keys](#managing-keys)
 
-## Short history of Web evolution ##
+## Short history of web evolution ##
 
 The Internet as a technology was born in 1969 (more than 50 years ago!), on 2nd September 1969.  
 This was the first time two computers communicated with each other.  
@@ -35,7 +35,7 @@ It will also make use of the benefits of major emerging technologies like the In
 ![](./images/web3.png)
 
 
-## Web services now and Web3 architecture ##
+## Web services now and web3 architecture ##
 
 Web3 is different from the previous shift from Web1 to Web2.  
 At its core, Web3 isn’t about speed, performance, or convenience.  

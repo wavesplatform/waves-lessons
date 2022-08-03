@@ -1,11 +1,11 @@
-  - [Node Description](#node-description)
-    - [Validating Node](#validating-node)
-    - [Generating Node](#generating-node)
-  - [Node Benefits](#node-benefits)
+- [Node description](#node-description)
+  - [Validating node](#validating-node)
+  - [Generating node](#generating-node)
+- [Node Benefits](#node-benefits)
 
 ---
 
-## Node Description ##
+## Node description ##
 
 A node is a host that is connected to the blockchain [network]() using the [Waves Node](https://github.com/wavesplatform/Waves) application.  
 In other words, it is a computer, a local machine in one big network that:  
@@ -42,7 +42,7 @@ Once found out that the transaction is invalid, it will be rejected and not be i
 
 ---
 
-### Validating Node ###
+### Validating node ###
 
 Every single node connected to the network is taking a part in the validation process.  
 Once nodes receive a transaction, they begin the process of verification of that transaction.  
@@ -55,7 +55,7 @@ The transaction must:
 
 ---
 
-### Generating Node ###
+### Generating node ###
 
 A generating node is a node that generates blocks.  
 All the nodes are [validating nodes](#validating-node), but not every node is a generating node.  

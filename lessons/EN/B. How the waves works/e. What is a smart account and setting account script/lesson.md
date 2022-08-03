@@ -1,15 +1,15 @@
- - [Smart-Account Definition](#smart-account-definition)
- - [Usage Examples](#usage-examples)
-   - [Selling Or Buying Only BTC](#selling-or-buying-only-btc)
-   - [Purchase Of A Certain Asset](#purchase-of-a-certain-asset)
- - [Setting A Smart Account Script](#setting-a-dapp-script)
-   - [Requirements](#requirements)
-   - [Limitations](#limitations)
-   - [Set Script Transaction](#set-script-transaction)
+- [Smart account definition](#smart-account-definition)
+- [Usage examples](#usage-examples)
+  - [`Selling or buying only BTC`](#selling-or-buying-only-btc)
+  - [`Purchase of an asset`](#purchase-of-an-asset)
+- [Setting a smart account script](#setting-a-smart-account-script)
+  - [Requirements](#requirements)
+  - [Limitations](#limitations)
+  - [Set script transaction](#set-script-transaction)
 
 ---
 
-## Smart Account Definition ##
+## Smart account definition ##
 
 On the Waves platform, it is possible to create a regular account.  
 With a regular account, you can send any transactions manually.  
@@ -37,12 +37,12 @@ Read more about [Smart Account](https://docs.waves.tech/en/building-apps/smart-c
 
 ---
 
-## Usage Examples ##
+## Usage examples ##
 
 The examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).  
 In the topic [Programming on RIDE]() basics of the language will be described.
 
-### `Selling Or Buying Only BTC` ###
+### `Selling or buying only BTC` ###
 
 An account with the script below can make sales transactions only in relation to BTC:  
 ```ride
@@ -60,7 +60,7 @@ match tx {
 }
 ```
 
-### `Purchase Of A Certain Asset` ###
+### `Purchase of an asset` ###
 
 The script below allows making purchases from your account only:
 
@@ -89,7 +89,7 @@ match tx {
 
 ---
 
-## Setting A Smart Account Script ##
+## Setting a smart account script ##
 
 ### Requirements ###
 
@@ -101,7 +101,7 @@ The transaction fee for setting the script is 0.01 WAVES.
 Any account may have only one script attached to it.  
 “Detaching” a script from a smart account or replacing it with a new one is possible only if the "old" script doesn't forbid it.   
 
-### Set Script Transaction ###
+### Set script transaction ###
 
 There are 2 major ways of smart account script installation:
 - [Waves IDE](#wavesidechapterreference):

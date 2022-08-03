@@ -9,7 +9,7 @@
 
 ---
 
-## Waves Toolset ##
+## Waves toolset ##
 
 The Waves blockchain platform has many ready solutions for working with the blockchain.  
 It is presented in a vast variety of tools that help both developers and regular blockchain users.  
@@ -28,7 +28,7 @@ There are 6 major instruments that are absolutely free to use:
     Libraries intended for creation, signing, broadcasting [transactions](#linktotransactionlesson), and reading data from the Waves blockchain.
 - **<ins>[IDE Plugins](#ide-plugins)</ins>**  
     
-### Waves Explorer ###
+### Waves explorer ###
 
 If you would like to browse the Waves blockchain data, the [Waves Explorer](https://new.wavesexplorer.com/) is the correct place for that.  
 Please, keep in mind that all the blockchain data can exist within 3 major [Waves networks (Mainnet, Testnet, and Stagenet)]().  
@@ -130,7 +130,7 @@ For example, you can get the current node status:
 ![](./images/restapi.png)
     
 
-### Software Development Kits ###
+### Software development kits ###
 
 For developers wishing to interact with the Waves blockchain, there is a great opportunity  
 We created multiple libraries in different programming languages that allow you to:
@@ -149,7 +149,7 @@ The list of supported languages:
 - [Python]() 
 - [PHP]()
 
-### IDE Plugins ###
+### IDE plugins ###
 
 The Waves team is developing different plugins for popular IDEs like Visual Studio Code or JetBrains products.  
 Meanwhile, some of the plugins are still in the development stage, there is a [Visual Studo Code extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride).  

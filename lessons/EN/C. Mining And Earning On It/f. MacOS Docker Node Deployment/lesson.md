@@ -1,22 +1,22 @@
-- [- Docker Node Upgrade](#--docker-node-upgrade)
-- [Node Structure](#node-structure)
+- [Node structure](#node-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Node Configuration File Description](#node-configuration-file-description)
-  - [Modules In The Configuration File](#modules-in-the-configuration-file)
-  - [API Key Of Your Node](#api-key-of-your-node)
-  - [Configuration File Setup](#configuration-file-setup)
+  - [Node configuration file description](#node-configuration-file-description)
+  - [Modules in the configuration file](#modules-in-the-configuration-file)
+  - [API key of your node](#api-key-of-your-node)
+  - [Configuration file setup](#configuration-file-setup)
 - [Synchronization](#synchronization)
-  - [Synchronization Process Description](#synchronization-process-description)
-  - [Blockchain Synchronization](#blockchain-synchronization)
+  - [Synchronization process description](#synchronization-process-description)
+  - [Blockchain synchronization](#blockchain-synchronization)
 - [Update](#update)
-  - [Necessity Of Upgrading Your Node](#necessity-of-upgrading-your-node)
-  - [Fork Of Blockchain](#fork-of-blockchain)
-  - [Node Upgrade](#node-upgrade)
+  - [Necessity of upgrading your node](#necessity-of-upgrading-your-node)
+  - [Fork of blockchain](#fork-of-blockchain)
+  - [Node upgrade](#node-upgrade)
+  
 ---
 
-## Node Structure ##
+## Node structure ##
 
 To clarify all of our node installation steps, it is better, to begin with, a node structure explanation.  
 Understanding the structure of the node will shed some light on major essences that a node interacts with.  
@@ -113,7 +113,7 @@ In the next lesson, [node configuration](), we will learn how to set up a config
 
 ## Configuration ##
 
-### Node Configuration File Description ###
+### Node configuration file description ###
 
 As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
@@ -125,7 +125,7 @@ In the [next lesson](), we will talk about node synchronization with the Waves b
 A configuration file is a way of setting up instructions on how a node should work.  
   
 
-### Modules In The Configuration File ###
+### Modules in the configuration file ###
 
 All the node modules are wrapped within the `Waves` configuration section.  
 There we can define what modules we would like to configure.  
@@ -242,7 +242,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
      Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
 
-### API Key Of Your Node ###
+### API key of your node ###
 
 After the REST API module is configured and node deployed, you will be able to access the Swagger interface for blockchain interaction.  
 There you can access different methods that will allow you:
@@ -291,7 +291,7 @@ Here is how you can do it:
     ![](./images/swagg3.png)  
 5. Save both the original phrase you entered (API key) and the hash (API key hash) of it as we will use them for interaction with private node methods in this lesson.
 
-### Configuration File Setup ###
+### Configuration file setup ###
 Follow the instructions below for setting up configurations:
 
 1. Once a node has been deployed, a configuration file gets automatically created.  
@@ -383,7 +383,7 @@ In the next lesson, [Blockchain Synchronization](), we will move to the final st
 
 ## Synchronization ##
 
-### Synchronization Process Description ###
+### Synchronization process description ###
 
 Before we begin blockchain synchronization, it is necessary to understand how blockchain gets formed.  
 Let's recap what we discussed in the lesson, [Waves Blockchain Description]().  
@@ -430,7 +430,7 @@ If so, you can skip all the instructions below and continue with the next chapte
 
 However, if you wish to speed up this process, within this lesson we will concentrate on the blockchain data upload.  
 
-### Blockchain Synchronization ###
+### Blockchain synchronization ###
 
 Follow the steps below to synchronize the current blockchain with your node:  
 1. Remove all the data within the directory that contains the blockchain data of the node:
@@ -497,7 +497,7 @@ If your node generates a block, you will get a reward for block generation right
 
 ## Update ##
 
-### Necessity Of Upgrading Your Node ###
+### Necessity of upgrading your node ###
 
 The blockchain world constantly evolves, pushing all its participants to continuous development.  
 The Waves blockchain is among leaders that persistently work on technological advancement.  
@@ -507,7 +507,7 @@ These updates expand nodes functionality, offer new transaction types, etc.
 You can subscribe to the [github releases page](https://github.com/wavesplatform/Waves/releases/) to be always aware of all published updates.  
 In case a noder owner skips the update, it may cause [forks](#fork-of-blockchain).  
 
-### Fork Of Blockchain ###
+### Fork of blockchain ###
 
 Fork is the moment when the blockchain is split by two different chains.  
 Within the Waves blockchain, fork formation is possible if the Waves team publishes a node update, but not all nodes decide to switch to the update.
@@ -531,7 +531,7 @@ In the chapter below, [Node Upgrade](), we will run through all the steps of upd
 In case you didn't update your node in time, in the chapter, [Node Rollback](), we will discuss steps of how to roll back your node to the working state.
 
 
-### Node Upgrade ###
+### Node upgrade ###
 
 Approximately every two-four weeks the Waves team publishes updates to the [wavesplatform git repository](https://github.com/wavesplatform/Waves/releases/).  
 The Waves team strongly recommends to subscribe to the repository page to be aware of all releases.  

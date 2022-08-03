@@ -1,11 +1,11 @@
-  - [Blockchain](#blockchain)
-  - [Transaction](#transaction)
-  - [Nodes](#nodes)
-  - [Types of consensus](#types-of-consensus)
-    - [Proof of Work (PoW)](#proof-of-work-pow)
-    - [Proof of Stake (PoS)](#proof-of-stake-pos)
-    - [Proof of Authority (PoA)](#proof-of-authority-poa)
-  - [Why blockchain is great](#why-blockchain-is-great)
+- [Blockchain](#blockchain)
+- [Transaction](#transaction)
+- [Nodes](#nodes)
+- [Types of consensus](#types-of-consensus)
+  - [`Proof of work (PoW)`](#proof-of-work-pow)
+  - [`Proof of stake (PoS)`](#proof-of-stake-pos)
+  - [`Proof of authority (PoA)`](#proof-of-authority-poa)
+- [Why blockchain is great](#why-blockchain-is-great)
 
 ---
 
@@ -65,7 +65,7 @@ The block generation process is called mining.
 There are actually many types of consensus algorithms with different advantages and disadvantages.  
 
 
-### `Proof of Work (PoW)` ###
+### `Proof of work (PoW)` ###
 
 Proof of Work (PoW) is the first classical consensus algorithm.  
 It is based on the computation of a special “nonce” value, from which is produced a hash result with a specific number of zeros.  
@@ -76,14 +76,14 @@ The process of computation consumes large quantities of electricity, which means
 
 Bitcoin and Ethereum blockchain networks are based on the Proof of Work; however, Ethereum is now transitioning to Proof of Stake.  
 
-### `Proof of Stake (PoS)` ###
+### `Proof of stake (PoS)` ###
 
 Proof of Stake (PoS) is a category of consensus algorithms that depend on a participants’ economic stake in the network.  
 Anyone who holds the blockchain’s native cryptocurrency have a chance to add a block and be rewarded.  
 The probability of creating a block depends on the participant’s stake (balance) computational power, which drastically reduce energy consumption.  
 Examples of uses include NXT, Tezos, Peercoin, Blackcoin.  
 
-**Delegated Proof of Stake** is a version of PoS, where all cryptocurrency holders vote for their delegates.  Delegates are responsible for validating transactions, creating new blocks, and maintaining a network.  
+**Delegated proof of stake** is a version of PoS, where all cryptocurrency holders vote for their delegates.  Delegates are responsible for validating transactions, creating new blocks, and maintaining a network.  
 The best analogy for this is the US presidential elections.  
 Delegates are elected by token holders through a Delegated Proof-of-Stake consensus mechanism.  
 The number of delegates is limited to a predefined and relatively small number.  
@@ -97,7 +97,7 @@ The probability of being a block generator is proportional to the total amount o
 Leased WAVES are locked in the user’s account and cannot be transferred or traded.  
 Still, the tokens remain in the full control of the account holder, and leases can be canceled at any time.  
 
-### `Proof of Authority (PoA)` ###
+### `Proof of authority (PoA)` ###
 
 Proof of Authority (PoA) is an alternative consensus mechanism, which relies on known and reputable validators to produce blocks.  
 PoA is geared towards enterprises or private organizations who want to build their own chains that are essentially closed and do not involve external participants.   
