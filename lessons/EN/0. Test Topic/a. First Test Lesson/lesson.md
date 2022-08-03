@@ -133,40 +133,6 @@ Watch the third video
 [![Watch the third video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/34Na4j8AVgA)
   Insertion of multiple code examples:  
 
-<!-- ```java
-package com.wavesplatform.wavesj;
- 
-import java.net.URI;
- 
-import java.net.URISyntaxException;
- 
-public enum Profile {
- 
-     MAINNET("https://nodes.wavesnodes.com/%22),
- 
-     TESTNET("https://nodes-testnet.wavesnodes.com/%22),
- 
-     STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
- 
-     LOCAL("http://127.0.0.1:6869/%22);
- 
-private final URI uri;
- 
-   Profile(String url) {
- 
-       try {
- 
-          this.uri = new URI(url);
- 
-      } catch (URISyntaxException e) {
- 
-         throw new RuntimeException(e);
- 
-   }
- 
-} public URI uri() { return uri; } }
-``` -->
-
 ```js
 
 <script> function getCookie(byname) // возвращает по имени значение, здесь не используется 

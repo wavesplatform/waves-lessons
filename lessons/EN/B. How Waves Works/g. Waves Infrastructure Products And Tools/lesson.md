@@ -41,7 +41,6 @@ All the information you would be able to see on the screen would depend on the c
 The platform has a user-friendly interface that allows you to:
 - **<ins>See the Waves blockchain statistics</ins>**:  
   ![](./images/wavesexp_stat.png)  
-  <!-- There will be available details about the current Waves price in the USD equivalent, the amount of completed transactions, the current block height, etc. -->
 -  **<ins>Search transactions, accounts, tokens, blocks details</ins>**:
   ![](./images/wavesexp_search.png)  
 -  **<ins>Get detailed information about [transactions](https://new.wavesexplorer.com/transactions)</ins>**:

@@ -28,9 +28,6 @@ To deploy a node there are no other requirements but the requirements for comput
 
 ### Block Generation Requirements ###
 
-<!-- Every generating node should have an account attached to it.
-Generating account is an account that node uses for signing generated blocks. -->
-
 To have a generating node, you need to have the node's account generating balance at least 1000 WAVES for the last 1000 blocks:    
 
 | Requirement Description | Example|

@@ -169,10 +169,9 @@ These "containers" have:
   
 
 This concept can be displayed with the following picture:  
-  
-<img width="700px" src="https://www.mdpi.com/applsci/applsci-09-01788/article_deploy/html/images/applsci-09-01788-g001.png">
-  
 
+![](./images/blockstr.png) 
+  
 A very important element in a block is a hash.  
 <ins>Hash</ins> is a result of mathematical algorithms that converts an input value of any size to a certain combination of letters and numbers of a fixed size.  
 For example, if we take the phrase "I love Waves", with the magic help of the SHA256 algorithm, this phrase would turn into the hash:  
@@ -180,7 +179,6 @@ For example, if we take the phrase "I love Waves", with the magic help of the SH
 Regardless of how many times we repeat this transformation, this phrase would always be equal to this hash.  
 In the blockchain, a hash of a block is formed from all the data that the block is contained, including the hash of the previous block.  
 This bond makes it impossible to falsify even a small piece of data, as it would create a totally different hashing sequence.  
-<!-- You can read more about it in the chapter [Nodes of the Waves Network](). -->
 
 ---
 
@@ -190,8 +188,7 @@ All the blocks don't exist by themselves, and they all are a part of the big seq
 This sequence of blocks is called a blockchain.  
 On this picture, you may see a representation of this idea (from left to the right):  
   
-<img src="https://miro.medium.com/max/977/1*mNdCyhj2WRSzmgTOVztaUg.png">
-  
+![](./images/blockchainexm.png)  
   
 Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes in the network.  
   

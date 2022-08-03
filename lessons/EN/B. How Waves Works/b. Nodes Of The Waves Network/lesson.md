@@ -31,7 +31,7 @@ Even if one particular node initiates a certain action, for example, a money tra
   
 
 There are nearly hundreds Waves nodes across the globe:  
-<img width="700px" src="https://miro.medium.com/max/1400/0*jLB-75Xqyrgw8rPk">
+![](./images/wavesmap.png)  
 
 Nodes represent witnesses that keep an eye on all of the actions completed on the blockchain.  
 They check transactions and blocks to whether they were valid or if there is any attempt to alter the blockchain data.  
@@ -39,7 +39,6 @@ If there is a fraudulent transaction initiated by a node, other nodes will verif
 Once found out that the transaction is invalid, it will be rejected and not be included in a block.  
 
 ![](./images/attacker.png)  
-<!-- It is necessary to depict how a fraudulent attack of one node can look like. -->
 
 ---
 

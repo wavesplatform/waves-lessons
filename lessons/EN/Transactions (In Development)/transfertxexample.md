@@ -36,8 +36,6 @@
   | amount | Amount of token to transfer:<br> an integer value specified in the minimum fraction (“cents”) of token.| 1000 |
   | recipient | Recipient address base58 encoded or recipient [alias](https://docs.waves.tech/en/blockchain/account/alias) with alias:<chain_id>:prefix.<br>For example alias:T:merry (see [Chain ID](https://docs.waves.tech/en/blockchain/blockchain-network/#chain-id)) | 3PFmoN5YLoPNsL4cmNGkRxbUKrUVntwyAhf |
   | attachment | 	Arbitrary binary data (typically a comment to transfer) base58 encoded, up to 140 bytes. | 3vrgtyozxuY88J9RqMBBAci2UzAq9DBMFTpMWLPzMygGeSWnD7k | 
-  <!-- | sender | Адрес отправителя в кодировке base58 | 3P274YB5qseSE9DTTL3bpSjosZrYBPDpJ8k |
-  | proofs | | | -->
 
 - `Exchange Transaction`:<br>
   Exchanges two different tokens between two accounts.<br>
