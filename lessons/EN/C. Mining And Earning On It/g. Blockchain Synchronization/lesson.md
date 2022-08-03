@@ -1,7 +1,3 @@
- - [Node Upgrade](#node-upgrade)
- - [Fork Of Blockchain](#fork-of-blockchain)
- - [Node Rollback](#node-rollback)
-
 ##### Necessity Of Upgrading Your Node #####
 
 The blockchain world constantly evolves, pushing all its participants to continuous development.  
@@ -23,7 +19,7 @@ This idea can be simplified with an instance in the fictional world.
 Let's imagine we have 5 nodes in our fictional blockchain.  
 All 5 nodes have the same very node version 1.0, working identically.  
 One moment, we, as blockchain creators and developers, decide to upgrade the blockchain and add some features to it.  
-We publish the update of 1.1 node version and require all the node owners to update their nodes.   
+We publish the update of the node version, 1.1, and require all the node owners to update their nodes.   
 Out of all 5 nodes, only 3 node owners upgraded their nodes with the update.  
 The other 2 nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
@@ -423,9 +419,9 @@ Once you receive a notifcation of a new node version release, follow the steps b
     docker pull wavesplatform/wavesnode
     ```
 2. Stop the currently running node container:  
-    ![]()
+    ![](./images/stpcontdock.png)
 3. Remove the "old "node container:  
-    ![]()
+    ![](./images/rmcontdock.png)
 4. On the [page with the latest release](https://github.com/wavesplatform/Waves/releases/), take a look at the "Update notes" section.  
     There you will be able to see whether your node needs to re-import the blockchain data once again.  
       
