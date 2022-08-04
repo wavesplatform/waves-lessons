@@ -42,12 +42,37 @@ The generating balance of this account is 1000 WAVES for the last 1000 blocks.
 
 ## Getting started ##
 
-Depending on your operating system, there are different ways of node deployment.  
-For every OS, there will be 2 ways of node installation:
-- Docker container;
-- Package installation.
+There are 5 steps to deploy and manage your node:
+1. **<ins>Node installation</ins>**  
+    Firstly, we need to install our node.  
+    Within this step, all necessary directories and files in them will be installed on your host.  
+    You will deploy your own Waves node with minimum parameters.
+2. **<ins>Node configuration</ins>**  
+    Secondly, the installed node needs to be configured.  
+    We will work on the configuration file that defines how your node would work.
+3. **<ins>Blockchain synchronization</ins>**  
+    After that, it is necessary to synchronize the node with the current blockchain state.  
+    A newly installed node doesn't have all the blockchain data downloaded yet.  
+    The goal of this step is to upload the current blockchain data to our node.
+4. **<ins>Node update</ins>**  
+    Once you have a fully working node, after a time, you will need to update it.  
+    This step will describe all necessary steps of node upgrading.
+5. **<ins>Node rollback</ins>**  
+    In case your node doesn't have updates installed timely, it would be necessary to roll back the node.  
+    Rolling back your node would revert it to the working state for further synchronization.
 
-Please, select your OS to find out how to deploy a node with it:  
-- [Ubuntu]()
-- [MacOS]()
-- [Windows]()
+It is possible to deploy a node on Ubuntu, MacOS, and Windows.  
+For every OS, there can be different ways of deployment offered.  
+The Waves team suggests using Docker on your OS for a better experience.  
+However, you are free to use any of the suggested methods below.  
+Please, choose your OS and only one way of node deployment among the following:
+- [Ubuntu]:
+  - [docker]()
+  - [deb package]()
+  - [waves package]()
+- [MacOS]:
+  - [docker]()
+  - [waves package]()
+- [Windows]:
+  - [docker]()
+  - [waves package]()
