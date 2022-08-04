@@ -53,4 +53,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
 
+<Examples>
+
+```js
+console.log('hi')
+```
+```java
+System.out.println(String msg)
+```
+```php
+console.log('hi')
+```
+```csharp
+System.Diagnostics.Debug.WriteLine("This is a log")
+```
+```python
+print('hi')
+```
+```ride
+{-# STDLIB_VERSION 5 #-}
+{-# CONTENT_TYPE EXPRESSION #-}
+{-# SCRIPT_TYPE ACCOUNT #-}
+```
+
+</Examples>
+
 </Message>
