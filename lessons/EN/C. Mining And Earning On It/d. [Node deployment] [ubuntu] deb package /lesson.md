@@ -18,8 +18,8 @@
 
 ## Node structure ##
 
-To clarify all of our node installation steps, it is better, to begin with, a node structure explanation.  
-Understanding the structure of the node will shed some light on major essences that a node interacts with.  
+To clarify all of the node deployment steps, it is required to understand the structure of a node.  
+Understanding the node structure will shed some light on major essences that a node interacts with.  
 
 Under the bonnet, every node has:
 - **<ins>Blockchain database</ins>**:  
@@ -41,9 +41,10 @@ Here is how you can encode a seed phrase to Base58:
 1. Open the [Waves IDE](https://waves-ide.com/);
 2. Click "RideREPL" down the screen:  
     ![](./images/repl1.png)  
-3. Insert in the function your seed phrase:
+3. Insert in the function your seed phrase:  
     `"your-seed-phrase".toBytes().toBase58String()`  
-    For example, `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
+    For example:  
+    `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
 4. Copy the function with your seed phrase to the console:  
     ![](./images/repl2.png)  
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
@@ -126,8 +127,15 @@ Follow the steps below to install a Waves node:
     ```
     INFO [appender-22] c.w.s.BlockchainUpdaterImpl - New height: 100
     ```
-Congratulations! You have a working Waves node!  
-In the next lesson, [node configuration](), we will learn how to set up a configuration file of your node.  
+
+All done! You have a working node deployed!  
+  
+Also, it is possible to deploy a node on your custom blockchain.  
+You can read more information about it in the [full documentation](https://docs.waves.tech/en/waves-node/private-waves-network).  
+Please, note that mining the WAVES tokens that have value on the market is possible only on the MAINNET network.  
+Within this lesson, we will be deploying our node on the MAINNET network only.  
+   
+In the next chapter, [node configuration](#configuration), we will learn how to set up a configuration file of your node.  
 
 ## Node configuration ##
 
@@ -514,6 +522,10 @@ Follow the steps below to synchronize the current blockchain with your node:
 
 After syncrhonization is completed, your node will be ready for mining!  
 If your node generates a block, you will get a reward for block generation right to your node wallet.
+  
+Please, note that once you have a synchronized node, you can export the node's blockchain to a binary file.  
+It will allow you to deploy one more node on your host.  
+For more details, read [Export Blockchain to Binary File](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
 
 --- 
 
