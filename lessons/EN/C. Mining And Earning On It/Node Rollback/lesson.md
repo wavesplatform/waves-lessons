@@ -23,7 +23,7 @@ As a consequence of a non-functioning node, there will be no opportunity to gene
   
 In the scenario you turned out to be on a fork, it will be necessary to update your node and roll back.  
 Firsly, we eliminate the very issue why our node went to the fork, i.e. we install the necessary updates that were absent.  
-Secondly, we rollback our node to the height before the certain feature was activated that caused the fork.  
+Secondly, we rollback our node to the height before the certain feature was activated.  
 Rolling back a node is a way to restore the node blockchain height to the moment before the fork occurred.  
 Lastly, the node will be able to synchronize with the current blockchain state and be ready to mine once again.  
 
@@ -83,7 +83,7 @@ In this situation, we will need to:
     ```
     "signature":"5qnRwFt4vkrvAx4jbhu7Bu8XHrxY17JkYV41nbnPEEX3euqznGg15j9i2si1K2k5rZahRiDQovwxFq459Rwewjf7"
     ```
-4. Verify the signature of a block of our node's blockchain.
+4. Verify the signature of a block of our node's blockchain.  
     Check the signature of the blockchain's height minus 10 by the link:
     
     ```
@@ -107,6 +107,7 @@ In this situation, we will need to:
     - **<u>The signatures match.</u>**  
         If the signatures match, your node is up to date.  
         You won't need to update and roll it back for now.  
+        You can skip all the steps of the instruction below and go directly to the [Node of the network]() chapter.
     - **<u>The signatures do not match.</u>**  
         If the signatures did not match, it will be necessary to repeat the steps №3 and №4 in 20 minutes one more time.    
         
@@ -120,17 +121,19 @@ In this situation, we will need to:
         If our signatures matched once, it is a sign that both our node and the random node that responded via the REST API are not on the fork.  
         However, if the signatures did not match, there is a small chance the blockchain node could be on the fork.  
 
-        We will need to repeat the step №3 and №4 in 20 minutes for only one more time.
-        In case it matches after the second attempt, you won't need to update and roll back your node.
+        We will need to repeat the step №3 and №4 in 20 minutes for only one more time.  
+        In case it matches after the second attempt, you won't need to update and roll back your node.  
         If for the second time the signatures did not match, please, continue with the step №6.
 6. Update your node.  
-    Once you encountered two signature mismatches, run through the procedure of the [node update](#node-upgrade).
+    Once you encountered two signature mismatches, run through the procedure of the [Node update](#node-upgrade).
 7. Roll back your node.  
     Please, make sure you are authorized in the REST API service as it was mentioned in the 4th step of the chapter [Configuration file setup](#configuration-file-setup).
     
     Go to the link to roll back your node at your node height minus 2000 blocks:
-    http://localhost:6869/debug/rollbackToHeight/{insert the your node blockchain height minus 2000 blocks}
     
+    ```
+    http://localhost:6869/debug/rollbackToHeight/{insert the your node blockchain height minus 2000 blocks}
+    ```
     For example, since the height of our node was equal to `{"height":2999}`, we need to roll it back 2000 blocks ago (`2999 - 2000 = 999`):    
 
     ```
@@ -141,7 +144,9 @@ In this situation, we will need to:
     - **<u>The operation is succesfull</u>**.  
         You will receive a block id string in response.  
         As well, you will be able to see the logs of your node app with the current blockchain height.  
-        The node blockchain height will be rolledback to 2000 blocks ago.
+        The node blockchain height will be rolledback to 2000 blocks ago. 
+        After this, your node will automatically start synchronization to the current blockchain state.  
+        Once the synchronization is done, your node will be ready for mining once again.  
     - **<u>The operation is failed</u>**.  
         You will receive an error and the height of the blockchain in your app logs will not change.  
         If you encounter the roll back failure, it means that the fork occured more than 2000 blocks ago.  
