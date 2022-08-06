@@ -17,28 +17,72 @@ To answer the question why it is necessary to roll back a node after a fork, let
     - **<u>Recommended updates</u>** include minor bug fixes or slight improvements.  
         Skipping such updates will not lead to a fork, however, for the best experience, are still recommended to be installed.
 
-In case you don't update your node in time after a mandatory update,  your node may switch to a fork.  
+In case you don't update your node before a feature activation within a mandatory update, your node will switch to a fork.  
 The risks of staying in a fork are that at one moment the node may stop working.  
 As a consequence of a non-functioning node, there will be no opportunity to generate a block and receive a reward.  
   
-In this scenario, to make your node work properly, it will be necessary to update your node and roll back.  
+In the scenario you turned out to be on a fork, it will be necessary to update your node and roll back.  
 Firsly, we eliminate the very issue why our node went to the fork, i.e. we install the necessary updates that were absent.  
-Secondly, we rollback our node to the height before the certain feature was activated that caused fork.  
+Secondly, we rollback our node to the height before the certain feature was activated that caused the fork.  
 Rolling back a node is a way to restore the node blockchain height to the moment before the fork occurred.  
+Lastly, the node will be able to synchronize with the current blockchain state and be ready to mine once again.  
 
 The best way to get the idea is to watch it working on the live example.  
-We will return to our fictional blockchain instance, where the blochcain split into two chains at the 100th block:  
+We will return to our fictional blockchain instance, where the blochcain split into two chains at the 100th block.  
+A feature that was included in the update was activated at the 100th block:    
 ![](./images/noderoll.png)
 
+Since we didn't update our node before the feature activation, we switched to a fork.  
 At the moment of the 102th block, we found out that we were on the fork:  
 ![](./images/102block.png)
 
-In this situation, we will need to roll back the node from the fork's 102th block to the 100th block before the split occurred.  
+In this situation, we will need to:
+- Update our node;
+- Roll it back from the 102th block to the 100th block before the split occurred.  
+    
 ![](./images/102to100.png)
 
 ## How to rollback a node ###
 
-1. Чекаем высоту нашей ноды и блокчейна.
+<!-- Once you realize you skipped a mandatory update, many steps of node restoration would depen on how much time passed since this moment.  
+If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, it will be necessary to update and re-synchronize your node. -->
+
+1. Check the current height of the blockchain by the [link](https://nodes.wavesnodes.com/blocks/height).  
+    It can look like this:
+
+    ```
+    {"height":1000}
+    ```
+2. Check the blockchain height of your node via the [REST API of your node](http://localhost:6869/blocks/height).  
+    Two scenarion are possible:
+    - Your blockchain height is the same or is different for a few blocks.  
+        It can look something like this:  
+
+        ```
+        {"height":999}
+        ```
+        In such a case, please, continue with the step №3 of this instruction.
+    - Your blockchain height is significantly far behind the blockchain's height.  
+        It can look something like this:
+        
+        ```
+        {"height":500}
+        ```  
+        In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
+        Please, note, that you won't need to follow this instruction below (step №3 and below).
+3. Verify block's headers.   
+    Please, note that the [REST API of the MAINNET nodes](https://nodes.wavesnodes.com/) is connecting to a random node.  
+    If it was only one node, it could become unavailable or overloaded, so the REST API service would not be available.  
+    For load balancing purpose, by accessing `https://nodes.wavesnodes.com`, at different times a different node may respond.   
+        https://nodes.wavesnodes.com/blocks/headers/at/3236926
+
+
+
+
+
+
+
+4. Чекаем высоту нашей ноды и блокчейна.
 Например, высота 100.
 2. От этой высоты вычитаем 10.
 100 - 10 = 90
