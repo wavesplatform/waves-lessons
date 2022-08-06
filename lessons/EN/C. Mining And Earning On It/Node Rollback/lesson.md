@@ -48,7 +48,7 @@ In this situation, we will need to:
     It can look like this:
 
     ```
-    {"height":1000}
+    {"height":3000}
     ```
 2. Check the blockchain height of your node via the [REST API of your node](http://localhost:6869/blocks/height).  
     Two scenarios are possible:
@@ -56,14 +56,14 @@ In this situation, we will need to:
         It can look something like this:  
 
         ```
-        {"height":999}
+        {"height":2999}
         ```
         In such a case, please, continue with the step №3 of this instruction.
     - Your blockchain height is significantly far behind the blockchain's height.  
         It can look something like this:
         
         ```
-        {"height":500}
+        {"height":2500}
         ```  
         In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
         Please, note, that you won't need to follow this instruction below (step №3 and below).  
@@ -74,8 +74,8 @@ In this situation, we will need to:
     ```
     https://nodes.wavesnodes.com/blocks/headers/at/{insert blockchain height minus 10}
     ```
-    In our example, the blockchain height was `{"height":1000}`, therefore `1000 - 10 = 990`:  
-    https://nodes.wavesnodes.com/blocks/headers/at/990
+    In our example, the blockchain height was `{"height":3000}`, therefore `3000 - 10 = 2990`:  
+    https://nodes.wavesnodes.com/blocks/headers/at/2990
 
     You will see multiple different keys on the screen, but we need only the "signature" key.  
     The signature may look like this:
@@ -89,10 +89,10 @@ In this situation, we will need to:
     ```
     http://localhost:6869/blocks/headers/at/{insert blockchain height minus 10}
     ```
-    In our example, our node blockchain height was `{"height":999}`.  
-    Yet, it could have taken some time for our node to synchronize the height with the blockchain's height (up to `{"height":1000}`).  
-    Since we are aiming at checking the same height block signature, we will need to use the same height, `1000 - 10 = 990`:  
-    http://localhost:6869/blocks/headers/at/990
+    In our example, our node blockchain height was `{"height":2999}`.  
+    Yet, it could have taken some time for our node to synchronize the height with the blockchain's height (up to `{"height":3000}`).  
+    Since we are aiming at checking the same height block signature, we will need to use the same height (`3000 - 10 = 2990`):  
+    http://localhost:6869/blocks/headers/at/2990
 
     You will see multiple different keys on the screen, but we need only the "signature" key.  
     The signature may look like this:
@@ -101,31 +101,48 @@ In this situation, we will need to:
     "signature":"5qnRwFt4vkrvAx4jbhu7Bu8XHrxY17JkYV41nbnPEEX3euqznGg15j9i2si1K2k5rZahRiDQovwxFq459Rwewjf7"
     ```
 
-5. Compare the signatures 
-    In this step, we need to verify if the signatures of a blockchain block and block of our node blockchain match.  
-       
-    Please, note that the [REST API user interface](https://nodes.wavesnodes.com/) is connecting to a random node within the Mainnet network.  
-    If it was only one node, it could become unavailable or overloaded, so the REST API service would not be working.  
-    For load balancing purpose, by accessing `https://nodes.wavesnodes.com`, at different times a different node may respond.   
-    Due to the fact we connect to random nodes within the network via [REST API](https://nodes.wavesnodes.com/), there are chances that this particular node that responded could switch to a fork itself.   
+5. Compare the block signatures of the blockchain and our node blockchain.  
 
-    For this very reason, there is a very small chance we could encounter a forked node during block's headers verification step.  
-   
+    Two scenarios are possible:
+    - **<u>The signatures match.</u>**  
+        If the signatures match, your node is up to date.  
+        You won't need to update and roll it back for now.  
+    - **<u>The signatures do not match.</u>**  
+        If the signatures did not match, it will be necessary to repeat the steps №3 and №4 in 20 minutes one more time.    
+        
+        The reason why we are doing this is the following:     
+        The [REST API user interface](https://nodes.wavesnodes.com/) is connecting to a random node within the Mainnet network.  
+        If it was only one node, it could become unavailable or overloaded, so the REST API service would not be working.  
+        For load balancing purpose, by accessing `https://nodes.wavesnodes.com`, at different times a different node may respond.   
+        Due to the fact we connect to random nodes within the network via [REST API](https://nodes.wavesnodes.com/), there are chances that this particular node that responded could switch to a fork itself.   
+
+        For this very reason, there is a very small chance we could encounter a forked node during block's headers verification step.  
+        If our signatures matched once, it is a sign that both our node and the random node that responded via the REST API are not on the fork.  
+        However, if the signatures did not match, there is a small chance the blockchain node could be on the fork.  
+
+        We will need to repeat the step №3 and №4 in 20 minutes for only one more time.
+        In case it matches after the second attempt, you won't need to update and roll back your node.
+        If for the second time the signatures did not match, please, continue with the step №6.
+6. Update your node.  
+    Once you encountered two signature mismatches, run through the procedure of the [node update](#node-upgrade).
+7. Roll back your node.  
+    Please, make sure you are authorized in the REST API service as it was mentioned in the 4th step of the chapter [Configuration file setup](#configuration-file-setup).
     
+    Go to the link to roll back your node at your node height minus 2000 blocks:
+    http://localhost:6869/debug/rollbackToHeight/{insert the your node blockchain height minus 2000 blocks}
+    
+    For example, since the height of our node was equal to `{"height":2999}`, we need to roll it back 2000 blocks ago (`2999 - 2000 = 999`):    
 
+    ```
+    http://localhost:6869/debug/rollbackToHeight/999
+    ```
 
-
-
-
-
-
-<!-- 
-4. Чекаем высоту нашей ноды и блокчейна.
-Например, высота 100.
-2. От этой высоты вычитаем 10.
-100 - 10 = 90
-Делаем еще раз спустся 20 минут если не совпадают - 
-3. На 90 блоке проверяем хэдеры, а именно значение signature.
-4. 
-Если signature ноды и блокчейна совпадают - можно выдохнуть и ждать новых обновлений.
-Если signature ноды и блокчейна не совпадают - обновляю ноду и откачиваю на 2000 блоков назад. Только в случае ошибки - заново выкачиваю блокчейн. -->
+    There are two possible results:
+    - **<u>The operation is succesfull</u>**.  
+        You will receive a block id string in response.  
+        As well, you will be able to see the logs of your node app with the current blockchain height.  
+        The node blockchain height will be rolledback to 2000 blocks ago.
+    - **<u>The operation is failed</u>**.  
+        You will receive an error and the height of the blockchain in your app logs will not change.  
+        If you encounter the roll back failure, it means that the fork occured more than 2000 blocks ago.  
+        It will not be possible to roll back more than 2000 blocks, therefore, you will need to star [Blockchain synchronization](#blockchain-synchronization) from the start.  
