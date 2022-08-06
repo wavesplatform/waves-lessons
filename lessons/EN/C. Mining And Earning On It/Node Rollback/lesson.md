@@ -44,9 +44,6 @@ In this situation, we will need to:
 
 ## How to rollback a node ###
 
-<!-- Once you realize you skipped a mandatory update, many steps of node restoration would depen on how much time passed since this moment.  
-If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, it will be necessary to update and re-synchronize your node. -->
-
 1. Check the current height of the blockchain by the [link](https://nodes.wavesnodes.com/blocks/height).  
     It can look like this:
 
@@ -54,7 +51,7 @@ If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, i
     {"height":1000}
     ```
 2. Check the blockchain height of your node via the [REST API of your node](http://localhost:6869/blocks/height).  
-    Two scenarion are possible:
+    Two scenarios are possible:
     - Your blockchain height is the same or is different for a few blocks.  
         It can look something like this:  
 
@@ -69,12 +66,52 @@ If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, i
         {"height":500}
         ```  
         In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
-        Please, note, that you won't need to follow this instruction below (step №3 and below).
-3. Verify block's headers.   
-    Please, note that the [REST API of the MAINNET nodes](https://nodes.wavesnodes.com/) is connecting to a random node.  
-    If it was only one node, it could become unavailable or overloaded, so the REST API service would not be available.  
+        Please, note, that you won't need to follow this instruction below (step №3 and below).  
+        After this step is completed, you can go to the [Node of the network]() chapter.
+3. Verify the signature of a block of the blockchain.   
+    Check the signature of the blockchain's height minus 10 by the link:
+    
+    ```
+    https://nodes.wavesnodes.com/blocks/headers/at/{insert blockchain height minus 10}
+    ```
+    In our example, the blockchain height was `{"height":1000}`, therefore `1000 - 10 = 990`:  
+    https://nodes.wavesnodes.com/blocks/headers/at/990
+
+    You will see multiple different keys on the screen, but we need only the "signature" key.  
+    The signature may look like this:
+
+    ```
+    "signature":"5qnRwFt4vkrvAx4jbhu7Bu8XHrxY17JkYV41nbnPEEX3euqznGg15j9i2si1K2k5rZahRiDQovwxFq459Rwewjf7"
+    ```
+4. Verify the signature of a block of our node's blockchain.
+    Check the signature of the blockchain's height minus 10 by the link:
+    
+    ```
+    http://localhost:6869/blocks/headers/at/{insert blockchain height minus 10}
+    ```
+    In our example, our node blockchain height was `{"height":999}`.  
+    Yet, it could have taken some time for our node to synchronize the height with the blockchain's height (up to `{"height":1000}`).  
+    Since we are aiming at checking the same height block signature, we will need to use the same height, `1000 - 10 = 990`:  
+    http://localhost:6869/blocks/headers/at/990
+
+    You will see multiple different keys on the screen, but we need only the "signature" key.  
+    The signature may look like this:
+
+    ```
+    "signature":"5qnRwFt4vkrvAx4jbhu7Bu8XHrxY17JkYV41nbnPEEX3euqznGg15j9i2si1K2k5rZahRiDQovwxFq459Rwewjf7"
+    ```
+
+5. Compare the signatures 
+    In this step, we need to verify if the signatures of a blockchain block and block of our node blockchain match.  
+       
+    Please, note that the [REST API user interface](https://nodes.wavesnodes.com/) is connecting to a random node within the Mainnet network.  
+    If it was only one node, it could become unavailable or overloaded, so the REST API service would not be working.  
     For load balancing purpose, by accessing `https://nodes.wavesnodes.com`, at different times a different node may respond.   
-        https://nodes.wavesnodes.com/blocks/headers/at/3236926
+    Due to the fact we connect to random nodes within the network via [REST API](https://nodes.wavesnodes.com/), there are chances that this particular node that responded could switch to a fork itself.   
+
+    For this very reason, there is a very small chance we could encounter a forked node during block's headers verification step.  
+   
+    
 
 
 
@@ -82,6 +119,7 @@ If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, i
 
 
 
+<!-- 
 4. Чекаем высоту нашей ноды и блокчейна.
 Например, высота 100.
 2. От этой высоты вычитаем 10.
@@ -90,4 +128,4 @@ If it was a few mandatory updates, for example, 2-3 mandatory updates skipped, i
 3. На 90 блоке проверяем хэдеры, а именно значение signature.
 4. 
 Если signature ноды и блокчейна совпадают - можно выдохнуть и ждать новых обновлений.
-Если signature ноды и блокчейна не совпадают - обновляю ноду и откачиваю на 2000 блоков назад. Только в случае ошибки - заново выкачиваю блокчейн.
+Если signature ноды и блокчейна не совпадают - обновляю ноду и откачиваю на 2000 блоков назад. Только в случае ошибки - заново выкачиваю блокчейн. -->
