@@ -521,11 +521,29 @@ For more details, read [Export Blockchain to Binary File](https://docs.waves.tec
 
 The blockchain world constantly evolves, pushing all its participants to continuous development.  
 The Waves blockchain is among leaders that persistently work on technological advancement.  
-Due to this, the Waves team publishes updates of the blockchain that all the nodes are required to install.  
-These updates expand nodes functionality, offer new transaction types, etc. 
+Due to this, the Waves team publishes updates of the blockchain that all the nodes are required to install.    
+These updates expand nodes functionality, offer new transaction types, can fix bugs, etc. 
   
+There are two types of updates:
+- **<u>The ones that can be implemented right away</u>**   
+    Usually, it is minor bug fixes or slight changes.  
+    Once you update your node with them, the new functionality will become available for you right away.  
+    In case you don't update your node with such a release, it will not case a [fork](#fork-of-blockchain).
+- **<u>The ones that take time to be implemented</u>**.  
+    It is large updates that may include consensus changes or any other significant changes.  
+    On the node releases page, node owners are warned about the upcoming switch to the new changes.  
+    For example, an update may be published at the 1st of September, but in the comments of the release it is mentioned:  
+    
+    ```
+    This is a mandatory release. 
+    Mainnet nodes need to be updated before feature #​17 is activated.
+    The activation will happen at height 3250000 (approx. on Sep 10 2022 05:37 UTC)."
+    ```
+    Therefore, node owners receive a time frame within which it is necessary to update the node.  
+    In case a noder owner skips such an update after the new feature is activated, it may cause [forks](#fork-of-blockchain). 
+
 You can subscribe to the [github releases page](https://github.com/wavesplatform/Waves/releases/) to be always aware of all published updates.  
-In case a noder owner skips the update, it may cause [forks](#fork-of-blockchain).  
+It is recommended to install all updates without postponing to always keep your node functioning properly.   
 
 ### Fork of blockchain ###
 
@@ -555,9 +573,12 @@ In case you didn't update your node in time, in the chapter, [Node Rollback](), 
 Approximately every two-four weeks the Waves team publishes updates to the [wavesplatform git repository](https://github.com/wavesplatform/Waves/releases/).  
 The Waves team strongly recommends to subscribe to the repository page to be aware of all releases.  
 There you may see the: 
-- **<ins>Version of the update</ins>**:  
-    It is a consecutive number of the node version.  
-    For example: 1.4.8
+- **<ins>Version of the update and its network</ins>**:  
+    It is a consecutive number of the node version and the network it concerns.   
+    For example: 1.4.8 (Mainnet + Testnet + Stagenet).  
+    Please, note keep in mind that we deploy our node in the Mainnet network in this lesson.  
+    Therefore it is necessary to pay attention only to the updates that concern the Mainnet network.  
+    However, if you deployed or plan to deploy a node in other networks, pay attention to the respective updates.
 - **<ins>Update description</ins>**:  
     Update description gives details what exactly has been implemented within this relase.
 - **<ins>Update notes</ins>**:  
