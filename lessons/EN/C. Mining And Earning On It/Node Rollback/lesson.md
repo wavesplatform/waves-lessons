@@ -28,21 +28,21 @@ Rolling back a node is a way to restore the node blockchain height to the moment
 Lastly, the node will be able to synchronize with the current blockchain state and be ready to mine once again.  
 
 The best way to get the idea is to watch it working on the live example.  
-We will return to our fictional blockchain instance, where the blockchain split into two chains at the 100th block.  
-A feature that was included in the update was activated at the 100th block:    
-![](./images/noderoll.png)
+We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
+A feature that was included in the update was activated at the 3000th block:    
+![](./images/3000.png)
 
 Since we didn't update our node before the feature activation, we switched to a fork.  
-At the moment of the 102nd block, we found out that we were on the fork:  
-![](./images/102block.png)
+At the moment of the 3002nd block, we found out that we were on the fork:  
+![](./images/3002.png)
 
 In this situation, we will need to:
 - Update our node;
-- Roll it back from the 102nd block to the 100th block before the split occurred.  
+- Roll it back from the 3002nd block to the 3000th block before the split occurred.  
     
-![](./images/102to100.png)
+![](./images/3002to3000.png)
 
-## How to rollback a node ###
+### How to rollback a node ###
 
 1. Check the current height of the blockchain by the [link](https://nodes.wavesnodes.com/blocks/height).  
     It can look like this:
@@ -112,14 +112,14 @@ In this situation, we will need to:
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes.    
         
         The reason why we are doing this is the following:     
-        The [REST API user interface](https://nodes.wavesnodes.com/) connects to a random node within the Mainnet network.  
+        The [REST API user interface](https://nodes.wavesnodes.com/) connects to a random official Waves node within the Mainnet network.  
         If only one node existed, it could become unavailable or overloaded, so the REST API service would not be working.  
-        For load balancing purposes, by accessing `https://nodes.wavesnodes.com`, a different node may respond at different times.   
-        Due to the fact we connect to random nodes within the network via [REST API](https://nodes.wavesnodes.com/), there are chances that this particular node that responded could switch to a fork itself.   
+        For load balancing purposes, by accessing `https://nodes.wavesnodes.com`, a different official Waves node may respond at different times.   
+        Due to the fact we connect to random Waves nodes within the network via [REST API](https://nodes.wavesnodes.com/), there are chances that this particular node that responded could switch to a fork itself.   
 
-        For this reason, there is a tiny chance we could encounter a forked node during the block's headers verification step.  
+        For this reason, there is a tiny chance we could encounter a forked Waves node during the block's headers verification step.  
         If our signatures matched once, it signifies that both our node and the random node that responded via the REST API are not on the fork.  
-        However, if the signatures do not match, there is a slight chance that the blockchain node could be on the fork.  
+        However, if the signatures do not match, there is a slight chance that the official Waves node could be on the fork.  
 
         We will need to repeat steps №3 and №4 in 20 minutes only one more time.  
         If it matches after the second attempt, you won't need to update and roll back your node.  
@@ -139,6 +139,10 @@ In this situation, we will need to:
     ```
     http://localhost:6869/debug/rollbackToHeight/999
     ```
+
+    Rolling back to 2000 blocks is due to the facts:
+    - We do not have certainty at which block a fork occurred;
+    - We need to roll back the maximum number of blocks, whereas the limit is 2000.
 
     There are two possible results:
     - **<u>The operation is successful</u>**.  
