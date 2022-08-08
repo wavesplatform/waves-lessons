@@ -17,7 +17,7 @@ It is a way of account management that makes the life of the owner easier.
   
 Yet, it may be a bit ambiguous of what an incoming transaction is.  
 Let's give it a try to grasp the idea with the following diagram example:    
-![](./images/dapp_diagram.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dapp_diagram.png?raw=true)
     
 The blue block user is our dApp account.  
 We are the creators of a token, called "SAMPLE" that became popular in the imaginary world.  
@@ -38,7 +38,7 @@ Read more about [dApp](https://docs.waves.tech/en/building-apps/smart-contracts/
 The structure of a dApp may seem a bit more complex than smart account's, so we will dedicate a chapter to it.  
 Below you can see a basic structure of dApp.  
   
-![](./images/dapp_structure.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dapp_structure.png?raw=true)
     
 
 There are 2 necessary elements:
@@ -158,14 +158,14 @@ There are 2 ways of making your account a dApp using:
 - [Waves IDE](#wavesidechapterreference):
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
     2. Click "+" in the right corner of the IDE, select "dApp script":
-    ![](./images/dApp_setup_1.png)
-    3. Write the Ride script code and click "Deploy":
-    ![](./images/dapp_setup_2.png)
-    4. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dApp_setup_1.png?raw=true)
+    1. Write the Ride script code and click "Deploy":
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dapp_setup_2.png?raw=true)
+    1. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.  
     After this, publish the dApp script.  
-    ![](./images/dapp_setup_3.png)
-    5. As a result of a succesful operation, you will see a similar notification:  
-    ![](./images/dapp_setup_success.png)
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dapp_setup_3.png?raw=true)
+    1. As a result of a succesful operation, you will see a similar notification:  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/f.%20What%20is%20a%20dApp%20and%20dApp%20creation/images/dapp_setup_success.png?raw=true)
   
 - [Client libraries](#XII.Libraries):  
     1. Prepare your [dApp script](https://docs.waves.tech/en/building-apps/smart-contracts/writing-dapps):  

@@ -33,20 +33,20 @@ Please, keep in mind that all the blockchain data can exist within 3 major [Wave
 As well, it can be any [custom blockchain network](https://docs.waves.tech/en/waves-node/private-waves-network) you can create.  
   
 All the information you would be able to see on the screen would depend on the chosen network:    
-![](./images/wavesexp_net.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_net.png?raw=true)
     
 
 The platform has a user-friendly interface that allows you to:
 - **<u>See the Waves blockchain statistics</u>**:  
-  ![](./images/wavesexp_stat.png)  
+  ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_stat.png?raw=true)  
 -  **<u>Search transactions, accounts, tokens, blocks details</u>**:
-  ![](./images/wavesexp_search.png)  
+  ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_search.png?raw=true)  
 -  **<u>Get detailed information about [transactions](https://new.wavesexplorer.com/transactions)</u>**:
-  ![](./images/wavesexp_tx.png)  
+  ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_tx.png?raw=true)  
 -  **<u>Get detailed information about [blocks](https://new.wavesexplorer.com/blocks)</u>**:
-  ![](./images/wavesexp_blocks.png)  
+  ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_blocks.png?raw=true)  
 -  **<u>Get detailed information about [nodes](https://new.wavesexplorer.com/nodes)</u>**:
-  ![](./images/wavesexp_nodes.png)  
+  ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_nodes.png?raw=true)  
 
 Try browsing blockchain data with Waves Explorer!  
 
@@ -60,9 +60,9 @@ We don't want to accept any payments except with the WAVES cryptocurrency.
 In case we want to receive WAVES to our crypto wallet, we have 2 options:
 
 - Write down the requisites of our wallet and ask a client to transfer tokens there:  
-    ![](./images/signer_no.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/signer_no.png?raw=true)  
 - Integrate a payment service that would allow clients to pay with a few clicks:  
-    ![](./images/signer_yes.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/signer_yes.png?raw=true)  
 
 As we may have guessed, the first option is an outdated method.  
 It puts our business at risk, as some clients can change their minds to order due to payment complexity.  
@@ -87,11 +87,11 @@ This is a demonstration of the Waves IDE user interface:
     
 
 It is possible to switch between different networks within the IDE, be it a default network or a custom one.    
-![](./images/waveside_nodes.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/waveside_nodes.png?raw=true)
     
 
 As well you can check libraries that contain code examples and even a series of short tutorials:    
-![](./images/waveside_libs.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/waveside_libs.png?raw=true)
     
 
 Read more about [Waves IDE](https://docs.waves.tech/en/building-apps/smart-contracts/tools/waves-ide).
@@ -125,7 +125,7 @@ If you want to use private endpoints, start [your own node](https://docs.waves.t
   
 
 For example, you can get the current node status:    
-![](./images/restapi.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/restapi.png?raw=true)
     
 
 ### Software development kits ###

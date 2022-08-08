@@ -105,14 +105,14 @@ There are 2 major ways of smart account script installation:
 - [Waves IDE](#wavesidechapterreference):
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
     2. Click "+" in the right corner of the IDE, select "Account script":
-    ![](./images/smartac_1.png)
-    3. Write the Ride script code and click "Deploy":
-    ![](./images/smartac_2.png)
-    4. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_1.png?raw=true)
+    1. Write the Ride script code and click "Deploy":
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_2.png?raw=true)
+    1. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.  
       After this, publish the smart account script.  
-      ![](./images/smartac_3.png)
-    5. As a result of a succesful operation, you will see a similar notification:  
-      ![](./images/smartac_4.png)
+      ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_3.png?raw=true)
+    2. As a result of a succesful operation, you will see a similar notification:  
+      ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_4.png?raw=true)
 
   
 - [Client libraries](#XII.Libraries):  

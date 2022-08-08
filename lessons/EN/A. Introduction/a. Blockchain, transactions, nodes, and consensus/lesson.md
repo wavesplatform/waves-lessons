@@ -18,7 +18,7 @@ This sequence (or chain) of blocks is a blockchain.
 This unique data structure makes the blockchain **immutable** and protects it from mutations or malicious changes.  
 If something is changed in block A, all subsequent blocks will be invalid and must be created again.
 
-![](./images/blockchain.png)
+![](https://raw.githubusercontent.com/wavesplatform/waves-lessons/template/lessons/EN/A.%20Introduction/a.%20Blockchain%2C%20transactions%2C%20nodes%2C%20and%20consensus/images/blockchain.png)
 
 ---
 
@@ -47,12 +47,12 @@ Let’s imagine that we have hundreds and thousands of copies of this data distr
 Now, to change the block history we have to rewrite the blocks on a majority of these copies.  
 That is why you might have heard that blockchain is able to ensure data is **immutable** for a long time.  
 
-![](./images/nodes.png)
+![](https://raw.githubusercontent.com/wavesplatform/waves-lessons/template/lessons/EN/A.%20Introduction/a.%20Blockchain%2C%20transactions%2C%20nodes%2C%20and%20consensus/images/nodes.png)
 
 The problem is that different machines are able to generate different chains of blocks – either deliberately or by accident.  
 So the copies of the blockchain they hold may not be the same. This phenomenon is called a **fork**.
 
-![](./images/fork.png)
+![](https://raw.githubusercontent.com/wavesplatform/waves-lessons/template/lessons/EN/A.%20Introduction/a.%20Blockchain%2C%20transactions%2C%20nodes%2C%20and%20consensus/images/fork.png)
 
 To keep exactly the same data across different machines, all participants have to reach a **consensus** for each new block.  
 The network participants must agree on **who** is responsible for the generation of a new block, and whether that block is **valid**.  
