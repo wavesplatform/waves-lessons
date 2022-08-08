@@ -5,8 +5,6 @@
   - [Limitations](#limitations)
   - [DApp script installation](#dapp-script-installation)
 
----
-
 ## DApp definition ##
 
 A dApp is a Waves account with an attached script.  

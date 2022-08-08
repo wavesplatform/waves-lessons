@@ -1,6 +1,6 @@
 {
     "guid": "71df084e-10ce-4b17-a80b-6b5dabad6371",
-    "title": "Waves Networks, Their Types, and Application",
+    "title": "Waves networks, their types, and application",
     "description": "This lesson will be dedicated to Waves networks",
     "number": 3,
     "doclink": "https://docs.waves.tech/en/blockchain/blockchain-network",
@@ -12,6 +12,7 @@
         "node",
         "waves explorer",
         "api",
-        "swagger"
+        "swagger",
+        "rest api"
     ]
 }

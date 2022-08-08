@@ -7,8 +7,6 @@
    - [IDE Plugins](#ide-plugins)
  - [Outro](#outro)
 
----
-
 ## Waves toolset ##
 
 The Waves blockchain platform has many ready solutions for working with the blockchain.  

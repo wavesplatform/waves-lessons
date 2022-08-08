@@ -4,8 +4,6 @@
   - [Waves explorer](#waves-explorer)
   - [Network API](#network-api)
 
----
-
 ## Network description ##
 
 A network is a way of connecting different hosts into one space.  

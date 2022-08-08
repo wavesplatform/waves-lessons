@@ -5,13 +5,20 @@
     "number": 6,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/on-mac",
     "hashtags": [
-        "macos",
         "node installation",
         "node deployment",
         "node",
         "node configuration",
         "blockchain data",
         "configuration file",
-        "configuration"
+        "configuration",
+        "synchronization",
+        "update",
+        "upgrade",
+        "roll back",
+        "fork",
+        "macos",
+        "docker",
+        "macos docker"
     ]
 }

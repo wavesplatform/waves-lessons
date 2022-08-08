@@ -5,14 +5,21 @@
     "number": 5,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/on-ubuntu",
     "hashtags": [
-        "ubuntu",
         "node installation",
         "node deployment",
         "node",
         "node configuration",
         "blockchain data",
-        "ubuntu",
         "configuration file",
-        "configuration"
+        "configuration",
+        "synchronization",
+        "update",
+        "upgrade",
+        "roll back",
+        "fork",
+        "ubuntu",
+        "waves package",
+        "ubuntu waves package",
+        "jar"
     ]
 }

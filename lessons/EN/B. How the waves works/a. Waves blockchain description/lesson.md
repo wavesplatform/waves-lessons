@@ -7,9 +7,6 @@
 - [Blocks](#blocks)
 - [Blockchain](#blockchain)
 
-
----
-
 ## Intro ## 
 
 To begin our journey to the Waves Blockchain Platform, we will first cover some basics.  

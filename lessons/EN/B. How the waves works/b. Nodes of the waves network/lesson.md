@@ -3,8 +3,6 @@
   - [Generating node](#generating-node)
 - [Node Benefits](#node-benefits)
 
----
-
 ## Node description ##
 
 A node is a host that is connected to the blockchain [network]() using the [Waves Node](https://github.com/wavesplatform/Waves) application.  
@@ -40,8 +38,6 @@ Once found out that the transaction is invalid, it will be rejected and not be i
 
 ![](./images/attacker.png)  
 
----
-
 ### Validating node ###
 
 Every single node connected to the network is taking a part in the validation process.  
@@ -52,8 +48,6 @@ The transaction must:
 - Contain [sender's signature](https://docs.waves.tech/en/blockchain/transaction/#sender-and-signature:~:text=Transaction%20Type%20article.-,Sender%20and%20Signature,-Each%20transaction%20contains) (ordinary accounts) or account script execution ([smart accounts](#chapter_with_smart_accounts));
 - Conduct other complex verification.  
     See more about [transaction validation](https://docs.waves.tech/ru/blockchain/transaction/transaction-validation).
-
----
 
 ### Generating node ###
 

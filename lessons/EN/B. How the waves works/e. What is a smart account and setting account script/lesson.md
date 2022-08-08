@@ -7,8 +7,6 @@
   - [Limitations](#limitations)
   - [Set script transaction](#set-script-transaction)
 
----
-
 ## Smart account definition ##
 
 On the Waves platform, it is possible to create a regular account.  
@@ -33,7 +31,7 @@ There is also another type of account script, called [dApp](#linktothedapplesson
 A dApp works with incoming transactions, meanwhile, a smart account operates with outgoing transactions.  
 We will talk about dApps in the [next lesson](#dapplessonlink).
 
-Read more about [Smart Account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
+Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
 
 ---
 

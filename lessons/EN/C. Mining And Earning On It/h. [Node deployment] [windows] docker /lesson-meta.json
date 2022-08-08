@@ -5,13 +5,20 @@
     "number": 8,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/on-windows",
     "hashtags": [
-        "windows",
         "node installation",
         "node deployment",
         "node",
         "node configuration",
         "blockchain data",
         "configuration file",
-        "configuration"
+        "configuration",
+        "synchronization",
+        "update",
+        "upgrade",
+        "roll back",
+        "fork",
+        "windows",
+        "docker",
+        "windows docker"
     ]
 }
