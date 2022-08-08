@@ -32,7 +32,7 @@ Under the bonnet, every node has:
     A configuration file is a set of instructions on how a node should work.  
     In the configuration file, we can define multiple parameters, for instance, which [network]() to connect to.
 
-![](./images/nodestr.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/nodestr.png?raw=true)
 
 ---
 
@@ -43,15 +43,15 @@ Also, it would be necessary to keep on hand a Base58 encoded string of the seed 
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
 2. Click "RideREPL" down the screen:  
-    ![](./images/repl1.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/repl1.png?raw=true)  
 3. Insert in the function your seed phrase:  
     `"your-seed-phrase".toBytes().toBase58String()`    
     For example:  
     `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
 4. Copy the function with your seed phrase to the console:  
-    ![](./images/repl2.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/repl2.png?raw=true)  
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
-    ![](./images/repl3.png)
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/repl3.png?raw=true)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
 
 ---
@@ -321,12 +321,12 @@ The chapter goal is to get this API key and API key hash to be able to operate w
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
 2. Click "Try it out":  
-    ![](./images/swagg1.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg1.png?raw=true)  
 3. Enter any random string value and click "Execute":
-    ![](./images/swagg2.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg2.png?raw=true)  
     Please, do not use the example in the screenshot, as it is given for demonstration purposes only.
 4. In the response section below, you will receive a hash:
-    ![](./images/swagg3.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg3.png?raw=true)  
 5. Save both the original phrase you entered (API key) and the hash (API key hash) of it as we will use them for interaction with private node methods in this lesson.
 
 ### Configuration file setup ###
@@ -395,7 +395,7 @@ Follow the instructions below for setting up configurations:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods don't require any additional authorization.  
         For example, the `/addresses/` method, will return the address of your node wallet.  
-        ![](./images/swaggadd.png) 
+        ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swaggadd.png?raw=true) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash that you inserted in the configuration file is not equal to the API key.  
@@ -404,16 +404,16 @@ Follow the instructions below for setting up configurations:
           
         To authorize private method usage:
         1. Click "Authorize":
-            ![](./images/swagg6.png)
+            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg6.png?raw=true)
         2. Enter your API key (not the API hash) and click "Authorize":
-            ![](./images/swagg7.png)
+            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg7.png?raw=true)
             Please, note the API key on the screen is an example.  
             You need to use your own API key.
         3. Click "Close":
-            ![](./images/swagg8.png)
+            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg8.png?raw=true)
         4. Now you can use private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
-            ![](./images/swagg9.png)   
+            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/swagg9.png?raw=true)   
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
@@ -586,7 +586,7 @@ Out of all 5 nodes, only 3 node owners upgraded their nodes with the update.
 The other 2 nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
 3 nodes remained with the original blockchain, installing all necessary updates, meanwhile 2 other nodes switcheds to the fork.  
-![](./images/blockchainfork.png)  
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/blockchainfork.png?raw=true)  
   
 Eventually, the 2 nodes that weren not updated, may stop working.  
 This is the very reason why it is important to timely update your node.  
@@ -611,7 +611,7 @@ There you may see the:
 - **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it once again.
   
-![](./images/wavesgit.png)  
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/wavesgit.png?raw=true)  
   
 Once you receive a notifcation of a new node version release, follow the steps below to upgrade your node:
 1. Get to the directory with the `waves-all-<version number>.jar` file:
@@ -624,19 +624,19 @@ Once you receive a notifcation of a new node version release, follow the steps b
     For example, for `waves-all-1.4.7.jar` file, the version would be 1.4.7.
 3. Check the version node number of the latest blockchain update release:  
     The version number will be specified in the name of the release.  
-    ![](./images/nodeversionnum.png)
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/nodeversionnum.png?raw=true)
 4. Take a look at the "Update notes" section.  
     There you will be able to see whether your node needs to re-import the blockchain data once again.  
       
     If the blockchain re-import is not needed, it will be enough to replace the old jar file with a new one:  
-    ![](./images/gitupdtunnsc.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/gitupdtunnsc.png?raw=true)  
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
     -  Repeat the same steps of node syncrhonization as in the chapter [Synchronization]().
     -  After the node is synchronized, download the new jar file, as it is mentioned in the step №5.  
     
-    ![](./images/gitupdateneeded.png)  
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/gitupdateneeded.png?raw=true)  
 5. Replace the old jar file with a new one.  
     Delete the old `waves-all-<version number>.jar` file:  
     
@@ -645,7 +645,7 @@ Once you receive a notifcation of a new node version release, follow the steps b
     ```
     Download the latest jar file to the `/opt/waves-node` folder.  
     The file will be available for downloading under the "Assets" section:     
-    ![](./images/gitwavesall.png)    
+    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/gitwavesall.png?raw=true)    
     Please, note that the version number on the screen is an example.  
     At the moment of your upgrade, there may be a newer version available.
 6. Restart the node.    
@@ -701,17 +701,17 @@ Lastly, the node will be able to synchronize with the current blockchain state a
 The best way to get the idea is to watch it working on the live example.  
 We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
 A feature that was included in the update was activated at the 3000th block:    
-![](./images/3000.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/3000.png?raw=true)
 
 Since we didn't update our node before the feature activation, we switched to a fork.  
 At the moment of the 3002nd block, we found out that we were on the fork:  
-![](./images/3002.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/3002.png?raw=true)
 
 In this situation, we will need to:
 - Update our node;
 - Roll it back from the 3002nd block to the 3000th block before the split occurred.  
     
-![](./images/3002to3000.png)
+![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/g.%20%5BNode%20deployment%5D%20%5BmacOS%5D%20waves%20package%20/images/3002to3000.png?raw=true)
 
 ### How to rollback a node ###
 
