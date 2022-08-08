@@ -55,4 +55,6 @@ You may send requests for fetching, posting, or deleting data with a few clicks.
 If you are using Mainnet, Testnet, or Stagenet networks REST API, you may face certain limitations in the frequency of invoking methods.  
 Here you can see an example of [requests limitations for Mainnet](https://docs.waves.tech/en/waves-node/api-limitations-of-the-pool-of-public-nodes#limitations-on-mainnet-pool).    
 Please, note that in the table available by the link, regular expressions are used to define paths, for example, `\d+`.
-
+  
+In the next topic, [Working with the Waves libraries](), we will summarize the Waves libraries written in different programming languages.   
+These libraries will ease working with the Waves blockchain on the most popular programming languages.

@@ -21,9 +21,9 @@ There are 6 major instruments that are absolutely free to use:
 - **<u>[Waves IDE](#waves-ide)</u>**  
     Online environment for developing, testing, and deploying [Ride](#ridetopic) smart contracts.
 - **<u>[Node REST API](#node-rest-api)</u>**  
-    Main interface for interacting with the Waves blockchain within different [networks](#networktopic).
+    Main interface for interacting with the Waves blockchain within different [networks]().
 - **<u>[Software Development Kits](#software-development-kits)</u>**  
-    Libraries intended for creation, signing, broadcasting [transactions](#linktotransactionlesson), and reading data from the Waves blockchain.
+    Libraries intended for creation, signing, broadcasting [transactions](), and reading data from the Waves blockchain.
 - **<u>[IDE Plugins](#ide-plugins)</u>**  
     
 ### Waves explorer ###

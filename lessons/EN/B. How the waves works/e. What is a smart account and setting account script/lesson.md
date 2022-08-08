@@ -27,9 +27,9 @@ The possible result of the smart account's script compilation can be:
 - **<u>Declined transaction</u>**;
 - **<u>Error of compilation</u>**.
 
-There is also another type of account script, called [dApp](#linktothedapplesson).  
+There is also another type of account script, called [dApp]().  
 A dApp works with incoming transactions, meanwhile, a smart account operates with outgoing transactions.  
-We will talk about dApps in the [next lesson](#dapplessonlink).
+We will talk about dApps in the [next lesson]().
 
 Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
 

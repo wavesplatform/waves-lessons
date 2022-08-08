@@ -129,8 +129,8 @@ As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
 - The blockchain copy.
   
-Within this lesson, we are going to work with the configuration file of the node.  
-In the [next lesson](), we will talk about node synchronization with the Waves blockchain.  
+Within this chapter, we are going to work with the configuration file of the node.  
+In the [next chapter](#synchronization), we will talk about node synchronization with the Waves blockchain.  
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
@@ -311,7 +311,7 @@ Follow the instructions below for setting up configurations:
    sudo nano /opt/waves-node/conf/waves.conf
    ```
 2.  Edit the configuration file.  
-    [In the previous lesson](), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
+    [In the previous chapter](#installation), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
     It looked something like this but with your own seed and password: 
     
     ```
@@ -387,7 +387,7 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).     
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next chapter, [Synchronization](#synchronization), we will move to the final step of preparations for mining.  
 
 ---
 
@@ -438,7 +438,7 @@ There are two ways how it is possible to synchronize the blockchain data with yo
 In case you don't want to speed up the synchronization, you may wait before it is done automatically.  
 If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
 
-However, if you wish to speed up this process, within this lesson we will concentrate on the blockchain data upload.  
+However, if you wish to speed up this process, within this chapter we will concentrate on the blockchain data upload.  
 
 ### Blockchain synchronization ###
 
@@ -704,7 +704,7 @@ In this situation, we will need to:
         ```  
         In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
         Please, note that you won't need to follow this instruction below (steps №3 and below).  
-        After completing this step, you can go to the [Node of the network]() chapter.
+        After completing this step, you can go to the [Node networks]() chapter.
 3. Verify the signature of a block of the blockchain.   
     Check the signature of the blockchain's height minus ten by the link:
     
@@ -744,7 +744,7 @@ In this situation, we will need to:
     - **<u>The signatures match.</u>**  
         If the signatures match, your node is up to date.  
         You won't need to update and roll it back for now.  
-        You can skip all the steps of the instruction below and go directly to the [Node of the network]() chapter.
+        You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
     - **<u>The signatures do not match.</u>**  
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes.    
         
@@ -793,3 +793,5 @@ In this situation, we will need to:
         If you encounter the roll-back failure, the fork occurred more than 2000 blocks ago.  
         It will not be possible to roll back more than 2000 blocks.   
         Therefore, you restart [Blockchain synchronization](#blockchain-synchronization).  
+
+In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.

@@ -80,7 +80,7 @@ Follow the steps below to install a Waves node:
     | Field Name | Description | Example |
     | :----- | :----- | :----- |
     | Container Name | Gives a name to a Docker container. | wavesnode |
-    | Host Port | The port that will enable the REST API service on your localhost, for example, 127.0.0.1:6869.<br>In the next lesson, [Node Configuration](), we will configure REST API of your node.  | 6869 |
+    | Host Port | The port that will enable the REST API service on your localhost, for example, 127.0.0.1:6869.<br>In the next chapter, [Configuration](#configuration), we will configure REST API of your node.  | 6869 |
     | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data stored locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br>In case your docker container gets accidentally deleted, your node configurations and the blockchain copy will not be lost.<br>You will be able to deploy a node once again with the stored locally data, so the progress will be resumed right from where it has been stopped. | Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
     | Environment Variables<br>Variable<br>WAVES_WALLET_PASSWORD | The password you are setting up locally on your host.<br>This password will encode your seed Base58 string within the `wallet.dat` file. | `RandomPassword_` |
     | Environment Variables<br>Variable<br>WAVES_WALLET_SEED | The seed phrase of your Waves account encoded to Base58 string. | `DCvnnTiVt77TybcCoqVogG2`|
@@ -114,8 +114,8 @@ As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
 - The blockchain copy.
   
-Within this lesson, we are going to work with the configuration file of the node.  
-In the [next lesson](), we will talk about node synchronization with the Waves blockchain.  
+Within this chapter, we are going to work with the configuration file of the node.  
+In the [next chapter](#synchronization), we will talk about node synchronization with the Waves blockchain.  
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
@@ -291,7 +291,7 @@ Follow the instructions below for setting up configurations:
 1.  Once a node has been deployed, a configuration file gets automatically created.   
     Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`).
 2.  Edit the configuration file.  
-    [In the previous lesson](), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
+    [In the previous chapter](#installation), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
     It looked something like this but with your own seed and password: 
     ![](./images/dockerwin.png)  
     
@@ -360,7 +360,7 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next chapter, [Synchronization](#synchronization), we will move to the final step of preparations for mining.  
 
 ---
 
@@ -411,7 +411,7 @@ There are two ways how it is possible to synchronize the blockchain data with yo
 In case you don't want to speed up the synchronization, you may wait before it is done automatically.  
 If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
 
-However, if you wish to speed up this process, within this lesson we will concentrate on the blockchain data upload.  
+However, if you wish to speed up this process, within this chapter we will concentrate on the blockchain data upload.  
 
 ### Blockchain synchronization ###
 
@@ -645,7 +645,7 @@ In this situation, we will need to:
         ```  
         In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
         Please, note that you won't need to follow this instruction below (steps №3 and below).  
-        After completing this step, you can go to the [Node of the network]() chapter.
+        After completing this step, you can go to the [Node networks]() chapter.
 3. Verify the signature of a block of the blockchain.   
     Check the signature of the blockchain's height minus ten by the link:
     
@@ -685,7 +685,7 @@ In this situation, we will need to:
     - **<u>The signatures match.</u>**  
         If the signatures match, your node is up to date.  
         You won't need to update and roll it back for now.  
-        You can skip all the steps of the instruction below and go directly to the [Node of the network]() chapter.
+        You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
     - **<u>The signatures do not match.</u>**  
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes.    
         
@@ -734,3 +734,5 @@ In this situation, we will need to:
         If you encounter the roll-back failure, the fork occurred more than 2000 blocks ago.  
         It will not be possible to roll back more than 2000 blocks.   
         Therefore, you restart [Blockchain synchronization](#blockchain-synchronization).  
+  
+In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.  

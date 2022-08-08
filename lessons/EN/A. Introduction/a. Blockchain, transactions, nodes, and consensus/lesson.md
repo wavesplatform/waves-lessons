@@ -32,7 +32,7 @@ Each new record **changes the state of the blockchain**: for example, transfers 
 The Waves blockchain supports many different types of transactions at a core level.  
 For example, an “asset transfer transaction” contains a timestamp, sender, recipient, amount and transaction **fee**.
 
-As we said in the previous lesson, a transaction normally contains the sender’s digital **signature**.  
+A transaction normally contains the sender’s digital **signature**.  
 Anyone can verify the integrity of the transaction data and the authenticity of the signature, that is, make sure that the signature of the transaction matches the sender public key.
 
 ---

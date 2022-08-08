@@ -16,16 +16,16 @@ By the end of this module, you would be able to deploy your own node and be able
 
 ## Generating node definition ##
 
-In the lesson [Nodes Of The Waves Network](), we gave a definition of a node and described its major features.  
+In the lesson [Nodes of the waves network](), we gave a definition of a node and described its major features.  
 Let's recap what we have just learned about it with a few short sentences.  
 A node is a device (computer) that is connected to a [Waves network (Mainnet, Stagenet, Testnet)]().  
 Every node is participating in the process of validation of new blocks and transactions.  
 Some nodes can also receive the right of block generation, which grants the generating node owner a reward for every block generated.  
 A node that is participating in block generation is called a generating node.  
-Within this and the following lesson, [Summary Of Mining Node Requirements](), it will be our major task to find out how exactly we can receive that block generation right and receive profit from it.  
+Within this and the following lesson, [Summary of mining node requirements](), it will be our major task to find out how exactly we can receive that block generation right and receive profit from it.  
 
 It is worth mentioning that with the Waves, you are mining with the [LPoS consensus]().  
-In the lesson [Introduction - Blockchain, Transactions, etc](), there was given an example of [LPoS consensus]().  
+In the lesson [Blockchain, transactions, nodes, and consensus](), there was given an example of [LPoS consensus]().  
 What it means is that you don't need to have an extremely powerful computer to generate a block and get a reward.  
 Every time there is only one block generator and not thousands of competing computers as it works with the [PoW consensus]().  
 Basically, you may have one casual computer or a laptop on which you can deploy a node.  

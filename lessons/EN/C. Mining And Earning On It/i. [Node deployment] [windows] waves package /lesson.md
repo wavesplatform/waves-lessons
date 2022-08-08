@@ -90,7 +90,7 @@ Follow the steps below to install a Waves node:
 5. Study the minimum parameters.  
     It will be necessary to edit the configuration file to run a node.  
     The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
-    Within this lesson, we don't have a goal to configure them all, as we have the lesson [Node Configurations]() dedicated to it.  
+    Within this chapter, we don't have a goal to configure them all, as we have the chapter [Configuration](#configuration) dedicated to it.  
     As of now, it would be enough to run a node with minimum parameters.  
 
     | Parameter | Description | Example |
@@ -150,8 +150,8 @@ As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
 - The blockchain copy.
   
-Within this lesson, we are going to work with the configuration file of the node.  
-In the [next lesson](), we will talk about node synchronization with the Waves blockchain.  
+Within this chapter, we are going to work with the configuration file of the node.  
+In the [next chapter](#synchronization), we will talk about node synchronization with the Waves blockchain.  
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
@@ -326,7 +326,7 @@ Here is how you can do it:
 Follow the instructions below for setting up configurations:
 1. Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`)
 2. Edit the configuration file.  
-    [In the previous lesson](), we already added the `waves.wallet` module.  
+    [In the previous chapter](#installation), we already added the `waves.wallet` module.  
     Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
       
     Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
@@ -405,14 +405,14 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/). 
 
-In the next lesson, [Blockchain Synchronization](), we will move to the final step of preparations for mining.  
+In the next chapter, [Synchronization](#synchronization), we will move to the final step of preparations for mining.  
 
 ## Synchronization ##
 
 ### Synchronization process description ###
 
 Before we begin blockchain synchronization, it is necessary to understand how blockchain gets formed.  
-Let's recap what we discussed in the lesson, [Waves Blockchain Description]().  
+Let's recap what we discussed in the lesson, [Waves blockchain description]().  
 The smallest blockchain component is a transaction that may include various data (account address, sum, operation type, etc).  
 All transactions are wrapped in blocks, where each block has a maximum capacity of how many transactions it may include.  
 The chain of blocks is called a blockchain.  
@@ -454,7 +454,7 @@ There are two ways how it is possible to synchronize the blockchain data with yo
 In case you don't want to speed up the synchronization, you may wait before it is done automatically.  
 If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
 
-However, if you wish to speed up this process, within this lesson we will concentrate on the blockchain data upload.  
+However, if you wish to speed up this process, within this chapter we will concentrate on the blockchain data upload.  
 
 ### Blockchain synchronization ###
 
@@ -712,7 +712,7 @@ In this situation, we will need to:
         ```  
         In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
         Please, note that you won't need to follow this instruction below (steps №3 and below).  
-        After completing this step, you can go to the [Node of the network]() chapter.
+        After completing this step, you can go to the [Node networks]() chapter.
 3. Verify the signature of a block of the blockchain.   
     Check the signature of the blockchain's height minus ten by the link:
     
@@ -752,7 +752,7 @@ In this situation, we will need to:
     - **<u>The signatures match.</u>**  
         If the signatures match, your node is up to date.  
         You won't need to update and roll it back for now.  
-        You can skip all the steps of the instruction below and go directly to the [Node of the network]() chapter.
+        You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
     - **<u>The signatures do not match.</u>**  
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes.    
         
@@ -801,3 +801,5 @@ In this situation, we will need to:
         If you encounter the roll-back failure, the fork occurred more than 2000 blocks ago.  
         It will not be possible to roll back more than 2000 blocks.   
         Therefore, you restart [Blockchain synchronization](#blockchain-synchronization).  
+  
+In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.  

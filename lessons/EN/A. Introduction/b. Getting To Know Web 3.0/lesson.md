@@ -124,7 +124,7 @@ In the Waves ecosystem, there is [Keeper Wallet](https://keeper-wallet.app/#get-
 3. When apps request something, the user sees it and can approve or reject it.
 4. If he approves it, the transaction goes to the blockchain network.
 
-Well, let’s summarize this lesson and the most important things we’ve learned.  
+Well, let’s summarize this lesson and the most important things we have learned.  
 We’ve talked about the Web’s evolution, about Web 1, 2 and 3 and their differences.  
 We can describe Web3 as a fully decentralized web with new models of interaction for users, based on trustless infrastructure.  
 We also talked about digital signatures and how they affect user experience with Web3 services.  
