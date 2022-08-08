@@ -108,22 +108,22 @@ PoA is geared towards enterprises or private organizations who want to build the
 
 Blockchain has several important properties:
 
-- **<ins>Decentralization:</ins>**  
+- **<u>Decentralization:</u>**  
   There is no the main storage server.  
   All records are copied and stored in different places.  
   When new information is added, it appears in all copies after verification.  
-- **<ins>Reliability:</ins>**  
+- **<u>Reliability:</u>**  
   Any attempts to make unauthorized changes will be rejected because of inconsistency with other copies.  
   No one has the power to manipulate or destroy the data.  
-- **<ins>Immutability</ins>:**  
+- **<u>Immutability</u>:**  
   Once a transaction got into the blockchain, its data cannot be manipulated, edited or deleted.  
-- **<ins>Transparency</ins>:**  
+- **<u>Transparency</u>:**  
   Each participant can read data and track all transactions.  
-- **<ins>Pseudo-anonymity</ins>:**  
+- **<u>Pseudo-anonymity</u>:**  
   Anyone can track transactions, but cannot identify the sender or recipient.  
   To sign a transaction, only a private key is required, which itself is not associated with a person.  
   Everything is anonymous unless you state that a certain public address belongs to you or someone you know.  
-- **<ins>Reduced costs</ins>:**  
+- **<u>Reduced costs</u>:**  
   If we use any systems for funds transfers like SWIFT, we pay big comission for the transfer.  
   Private companies charge us with big payments for the usage of their service.  
   Fees in the blockchain are many times less, since there is no mediator that keeps the profit to himself.  

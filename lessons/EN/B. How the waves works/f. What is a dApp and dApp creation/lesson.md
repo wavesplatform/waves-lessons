@@ -45,7 +45,7 @@ Below you can see a basic structure of dApp.
 
 There are 2 necessary elements:
 
-- **<ins>Directives</ins>**:  
+- **<u>Directives</u>**:  
     It is a set of basic configurations written in the [Ride programming language](#ridechappter).  
     They "inform" a compiler that we:
     
@@ -58,7 +58,7 @@ There are 2 necessary elements:
     {-# CONTENT_TYPE DAPP #-}
     {-# SCRIPT_TYPE ACCOUNT #-}
     ``` 
-- **<ins>Callable function</ins>**:    
+- **<u>Callable function</u>**:    
     A callable function that is invoked externally.  
     This is the very script that another user would invoke.  
     It is necessary that a dApp would have at least one callable function.  
@@ -97,7 +97,7 @@ There are 2 necessary elements:
 
 There are 2 optional elements:
 
-- **<ins>Verifier function</ins>**:  
+- **<u>Verifier function</u>**:  
     By default, every dApp has a built-in verifier function that verifies if an order or a transaction was signed by this account.  
     A verifier function cannot be invoked externally, i.e. another user cannot invoke it the same way as a callable function.  
     Likewise, you may also add an additional verifier function.  
@@ -113,7 +113,7 @@ There are 2 optional elements:
         }
     }
     ```
-- **<ins>Script context</ins>**:  
+- **<u>Script context</u>**:  
     A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.  
     Waves already created necessary functions and variables that you may use within your dApp.  
     If you declare a variable or a function within a certain callable function, they will be available only within that callable function.  

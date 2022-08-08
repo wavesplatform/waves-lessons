@@ -25,10 +25,10 @@ To clarify all of the node deployment steps, it is required to understand the st
 Understanding the node structure will shed some light on major essences that a node interacts with.  
 
 Under the bonnet, every node has:
-- **<ins>Blockchain database</ins>**:  
+- **<u>Blockchain database</u>**:  
     All the nodes of the Waves blockchain are intended to ensure [decentralization]().  
     Therefore, an identical copy of all the blockchain data must be stored in every node.  
-- **<ins>Configuration file</ins>**:  
+- **<u>Configuration file</u>**:  
     A configuration file is a set of instructions on how a node should work.  
     In the configuration file, we can define multiple parameters, for instance, which [network]() to connect to.
 
@@ -179,7 +179,7 @@ waves {
 This list of modules in the given example is not full, you can find the full list of Waves node modules and their parameters in the [documentation](https://docs.waves.tech/en/waves-node/node-configuration#sections-of-the-configuration-file).  
 
 For the sake of simplicity, we will concentrate on the same modules as the ones included in the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf):  
-- **<ins>[Wallet](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings)</ins>**  
+- **<u>[Wallet](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings)</u>**  
     Built-in node wallet parameters.  
     In the wallet module, you can configure the parameters of the [wallet built in the Waves node](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet).  
     [Previously](), we defined the seed of the wallet Base58 encoded and set a password to encode the seed in `wallet.dat` file:
@@ -200,7 +200,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | seed | Connects your wallet to your node via the [wallet seed Base58 encoded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in [REST API]() using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
     Read more about [Wallet Settings](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings).
-- **<ins>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</ins>**  
+- **<u>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</u>**  
     Blockchain parameters.  
     In the blockchain module, you can select the blockchain type.  
     Since we are aimed at mining and receiving rewards for block generation, we will use the MAINNET type.  
@@ -219,7 +219,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | type | Selects the blockchain type: [MAINNET, STAGENET, TESTNET]() or [CUSTOM](https://docs.waves.tech/en/waves-node/private-waves-network). | MAINNET | 
 
     Read more about [Blockchain Settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
-- **<ins>[REST API](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)</ins>**  
+- **<u>[REST API](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)</u>**  
     Node API parameters.  
     The Waves node REST API is the main interface for blockchain interaction.  
     The API has both public (available for everyone) and private (available only via authorization) endpoints.  
@@ -248,7 +248,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
     Read more about [REST API Settings](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
-- **<ins>[Network](https://docs.waves.tech/en/waves-node/node-configuration#network-settings)</ins>**  
+- **<u>[Network](https://docs.waves.tech/en/waves-node/node-configuration#network-settings)</u>**  
     Peer-to-peer network parameters.  
     This module allows you to define how your node would interact with other nodes within the network:
 
@@ -295,14 +295,14 @@ There you can access different methods that will allow you:
     -  `Etc`
 
 These methods can be:
-- **<ins>Public</ins>**:  
+- **<u>Public</u>**:  
     Methods available to everyone. Public methods do not:
     - Operate with any private data of the node owner;
     - Invoke any methods that would make an action with any node, like stopping a node or connecting to a peer.  
   
     For example, [`/blocks/height`](https://nodes.wavesnodes.com/api-docs/index.html#/blocks/getHeight) is a method that checks the current height of the blockchain.  
     This information is not private and there is no action made with a node, therefore it doesn't require any additional authorization. 
-- **<ins>Private</ins>**:  
+- **<u>Private</u>**:  
     Methods available only to node owners.  
     These methods can be invoked only by node owners via API key and API key hash authorization.  
     For example, [`/debug/configInfo`](https://nodes.wavesnodes.com/api-docs/index.html#/debug/getConfig) is a method that checks the configuration of the currently running node.
@@ -423,13 +423,13 @@ What it means is that all the nodes represent witnesses that:
     
 The process of data validation is uninterrupted.  
 There are two most significant validation processes:
-- **<ins>Validation of blocks</ins>**  
+- **<u>Validation of blocks</u>**  
   It is a single-threaded process.  
   Therefore if you have a high-frequency CPU, it will provide much better performance.  
   This process is not linear and takes as much time as blocks require.  
   The heavier a block is, the longer it takes to verify it.  
   The first 200,000 blocks are empty so they get verified much faster.  
-- **<ins>Validation of signatures</ins>**  
+- **<u>Validation of signatures</u>**  
   Unlike the block validation process, signature validation is multi-threaded.  
   Therefore it is not dependent on the CPU frequency.  
 
@@ -441,11 +441,11 @@ If the operating system does not have enough physical memory, it may lead to del
 Waves team recommends using [SSD](https://en.wikipedia.org/wiki/Solid-state_drive) and keeping at least 30% of the total memory for the needs of the operating system (cache/buffers).  
   
 There are two ways how it is possible to synchronize the blockchain data with your node:
-1. **<ins>Wait for the automatic synchronization</ins>**:  
+1. **<u>Wait for the automatic synchronization</u>**:  
     After the node deployment, you may wait until the synchronization is done automatically.  
     Without any additional actions, your node will be uploading and validating all the data on its own.  
     However, this process takes a significant amount of time for days.
-2. **<ins>Upload the current blockchain data to your node<ins>**:  
+2. **<u>Upload the current blockchain data to your node</u>**:  
     It is possible to greatly speed up the synchronization by uploading the latest blockchain data.  
     In this case, you will skip transaction execution (validation of signatures, balances, etc).  
 
@@ -592,15 +592,15 @@ In case you didn't update your node in time, in the chapter, [Node Rollback](), 
 Approximately every two-four weeks the Waves team publishes updates to the [wavesplatform git repository](https://github.com/wavesplatform/Waves/releases/).  
 The Waves team strongly recommends to subscribe to the repository page to be aware of all releases.  
 There you may see the: 
-- **<ins>Version of the update and its network</ins>**:  
+- **<u>Version of the update and its network</u>**:  
     It is a consecutive number of the node version and the network it concerns.   
     For example: 1.4.8 (Mainnet + Testnet + Stagenet).  
     Please, note keep in mind that we deploy our node in the Mainnet network in this lesson.  
     Therefore it is necessary to pay attention only to the updates that concern the Mainnet network.  
     However, if you deployed or plan to deploy a node in other networks, pay attention to the respective updates.
-- **<ins>Update description</ins>**:  
+- **<u>Update description</u>**:  
     Update description gives details what exactly has been implemented within this relase.
-- **<ins>Update notes</ins>**:  
+- **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it once again.
   
 ![](./images/wavesgit.png)  

@@ -16,17 +16,17 @@ It is presented in a vast variety of tools that help both developers and regular
 
 Below we will run through different tools and discover how they all can give you the best experience of the Waves blockchain interaction.   
 There are 6 major instruments that are absolutely free to use:
-- **<ins>[Waves Explorer](#waves-explorer)</ins>**  
+- **<u>[Waves Explorer](#waves-explorer)</u>**  
     Online service that allows you to browse the Waves blockchain data.  
-- **<ins>[Signer]()</ins>**  
+- **<u>[Signer]()</u>**  
     A TypeScript/JavaScript library featuring signing and broadcasting transactions on users behalf.   
-- **<ins>[Waves IDE](#waves-ide)</ins>**  
+- **<u>[Waves IDE](#waves-ide)</u>**  
     Online environment for developing, testing, and deploying [Ride](#ridetopic) smart contracts.
-- **<ins>[Node REST API](#node-rest-api)</ins>**  
+- **<u>[Node REST API](#node-rest-api)</u>**  
     Main interface for interacting with the Waves blockchain within different [networks](#networktopic).
-- **<ins>[Software Development Kits](#software-development-kits)</ins>**  
+- **<u>[Software Development Kits](#software-development-kits)</u>**  
     Libraries intended for creation, signing, broadcasting [transactions](#linktotransactionlesson), and reading data from the Waves blockchain.
-- **<ins>[IDE Plugins](#ide-plugins)</ins>**  
+- **<u>[IDE Plugins](#ide-plugins)</u>**  
     
 ### Waves explorer ###
 
@@ -39,15 +39,15 @@ All the information you would be able to see on the screen would depend on the c
     
 
 The platform has a user-friendly interface that allows you to:
-- **<ins>See the Waves blockchain statistics</ins>**:  
+- **<u>See the Waves blockchain statistics</u>**:  
   ![](./images/wavesexp_stat.png)  
--  **<ins>Search transactions, accounts, tokens, blocks details</ins>**:
+-  **<u>Search transactions, accounts, tokens, blocks details</u>**:
   ![](./images/wavesexp_search.png)  
--  **<ins>Get detailed information about [transactions](https://new.wavesexplorer.com/transactions)</ins>**:
+-  **<u>Get detailed information about [transactions](https://new.wavesexplorer.com/transactions)</u>**:
   ![](./images/wavesexp_tx.png)  
--  **<ins>Get detailed information about [blocks](https://new.wavesexplorer.com/blocks)</ins>**:
+-  **<u>Get detailed information about [blocks](https://new.wavesexplorer.com/blocks)</u>**:
   ![](./images/wavesexp_blocks.png)  
--  **<ins>Get detailed information about [nodes](https://new.wavesexplorer.com/nodes)</ins>**:
+-  **<u>Get detailed information about [nodes](https://new.wavesexplorer.com/nodes)</u>**:
   ![](./images/wavesexp_nodes.png)  
 
 Try browsing blockchain data with Waves Explorer!  
@@ -109,7 +109,7 @@ The Waves team supports node pools with public API endpoints accessible to anyon
 - [Stagenet](https://nodes-stagenet.wavesnodes.com)
 
 With the help of the Swagger user interface, you can work with:  
-**<ins>Public methods</ins>**:  
+**<u>Public methods</u>**:  
   - `Reading blockchain data`: Information about accounts, transactions, tokens, blocks, etc.
   - `Working with transactions`: Broadcasting and validating transactions, checking their statuses.
   - `Working with utilities`: Random seed generation, checking the validity of an address, etc. 
@@ -118,7 +118,7 @@ With the help of the Swagger user interface, you can work with:
 The Waves team does not provide the API key for public nodes.  
 If you want to use private endpoints, start [your own node](https://docs.waves.tech/en/waves-node/private-waves-network).
 
-**<ins>Private Methods</ins>** (only for node owners):  
+**<u>Private Methods</u>** (only for node owners):  
 - `Managing accounts in the node wallet`.
 - `Signing transactions`: signing on behalf of the node wallet accounts.
 - `Node management`: stop, roll back, connect to other nodes.
@@ -135,11 +135,11 @@ For example, you can get the current node status:
 For developers wishing to interact with the Waves blockchain, there is a great opportunity  
 We created multiple libraries in different programming languages that allow you to:
 
-- **<ins>Work with cryptography</ins>**:   
+- **<u>Work with cryptography</u>**:   
     Generation of private/public keys and wallet addresses.  
-- **<ins>Work with transactions</ins>**:  
+- **<u>Work with transactions</u>**:  
     Creating, signing, and broadcasting transactions.   
-- **<ins>Interact with the Waves node</ins>**:  
+- **<u>Interact with the Waves node</u>**:  
     Reading blockchain data, node interaction, and working with cryptography.  
     
 The list of supported languages:
@@ -157,9 +157,9 @@ It is a [Ride]() extension for Visual Studio Code, which provides Ride language 
   
 
 The major extension's key features are:
-- **<ins>Code completion (snippets).</ins>**
-- **<ins>Syntax and error highlighting.</ins>**
-- **<ins>JavaScript console with built-in functions for the Waves blockchain interactions.</ins>**
+- **<u>Code completion (snippets).</u>**
+- **<u>Syntax and error highlighting.</u>**
+- **<u>JavaScript console with built-in functions for the Waves blockchain interactions.</u>**
 
 Read more about [Visual Studio Code Extension](https://docs.waves.tech/en/building-apps/smart-contracts/tools/ride-vscode).
 

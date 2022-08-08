@@ -24,16 +24,16 @@ This space allows all the nodes to be connected to each other, forming condition
 In our platform, there are 3 different networks within the Waves blockchain.  
 All of the nodes are united within a network they are connected to:
 
-- **<ins>Mainnet</ins>**:  
+- **<u>Mainnet</u>**:  
   The main Waves network where tokens have real value.   
   Block generators and lessors receive rewards for block generation and leasing respectively.  
   You can also check some statistics regarding the nodes launched on Mainnet [here](https://new.wavesexplorer.com/nodes).
-- **<ins>Testnet</ins>**:  
+- **<u>Testnet</u>**:  
   The network is intended for testing purposes.  
   Testnet is a clone of Mainnet, yet it is a testing environment.  
   There is no necessity of using real funds, and it is possible to generate free WAVES tokens.  
   Check out the [Faucet](https://testnet.wavesexplorer.com/faucet) to top up the account balance on Testnet.
-- **<ins>Stagenet</ins>**:  
+- **<u>Stagenet</u>**:  
   The experimental network.  
   All the new features are firstly tested on Stagenet before being deployed to both Mainnet and Testnet.  
   If you would like to be the first one to test experimental features, Stagenet is the correct place.  

@@ -24,13 +24,13 @@ For example, we may create a smart asset with a script that blocks operations wi
 
 There are 3 different possible results of the asset script invokation:
 
-- **<ins>Permitted transaction</ins>**:  
+- **<u>Permitted transaction</u>**:  
   The transaction is permitted, all the of the conditions of the script are satisfied.  
   This transaction will be included in the blockchain and the [fee](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset#smart-asset-fees) for asset script invokation charged.
-- **<ins>Declined transaction</ins>**:  
+- **<u>Declined transaction</u>**:  
   The asset script invokation found the incompatibility with the conditions, leading to rejection of the transaction.  
   In such a case, the fee for asset script invokation will be charged and the transaction will be marked as rejected in the blockchain.
-- **<ins>Error of compilation</ins>**:  
+- **<u>Error of compilation</u>**:  
   An error of the script compliation has occured, the transaction was declined.  
   No fee will be charged and the transaction will not appear in the blockchain.  
 
@@ -90,12 +90,12 @@ Please, note the minimum fee for this transaction is 1 WAVES.
 ### Limitations ###
 There are 2 major limitations when working with smart asset creation is
 
-- **<ins>Inability to change asset type:</ins>**  
+- **<u>Inability to change asset type:</u>**  
   Creation of a smart asset is possible at the moment of a token creation.  
   If you create a token with no script attached to it, it will not be possible to attach a script to it later.  
   Similarly, if a token is created as a smart asset, it will always stay a smart asset with a possiblity to change the script at any time.  
   In case you don't have any ready scripts, you can write a simple script that always returns `true` and change it later.   
-- **<ins>A smart asset cannot be sponsored:</ins>**  
+- **<u>A smart asset cannot be sponsored:</u>**  
   Read more about [Fee in Sponsored Asset](https://docs.waves.tech/en/blockchain/transaction/transaction-fee#fee-in-sponsored-asset).
 
 

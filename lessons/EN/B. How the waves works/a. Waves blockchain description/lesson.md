@@ -66,9 +66,9 @@ You can also get the best experience, enjoying all the advantages of the Waves b
 A transaction is an action on the [blockchain]() made on behalf of an account.  
 In the real world, a familiar to us example would be transferring money from one bank account to another.  
 This transaction would necessarily include such details as:
-* **<ins>Sender account</ins>**;
-* **<ins>Recipient account</ins>**;
-* **<ins>Details about the transfer</ins>**.  
+* **<u>Sender account</u>**;
+* **<u>Recipient account</u>**;
+* **<u>Details about the transfer</u>**.  
   (currency, amount, commissions, etc)
 
 However, blockchain transactions are not totally the same as bank transactions.  
@@ -140,28 +140,28 @@ Let's give an example that is a real-life prototype.
 If there is a cargo that is being transferred from 'A' to 'B' point, it should be placed within a container.  
 As well, for the cargo container, it is necessary to have:
 
-- <ins>Serial number</ins>  
+- <u>Serial number</u>  
   So that the enterprise that owns it, could identify it.
-- <ins>Capacity</ins>  
+- <u>Capacity</u>  
   It would help to understand how heavy the container is.
-- <ins>Information about the cargo</ins>  
+- <u>Information about the cargo</u>  
   What type of cargo it is, the time it was sent, etc.
-- <ins>List of items transferred</ins>  
+- <u>List of items transferred</u>  
   Serves as a waybill that keeps all accounted for. 
-- <ins>Counter of transferable items</ins>  
+- <u>Counter of transferable items</u>  
   To escape any loss of the cargo unit.
 
 Likewise, the blocks are the containers for transactions inside of them.  
 These "containers" have:
-- <ins>Block number</ins>  
+- <u>Block number</u>  
   Current serial number of the block, its height.
-- <ins>Block size</ins>  
+- <u>Block size</u>  
   Size of all the data that a block has.  
-- <ins>Block header</ins>  
+- <u>Block header</u>  
   Block metadata (timestamps), hashes of the previous block's header and the current's, etc.  
-- <ins>Transaction counter</ins>  
+- <u>Transaction counter</u>  
   Count of all transactions wrapped in the block.
-- <ins>Transaction list</ins>  
+- <u>Transaction list</u>  
   List of all transactions inside the particular block.
   
   
@@ -171,7 +171,7 @@ This concept can be displayed with the following picture:
 ![](./images/blockstr.png) 
   
 A very important element in a block is a hash.  
-<ins>Hash</ins> is a result of mathematical algorithms that converts an input value of any size to a certain combination of letters and numbers of a fixed size.  
+<u>Hash</u> is a result of mathematical algorithms that converts an input value of any size to a certain combination of letters and numbers of a fixed size.  
 For example, if we take the phrase "I love Waves", with the magic help of the SHA256 algorithm, this phrase would turn into the hash:  
 ` 0da73e9fd2df9630bcb689f5b66e76b7d1809d71ea841f7e075b8b82bd05a155 `    
 Regardless of how many times we repeat this transformation, this phrase would always be equal to this hash.  

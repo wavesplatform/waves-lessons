@@ -25,9 +25,9 @@ A smart account's script can contain one or many different functions (sets of ru
 Only in case that a transaction met the requirements of all the functions of the script, it can be permitted.  
 The possible result of the smart account's script compilation can be:
 
-- **<ins>Permitted transaction</ins>**;
-- **<ins>Declined transaction</ins>**;
-- **<ins>Error of compilation</ins>**.
+- **<u>Permitted transaction</u>**;
+- **<u>Declined transaction</u>**;
+- **<u>Error of compilation</u>**.
 
 There is also another type of account script, called [dApp](#linktothedapplesson).  
 A dApp works with incoming transactions, meanwhile, a smart account operates with outgoing transactions.  
