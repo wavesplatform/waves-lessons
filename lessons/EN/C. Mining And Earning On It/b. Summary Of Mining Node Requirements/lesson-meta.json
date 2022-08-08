@@ -1,7 +1,7 @@
 {
     "guid": "89c410a8-83d5-4691-8f38-f912f779fb78",
-    "title": "Summary Of Mining Node Requirements",
-    "description": "`This lesson will list all necessary requirements for node deployment and offer you different installation instruction, depending on your OS",
+    "title": "Summary of mining node requirements",
+    "description": "This lesson will list all necessary requirements for node deployment and offer you different installation instructions, depending on your OS",
     "number": 2,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/how-to-install-a-node",
     "hashtags": [
@@ -9,6 +9,10 @@
         "node requirements",
         "generating node",
         "block generation",
-        "start mining" 
+        "start mining",
+        "validating node",
+        "generating node",
+        "generation requirements",
+        "installation"
     ]
 }
