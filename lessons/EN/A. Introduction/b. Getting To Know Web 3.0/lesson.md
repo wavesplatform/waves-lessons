@@ -133,5 +133,5 @@ We can describe Web3 as a fully decentralized web with new models of interaction
 We also discussed digital signatures and how they affect user experience with Web3 services.  
   
 The next topic will be an [introduction to the Waves platform]().   
-Slowly you'll start receiving more practical material along with theory.  
+Slowly you will start receiving more practical material along with theory.  
 

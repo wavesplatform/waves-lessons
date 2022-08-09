@@ -10,27 +10,27 @@
 ## Waves toolset ##
 
 The Waves blockchain platform has many ready solutions for working with the blockchain.  
-It is presented in a vast variety of tools that help both developers and regular blockchain users.  
+It is presented in a wide variety of tools that help both developers and regular blockchain users.  
 
-Below we will run through different tools and discover how they all can give you the best experience of the Waves blockchain interaction.   
-There are 6 major instruments that are absolutely free to use:
+Below we will run through different tools and discover how they can give you the best experience of the Waves blockchain interaction.   
+There are six major instruments that are free to use:
 - **<u>[Waves Explorer](#waves-explorer)</u>**  
     Online service that allows you to browse the Waves blockchain data.  
 - **<u>[Signer]()</u>**  
-    A TypeScript/JavaScript library featuring signing and broadcasting transactions on users behalf.   
+    A TypeScript/JavaScript library features signing and broadcasting transactions on users’ behalf.   
 - **<u>[Waves IDE](#waves-ide)</u>**  
     Online environment for developing, testing, and deploying [Ride](#ridetopic) smart contracts.
 - **<u>[Node REST API](#node-rest-api)</u>**  
-    Main interface for interacting with the Waves blockchain within different [networks]().
+    The main interface for interacting with the Waves blockchain within different [networks]().
 - **<u>[Software Development Kits](#software-development-kits)</u>**  
-    Libraries intended for creation, signing, broadcasting [transactions](), and reading data from the Waves blockchain.
+    Libraries are intended for creation, signing, broadcasting [transactions](), and reading data from the Waves blockchain.
 - **<u>[IDE Plugins](#ide-plugins)</u>**  
     
 ### Waves explorer ###
 
-If you would like to browse the Waves blockchain data, the [Waves Explorer](https://new.wavesexplorer.com/) is the correct place for that.  
-Please, keep in mind that all the blockchain data can exist within 3 major [Waves networks (Mainnet, Testnet, and Stagenet)]().  
-As well, it can be any [custom blockchain network](https://docs.waves.tech/en/waves-node/private-waves-network) you can create.  
+If you want to browse the Waves blockchain data, the [Waves Explorer](https://new.wavesexplorer.com/) is the correct place.  
+Please, keep in mind that all the blockchain data can exist within three major [Waves networks (Mainnet, Testnet, and Stagenet)]().  
+It can also be any [custom blockchain network](https://docs.waves.tech/en/waves-node/private-waves-network) you can create.  
   
 All the information you would be able to see on the screen would depend on the chosen network:    
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/wavesexp_net.png?raw=true)
@@ -52,12 +52,12 @@ Try browsing blockchain data with Waves Explorer!
 
 ### Signer ###
 
-Signer is a tool that grants integration of payments with WAVES in any other service.  
+The Signer is a tool that grants integration of payments with WAVES in any other service.  
 The best way to describe how Signer works is to do it with an example.  
   
 Let's imagine that we manage an online pizza delivery.  
-We don't want to accept any payments except with the WAVES cryptocurrency.  
-In case we want to receive WAVES to our crypto wallet, we have 2 options:
+We do not want to accept any payments except with the WAVES cryptocurrency.  
+In case we want to receive WAVES to our crypto wallet, we have two options:
 
 - Write down the requisites of our wallet and ask a client to transfer tokens there:  
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/signer_no.png?raw=true)  
@@ -65,7 +65,7 @@ In case we want to receive WAVES to our crypto wallet, we have 2 options:
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/signer_yes.png?raw=true)  
 
 As we may have guessed, the first option is an outdated method.  
-It puts our business at risk, as some clients can change their minds to order due to payment complexity.  
+It risks our business, as some clients can change their minds to order due to payment complexity.  
 Secondly, some clients may experience troubles with proving the payment completion.  
   
 
@@ -78,7 +78,7 @@ Read more about [Signer](https://docs.waves.tech/en/building-apps/waves-api-and-
 ### Waves IDE ###
 
 [Waves IDE](https://waves-ide.com/) is an environment for working with smart contracts written in [Ride](#ridetopic).  
-Ride is a programming language intended for smart contract development, testing, and deployment.  
+The Ride is a programming language for smart contract development, testing, and deployment.  
 In the Waves IDE, you can work with [dApps](#dapptopic), [smart accounts](#smartacctopic), and [smart assets](#smartassettopic).  
 
 This is a demonstration of the Waves IDE user interface:
@@ -90,7 +90,7 @@ It is possible to switch between different networks within the IDE, be it a defa
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/waveside_nodes.png?raw=true)
     
 
-As well you can check libraries that contain code examples and even a series of short tutorials:    
+As well, you can check libraries that contain code examples and even a series of short tutorials:    
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/g.%20Waves%20infrastructure%20products%20and%20tools/images/waveside_libs.png?raw=true)
     
 
@@ -98,8 +98,8 @@ Read more about [Waves IDE](https://docs.waves.tech/en/building-apps/smart-contr
 
 ### Node REST API ###
 
-The Waves node REST API is the main interface for interacting with the Waves blockchain.  
-The API provides public endpoints and also private endpoints that require authorization using an API key.  
+The Waves node REST API is the primary interface for interacting with the Waves blockchain.  
+The API provides private endpoints requiring authorization using an API key and public endpoints.  
 
 The Waves team supports node pools with public API endpoints accessible to anyone:
 - [Mainnet](https://nodes.wavesnodes.com)
@@ -114,13 +114,13 @@ With the help of the Swagger user interface, you can work with:
   
 
 The Waves team does not provide the API key for public nodes.  
-If you want to use private endpoints, start [your own node](https://docs.waves.tech/en/waves-node/private-waves-network).
+If you want to use private endpoints, start [your node](https://docs.waves.tech/en/waves-node/private-waves-network).
 
 **<u>Private Methods</u>** (only for node owners):  
 - `Managing accounts in the node wallet`.
 - `Signing transactions`: signing on behalf of the node wallet accounts.
 - `Node management`: stop, roll back, connect to other nodes.
-- `Getting debug information`.
+- `Getting debug information.
 
   
 
@@ -150,7 +150,7 @@ The list of supported languages:
 ### IDE plugins ###
 
 The Waves team is developing different plugins for popular IDEs like Visual Studio Code or JetBrains products.  
-Meanwhile, some of the plugins are still in the development stage, there is a [Visual Studo Code extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride).  
+Meanwhile, some of the plugins are still in the development stage, there is a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride).  
 It is a [Ride]() extension for Visual Studio Code, which provides Ride language support and interaction with the Waves blockchain.  
   
 
@@ -160,8 +160,7 @@ The major extension's key features are:
 - **<u>JavaScript console with built-in functions for the Waves blockchain interactions.</u>**
 
 Read more about [Visual Studio Code Extension](https://docs.waves.tech/en/building-apps/smart-contracts/tools/ride-vscode).
-
-
+  
 ---
 
 ## Outro ##

@@ -12,36 +12,36 @@ All of those devices would be considered members of the home network.
 
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/network.jpeg?raw=true)  
 
-Likewise, with the Waves network, there is a space where independent [nodes]() are connected to one network.  
-This space allows all the nodes to be connected to each other, forming conditions for [decentralization]().  
+Likewise, the Waves network has a space where independent [nodes]() are connected to one network.  
+This space allows all the nodes to be connected, forming conditions for [decentralization]().  
 
 ---
 
 ## Mainnet, Testnet, Stagenet ##
 
-In our platform, there are 3 different networks within the Waves blockchain.  
+In our platform, there are three different networks within the Waves blockchain.  
 All of the nodes are united within a network they are connected to:
 
 - **<u>Mainnet</u>**:  
-  The main Waves network where tokens have real value.   
-  Block generators and lessors receive rewards for block generation and leasing respectively.  
+  The primary Waves network where tokens have real value.   
+  Block generators and lessors receive rewards for block generation and leasing, respectively.  
   You can also check some statistics regarding the nodes launched on Mainnet [here](https://new.wavesexplorer.com/nodes).
 - **<u>Testnet</u>**:  
   The network is intended for testing purposes.  
   Testnet is a clone of Mainnet, yet it is a testing environment.  
-  There is no necessity of using real funds, and it is possible to generate free WAVES tokens.  
+  No real funds are necessary, and it is possible to generate free WAVES tokens.  
   Check out the [Faucet](https://testnet.wavesexplorer.com/faucet) to top up the account balance on Testnet.
 - **<u>Stagenet</u>**:  
   The experimental network.  
-  All the new features are firstly tested on Stagenet before being deployed to both Mainnet and Testnet.  
-  If you would like to be the first one to test experimental features, Stagenet is the correct place.  
+  All new features are first tested on Stagenet before being deployed to Mainnet and Testnet.  
+  If you want to be the first to test experimental features, Stagenet is the correct place.  
   Check out the [Faucet](https://stagenet.wavesexplorer.com/faucet) to top up the account balance on Stagenet.  
 
 
-All the networks have their own chain ID.  
+All the networks have their chain ID.  
 Chain ID is a symbol that differentiates one network from another.  
-This chain ID is used in account address formation and makes inter-network operations impossible.  
-It won't be possible to use the same address account in different networks or transfer funds from one network to another.
+This chain ID is used in account address formation, making inter-network operations impossible.  
+It will not be possible to use the same address account in different networks or transfer funds from one network to another.
 
 | Network Name | Chain ID|
 | ------ | ------ |
@@ -52,17 +52,17 @@ It won't be possible to use the same address account in different networks or tr
 Also, you may create your custom network.  
 See more about [Custom Blockchain](https://docs.waves.tech/en/waves-node/private-waves-network#deploy-node-with-custom-blockchain-in-docker).  
 
-Depending on the goal, you may launch your own node in any of the networks.  
-Read about it in the [Mining and earning on it]() chapter.  
+You may launch your node in any of these networks, depending on the goal.  
+You can read more about it in the [Mining and earning on it]() chapter.  
 
 ---
 
 ## Useful network resources ##
 
-Since Waves has a large infrastructure, it has many different tools that function with the aforementioned networks.  
+Since Waves has a developed infrastructure, it has many different tools that function with the networks mentioned above.  
 In the lesson [Waves Infrastructure Products And Tools](), all of them will be explained in detail.
 
-Nevertheless, there are 2 services that it is worth mentioning:
+Nevertheless, there are two services that it is worth mentioning:
 - [Waves Explorer](#waves-explorer)
 - [Swagger API](#network-api)
 
@@ -73,8 +73,8 @@ For example, if we made a money transfer to our friend, such a transaction can b
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/waves_transfer.png?raw=true)
   
-Kindly note that it is very important to select the correct network when browsing any blockchain data.  
-If any transaction is made in one network, meanwhile the search was made within another, no data will appear.  
+Kindly note that selecting the correct network when browsing any blockchain data is very important.  
+No data will appear if any transaction is made in one network while the search was done within another.  
 The network can be changed in the right corner of the screen on the [site](https://new.wavesexplorer.com).  
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/network_selection.png?raw=true)
@@ -84,21 +84,22 @@ The topic of the Waves Explorer will be covered in the [Infrastructure Products 
 ### Network API ###
 
 With the API service, it is possible to interact with the blockchain.  
-There are 3 different APIs with each of the networks.  
+There are three different APIs with each of the networks.  
 All of them are accessible via the Swagger User Interface:
 
 - [Mainnet](https://nodes.wavesnodes.com/api-docs/index.html)
 - [Testnet](https://nodes-testnet.wavesnodes.com/api-docs/index.html)
 - [Stagenet](https://nodes-stagenet.wavesnodes.com/api-docs/index.html)
 
-Please, note that depending on the load of all the nodes, the Swagger tool connects you automatically to a random node that isn't overloaded.  
-Therefore, at different times, different nodes' APIs may be opened in the Swagger interface.  
+Please, note that depending on the load of all the nodes, the Swagger tool connects you automatically to a random official Waves node that is not overloaded.  
+Therefore, different nodes’ APIs may be opened in the Swagger interface at different times.  
 
-Using the API, it is possible to fetch some data of the blockchain or make an action on it.  
+Using the API, it is possible to fetch some data from the blockchain or make an action on it.  
 For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/index.html#/node/getNodeVersion) to get the current Waves node version.  
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/api_response.png?raw=true)
   
 The API features will be explained in more detail in the [Infrastructure Products and tools]() chapter.  
   
-The topic of the next lesson will be [smart assets and how to create one]().
+The next lesson’s topic will be [smart assets and how to create one]().
+

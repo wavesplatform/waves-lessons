@@ -13,22 +13,22 @@ On the Waves platform, it is possible to create a regular account.
 With a regular account, you can send any transactions manually.  
 The only verification completed automatically is checking that the transaction was indeed sent from this account.  
 For example, sending money from one wallet to another.   
-Auto-verification will check if this transaction was truly initiated by the account owner and if he has an available balance.  
+Auto-verification will check if the account owner indeed initiated this transaction and if he has an available balance.  
   
-A smart account is an account that has an add-on verifying that an issued transaction satisfied all conditions of the script.  
+A smart account is an account that has an add-on verifying that an issued transaction satisfies all conditions of the script.  
 For example, sending money from one wallet to another only if the account balance is not less than 20 WAVES.  
 Therefore an account that contains a script that checks all outgoing transactions whether they meet all requirements or not is called a smart account.  
   
-A smart account's script can contain one or many different functions (sets of rules).  
-Only in case that a transaction met the requirements of all the functions of the script, it can be permitted.  
+A smart account's script can contain one or many functions (sets of rules).  
+Only if a transaction meets the requirements of all the functions of the script can it be permitted.  
 The possible result of the smart account's script compilation can be:
 
 - **<u>Permitted transaction</u>**;
 - **<u>Declined transaction</u>**;
 - **<u>Error of compilation</u>**.
 
-There is also another type of account script, called [dApp]().  
-A dApp works with incoming transactions, meanwhile, a smart account operates with outgoing transactions.  
+Another type of account script is called [dApp]().  
+A dApp works with incoming transactions, while a smart account operates with outgoing transactions.  
 We will talk about dApps in the [next lesson]().
 
 Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
@@ -38,11 +38,11 @@ Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-c
 ## Usage examples ##
 
 The examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).  
-In the topic [Programming on RIDE]() basics of the language will be described.
+The topic [Programming on RIDE]() will describe the basics of the language.
 
 ### `Selling or buying only BTC` ###
 
-An account with the script below can make sales transactions only in relation to BTC:  
+An account with the script below can make sales transactions only with BTC:  
 ```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
@@ -97,21 +97,21 @@ The transaction fee for setting the script is 0.01 WAVES.
 ### Limitations ###
 
 Any account may have only one script attached to it.  
-“Detaching” a script from a smart account or replacing it with a new one is possible only if the "old" script doesn't forbid it.   
+“Detaching” a script from a smart account or replacing it with a new one is possible only if the "old" script does not forbid it.   
 
 ### Set script transaction ###
 
-There are 2 major ways of smart account script installation:
+There are two major ways of smart account script installation:
 - [Waves IDE](#wavesidechapterreference):
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
-    2. Click "+" in the right corner of the IDE, select "Account script":
+    2. Click "+" in the right corner of the IDE, and select "Account script":
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_1.png?raw=true)
     1. Write the Ride script code and click "Deploy":
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_2.png?raw=true)
-    1. Select the account and the tool that you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction) with.  
+    1. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
       After this, publish the smart account script.  
       ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_3.png?raw=true)
-    2. As a result of a succesful operation, you will see a similar notification:  
+    2. As a result of a successful operation, you will see a similar notification:  
       ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/e.%20What%20is%20a%20smart%20account%20and%20setting%20account%20script/images/smartac_4.png?raw=true)
 
   
@@ -125,7 +125,7 @@ There are 2 major ways of smart account script installation:
          sigVerify(tx.bodyBytes, tx.proofs[0], tx.senderPublicKey)
          ```
     2. Use your native programming language to:
-         -  Insert the ride script as an arguement of the compileScript function;
+         -  Insert the ride script as an argument of the compileScript function;
          -  Send this transaction to the node.  
             (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
             
@@ -160,11 +160,8 @@ There are 2 major ways of smart account script installation:
          | Field | Description | Example |
          | ----------- | ----------- | ----------- |
          | script | Compiled script, base64 encoded.<br>Account script up to 8192 bytes.<br>null — delete script| [Example](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction#json-representation:~:text=%22script%22%3A,%22base64%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%3D%3D%22)|
-
            
-
           More about [Set Script Transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
-
   
+The next lesson will be dedicated to [dApp](), another type of account script.
 
-The next lesson will be dedicated to [dApp](), another type of an account script.

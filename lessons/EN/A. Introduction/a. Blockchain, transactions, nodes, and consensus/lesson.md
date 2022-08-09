@@ -129,5 +129,5 @@ Blockchain has several important properties:
 
 In this lesson, we talked about the basics of blockchain — transactions, blocks, consensus mechanisms like proof-of-work and proof-of-stake, and delegated and leased versions of proof of stake.  
   
-In the next lesson, we'll give some insights into how all these blockchain properties are used in [Web3 services]().
+In the next lesson, we will give some insights into how all these blockchain properties are used in [Web3 services]().
 
