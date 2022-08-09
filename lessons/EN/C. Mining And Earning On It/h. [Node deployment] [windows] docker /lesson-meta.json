@@ -1,0 +1,24 @@
+{
+    "guid": "a413e77e-58f0-4ab5-824d-7bdd1507548c",
+    "title": "[Node deployment][windows] docker",
+    "description": "In this lesson, we will deploy a node in the Mainnet network ready for mining, using Docker on Windows",
+    "number": 8,
+    "doclink": "https://docs.waves.tech/en/waves-node/waves-node-in-docker",
+    "hashtags": [
+        "node installation",
+        "node deployment",
+        "node",
+        "node configuration",
+        "blockchain data",
+        "configuration file",
+        "configuration",
+        "synchronization",
+        "update",
+        "upgrade",
+        "roll back",
+        "fork",
+        "windows",
+        "docker",
+        "windows docker"
+    ]
+}
