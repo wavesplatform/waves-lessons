@@ -11,16 +11,16 @@
 
 On the Waves platform, it is possible to create a regular account.  
 With a regular account, you can send any transactions manually.  
-The only verification completed automatically is checking that the transaction was indeed sent from this account.  
+The only verification completed automatically is checking that the transaction was sent from this account and had an available balance.  
 For example, sending money from one wallet to another.   
-Auto-verification will check if the account owner indeed initiated this transaction and if he has an available balance.  
+Auto-verification will check if the account owner indeed initiated this transaction and if he has enough of the balance. 
   
 A smart account is an account that has an add-on verifying that an issued transaction satisfies all conditions of the script.  
 For example, sending money from one wallet to another only if the account balance is not less than 20 WAVES.  
 Therefore an account that contains a script that checks all outgoing transactions whether they meet all requirements or not is called a smart account.  
   
 A smart account's script can contain one or many functions (sets of rules).  
-Only if a transaction meets the requirements of all the functions of the script can it be permitted.  
+Only if a transaction meets the requirements of all the functions of the script it can be permitted.  
 The possible result of the smart account's script compilation can be:
 
 - **<u>Permitted transaction</u>**;

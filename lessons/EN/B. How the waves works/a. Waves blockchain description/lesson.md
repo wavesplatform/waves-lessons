@@ -137,28 +137,28 @@ Let's give an example that is a real-life prototype.
 If cargo is being transferred from 'A' to 'B' point, it should be placed within a container.  
 As well, for the cargo container, it is necessary to have:
 
-- <u>Serial number</u>  
+- **<u>Serial number</u>**  
   So that the enterprise that owns it could identify it.
-- <u>Capacity</u>  
+- **<u>Capacity</u>**  
   It would help to understand how heavy the container is.
-- <u>Information about the cargo</u>  
+- **<u>Information about the cargo</u>**  
   What type of cargo, the time it was sent, etc.
-- <u>List of items transferred</u>  
+- **<u>List of items transferred</u>**  
   It serves as a waybill that keeps all accounted for. 
-- <u>Counter of transferable items</u>  
+- **<u>Counter of transferable items</u>**  
   To escape any loss of the cargo unit.
 
 Likewise, the blocks are the containers for transactions inside of them.  
 These "containers" have:
-- <u>Block number</u>  
+- **<u>Block number</u>**  
   Current serial number of the block, its height.
-- <u>Block size</u>  
+- **<u>Block size</u>**  
   Size of all the data that a block has.  
-- <u>Block header</u>  
+- **<u>Block header</u>**  
   Block metadata (timestamps), hashes of the previous block's header and the current's, etc.  
-- <u>Transaction counter</u>  
+- **<u>Transaction counter</u>**  
   The count of all transactions wrapped in the block.
-- <u>Transaction list</u>  
+- **<u>Transaction list</u>**  
   List of all transactions inside the particular block.
   
   

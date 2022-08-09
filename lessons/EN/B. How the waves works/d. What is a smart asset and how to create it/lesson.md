@@ -32,7 +32,7 @@ There are three different possible results of the asset script invocation:
   An error in the script compilation occurred, and the transaction was declined.  
   No fee will be charged, and the transaction will not appear in the blockchain.  
 
-Read more about [Smart Asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset).
+Read more about [smart asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset).
 
 ---
 

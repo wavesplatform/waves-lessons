@@ -25,6 +25,8 @@ There are six major instruments that are free to use:
 - **<u>[Software Development Kits](#software-development-kits)</u>**  
     Libraries are intended for creation, signing, broadcasting [transactions](), and reading data from the Waves blockchain.
 - **<u>[IDE Plugins](#ide-plugins)</u>**  
+    Plugins for your IDE.  
+    For example, [Ride]() language support.
     
 ### Waves explorer ###
 
@@ -99,7 +101,9 @@ Read more about [Waves IDE](https://docs.waves.tech/en/building-apps/smart-contr
 ### Node REST API ###
 
 The Waves node REST API is the primary interface for interacting with the Waves blockchain.  
-The API provides private endpoints requiring authorization using an API key and public endpoints.  
+The API provides:
+- Private endpoints requiring authorization using an API key;
+- Public endpoints.  
 
 The Waves team supports node pools with public API endpoints accessible to anyone:
 - [Mainnet](https://nodes.wavesnodes.com)
@@ -130,7 +134,7 @@ For example, you can get the current node status:
 
 ### Software development kits ###
 
-For developers wishing to interact with the Waves blockchain, there is a great opportunity  
+For developers wishing to interact with the Waves blockchain, there is a great opportunity.  
 We created multiple libraries in different programming languages that allow you to:
 
 - **<u>Work with cryptography</u>**:   
@@ -150,21 +154,21 @@ The list of supported languages:
 ### IDE plugins ###
 
 The Waves team is developing different plugins for popular IDEs like Visual Studio Code or JetBrains products.  
-Meanwhile, some of the plugins are still in the development stage, there is a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride).  
+Meanwhile, some of the plugins are still in the development stage, there is a [Visual studio code extension](https://marketplace.visualstudio.com/items?itemName=wavesplatform.waves-ride).  
 It is a [Ride]() extension for Visual Studio Code, which provides Ride language support and interaction with the Waves blockchain.  
   
 
 The major extension's key features are:
-- **<u>Code completion (snippets).</u>**
-- **<u>Syntax and error highlighting.</u>**
-- **<u>JavaScript console with built-in functions for the Waves blockchain interactions.</u>**
+- **<u>Code completion (snippets)</u>**
+- **<u>Syntax and error highlighting</u>**
+- **<u>JavaScript console with built-in functions for the Waves blockchain interactions</u>**
 
-Read more about [Visual Studio Code Extension](https://docs.waves.tech/en/building-apps/smart-contracts/tools/ride-vscode).
+Read more about [Visual studio code extension](https://docs.waves.tech/en/building-apps/smart-contracts/tools/ride-vscode).
   
 ---
 
 ## Outro ##
 
 We have managed to get basic ideas and discover some tools used in the Waves blockchain platform.  
-The module's goal was to lay the foundation for further development in blockchain technology with Waves.  
+The module's goal was to lay the foundation for further development in blockchain technology with the Waves.  
 In the next module, we will talk about [mining and how to earn with it]().  

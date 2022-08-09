@@ -52,12 +52,12 @@ Information that we assume to be private, we keep secret and never reveal.
 Communication always takes place over encrypted channels and only with pseudonymous identities as endpoints, never with anything traceable (such as IP addresses).   
 In short, we engineer the system to mathematically enforce our prior assumptions since no government or organization can reasonably be trusted.”  
 
-**We can describe Web3 as a fully decentralized web with new models of interaction for users, based on trustless infrastructure** — such as a blockchain.
+**We can describe Web3 as a fully decentralized web with new models of interaction for users** — such as a blockchain.
 
 Traditional web services have “server” and “client” elements.  
 When a user opens a page in his browser, the server responds with a Web Page with static content, HTML, various assets (e.g., images and fonts), and JavaScript code.  
 
-Once the user interacts with the UI components of the web page – for example, buttons and forms – the JavaScript code creates a new request to the server: to fetch data to display or to write some data to the database on the server.  
+Once a user interacts with the UI components of the web page – for example, buttons and forms – the JavaScript code creates a new request to the server: to fetch data to display or to write some data to the database on the server.  
 
 The server processes the request and returns as a response HTML, XML, or JSON data.  
 The JavaScript in a browser uses this data to change the client’s application state and view.  
@@ -72,7 +72,8 @@ A “Read” request is created when a user interacts with a client application.
 In a Web3 app, the request is processed by a node from a Blockchain Network.  
 The main difference is that the data can be read by anyone and is public on popular distributed ledgers.
 
-**The most important thing is to know how to write a piece of information into the blockchain network. Here we use the terms “transaction” and “digital signature”.**
+**The most important thing is to know how to write a piece of information into the blockchain network.**  
+**Here we use the terms “transaction” and “digital signature”.**
 
 All updates to the blockchain network must be submitted using transactions.  
 The blockchain network determines that a transaction is valid only if a valid digital signature is provided.  
@@ -129,7 +130,7 @@ In the Waves ecosystem, there is [Keeper Wallet](https://keeper-wallet.app/#get-
 
 Let’s summarize this lesson and the most important things we have learned.  
 We’ve discussed the Web’s evolution, Web 1, 2, and 3, and their differences.  
-We can describe Web3 as a fully decentralized web with new models of interaction for users based on trustless infrastructure.  
+We can describe Web3 as a fully decentralized web with new models of interaction for users.  
 We also discussed digital signatures and how they affect user experience with Web3 services.  
   
 The next topic will be an [introduction to the Waves platform]().   
