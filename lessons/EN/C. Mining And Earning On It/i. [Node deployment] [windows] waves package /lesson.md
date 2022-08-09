@@ -17,12 +17,10 @@
   - [Why roll back your node](#why-roll-back-your-node)
   - [How to rollback a node](#how-to-rollback-a-node)
 
----
-
 ## Node structure ##
 
 To clarify all of the node deployment steps, it is required to understand the structure of a node.  
-Understanding the node structure will shed some light on major essences that a node interacts with.  
+Understanding the node structure will shed some light on the principal essences that a node interacts with.  
 
 Under the bonnet, every node has:
 - **<u>Blockchain database</u>**:  
@@ -30,7 +28,7 @@ Under the bonnet, every node has:
     Therefore, an identical copy of all the blockchain data must be stored in every node.  
 - **<u>Configuration file</u>**:  
     A configuration file is a set of instructions on how a node should work.  
-    In the configuration file, we can define multiple parameters, for instance, which [network]() to connect to.
+    We can define multiple parameters in the configuration file, such as [network]() to connect to.
 
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/nodestr.png?raw=true)
 
@@ -38,7 +36,7 @@ Under the bonnet, every node has:
 
 ## Prerequisites ##
 
-Before starting the installation, make sure your Waves account has a [generating balance]() at least 1000 WAVES.  
+Before installing a node, ensure your Waves account has a [generating balance]() at least 1000 WAVES.  
 Also, it would be necessary to keep on hand a Base58 encoded string of the seed phrase of your account.  
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
@@ -61,7 +59,7 @@ Here is how you can encode a seed phrase to Base58:
 Waves node installation via package is a more advanced way of node deployment.  
 Follow the steps below to install a Waves node:
 1. Install Java (OpenJDK 8).  
-    Please, note, that if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.  
+    Please, note that if you already have OpenJDK 11 installed, there is no need to roll it back to OpenJDK 8.  
     The node Installation is supported in both the 8th and the 11th versions.  
     Install OpenJDK8 as mentioned in the [documentation](https://access.redhat.com/documentation/en-us/openjdk/8/html/installing_and_using_openjdk_8_for_windows/openjdk8-windows-installation-options).  
 
@@ -71,7 +69,7 @@ Follow the steps below to install a Waves node:
     java -version
     ```
 
-    If you see in the output the version is such as below or higher, you can move to the next step:  
+    If you see in the output that the version is such as below or higher, you can move to the next step:  
 
     ```
     java version "1.8.0_201"
@@ -90,7 +88,7 @@ Follow the steps below to install a Waves node:
 5. Study the minimum parameters.  
     It will be necessary to edit the configuration file to run a node.  
     The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
-    Within this chapter, we don't have a goal to configure them all, as we have the chapter [Configuration](#configuration) dedicated to it.  
+    Within this chapter, we do not have a goal to configure them all, as we have the chapter [Configuration](#configuration) dedicated to it.  
     As of now, it would be enough to run a node with minimum parameters.  
 
     | Parameter | Description | Example |
@@ -99,7 +97,7 @@ Follow the steps below to install a Waves node:
     | seed | The seed phrase of your Waves account [encoded to the Base58 string](#prerequisites). <br> |  `seed = "K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV"` |
 6. Edit and save the configuration file.  
     Open `waves-sample.conf` in the directory `C:\wavesnode\conf`.  
-    We may remove all the parameters except the password and the seed of the wallet.  
+    We may remove all the parameters except the password and the wallet’s seed.  
     Set a password and insert a seed Base58 encoded string.  
     It may look something as in the code below:  
 
@@ -126,8 +124,8 @@ Follow the steps below to install a Waves node:
     cd C:\wavesnode
     java -jar waves-all-1.4.7.jar .\conf\waves-sample.conf
     ```
-8. Please, note it may take a few moments to deploy a node.  
-    Once you see logs about the height of the blockchain, it means everything is working properly:
+8. Please, note that it may take a few moments to deploy a node.  
+    Once you see logs about the height of the blockchain, it means everything is working correctly:
 
     ```
     INFO [appender-22] c.w.s.BlockchainUpdaterImpl - New height: 5100
@@ -136,9 +134,9 @@ Follow the steps below to install a Waves node:
 All done! You have a working node deployed!  
   
 Also, it is possible to deploy a node on your custom blockchain.  
-You can read more information about it in the [full documentation](https://docs.waves.tech/en/waves-node/private-waves-network).  
-Please, note that mining the WAVES tokens that have value on the market is possible only on the MAINNET network.  
-Within this lesson, we will be deploying our node on the MAINNET network only.  
+You can read more information about it in the [complete documentation](https://docs.waves.tech/en/waves-node/private-waves-network).  
+Please, note that mining the WAVES tokens that have value on the market is possible only on the Mainnet network.  
+In this lesson, we will deploy our node in the Mainnet network.  
    
 In the next chapter, [node configuration](#configuration), we will learn how to set up a configuration file of your node.  
   
@@ -150,8 +148,8 @@ As we previously mentioned in the [Node Structure]() chapter, every node has:
 - A configuration file;
 - The blockchain copy.
   
-Within this chapter, we are going to work with the configuration file of the node.  
-In the [next chapter](#synchronization), we will talk about node synchronization with the Waves blockchain.  
+Within this chapter, we will work with the node’s configuration file.  
+In the [next chapter](#synchronization), we will discuss node synchronization with the Waves blockchain.  
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
@@ -178,13 +176,14 @@ waves {
 }
 ```
 
-This list of modules in the given example is not full, you can find the full list of Waves node modules and their parameters in the [documentation](https://docs.waves.tech/en/waves-node/node-configuration#sections-of-the-configuration-file).  
+This list of modules in the given example is not complete.   
+You can find the complete list of Waves node modules and their parameters in the [documentation](https://docs.waves.tech/en/waves-node/node-configuration#sections-of-the-configuration-file).  
 
 For the sake of simplicity, we will concentrate on the same modules as the ones included in the [sample configuration file](https://github.com/wavesplatform/Waves/blob/version-1.4.x/node/waves-sample.conf):  
 - **<u>[Wallet](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings)</u>**  
     Built-in node wallet parameters.  
     In the wallet module, you can configure the parameters of the [wallet built in the Waves node](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet).  
-    [Previously](), we defined the seed of the wallet Base58 encoded and set a password to encode the seed in `wallet.dat` file:
+    [Previously](), we defined the seed of the wallet Base58 encoded and set a password to encode the seed in the `wallet.dat` file:
     
     ```
     waves {
@@ -205,7 +204,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 - **<u>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</u>**  
     Blockchain parameters.  
     In the blockchain module, you can select the blockchain type.  
-    Since we are aimed at mining and receiving rewards for block generation, we will use the MAINNET type.  
+    Since we are aimed at mining and receiving rewards for block generation, we will use the Mainnet type.  
 
     ```
     waves {
@@ -223,11 +222,11 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     Read more about [Blockchain Settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
 - **<u>[REST API](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)</u>**  
     Node API parameters.  
-    The Waves node REST API is the main interface for blockchain interaction.  
+    The Waves node REST API is the primary interface for blockchain interaction.  
     The API has both public (available for everyone) and private (available only via authorization) endpoints.  
-    You may check the swagger REST API interface for the [MAINNET network](https://nodes.wavesnodes.com/) to get an idea of what it looks like.  
+    You may check the swagger REST API interface for the [MAINNET network](https://nodes.wavesnodes.com/) to understand what it looks like.  
 
-    Once this parameter is configured, you may get access to the REST API service of your personal node directly:  
+    Once this parameter is configured, you may get access to the REST API service of your node directly:  
 
     
     ```
@@ -245,7 +244,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | Name | Description | Example |
     | :---- | :---- | :---- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
-    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use 127.0.0.1 address when deploying a node with deb package or waves package.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
+    | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use the 127.0.0.1 address when deploying a node with deb package or waves package.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
@@ -269,13 +268,13 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | :---- | :---- | :---- |
     | node-name | Sets the name of your node visible to other participants of the P2P network.<br>The name is transmitted during the initial handshake. | waves-node | 
     | bind-address | Sets the IP address of the local network interface on which Waves Node will accept incoming connections.<br>By default, node binds to 0.0.0.0 that means that it will listen on all available network adapters. | 0.0.0.0 | 
-    | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside, otherwise, your node will connect to the P2P network using only outgoing connections.<br>If this port is used by other applications, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
+    | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside. Otherwise, your node will connect to the P2P network using only outgoing connections.<br>If other applications use this port, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
 
      Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
 
 ### API key of your node ###
 
-After the REST API module is configured and node deployed, you will be able to access the Swagger interface for blockchain interaction.  
+After the REST API module is configured and node deployed, you can access the Swagger interface for blockchain interaction.  
 There you can access different methods that will allow you:
 - Read the blockchain data:
     - `Account data`  
@@ -298,28 +297,29 @@ There you can access different methods that will allow you:
 
 These methods can be:
 - **<u>Public</u>**:  
-    Methods available to everyone. Public methods do not:
+    Methods that are available to everyone. Public methods do not:
     - Operate with any private data of the node owner;
     - Invoke any methods that would make an action with any node, like stopping a node or connecting to a peer.  
   
     For example, [`/blocks/height`](https://nodes.wavesnodes.com/api-docs/index.html#/blocks/getHeight) is a method that checks the current height of the blockchain.  
-    This information is not private and there is no action made with a node, therefore it doesn't require any additional authorization. 
+    This information is not private, and there is no action made with a node.  
+    Therefore itdoes not require any additional authorization. 
 - **<u>Private</u>**:  
-    Methods available only to node owners.  
+    Methods that are available only to node owners.  
     These methods can be invoked only by node owners via API key and API key hash authorization.  
     For example, [`/debug/configInfo`](https://nodes.wavesnodes.com/api-docs/index.html#/debug/getConfig) is a method that checks the configuration of the currently running node.
 
-The chapter goal is to get this API key and API key hash to be able to operate with the private methods of your node.  
+The chapter goal is to get this API key and API key hash to operate with your node’s private methods.  
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
 2. Click "Try it out":  
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg1.png?raw=true)  
 3. Enter any random string value and click "Execute":
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg2.png?raw=true)  
-    Please, do not use the example in the screenshot, as it is given for demonstration purposes only.
+    Please do not use the example in the screenshot, as it is only for demonstration purposes.
 4. In the response section below, you will receive a hash:
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg3.png?raw=true)  
-5. Save both the original phrase you entered (API key) and the hash (API key hash) of it as we will use them for interaction with private node methods in this lesson.
+5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
 ### Configuration file setup ###
 
@@ -327,10 +327,10 @@ Follow the instructions below for setting up configurations:
 1. Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`)
 2. Edit the configuration file.  
     [In the previous chapter](#installation), we already added the `waves.wallet` module.  
-    Make sure to add `blockchain`, `rest-api`, and `network` modules to the file as well.  
+    Add `blockchain`, `rest-api`, and `network` modules to the file.  
       
-    Please, note `rest-api.api-key-hash` parameter doesn't necessarily have to match with the example below.  
-    In the chapter [API Key Of Your Node](#api-key-of-your-node), an instruction of how to generate the API key hash was given.  
+    Please note that the `rest-api.api-key-hash` parameter doesn’t necessarily have to match the example below.  
+    The chapter [API Key Of Your Node](#api-key-of-your-node) gave instructions on how to generate the API key hash.  
     Insert the API key hash in the `rest-api.api-key-hash` parameter.
       
     After the edit, the `waves.conf` file can look something like this: 
@@ -377,16 +377,16 @@ Follow the instructions below for setting up configurations:
     java -jar waves-all-1.4.7.jar .\conf\waves-sample.conf
     ```
     Please, note that it may take a few moments to deploy a node.
-4. Check the [REST API interface](http://localhost:6869/api-docs/index.html) of your deployed node.  
-    There you would be able to see multiple methods to interact with your node.  
+4. Check your deployed node’s [REST API interface](http://localhost:6869/api-docs/index.html).  
+    There you could see multiple methods to interact with your node.  
     For instance, you can try a:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
-        All public methods don't require any additional authorization.  
-        For example, the `/addresses/` method, will return the address of your node wallet.  
+        All public methods do not require any additional authorization.  
+        For example, the `/addresses/` method will return the address of your node wallet.  
         ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swaggadd.png?raw=true) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
-        Kindly note that the API key hash that you inserted in the configuration file is not equal to the API key.  
+        Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
         The API key hash is the random string you typed in the [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) method.  
         In case you do not remember what API key and API key hash are, please, check [API Key Of Your Node](#api-key-of-your-node).  
           
@@ -395,11 +395,11 @@ Follow the instructions below for setting up configurations:
             ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg6.png?raw=true)
         2. Enter your API key (not the API hash) and click "Authorize":
             ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg7.png?raw=true)
-            Please, note the API key on the screen is an example.  
-            You need to use your own API key.
+            Please, note that the API key on the screen is an example.  
+            You need to use your API key.
         3. Click "Close":
             ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg8.png?raw=true)
-        4. Now you can use private methods of your node.  
+        4. Now, you can use the private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
             ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/swagg9.png?raw=true)   
       
@@ -413,33 +413,33 @@ In the next chapter, [Synchronization](#synchronization), we will move to the fi
 
 Before we begin blockchain synchronization, it is necessary to understand how blockchain gets formed.  
 Let's recap what we discussed in the lesson, [Waves blockchain description]().  
-The smallest blockchain component is a transaction that may include various data (account address, sum, operation type, etc).  
+The smallest blockchain component is a transaction that may include various data (account address, sum, operation type, etc.).  
 All transactions are wrapped in blocks, where each block has a maximum capacity of how many transactions it may include.  
 The chain of blocks is called a blockchain.  
 
 Every node in the [Waves network]() stores the blockchain data copy, creating data decentralization.  
-The major element of decentralization within the blockchain is data security.  
+The primary element of decentralization within the blockchain is data security.  
 What it means is that all the nodes represent witnesses that:
 - Watch over the data integrity so that it will not be compromised;
 - No invalid transaction is saved into the blockchain.
     
 The process of data validation is uninterrupted.  
-There are two most significant validation processes:
+There are two most crucial validation processes:
 - **<u>Validation of blocks</u>**  
   It is a single-threaded process.  
   Therefore if you have a high-frequency CPU, it will provide much better performance.  
   This process is not linear and takes as much time as blocks require.  
   The heavier a block is, the longer it takes to verify it.  
-  The first 200,000 blocks are empty so they get verified much faster.  
+  The first 200,000 blocks are empty, so they get verified much faster.  
 - **<u>Validation of signatures</u>**  
   Unlike the block validation process, signature validation is multi-threaded.  
   Therefore it is not dependent on the CPU frequency.  
 
 This way, every node verifies all transactions and blocks whether they are valid.  
-If the data passed the validation, it will be included in the blockchain.  
+If the data passes the validation, it will be included in the blockchain.  
 In case the data is not valid, the data will be discarded.  
 
-If the operating system does not have enough physical memory, it may lead to delays in the work of the system.   
+If the operating system does not have enough physical memory, it may delay the system’s work.   
 Waves team recommends using [SSD](https://en.wikipedia.org/wiki/Solid-state_drive) and keeping at least 30% of the total memory for the needs of the operating system (cache/buffers).  
   
 There are two ways how it is possible to synchronize the blockchain data with your node:
@@ -449,17 +449,17 @@ There are two ways how it is possible to synchronize the blockchain data with yo
     However, this process takes a significant amount of time for days.
 2. **<u>Upload the current blockchain data to your node</u>**:  
     It is possible to greatly speed up the synchronization by uploading the latest blockchain data.  
-    In this case, you will skip transaction execution (validation of signatures, balances, etc).  
+    In this case, you will skip transaction execution (signatures validation, balances, etc.).  
 
-In case you don't want to speed up the synchronization, you may wait before it is done automatically.  
+If you do not want to speed up the synchronization, you may wait before it is done automatically.  
 If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
 
-However, if you wish to speed up this process, within this chapter we will concentrate on the blockchain data upload.  
+However, if you wish to speed up this process, we will concentrate on the blockchain data upload within this chapter.  
 
 ### Blockchain synchronization ###
 
 Follow the steps below to synchronize the current blockchain with your node:  
-1. Go to the directory with the blockchain data of the node `C:\wavesnode\data`.
+1. Go to the directory with the node blockchain data `C:\wavesnode\data`.
 2. Remove all the data within the directory.
 3. Download the [latest archive](http://blockchain.wavesnodes.com/blockchain_last.tar) with the blockchain data to the `C:\wavesnode\data` folder.  
 4. Download the [sha1sum file](http://blockchain.wavesnodes.com/blockchain_last.tar.SHA1SUM) to the `C:\wavesnode\data` folder.  
@@ -486,12 +486,12 @@ Follow the steps below to synchronize the current blockchain with your node:
     C:\wavesnode\data cat blockchain_last.tar.SHA1SUM`
     ```
 
-    The oupoot can look like this:
+    The output can look like this:
     
     ```
      f464c9da265077063f68e3f097cd9b0337b148e5
     ```    
-    The hash of the `blockchain_last.tar` file has to match with the content inside of the `blockchain_last.tar.SHA1SUM` file.  
+    The hash of the `blockchain_last.tar` file must match the content inside the `blockchain_last.tar.SHA1SUM` file.  
     In our example, we receive the hash ` f464c9da265077063f68e3f097cd9b0337b148e5` after running both commands.
 6. Restart the node.  
     Replace {*} with the actual file name:
@@ -514,7 +514,7 @@ Follow the steps below to synchronize the current blockchain with your node:
     Please, note that the complete synchronization may take up to 1-3 days and depends on your CPU frequency. 
 
 
-After syncrhonization is completed, your node will be ready for mining!  
+After synchronization is completed, your node will be ready for mining!  
 If your node generates a block, you will get a reward for block generation right to your node wallet.
   
 Please, note that once you have a synchronized node, you can export the node's blockchain to a binary file.  
@@ -530,97 +530,97 @@ For more details, read [Export Blockchain to Binary File](https://docs.waves.tec
 The blockchain world constantly evolves, pushing all its participants to continuous development.  
 The Waves blockchain is among leaders that persistently work on technological advancement.  
 Due to this, the Waves team publishes updates of the blockchain that all the nodes are required to install.    
-These updates expand nodes functionality, offer new transaction types, can fix bugs, etc. 
+These updates expand nodes’ functionality, offer new transaction types, can fix bugs, etc. 
   
 There are two types of updates:
 - **<u>The ones that can be implemented right away</u>**   
     Usually, it is minor bug fixes or slight changes.  
     Once you update your node with them, the new functionality will become available for you right away.  
-    In case you don't update your node with such a release, it will not case a [fork](#fork-of-blockchain).
+    If you do not update your node with such a release, it will not cause a [fork](#fork-of-blockchain).
 - **<u>The ones that take time to be implemented</u>**.  
-    It is large updates that may include consensus changes or any other significant changes.  
+    Extensive updates may include consensus changes or any other significant changes.  
     On the node releases page, node owners are warned about the upcoming switch to the new changes.  
-    For example, an update may be published at the 1st of September, but in the comments of the release it is mentioned:  
+    For example, an update may be published on the 1st of September, but in the comments of the release, it is mentioned:  
     
     ```
     This is a mandatory release. 
     Mainnet nodes need to be updated before feature #​17 is activated.
-    The activation will happen at height 3250000 (approx. on Sep 10 2022 05:37 UTC)."
+    The activation will happen at the height 3250000 (approximately Sep 10, 2022, 05:37 UTC)."
     ```
     Therefore, node owners receive a time frame within which it is necessary to update the node.  
-    In case a noder owner skips such an update after the new feature is activated, it may cause [forks](#fork-of-blockchain). 
+    If a node owner skips such an update after the new feature is activated, it may cause [forks](#fork-of-blockchain). 
 
-You can subscribe to the [github releases page](https://github.com/wavesplatform/Waves/releases/) to be always aware of all published updates.  
-It is recommended to install all updates without postponing to always keep your node functioning properly.   
+You can subscribe to the [github releases page](https://github.com/wavesplatform/Waves/releases/) to be constantly aware of all published updates.  
+Installing all updates without postponing is recommended to keep your node functioning properly.   
 
 ### Fork of blockchain ###
 
-Fork is the moment when the blockchain is split by two different chains.  
+A fork is when the blockchain is split into two different chains.  
 Within the Waves blockchain, fork formation is possible if the Waves team publishes a node update, but not all nodes decide to switch to the update.
     
 This idea can be simplified with an instance in the fictional world.  
-Let's imagine we have 5 nodes in our fictional blockchain.  
-All 5 nodes have the same very node version 1.0, working identically.  
-One moment, we, as blockchain creators and developers, decide to upgrade the blockchain and add some features to it.  
+Let's imagine we have five nodes in our fictional blockchain.  
+All five nodes have the same very node version 1.0, working identically.  
+As blockchain creators and developers, one moment, we decide to upgrade the blockchain and add some features.  
 We publish the update of the node version, 1.1, and require all the node owners to update their nodes.   
-Out of all 5 nodes, only 3 node owners upgraded their nodes with the update.  
-The other 2 nodes remained with the older node version.  
+Out of all five nodes, only three node owners upgraded their nodes with the update.  
+The other two nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
-3 nodes remained with the original blockchain, installing all necessary updates, meanwhile 2 other nodes switcheds to the fork.  
+Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.  
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/blockchainfork.png?raw=true)  
   
-Eventually, the 2 nodes that weren not updated, may stop working.  
-This is the very reason why it is important to timely update your node.  
+Eventually, the two nodes that were not updated may stop working.  
+This is why it is vital to timely update your node.  
   
 To avoid forks, be subscribed to the [Waves blockchain releases page](https://github.com/wavesplatform/Waves/releases/) and timely install updates.  
 In the chapter below, [Node Upgrade](), we will run through all the steps of updating your node.  
-In case you didn't update your node in time, in the chapter, [Node Rollback](), we will discuss steps of how to roll back your node to the working state.
+In case you did not update your node in time, in the chapter [Node Rollback](), we will discuss steps to roll back your node to the working state.
 
 ### Node upgrade ###
 
-Approximately every two-four weeks the Waves team publishes updates to the [wavesplatform git repository](https://github.com/wavesplatform/Waves/releases/).  
-The Waves team strongly recommends to subscribe to the repository page to be aware of all releases.  
+Approximately every two-four weeks, the Waves team publishes updates to the [wavesplatform git repository](https://github.com/wavesplatform/Waves/releases/).  
+The Waves team strongly recommends subscribing to the repository page to know about all releases.  
 There you may see the: 
 - **<u>Version of the update and its network</u>**:  
     It is a consecutive number of the node version and the network it concerns.   
     For example: 1.4.8 (Mainnet + Testnet + Stagenet).  
-    Please, note keep in mind that we deploy our node in the Mainnet network in this lesson.  
+    Please keep in mind that we deploy our node in the Mainnet network in this lesson.  
     Therefore it is necessary to pay attention only to the updates that concern the Mainnet network.  
-    However, if you deployed or plan to deploy a node in other networks, pay attention to the respective updates.
+    However, if you deployed or planning to deploy a node in other networks, pay attention to the respective updates.
 - **<u>Update description</u>**:  
-    Update description gives details what exactly has been implemented within this relase.
+    Update description gives details of what exactly has been implemented within this release.
 - **<u>Update notes</u>**:  
-    Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it once again.
+    Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it again.
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/wavesgit.png?raw=true)  
   
-Once you receive a notifcation of a new node version release, follow the steps below to upgrade your node:
+Once you receive a notification of a new node version release, follow the steps below to upgrade your node:
 1. Get to the directory `C:\wavesnode` with the `waves-all-<version number>.jar` file.
 2. Check the current node version number.  
     The version number is given in the name of the jar file.  
-    For example, for `waves-all-1.4.7.jar` file, the version would be 1.4.7.
+    For example, the version of the `waves-all-1.4.7.jar` file would be 1.4.7.
 3. Check the version node number of the latest blockchain update release:  
     The version number will be specified in the name of the release.  
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/nodeversionnum.png?raw=true)
 4. Take a look at the "Update notes" section.  
-    There you will be able to see whether your node needs to re-import the blockchain data once again.  
+    There you will be able to see whether your node needs to re-import the blockchain data again.  
       
     If the blockchain re-import is not needed, it will be enough to replace the old jar file with a new one:  
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/gitupdtunnsc.png?raw=true)  
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
-    -  Repeat the same steps of node syncrhonization as in the chapter [Synchronization]().
-    -  After the node is synchronized, download the new jar file, as it is mentioned in the step №5.  
+    -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
+    -  After the node is synchronized, download the new jar file, as mentioned in step №5.  
     
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/gitupdateneeded.png?raw=true)       
 5. Replace the old jar file with a new one.  
     Delete the old `waves-all-<version number>.jar` file.    
     Download the latest jar file to the `C:\wavesnode` folder.  
-    The file will be available for downloading under the "Assets" section:     
+    The file will be available for download under the "Assets" section:     
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/gitwavesall.png?raw=true)    
     Please, note that the version number on the screen is an example.  
-    At the moment of your upgrade, there may be a newer version available.
+    At the moment of your upgrade, a newer version may be available.
 6. Restart the node.    
     Replace {*} with the actual file name:  
     
@@ -634,14 +634,13 @@ Once you receive a notifcation of a new node version release, follow the steps b
     ```
 7. Check the logs of the running node app.  
     It may take a few moments before the node is running.  
-    Messages regarding increasing blockchain height mean that everything is completed succesfully:  
+    Messages regarding increasing blockchain height mean that everything is completed successfully:  
 
     ```
     INFO [appender-25] c.w.s.BlockchainUpdaterImpl - New height: 10000
     ```
 
     ---
-
 
 ## Node rollback ##
 
@@ -652,17 +651,19 @@ To answer the question of why it is necessary to roll back a node after a fork, 
     It occurs because not all nodes install mandatory updates.  
     For example, a new update supports a new transaction type.  
     Some nodes installed the update and can add this transaction type to the transaction list of a [block]().  
-    Other nodes that did not install it won't be able to read and broadcast this transaction type.  
+    Other nodes that did not install it will not be able to read and broadcast this transaction type.  
     It will cause a fork, where some nodes keep pace with the original blockchain, and others do not.
 2. All node update releases can be either mandatory or recommended:  
     - **<u>Mandatory updates</u>** typically contain crucial updates.  
         After an update is published, it may take some time before it is activated.  
-        Sometimes it can take up to 1-2 weeks.   	You may find information about the activation time frames on the [releases page](https://github.com/wavesplatform/Waves/releases).    
-        In the scenario when you don't have an update installed after its activation, your node will switch to a fork.
+        Sometimes it can take up to 1-2 weeks.  
+        You may find information about the activation time frames on the [releases page](https://github.com/wavesplatform/Waves/releases).    
+        In the scenario when you do not have an update installed after its activation, your node will switch to a fork.
     - **<u>Recommended updates</u>** include minor bug fixes or slight improvements.  
-        Skipping such updates will not lead to a fork.   	However, for the best experience, it is still recommended to be installed.
+        Skipping such updates will not lead to a fork.  
+        However, for the best experience, it is still recommended to be installed.
 
-If you don't update your node before a feature activation within a mandatory update, your node will switch to a fork.  
+If you do not update your node before a feature activation within a mandatory update, your node will switch to a fork.  
 The risk of staying in a fork is that the node may stop working at one moment.  
 As a consequence of a non-functioning node, there will be no opportunity to generate a block and receive a reward.  
   
@@ -677,7 +678,7 @@ We will return to our fictional blockchain instance, where the blockchain split 
 A feature that was included in the update was activated at the 3000th block:    
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/3000.png?raw=true)
 
-Since we didn't update our node before the feature activation, we switched to a fork.  
+Since we did not update our node before the feature activation, we switched to a fork.  
 At the moment of the 3002nd block, we found out that we were on the fork:  
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/i.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20waves%20package%20/images/3002.png?raw=true)
 
@@ -710,8 +711,8 @@ In this situation, we will need to:
         ```
         {"height":2500}
         ```  
-        In this case, you will need to install the latest update as mentioned in the [Node Upgrade](#node-upgrade).  
-        Please, note that you won't need to follow this instruction below (steps №3 and below).  
+        In this case, you will need to install the latest update mentioned in the [Node Upgrade](#node-upgrade).  
+        Please, note that you will not need to follow this instruction below (steps №3 and below).  
         After completing this step, you can go to the [Node networks]() chapter.
 3. Verify the signature of a block of the blockchain.   
     Check the signature of the blockchain's height minus ten by the link:
@@ -751,7 +752,7 @@ In this situation, we will need to:
     Two scenarios are possible:
     - **<u>The signatures match.</u>**  
         If the signatures match, your node is up to date.  
-        You won't need to update and roll it back for now.  
+        You will not need to update and roll it back for now.  
         You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
     - **<u>The signatures do not match.</u>**  
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes.    
@@ -767,7 +768,7 @@ In this situation, we will need to:
         However, if the signatures do not match, there is a slight chance that the official Waves node could be on the fork.  
 
         We will need to repeat steps №3 and №4 in 20 minutes only one more time.  
-        If it matches after the second attempt, you won't need to update and roll back your node.  
+        If it matches after the second attempt, you will not need to update and roll back your node.  
         If the signatures did not match for the second time, please continue with step №6.
 6. Update your node.  
     Once you encounter two signature mismatches, run through the procedure of the [Node update](#node-upgrade).
