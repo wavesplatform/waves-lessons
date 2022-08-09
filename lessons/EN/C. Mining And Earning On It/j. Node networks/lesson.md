@@ -8,11 +8,11 @@ Let's recap what we have learned about them and extend our understanding of thei
   
 For every node owner, the Waves team offers four different network options:
 1. **<u>Mainnet network</u>**  
-    The Mainnet network is the main network where the WAVES tokens have a real value on the market.  
+    The Mainnet network is the primary network where the WAVES tokens have a real value on the market.  
     You can use the [Waves Exchange](https://waves.exchange/) wallet for cryptocurrency transfers, which will operate in the Mainnet network.  
-    If you have a goal to generate a block and receive a real reward, you also make it within the Mainnet network.  
+    If you aim to generate a block and receive a real reward, you also make it within the Mainnet network.  
     You can [develop smart contracts]() in the [Waves IDE](https://waves-ide.com/) within Mainnet.  
-    The network’s name describes its purposes, which is the Waves’ main network.  
+    The network’s name describes its purposes, which is the Waves’ primary network.  
 2. **<u>Testnet network</u>**  
     The Testnet network is an identical copy of the Mainnet, yet, without the actual value of its tokens on the market.  
     If your goal is to get used to the way the Waves blockchain works without the necessity of using real funds, feel free to connect to the Testnet network.  
