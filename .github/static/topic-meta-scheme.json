@@ -1,0 +1,61 @@
+{
+  "title": "Topic Meta Schema",
+  "type": "object",
+  "properties": {
+    "guid": {
+      "$ref": "#/definitions/uuid"
+    },
+    "title": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "description": {
+      "$ref": "#/definitions/nonEmptyString"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "hashtags": {
+      "$ref": "#/definitions/hashtags"
+    },
+    "ref1": {
+      "$ref": "#/definitions/uuidOrEmptyString"
+    },
+    "ref2": {
+      "$ref": "#/definitions/uuidOrEmptyString"
+    },
+    "ref3": {
+      "$ref": "#/definitions/uuidOrEmptyString"
+    }
+  },
+  "definitions": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "hashtags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/nonEmptyString"
+      }
+    },
+    "uuidOrEmptyString": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    }
+  },
+  "required": [
+    "guid",
+    "title",
+    "description",
+    "number",
+    "hashtags",
+    "ref1",
+    "ref2",
+    "ref3"
+  ]
+}

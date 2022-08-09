@@ -1,0 +1,17 @@
+name: Update backend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_info:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: update info
+        shell: bash
+        run: |
+          chmod +x ./.github/scripts/check-markdown-update.sh && \
+          ./.github/scripts/check-markdown-update.sh 'need prod url' ${{ secrets.LESSONS_SECRET_FOR_SYNC_PROD }}
