@@ -30,7 +30,7 @@ To have a generating node, you need to have the node's account generating balanc
 | Requirement Description | Example|
 | :----- | :----- |
 | **<u>Generating balance</u>** is the balance of your account that:<br>- Deductes all the funds you leased to some accounts;<br>- Adds all the funds any other accounts leased to your account.<br><br>| For instance, our imaginary balance is 1005 WAVES:<br>- 700 of them were our WAVES;<br>- 200 of them we leased to our friend Alex;<br>- 505 of them we received by our friend Diana in lease.<br><br>700 - 200 + 505 = 1005 WAVES, our generating balance. |
-| **<u>Last 1000 blocks</u>** are the last 1000 blocks from the current blockchain height. | Assume the current blockchain height is 3,211,000 blocks.<br>For us, it would be necessary to have the generating balance, starting from when it was the block 3,210,000,<br>up to the current blockchain height, i.e., 3,211,000 blocks.
+| **<u>Last 1000 blocks</u>** are the last 1000 blocks from the current blockchain height. | Assume the current blockchain height is 3,211,000 blocks.<br>For us, it would be necessary to have the generating balance, starting from when it was the block 3,210,000,<br>up to the current blockchain height, i.e., 3,211,000 blocks. |
   
 We can give an example of a node that is ready for mining.  
 It can be a laptop with 2+ CPU cores, 4+GB of RAM, and 100+ GB of SSD.   
