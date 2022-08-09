@@ -114,7 +114,7 @@ There are two optional elements:
     ```
 - **<u>Script context</u>**:  
     A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.  
-    Waves already created necessary functions and variables that you may use within your dApp.  
+    The Waves already created necessary functions and variables that you may use within your dApp.  
     If you declare a variable or function within a particular callable function, it will only be available within that callable function.  
     If you want to declare a global variable or a global function, make sure you write the code in the global dApp scope.  
 

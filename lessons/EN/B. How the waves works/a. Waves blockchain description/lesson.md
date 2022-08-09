@@ -2,7 +2,7 @@
 - [Overview](#overview)
 - [Waves blockchain platform](#waves-blockchain-platform)
   - [Principles of work](#principles-of-work)
-  - [Waves history](#waves-history)
+  - [The Waves history](#the-waves-history)
 - [Transactions](#transactions)
 - [Blocks](#blocks)
 - [Blockchain](#blockchain)
@@ -11,13 +11,13 @@
 
 To begin our journey to the Waves Blockchain Platform, we will first cover some basics.  
 All the material will be given in a logical sequence to make understanding easier.  
-This course will help people even with zero knowledge about blockchain to become PRO with Waves.
+This course will help people even with zero knowledge about blockchain to become PRO with the Waves.
 
 ---
 
 ## Overview ##
 
-As a quick overview, we will first learn about [Waves Blockchain Platform](#waves-blockchain-platform), its [principles of work](#principles-of-work), and its [history](#waves-history).  
+As a quick overview, we will first learn about the [Waves Blockchain Platform](#waves-blockchain-platform), its [principles of work](#principles-of-work), and its [history](#waves-history).  
 After this, we will get to know about [transactions](#transactions) as one of the significant essences that every blockchain contains.  
 The next step would be describing how transactions get wrapped in [blocks]().  
 At the end of the lesson, you will discover how all [blocks]() form into a chain, known as [blockchain]().  
@@ -26,7 +26,7 @@ At the end of the lesson, you will discover how all [blocks]() form into a chain
 
 ## Waves blockchain platform ##
 
-Waves is a [blockchain](#blockchain) platform for issuing cryptographic tokens and conducting crowdfunding campaigns.  
+The Waves is a [blockchain](#blockchain) platform for issuing cryptographic tokens and conducting crowdfunding campaigns.  
 The company offers everyone an open blockchain protocol that works with [decentralized](#decentralizationfirstchapter) solutions.
 
 ### Principles of work ###
@@ -43,7 +43,7 @@ All our users may create, promote, and use their own [custom tokens](), which ca
 The Waves has its token, WAVES, which can be used as a payment currency and reward for block generation and commissions.
     
 
-### Waves history ###
+### The Waves history ###
 The story of the company began in 2016.  
 With the help of the crowdfunding platform, the company received approximately 30,000 BTC for its further development.  
 A year later, a decentralized exchange platform within the Waves project was launched.  

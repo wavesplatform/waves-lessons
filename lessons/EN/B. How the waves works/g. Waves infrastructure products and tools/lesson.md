@@ -1,4 +1,4 @@
- - [Waves Toolset](#waves-toolset)
+ - [The Waves Toolset](#waves-toolset)
    - [Waves Explorer](#waves-explorer)
    - [Signer](#signer)
    - [Waves IDE](#waves-ide)
@@ -7,7 +7,7 @@
    - [IDE Plugins](#ide-plugins)
  - [Outro](#outro)
 
-## Waves toolset ##
+## The Waves toolset ##
 
 The Waves blockchain platform has many ready solutions for working with the blockchain.  
 It is presented in a wide variety of tools that help both developers and regular blockchain users.  
