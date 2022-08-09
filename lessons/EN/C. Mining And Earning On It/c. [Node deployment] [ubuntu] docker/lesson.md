@@ -57,7 +57,7 @@ Here is how you can encode a seed phrase to Base58:
 ## Installation ##
 
 Follow the steps below to install a Waves node:
-1. Install [Docker](https://docs.docker.com/desktop/install/linux-install/) on Ubuntu if it wasn't installed.
+1. Install [Docker](https://docs.docker.com/desktop/install/linux-install/) on Ubuntu if it was not installed.
 2. Pull the latest [docker image](https://hub.docker.com/r/wavesplatform/wavesnode) of the node:
     ```
     docker pull wavesplatform/wavesnode
@@ -279,7 +279,7 @@ These methods can be:
     - Invoke any methods that would make an action with any node, like stopping a node or connecting to a peer.  
   
     For example, [`/blocks/height`](https://nodes.wavesnodes.com/api-docs/index.html#/blocks/getHeight) is a method that checks the current height of the blockchain.  
-    This information is not private, and there is no action made with a node, so it doesn't require any additional authorization. 
+    This information is not private, and there is no action made with a node, so it does not require any additional authorization. 
 - **<u>Private</u>**:  
     Methods that are available only to node owners.  
     These methods can be invoked only by node owners via API key and API key hash authorization.  
@@ -361,7 +361,7 @@ Follow the instructions below for setting up configurations:
     There you can see multiple methods to interact with your node.  
     For instance, you can try a:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
-        All public methods don't require any additional authorization.  
+        All public methods do not require any additional authorization.  
         For example, the `/addresses/` method will return the address of your node wallet.  
         ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swaggadd.png?raw=true) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
@@ -433,7 +433,7 @@ There are two ways how it is possible to synchronize the blockchain data with yo
     It is possible to greatly speed up the synchronization by uploading the latest blockchain data.  
     In this case, you will skip transaction execution (signatures validation, balances, etc.).  
 
-If you don't want to speed up the synchronization, you may wait before it is done automatically.  
+If you do not want to speed up the synchronization, you may wait before it is done automatically.  
 If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
 
 However, if you wish to speed up this process, we will concentrate on the blockchain data upload within this chapter.  
