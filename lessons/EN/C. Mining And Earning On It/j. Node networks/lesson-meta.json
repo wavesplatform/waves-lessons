@@ -11,6 +11,7 @@
         "mainnet",
         "stagenet",
         "testnet",
-        "custom blockchain"
+        "custom blockchain",
+        "custom"
     ]
 }
