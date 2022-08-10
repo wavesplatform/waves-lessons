@@ -141,6 +141,7 @@ As well, for the cargo container, it is necessary to have:
 
 Likewise, the blocks are the containers for transactions inside of them.  
 These "containers" have:
+
 - **<u>Block number</u>**  
   Current serial number of the block, its height.
 - **<u>Block size</u>**  
