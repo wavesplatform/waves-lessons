@@ -1,12 +1,3 @@
-- [Blockchain](#blockchain)
-- [Transaction](#transaction)
-- [Nodes](#nodes)
-- [Types of consensus](#types-of-consensus)
-  - [`Proof of work (PoW)`](#proof-of-work-pow)
-  - [`Proof of stake (PoS)`](#proof-of-stake-pos)
-  - [`Proof of authority (PoA)`](#proof-of-authority-poa)
-- [Why blockchain is marvelous](#why-blockchain-is-marvelous)
-
 ## Blockchain ##
 
 What is a blockchain?  

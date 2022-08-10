@@ -1,12 +1,3 @@
-- [Smart account definition](#smart-account-definition)
-- [Usage examples](#usage-examples)
-  - [`Selling or buying only BTC`](#selling-or-buying-only-btc)
-  - [`Purchase of an asset`](#purchase-of-an-asset)
-- [Setting a smart account script](#setting-a-smart-account-script)
-  - [Requirements](#requirements)
-  - [Limitations](#limitations)
-  - [Set script transaction](#set-script-transaction)
-
 ## Smart account definition ##
 
 On the Waves platform, it is possible to create a regular account.  

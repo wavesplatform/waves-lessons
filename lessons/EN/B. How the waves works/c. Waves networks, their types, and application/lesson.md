@@ -1,9 +1,3 @@
-- [Network description](#network-description)
-- [Mainnet, Testnet, Stagenet](#mainnet-testnet-stagenet)
-- [Useful network resources](#useful-network-resources)
-  - [Waves explorer](#waves-explorer)
-  - [Network API](#network-api)
-
 ## Network description ##
 
 A network is a way of connecting different hosts into one space.  

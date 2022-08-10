@@ -1,12 +1,3 @@
-- [Smart asset description](#smart-asset-description)
-- [Usage examples](#usage-examples)
-  - [`Token usage freeze`](#token-usage-freeze)
-  - [`Unburnable token`](#unburnable-token)
-- [Setting an asset script](#setting-an-asset-script)
-  - [Requirements](#requirements)
-  - [Limitations](#limitations)
-  - [Writting a smart asset script](#writting-a-smart-asset-script)
-
 ## Smart asset description ##
 
 On the Waves platform, it is possible to issue your token.  

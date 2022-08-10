@@ -1,22 +1,3 @@
-- [Node structure](#node-structure)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-  - [Node configuration file description](#node-configuration-file-description)
-  - [Modules in the configuration file](#modules-in-the-configuration-file)
-  - [API key of your node](#api-key-of-your-node)
-  - [Configuration file setup](#configuration-file-setup)
-- [Synchronization](#synchronization)
-  - [Synchronization process description](#synchronization-process-description)
-  - [Blockchain synchronization](#blockchain-synchronization)
-- [Update](#update)
-  - [Necessity of upgrading your node](#necessity-of-upgrading-your-node)
-  - [Fork of blockchain](#fork-of-blockchain)
-  - [Node upgrade](#node-upgrade)
-- [Node rollback](#node-rollback)
-  - [Why roll back your node](#why-roll-back-your-node)
-  - [How to rollback a node](#how-to-rollback-a-node)
-
 ## Node structure ##
 
 To clarify all of the node deployment steps, it is required to understand the structure of a node.  
