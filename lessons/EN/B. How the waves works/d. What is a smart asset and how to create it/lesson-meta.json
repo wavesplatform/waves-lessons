@@ -5,13 +5,14 @@
     "number": 4,
     "doclink": "https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset",
     "hashtags": [
-        "smart contract",
-        "smart asset",
-        "asset script",
+        "smart",
+        "contract",
         "asset",
-        "smart account",
-        "token usage freeze",
-        "unburnable token",
-        "smart asset creation"
+        "script",
+        "account",
+        "token",
+        "unburnable",
+        "freeze",
+        "creation"
     ]
 }

@@ -5,9 +5,9 @@
     "number": 1,
     "hashtags": [
         "blockchain",
-        "web 3.0",
-        "web 1.0",
-        "web 2.0",
+        "3.0",
+        "1.0",
+        "2.0",
         "intro",
         "start",
         "consensus",
@@ -17,6 +17,7 @@
         "poa",
         "node",
         "key",
+        "web",
         "signature"
     ],
     "ref1": "5cb7375c-a546-4dcb-8a7f-89a402f2211e",

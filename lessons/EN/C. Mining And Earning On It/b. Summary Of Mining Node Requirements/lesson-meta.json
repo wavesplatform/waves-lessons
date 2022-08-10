@@ -5,13 +5,13 @@
     "number": 2,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/how-to-install-a-node",
     "hashtags": [
+        "requirements",
+        "generating",
+        "block",
+        "generation",
         "mining",
-        "node requirements",
-        "generating node",
-        "block generation",
-        "start mining",
-        "validating node",
-        "generation requirements",
+        "validating",
+        "validation",
         "installation"
     ]
 }

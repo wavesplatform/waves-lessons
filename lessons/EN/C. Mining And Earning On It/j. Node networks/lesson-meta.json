@@ -5,13 +5,13 @@
     "number": 10,
     "doclink": "https://docs.waves.tech/en/waves-node/node-api",
     "hashtags": [
-        "rest api",
+        "rest",
         "api",
         "swagger",
         "mainnet",
         "stagenet",
         "testnet",
-        "custom blockchain",
+        "blockchain",
         "custom"
     ]
 }
