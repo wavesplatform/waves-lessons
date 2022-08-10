@@ -1,8 +1,3 @@
-- [Prerequisites](#prerequisites)
-  - [Node requirements](#node-requirements)
-  - [Block generation requirements](#block-generation-requirements)
-- [Getting started](#getting-started)
-
 ## Prerequisites ##
 
 To have a mining node that would bring you an income, it is necessary to have requirements for both [having a node](#node-requirements) and [block generation](#block-generation-requirements) fulfilled.  

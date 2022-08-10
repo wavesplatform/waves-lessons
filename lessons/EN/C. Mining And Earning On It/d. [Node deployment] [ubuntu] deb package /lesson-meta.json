@@ -5,20 +5,19 @@
     "number": 4,
     "doclink": "https://docs.waves.tech/en/waves-node/how-to-install-a-node/on-ubuntu#installation-from-deb-package-on-deb-based-linux-ubuntu-debian",
     "hashtags": [
-        "node installation",
-        "node deployment",
+        "installation",
+        "deployment",
         "node",
-        "node configuration",
-        "blockchain data",
-        "configuration file",
+        "blockchain",
+        "data",
         "configuration",
         "synchronization",
         "update",
         "upgrade",
-        "roll back",
+        "rollback",
         "fork",
         "ubuntu",
-        "deb package",
-        "ubuntu dep package"
+        "deb",
+        "package"
     ]
 }

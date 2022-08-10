@@ -1,12 +1,3 @@
-- [Intro](#intro)
-- [Overview](#overview)
-- [Waves blockchain platform](#waves-blockchain-platform)
-  - [Principles of work](#principles-of-work)
-  - [The Waves history](#the-waves-history)
-- [Transactions](#transactions)
-- [Blocks](#blocks)
-- [Blockchain](#blockchain)
-
 ## Intro ## 
 
 To begin our journey to the Waves Blockchain Platform, we will first cover some basics.  

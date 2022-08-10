@@ -1,8 +1,3 @@
-- [Node description](#node-description)
-  - [Validating node](#validating-node)
-  - [Generating node](#generating-node)
-- [Node Benefits](#node-benefits)
-
 ## Node description ##
 
 A node is a host that is connected to the blockchain [network]() using the [Waves node](https://github.com/wavesplatform/Waves) application.  

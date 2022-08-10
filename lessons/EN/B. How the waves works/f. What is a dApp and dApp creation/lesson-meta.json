@@ -5,12 +5,13 @@
     "number": 6,
     "doclink": "https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp",
     "hashtags": [
-        "smart account",
-        "smart contract",
+        "smart",
+        "account",
+        "contract",
         "dapp",
-        "account script",
-        "decentralized app",
-        "dapp creation",
-        "dapp limitations"
+        "script",
+        "decentralized",
+        "app",
+        "creation"
     ]
 }

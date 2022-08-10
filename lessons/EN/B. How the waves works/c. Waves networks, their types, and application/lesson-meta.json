@@ -10,9 +10,10 @@
         "mainnet",
         "stagenet",
         "node",
-        "waves explorer",
+        "waves",
+        "explorer",
         "api",
         "swagger",
-        "rest api"
+        "rest"
     ]
 }

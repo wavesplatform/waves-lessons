@@ -1,6 +1,3 @@
-- [Which networks can a node connect to](#which-networks-can-a-node-connect-to)
-- [REST API of nodes in different networks](#rest-api-of-nodes-in-different-networks)
-
 ## Which networks can a node connect to ##
 
 In the lesson, [Waves networks, their types, and application](), we covered the topic of different kinds of Waves networks.  

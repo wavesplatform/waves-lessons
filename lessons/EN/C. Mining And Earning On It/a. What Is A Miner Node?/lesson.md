@@ -1,7 +1,3 @@
-- [Module intro](#module-intro)
-- [Generating node definition](#generating-node-definition)
-- [Rewards for blocks generation](#rewards-for-blocks-generation)
-
 ## Module intro ##
 
 This module will open the door to the world of mining with the Waves.  

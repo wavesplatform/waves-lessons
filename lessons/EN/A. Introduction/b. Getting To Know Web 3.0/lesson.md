@@ -1,8 +1,3 @@
-- [Short history of web evolution](#short-history-of-web-evolution)
-- [Web services now and web3 architecture](#web-services-now-and-web3-architecture)
-- [Digital signatures](#digital-signatures)
-- [Managing keys](#managing-keys)
-
 ## Short history of web evolution ##
 
 The Internet as technology was born in 1969 (more than 50 years ago!), on 2nd September 1969.  

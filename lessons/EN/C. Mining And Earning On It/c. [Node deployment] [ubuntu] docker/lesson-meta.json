@@ -5,20 +5,18 @@
     "number": 3,
     "doclink": "https://docs.waves.tech/en/waves-node/waves-node-in-docker",
     "hashtags": [
-        "node installation",
-        "node deployment",
+        "installation",
+        "deployment",
         "node",
-        "node configuration",
-        "blockchain data",
-        "configuration file",
+        "blockchain",
+        "data",
         "configuration",
         "synchronization",
         "update",
         "upgrade",
-        "roll back",
+        "rollback",
         "fork",
         "ubuntu",
-        "docker",
-        "ubuntu docker"
+        "docker"
     ]
 }

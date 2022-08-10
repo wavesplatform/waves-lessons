@@ -1,10 +1,3 @@
-- [DApp definition](#dapp-definition)
-  - [DApp structure](#dapp-structure)
-- [Usage examples](#usage-examples)
-- [Setting a dApp script](#setting-a-dapp-script)
-  - [Limitations](#limitations)
-  - [DApp script installation](#dapp-script-installation)
-
 ## DApp definition ##
 
 A dApp is a Waves account with an attached script.  
