@@ -73,7 +73,7 @@ Follow the steps below to install a Waves node:
 3.  Study the minimum configuration parameters.  
     It will be necessary to edit the configuration file to run a node.  
     The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
-    Within this chapter, we do not have a goal to configure them all, as we have the chapter [node configuration](#node-configuration) dedicated to it.  
+    Within this chapter, we do not have a goal to configure them all, as we have the chapter [Node configuration](#node-configuration) dedicated to it.  
     As of now, it would be enough to run a node with minimum parameters.  
 
     | Parameter | Description | Example |
@@ -142,7 +142,7 @@ In the next chapter, [node configuration](#configuration), we will learn how to 
 
 ### Node configuration file description ###
 
-As we previously mentioned in the [Node Structure]() chapter, every node has:
+As we previously mentioned in the [Node structure]() chapter, every node has:
 - A configuration file;
 - The blockchain copy.
   
@@ -244,7 +244,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
     | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use the 127.0.0.1 address when deploying a node with a deb package.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
-    | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API Key Of Your Node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
+    | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API key of your node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
     Read more about [REST API Settings](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
 - **<u>[Network](https://docs.waves.tech/en/waves-node/node-configuration#network-settings)</u>**  
@@ -332,8 +332,8 @@ Follow the instructions below for setting up configurations:
     [In the previous chapter](), we already added the `waves.wallet` module.  
     Add `blockchain`, `rest-api`, and `network` modules to the file.  
       
-    Please note that the `rest-api.api-key-hash` parameter doesn’t necessarily have to match the example below.  
-    The chapter [API Key Of Your Node](#api-key-of-your-node) gave instructions on generating the API key hash.  
+    Please note that the `rest-api.api-key-hash` parameter does not necessarily have to match the example below.  
+    The chapter [API key of your node](#api-key-of-your-node) gave instructions on generating the API key hash.  
     Insert the API key hash in the `rest-api.api-key-hash` parameter.
       
     After the edit, the `waves.conf` file can look something like this: 
@@ -383,7 +383,7 @@ Follow the instructions below for setting up configurations:
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
         The API key hash is the random string you typed in the [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) method.  
-        In case you do not remember what API key and API key hash are, please, check [API Key Of Your Node](#api-key-of-your-node).  
+        In case you do not remember what API key and API key hash are, please, check [API key of your node](#api-key-of-your-node).  
           
         To authorize private method usage:
         1. Click "Authorize":
@@ -400,7 +400,7 @@ Follow the instructions below for setting up configurations:
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
-In the next chapter, [Synchronization](#synchronization), we will move to the final step of preparations for mining.  
+In the next chapter, [Synchronization](#synchronization), we will move to the next step of preparations for mining.  
 
 ---
 
@@ -449,7 +449,7 @@ There are two ways how it is possible to synchronize the blockchain data with yo
     In this case, you will skip transaction execution (signatures validation, balances, etc.).  
 
 If you do not want to speed up the synchronization, you may wait before it is done automatically.  
-If so, you can skip all the instructions below and continue with the next chapter, [Nodes Of The Network]().
+If so, you can skip all the instructions below and continue with the next chapter, [Node networks]().
 
 However, if you wish to speed up this process, we will concentrate on the blockchain data upload within this chapter.  
 
@@ -527,7 +527,7 @@ If your node generates a block, you will get a reward for block generation right
   
 Please, note that once you have a synchronized node, you can export the node's blockchain to a binary file.  
 It will allow you to deploy one more node on your host.  
-For more details, read [Export Blockchain to Binary File](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
+For more details, read [Export blockchain to binary file](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
 
 --- 
 
@@ -545,7 +545,7 @@ There are two types of updates:
     Usually, it is minor bug fixes or slight changes.  
     Once you update your node with them, the new functionality will become available for you right away.  
     If you do not update your node with such a release, it will not cause a [fork](#fork-of-blockchain).
-- **<u>The ones that take time to be implemented</u>**.  
+- **<u>The ones that take time to be implemented</u>**  
     Extensive updates may include consensus changes or any other significant changes.  
     On the node releases page, node owners are warned about the upcoming switch to the new changes.  
     For example, an update may be published on the 1st of September, but in the comments of the release, it is mentioned:  
@@ -581,8 +581,8 @@ Eventually, the two nodes that were not updated may stop working.
 This is why it is vital to timely update your node.  
   
 To avoid forks, be subscribed to the [Waves blockchain releases page](https://github.com/wavesplatform/Waves/releases/) and timely install updates.  
-In the chapter below, [Node Upgrade](), we will run through all the steps of updating your node.  
-In case you did not update your node in time, in the chapter [Node Rollback](), we will discuss steps to roll back your node to the working state.
+In the chapter below, [Node upgrade](), we will run through all the steps of updating your node.  
+In case you did not update your node in time, in the chapter [Node rollback](), we will discuss steps to roll back your node to the working state.
 
 
 
@@ -738,7 +738,7 @@ In this situation, we will need to:
         ```
         {"height":2500}
         ```  
-        In this case, you will need to install the latest update mentioned in the [Node Upgrade](#node-upgrade).  
+        In this case, you will need to install the latest update mentioned in the [Node upgrade](#node-upgrade).  
         Please, note that you will not need to follow this instruction below (steps №3 and below).  
         After completing this step, you can go to the [Node networks]() chapter.
 3. Verify the signature of a block of the blockchain.   
@@ -795,7 +795,8 @@ In this situation, we will need to:
         However, if the signatures do not match, there is a slight chance that the official Waves node could be on the fork.  
 
         We will need to repeat steps №3 and №4 in 20 minutes only one more time.  
-        If it matches after the second attempt, you will not need to update and roll back your node.  
+        If it matches after the second attempt, you will not need to update and roll back your node.   
+        You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
         If the signatures did not match for the second time, please continue with step №6.
 6. Update your node.  
     Once you encounter two signature mismatches, run through the procedure of the [Node update](#node-upgrade).
