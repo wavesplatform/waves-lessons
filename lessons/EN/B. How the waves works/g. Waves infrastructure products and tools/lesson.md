@@ -1,11 +1,11 @@
- - [The Waves Toolset](#waves-toolset)
-   - [Waves Explorer](#waves-explorer)
-   - [Signer](#signer)
-   - [Waves IDE](#waves-ide)
-   - [Node REST API](#node-rest-api)
-   - [Software Development Kits](#software-development-kits)
-   - [IDE Plugins](#ide-plugins)
- - [Outro](#outro)
+- [The Waves toolset](#the-waves-toolset)
+  - [Waves explorer](#waves-explorer)
+  - [Signer](#signer)
+  - [Waves IDE](#waves-ide)
+  - [Node REST API](#node-rest-api)
+  - [Software development kits](#software-development-kits)
+  - [IDE plugins](#ide-plugins)
+- [Outro](#outro)
 
 ## The Waves toolset ##
 
@@ -22,9 +22,9 @@ There are six major instruments that are free to use:
     Online environment for developing, testing, and deploying [Ride](#ridetopic) smart contracts.
 - **<u>[Node REST API](#node-rest-api)</u>**  
     The main interface for interacting with the Waves blockchain within different [networks]().
-- **<u>[Software Development Kits](#software-development-kits)</u>**  
+- **<u>[Software development kits](#software-development-kits)</u>**  
     Libraries are intended for creation, signing, broadcasting [transactions](), and reading data from the Waves blockchain.
-- **<u>[IDE Plugins](#ide-plugins)</u>**  
+- **<u>[IDE plugins](#ide-plugins)</u>**  
     Plugins for your IDE.  
     For example, [Ride]() language support.
     

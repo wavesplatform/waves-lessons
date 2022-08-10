@@ -5,7 +5,7 @@
 
 ## Node description ##
 
-A node is a host that is connected to the blockchain [network]() using the [Waves Node](https://github.com/wavesplatform/Waves) application.  
+A node is a host that is connected to the blockchain [network]() using the [Waves node](https://github.com/wavesplatform/Waves) application.  
 In other words, it is a computer, a local machine in one big network that:  
 - Is keeping the actual [blockchain copy](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/state-downloading-and-applying);  
 - Is participating in the block [validation]() process;  
@@ -69,7 +69,7 @@ For every node holder, there are two ways to earn funds with the Waves blockchai
 - By [block generation](#generating-node);
 - By being a [lessor](https://docs.waves.tech/en/blockchain/transaction-type/lease-transaction).
 
-In the topic [Mining And Earning On It](), we will explain the process of [node installation]() and [how to start mining]().  
+In the topic [Mining and earning on it](), we will explain the process of [node installation]() and [how to start mining]().  
 As a quick preview, we will mention the minimal:
 
 - System requirements:  
