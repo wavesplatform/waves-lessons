@@ -88,7 +88,7 @@ Read more about [Nodes of the Waves network]().
 
 
 Below there are two examples of transactions that can be made with the Waves blockchain:  
-- `Transfer Transaction`:  
+- `Transfer Transaction:`  
 Transfers a certain amount of [token](https://docs.waves.tech/en/blockchain/token/) to another account.  
 For example, we can transfer 10 WAVES from account "alice" to account "bob".  
 This transaction would necessarily include parameters, as shown in the table below.
@@ -102,7 +102,7 @@ This transaction would necessarily include parameters, as shown in the table bel
 
   More о about [Transfer transaction](https://docs.waves.tech/ru/blockchain/transaction-type/transfer-transaction).
 
-- `Exchange Transaction`:  
+- `Exchange Transaction:`  
   Exchanges two different tokens between two accounts.  
   The Exchange transaction contains two counter orders: buy and sell orders.  
   It has the following parameters:
