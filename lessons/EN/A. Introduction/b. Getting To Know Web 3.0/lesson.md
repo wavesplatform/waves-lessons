@@ -99,7 +99,7 @@ On the other hand, the network address is obtained directly from the public key 
 All these transformations are **one-directional**.  
 The opposite direction is very hard in terms of required computations.
 
-It implies an astronomical value (~2^**256**) of computations required!  
+It implies an astronomical value (~2<sup>25<sup>) of computations required!  
 
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/curve.png?raw=true)
 
