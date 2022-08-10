@@ -17,7 +17,7 @@ This course will help people even with zero knowledge about blockchain to become
 
 ## Overview ##
 
-As a quick overview, we will first learn about the [Waves Blockchain Platform](#waves-blockchain-platform), its [principles of work](#principles-of-work), and its [history](#waves-history).  
+As a quick overview, we will first learn about the [Waves blockchain platform](#waves-blockchain-platform), its [principles of work](#principles-of-work), and its [history](#waves-history).  
 After this, we will get to know about [transactions](#transactions) as one of the significant essences that every blockchain contains.  
 The next step would be describing how transactions get wrapped in [blocks]().  
 At the end of the lesson, you will discover how all [blocks]() form into a chain, known as [blockchain]().  
@@ -51,7 +51,7 @@ Multiple infrastructure tools were created and presented to the blockchain commu
 - Development environment [Waves IDE]();
 - [Waves Network Explorer]();
 - [Signer](), a tool for transaction signing;
-- [Software Development Kits]() to operate with blockchain;
+- [Software development kits]() to operate with blockchain;
 - [Plugins]() for development in multiple IDEs;
 - [API]() for RESTful interaction with blockchain nodes.    
 
@@ -93,7 +93,7 @@ The essence of all transactions in the blockchain is an operation with an accoun
 Once there is any transaction, it is sent to a [node]() of a [network]() from an account.  
 This recipient node shares this transaction with other nodes within this network.  
 The other nodes will continue sharing this transaction until all the network nodes receive it.  
-Read more about [Nodes Of The Waves Network]().
+Read more about [Nodes of the Waves network]().
 
 
 Below there are two examples of transactions that can be made with the Waves blockchain:  
@@ -109,7 +109,7 @@ This transaction would necessarily include parameters, as shown in the table bel
   | recipient | Recipient address base58 encoded or recipient [alias](https://docs.waves.tech/en/blockchain/account/alias) with alias:<chain_id>:prefix.<br>For example alias:T:merry (see [Chain ID](https://docs.waves.tech/en/blockchain/blockchain-network/#chain-id)) | 3PFmoN5YLoPNsL4cmNGkRxbUKrUVntwyAhf |
   | attachment |  Arbitrary binary data (typically a comment to transfer) base58 encoded, up to 140 bytes. | 3vrgtyozxuY88J9RqMBBAci2UzAq9DBMFTpMWLPzMygGeSWnD7k | 
 
-  More о about [Transfer Transaction](https://docs.waves.tech/ru/blockchain/transaction-type/transfer-transaction).
+  More о about [Transfer transaction](https://docs.waves.tech/ru/blockchain/transaction-type/transfer-transaction).
 
 - `Exchange Transaction`:  
   Exchanges two different tokens between two accounts.  

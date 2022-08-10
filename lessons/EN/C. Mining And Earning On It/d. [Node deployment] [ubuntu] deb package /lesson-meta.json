@@ -1,5 +1,5 @@
 {
-    "guid": "890f0c02-dc10-41a1-b5dc-6eb8b2eeefc8",
+    "guid": "4c5a9b14-3b7c-4515-9cda-a9c3b20e4ddc",
     "title": "[Node deployment][ubuntu] deb package",
     "description": "In this lesson, we will deploy a node in the Mainnet network ready for mining, using deb package on Ubuntu",
     "number": 4,

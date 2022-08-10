@@ -1,5 +1,5 @@
 {
-    "guid": "6a41ce65-ac3c-472b-af06-dac953fbe8df",
+    "guid": "63591417-09c6-40bf-ae1e-221de605ba5d",
     "title": "[Node deployment][macOS] docker",
     "description": "In this lesson, we will deploy a node in the Mainnet network ready for mining, using Docker on macOS",
     "number": 6,

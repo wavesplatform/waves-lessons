@@ -50,7 +50,7 @@ It will not be possible to use the same address account in different networks or
 | Stagenet | S or 83 (ASCII code of S) |
 
 Also, you may create your custom network.  
-See more about [Custom Blockchain](https://docs.waves.tech/en/waves-node/private-waves-network#deploy-node-with-custom-blockchain-in-docker).  
+See more about [Custom blockchain](https://docs.waves.tech/en/waves-node/private-waves-network#deploy-node-with-custom-blockchain-in-docker).  
 
 You may launch your node in any of these networks, depending on the goal.  
 You can read more about it in the [Mining and earning on it]() chapter.  
@@ -60,7 +60,7 @@ You can read more about it in the [Mining and earning on it]() chapter.
 ## Useful network resources ##
 
 Since Waves has a developed infrastructure, it has many different tools that function with the networks mentioned above.  
-In the lesson [Waves Infrastructure Products And Tools](), all of them will be explained in detail.
+In the lesson [Waves infrastructure products and tools](), all of them will be explained in detail.
 
 Nevertheless, there are two services that it is worth mentioning:
 - [Waves Explorer](#waves-explorer)
@@ -79,7 +79,7 @@ The network can be changed in the right corner of the screen on the [site](https
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/network_selection.png?raw=true)
   
-The topic of the Waves Explorer will be covered in the [Infrastructure Products and tools]() chapter.  
+The topic of the Waves Explorer will be covered in the [Infrastructure products and tools]() chapter.  
 
 ### Network API ###
 
@@ -99,7 +99,7 @@ For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/
   
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/api_response.png?raw=true)
   
-The API features will be explained in more detail in the [Infrastructure Products and tools]() chapter.  
+The API features will be explained in more detail in the [Infrastructure products and tools]() chapter.  
   
 The next lesson’s topic will be [smart assets and how to create one]().
 

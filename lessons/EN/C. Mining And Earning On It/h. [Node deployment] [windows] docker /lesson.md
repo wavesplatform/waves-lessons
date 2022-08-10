@@ -57,7 +57,7 @@ Here is how you can encode a seed phrase to Base58:
 ## Installation ##
 
 Follow the steps below to install a Waves node:
-1. Install [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) on Windows if it was not yet installed.
+1. Install [Docker desktop](https://docs.docker.com/desktop/install/windows-install/) on Windows if it was not yet installed.
 2. Pull the latest [docker image](https://hub.docker.com/r/wavesplatform/wavesnode) of the node:
     ```
     docker pull wavesplatform/wavesnode
@@ -67,7 +67,7 @@ Follow the steps below to install a Waves node:
     ```
     md C:\wavesnode\data C:\wavesnode\conf
     ```
-4. Open the Docker Desktop app in the "Images" section and click "Run":
+4. Open the Docker desktop app in the "Images" section and click "Run":
     ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin.png?raw=true)
 5. The app will require you to fill in the settings of the container that is about to run:
     | ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin1.png?raw=true) | ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin2.jpeg?raw=true) | 
@@ -100,7 +100,7 @@ You can read more information about it in the [complete documentation](https://d
 Please, note that mining the WAVES tokens that have value on the market is possible only on the Mainnet network.  
 In this lesson, we will deploy our node in the Mainnet network.  
    
-In the next chapter, [node configuration](#configuration), we will learn how to set up a configuration file of your node.  
+In the next chapter, [Node configuration](#configuration), we will learn how to set up a configuration file of your node.  
 
 ---
 
@@ -164,7 +164,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | password | Random password a user sets. Encodes your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
     | seed | Connects your wallet to your node via the [wallet seed Base58 encoded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in [REST API]() using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
-    Read more about [Wallet Settings](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings).
+    Read more about [Wallet settings](https://docs.waves.tech/en/waves-node/node-configuration#wallet-settings).
 - **<u>[Blockchain](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings)</u>**  
     Blockchain parameters.  
     In the blockchain module, you can select the blockchain type.  
@@ -183,12 +183,12 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | :---- | :---- | :---- |
     | type | Selects the blockchain type: [MAINNET, STAGENET, TESTNET]() or [CUSTOM](https://docs.waves.tech/en/waves-node/private-waves-network). | MAINNET | 
 
-    Read more about [Blockchain Settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
+    Read more about [Blockchain settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
 - **<u>[REST API](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)</u>**  
     Node API parameters.  
     The Waves node REST API is the primary interface for blockchain interaction.  
     The API has both public (available for everyone) and private (available only via authorization) endpoints.  
-    You may check the swagger REST API interface for the [MAINNET network](https://nodes.wavesnodes.com/) to understand what it looks like.  
+    You may check the swagger REST API interface for the [Mainnet network](https://nodes.wavesnodes.com/) to understand what it looks like.  
 
     Once this parameter is configured, you may get access to the REST API service of your node directly:  
 
@@ -212,7 +212,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | port | Port number where the REST API accepts incoming connections. | 6869 |
     | api-key-hash | Hash of the API key to access private endpoints.<br>Please, check the chapter [API key of your node](#api-key-of-your-node) to generate the API Key. | CvTpRm21PyZf15q1dD7bz46meYYtWQAgA1kQU1iqXKriv |
 
-    Read more about [REST API Settings](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
+    Read more about [REST API settings](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
 - **<u>[Network](https://docs.waves.tech/en/waves-node/node-configuration#network-settings)</u>**  
     Peer-to-peer network parameters.  
     This module allows you to define how your node would interact with other nodes within the network:
@@ -234,7 +234,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
     | bind-address | Sets the IP address of the local network interface on which Waves Node will accept incoming connections.<br>By default, node binds to 0.0.0.0 that means that it will listen on all available network adapters. | 0.0.0.0 | 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside. Otherwise, your node will connect to the P2P network using only outgoing connections.<br>If other applications use this port, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
 
-     Read more about [Network Settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
+     Read more about [Network settings](https://docs.waves.tech/en/waves-node/node-configuration#network-settings).
 
 ### API key of your node ###
 

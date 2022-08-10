@@ -71,7 +71,7 @@ match tx {
 }
 ```
 
-More about [Burn Transaction](https://docs.waves.tech/en/blockchain/transaction-type/burn-transaction).  
+More about [Burn transaction](https://docs.waves.tech/en/blockchain/transaction-type/burn-transaction).  
 
 ---
 
@@ -80,7 +80,7 @@ More about [Burn Transaction](https://docs.waves.tech/en/blockchain/transaction-
 ### Requirements ###
 To create a smart asset, it is necessary:
 
-- Send an [Issue Transaction](https://docs.waves.tech/en/blockchain/transaction-type/issue-transaction) of version 2 or higher;
+- Send an [Issue transaction](https://docs.waves.tech/en/blockchain/transaction-type/issue-transaction) of version 2 or higher;
 - Include a script in base64 encoding in the issue transaction.
 
 Please, note that the minimum fee for this transaction is 1 WAVES.  
@@ -94,7 +94,7 @@ There are two crucial limitations when working with smart asset creation is
   Similarly, if a token is created as a smart asset, it will always stay a smart asset with the possibility to change the script at any time.  
   If you do not have any ready scripts, you can write a simple script that always returns `true` and change it later.   
 - **<u>A smart asset cannot be sponsored:</u>**  
-  Read more about [Fee in Sponsored Asset](https://docs.waves.tech/en/blockchain/transaction/transaction-fee#fee-in-sponsored-asset).
+  Read more about [Fee in sponsored asset](https://docs.waves.tech/en/blockchain/transaction/transaction-fee#fee-in-sponsored-asset).
 
 
 ### Writting a smart asset script ###
