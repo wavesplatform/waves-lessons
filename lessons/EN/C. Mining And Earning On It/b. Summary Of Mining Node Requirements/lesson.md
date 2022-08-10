@@ -18,8 +18,8 @@ To deploy a node there are no other requirements but the requirements for comput
 
 | Minimum Requirements | CPU | RAM | SSD | 
 | :---------- | :----------:  | :----------:  | :----------: |
-| [Validating Node](https://docs.waves.tech/en/blockchain/node/validating-node) | 2 | 4 GB| 100 GB SSD|
-| [Generating Node](https://docs.waves.tech/en/blockchain/node/mining-node) | 2+ | 4+ GB| 100+ GB SSD|
+| [Validating node](https://docs.waves.tech/en/blockchain/node/validating-node) | 2 | 4 GB| 100 GB SSD|
+| [Generating node](https://docs.waves.tech/en/blockchain/node/mining-node) | 2+ | 4+ GB| 100+ GB SSD|
 
 ---
 
