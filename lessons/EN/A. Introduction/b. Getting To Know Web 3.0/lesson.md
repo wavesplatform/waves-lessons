@@ -29,7 +29,7 @@ There are many challenges as well, especially concerning data breaches and priva
 So we believe the internet’s future should be decentralized, secure, and user-centric.  
 It will also use the benefits of emerging technologies like the Internet of Things, Artificial Intelligence, Big Data, and Virtual and Augmented Reality.
 
-![](https://raw.githubusercontent.com/wavesplatform/waves-lessons/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/web3.png)
+![](./img/web3.png)
 
 
 ## Web services now and web3 architecture ##
@@ -57,7 +57,7 @@ Once a user interacts with the UI components of the web page – for example, bu
 The server processes the request and returns as a response HTML, XML, or JSON data.  
 The JavaScript in a browser uses this data to change the client’s application state and view.  
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/web3-2.png?raw=true)
+![](./img/web3-2.png)
 
 Web3 works in a different way.  
 Of course, a Web3 app also requires HTML and JavaScript code to run in a browser.  
@@ -74,7 +74,7 @@ All updates to the blockchain network must be submitted using transactions.
 The blockchain network determines that a transaction is valid only if a valid digital signature is provided.  
 You may not be familiar with digital signatures, so let’s dive deeper into it.  
 
-![](https://raw.githubusercontent.com/wavesplatform/waves-lessons/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/web3-3.png)
+![](./img/web3-3.png)
 
 ## Digital signatures
 
@@ -86,7 +86,7 @@ Bob must keep his private key secret.
 But Bob can share the public key with anyone who will validate the signed message or transaction.  
 Anyone with Bob’s public key can verify that Bob’s private key signed a particular transaction – **proving that Bob was the only one able to create and sign that message/transaction.**
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/keys.png?raw=true)
+![](./img/keys.png)
 
 This is known as asymmetric cryptography.  
 
@@ -101,7 +101,7 @@ The opposite direction is very hard in terms of required computations.
 
 It implies an astronomical value (~2<sup>25</sup>) of computations required!  
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/A.%20Introduction/b.%20Getting%20To%20Know%20Web%203.0/images/curve.png?raw=true)
+![](./img/curve.png)
 
 Seed phrases usually look like a random list of words (usually 15 or 16), for example:  
 `couple remind obey mind core window talk maid small crisp card sure valve position sword`  
