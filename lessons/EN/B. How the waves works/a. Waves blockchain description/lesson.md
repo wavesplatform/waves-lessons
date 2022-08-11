@@ -153,8 +153,6 @@ These "containers" have:
 - **<u>Transaction list</u>**  
   List of all transactions inside the particular block.
   
-  
-
 This concept can be displayed with the following picture:  
 
 ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/a.%20Waves%20blockchain%20description/images/blockstr.png?raw=true) 

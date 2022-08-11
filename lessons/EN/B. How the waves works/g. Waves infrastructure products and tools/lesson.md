@@ -103,19 +103,24 @@ The Waves team supports node pools with public API endpoints accessible to anyon
 
 With the help of the Swagger user interface, you can work with:  
 **<u>Public methods</u>**:  
-  - `Reading blockchain data`: Information about accounts, transactions, tokens, blocks, etc.
-  - `Working with transactions`: Broadcasting and validating transactions, checking their statuses.
-  - `Working with utilities`: Random seed generation, checking the validity of an address, etc. 
+  - `Reading blockchain data:`   
+    Information about accounts, transactions, tokens, blocks, etc.
+  - `Working with transactions:`  
+    Broadcasting and validating transactions, checking their statuses.
+  - `Working with utilities:`  
+    Random seed generation, checking the validity of an address, etc. 
   
 
 The Waves team does not provide the API key for public nodes.  
 If you want to use private endpoints, start [your node](https://docs.waves.tech/en/waves-node/private-waves-network).
 
 **<u>Private Methods</u>** (only for node owners):  
-- `Managing accounts in the node wallet`.
-- `Signing transactions`: signing on behalf of the node wallet accounts.
-- `Node management`: stop, roll back, connect to other nodes.
-- `Getting debug information.
+- `Managing accounts in the node wallet`
+- `Signing transactions:`  
+  Signing on behalf of the node wallet accounts.
+- `Node management:`  
+  Stop, roll back, connect to other nodes.
+- `Getting debug information`
 
   
 
