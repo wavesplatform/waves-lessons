@@ -20,7 +20,7 @@ Welcome to the 1st Chapter!
 ### 1st Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
 It is the first nested chapter.    
-![Rock](./images/elixir.png)    
+![Rock](./img/elixir.png)    
 
 #### 1st Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
@@ -172,4 +172,4 @@ private final URI uri;
 
 ## 3rd Chapter ##
 Welcome to the 3rd Chapter!    
-![cake](./images/shrek.jpeg)    
+![cake](./img/shrek.jpeg)    
