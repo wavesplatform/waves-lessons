@@ -155,7 +155,7 @@ These "containers" have:
   
 This concept can be displayed with the following picture:  
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/a.%20Waves%20blockchain%20description/images/blockstr.png?raw=true) 
+![](./img/blockstr.png) 
   
 An essential element in a block is a hash.  
 <u>Hash</u> is a result of mathematical algorithms that converts an input value of any size to a specific combination of letters and numbers of a fixed size.  
@@ -173,7 +173,7 @@ All the blocks don't exist by themselves, and they all are a part of the big seq
 This sequence of blocks is called a blockchain.  
 In this picture, you may see a representation of this idea (from left to right):  
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/a.%20Waves%20blockchain%20description/images/blockchainexm.png?raw=true)  
+![](./img/blockchainexm.png)  
   
 Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes in the network.  
   

@@ -11,7 +11,7 @@ Under the bonnet, every node has:
     A configuration file is a set of instructions on how a node should work.  
     We can define multiple parameters in the configuration file, such as [network]() to connect to.
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/nodestr.png?raw=true)
+![](./img/nodestr.png)
 
 ---
 
@@ -22,15 +22,15 @@ Also, it would be necessary to keep on hand a Base58 encoded string of the seed 
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
 2. Click "RideREPL" down the screen:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/repl1.png?raw=true)  
+    ![](./img/repl1.png)  
 3. Insert in the function your seed phrase:  
     `"your-seed-phrase".toBytes().toBase58String()`    
     For example:  
     `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
 4. Copy the function with your seed phrase to the console:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/repl2.png?raw=true)  
+    ![](./img/repl2.png)  
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/repl3.png?raw=true)
+    ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
 
 ---
@@ -49,9 +49,9 @@ Follow the steps below to install a Waves node:
     md C:\wavesnode\data C:\wavesnode\conf
     ```
 4. Open the Docker desktop app in the "Images" section and click "Run":
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin.png?raw=true)
+    ![](./img/dockerwin.png)
 5. The app will require you to fill in the settings of the container that is about to run:
-    | ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin1.png?raw=true) | ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin2.jpeg?raw=true) | 
+    | ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg) | 
     | :-----: | :-----: |
 
     It will be necessary to fill the following fields:
@@ -67,11 +67,11 @@ Follow the steps below to install a Waves node:
     A notification regarding access request to `C:\wavesnode\data` and `C:\wavesnode\conf` may pop up.  
 7.  In the "Containers" section, ensure the container’s status is "Running". 
 8.  Click on the container name:
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin3.png?raw=true)
+    ![](./img/dockerwin3.png)
     You will see multiple lines of logs.  
     Please, note that it may take a few moments to deploy a node. 
     Once you see notifications about the height of the blockchain, it means everything is working properly:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin4.png?raw=true)
+    ![](./img/dockerwin4.png)
    
 
 All done! You have an active node deployed within your docker container!  
@@ -257,12 +257,12 @@ The chapter goal is to get this API key and API key hash to operate with your no
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
 2. Click "Try it out":  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg1.png?raw=true)  
+    ![](./img/swagg1.png)  
 3. Enter any random string value and click "Execute":
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg2.png?raw=true)  
+    ![](./img/swagg2.png)  
     Please do not use the example in the screenshot, as it is only for demonstration purposes.
 4. In the response section below, you will receive a hash:
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg3.png?raw=true)  
+    ![](./img/swagg3.png)  
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
 ### Configuration file setup ###
@@ -273,7 +273,7 @@ Follow the instructions below for setting up configurations:
 2.  Edit the configuration file.  
     [In the previous chapter](#installation), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
     It looked something like this but with your seed and password: 
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin.png?raw=true)  
+    ![](./img/dockerwin.png)  
     
     We will write these details in the configuration file within the `waves.wallet` module.  
     Add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.    
@@ -310,7 +310,7 @@ Follow the instructions below for setting up configurations:
     }
     ```
 3. Save the file and deploy a node once again by restarting a container:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/noderestart.png?raw=true)  
+    ![](./img/noderestart.png)  
     Please, wait a few moments for the node to restart.  
 4. Check your deployed node’s [REST API interface](http://localhost:6869/api-docs/index.html).  
     There you could see multiple methods to interact with your node.  
@@ -318,7 +318,7 @@ Follow the instructions below for setting up configurations:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods do not require any additional authorization.  
         For example, the `/addresses/` method will return the address of your node wallet.  
-        ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swaggadd.png?raw=true) 
+        ![](./img/swaggadd.png) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
@@ -327,16 +327,16 @@ Follow the instructions below for setting up configurations:
           
         To authorize private method usage:
         1. Click "Authorize":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg6.png?raw=true)
+            ![](./img/swagg6.png)
         2. Enter your API key (not the API hash) and click "Authorize":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg7.png?raw=true)
+            ![](./img/swagg7.png)
             Please, note that the API key on the screen is an example.  
             You need to use your API key.
         3. Click "Close":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg8.png?raw=true)
+            ![](./img/swagg8.png)
         4. Now, you can use the private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/swagg9.png?raw=true)   
+            ![](./img/swagg9.png)   
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
@@ -432,13 +432,13 @@ Follow the steps below to synchronize the current blockchain with your node:
     In our example, we receive the hash ` f464c9da265077063f68e3f097cd9b0337b148e5` after running both commands.
 6. Restart the node:  
       
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/restartnode.png?raw=true)
+    ![](./img/restartnode.png)
 7. Check the logs of the running container.  
     Click on the container name:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/winlogs0.png?raw=true)  
+    ![](./img/winlogs0.png)  
  
     You will see the height of the blockchain increasing rapidly:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/nodelogswin.png?raw=true)  
+    ![](./img/nodelogswin.png)  
     Please, note that the complete synchronization may take up to 1-3 days and depends on your CPU frequency. 
 
 
@@ -495,7 +495,7 @@ Out of all five nodes, only three node owners upgraded their nodes with the upda
 The other two nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
 Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.  
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/blockchainfork.png?raw=true)  
+![](./img/blockchainfork.png)  
   
 Eventually, the two nodes that were not updated may stop working.  
 This is why it is vital to timely update your node.  
@@ -520,7 +520,7 @@ There you may see the:
 - **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it again.
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/wavesgit.png?raw=true)  
+![](./img/wavesgit.png)  
   
 Once you receive a notification of a new node version release, follow the steps below to upgrade your node:  
 1. Pull the latest Docker image:
@@ -529,29 +529,29 @@ Once you receive a notification of a new node version release, follow the steps 
     docker pull wavesplatform/wavesnode
     ```
 2. Stop the currently running node container:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/stpcontdock.png?raw=true)
+    ![](./img/stpcontdock.png)
 3. Remove the "old "node container:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/rmcontdock.png?raw=true)
+    ![](./img/rmcontdock.png)
 4. On the [page with the latest release](https://github.com/wavesplatform/Waves/releases/), take a look at the "Update notes" section.  
     There you will be able to see whether your node needs to re-import the blockchain data again.  
       
     If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/gitupdtunnsc.png?raw=true)  
+    ![](./img/gitupdtunnsc.png)  
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
     -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5. 
     
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/gitupdateneeded.png?raw=true)    
+    ![](./img/gitupdateneeded.png)    
 5. Start your node once again:    
-   ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin1.png?raw=true) | ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin2.jpeg?raw=true)|
+   ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg)| 
 6. Check the logs of the running node container.  
     Click on the container name:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin3.png?raw=true)  
+    ![](./img/dockerwin3.png)  
     It may take a few moments before the node is running.   
     Messages regarding increasing blockchain height mean that everything is completed successfully:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/dockerwin4.png?raw=true)
+    ![](./img/dockerwin4.png)
   
 
 ---
@@ -588,17 +588,17 @@ Lastly, the node will be able to synchronize with the current blockchain state a
 The best way to get the idea is to watch it working on the live example.  
 We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
 A feature that was included in the update was activated at the 3000th block:    
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/3000.png?raw=true)
+![](./img/3000.png)
 
 Since we did not update our node before the feature activation, we switched to a fork.  
 At the moment of the 3002nd block, we found out that we were on the fork:  
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/3002.png?raw=true)
+![](./img/3002.png)
 
 In this situation, we will need to:
 - Update our node;
 - Roll it back from the 3002nd block to the 3000th block before the split occurred.  
     
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/h.%20%5BNode%20deployment%5D%20%5Bwindows%5D%20docker%20/images/3002to3000.png?raw=true)
+![](./img/3002to3000.png)
 
 ### How to rollback a node ###
 

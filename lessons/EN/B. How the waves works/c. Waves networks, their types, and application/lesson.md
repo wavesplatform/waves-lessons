@@ -4,7 +4,7 @@ A network is a way of connecting different hosts into one space.
 At home, we may have different devices connected to one WI-FI router, forming a net.  
 All of those devices would be considered members of the home network.  
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/network.jpeg?raw=true)  
+![](./img/network.jpeg?raw=true)  
 
 Likewise, the Waves network has a space where independent [nodes]() are connected to one network.  
 This space allows all the nodes to be connected, forming conditions for [decentralization]().  
@@ -65,13 +65,13 @@ Nevertheless, there are two services that it is worth mentioning:
 [Waves Explorer](https://new.wavesexplorer.com/) is a service that allows browsing the Waves blockchain data.  
 For example, if we made a money transfer to our friend, such a transaction can be checked via Waves Explorer.  
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/waves_transfer.png?raw=true)
+![](./img/waves_transfer.png?raw=true)
   
 Kindly note that selecting the correct network when browsing any blockchain data is very important.  
 No data will appear if any transaction is made in one network while the search was done within another.  
 The network can be changed in the right corner of the screen on the [site](https://new.wavesexplorer.com).  
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/network_selection.png?raw=true)
+![](./img/network_selection.png?raw=true)
   
 The topic of the Waves Explorer will be covered in the [Infrastructure products and tools]() chapter.  
 
@@ -91,7 +91,7 @@ Therefore, different nodes’ APIs may be opened in the Swagger interface at dif
 Using the API, it is possible to fetch some data from the blockchain or make an action on it.  
 For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/index.html#/node/getNodeVersion) to get the current Waves node version.  
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/B.%20How%20the%20waves%20works/c.%20Waves%20networks,%20their%20types,%20and%20application/images/api_response.png?raw=true)
+![](./img/api_response.png?raw=true)
   
 The API features will be explained in more detail in the [Infrastructure products and tools]() chapter.  
   

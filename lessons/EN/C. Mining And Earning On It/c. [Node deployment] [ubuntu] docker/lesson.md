@@ -11,7 +11,7 @@ Under the bonnet, every node has:
     A configuration file is a set of instructions on how a node should work.  
     We can define multiple parameters in the configuration file, such as [network]() to connect to.
 
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/nodestr.png?raw=true)
+![](./img/nodestr.png)
 
 ---
 
@@ -22,15 +22,15 @@ Also, it would be necessary to keep on hand a Base58 encoded string of the seed 
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
 2. Click "RideREPL" down the screen:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/repl1.png?raw=true)  
+    ![](./img/repl1.png)  
 3. Insert in the function your seed phrase:  
     `"your-seed-phrase".toBytes().toBase58String()`  
     For example:  
     `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
 4. Copy the function with your seed phrase to the console:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/repl2.png?raw=true)  
+    ![](./img/repl2.png)  
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/repl3.png?raw=true)
+    ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
 
 ---
@@ -271,12 +271,12 @@ The chapter goal is to get this API key and API key hash to operate with your no
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
 2. Click "Try it out":  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg1.png?raw=true)  
+    ![](./img/swagg1.png)  
 3. Enter any random string value and click "Execute":
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg2.png?raw=true)  
+    ![](./img/swagg2.png)  
     Please do not use the example in the screenshot, as it is only for demonstration purposes.
 4. In the response section below, you will receive a hash:
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg3.png?raw=true)  
+    ![](./img/swagg3.png)  
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
 
@@ -345,7 +345,7 @@ Follow the instructions below for setting up configurations:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods do not require any additional authorization.  
         For example, the `/addresses/` method will return the address of your node wallet.  
-        ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swaggadd.png?raw=true) 
+        ![](./img/swaggadd.png) 
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
@@ -354,16 +354,16 @@ Follow the instructions below for setting up configurations:
           
         To authorize private method usage:
         1. Click "Authorize":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg6.png?raw=true)
+            ![](./img/swagg6.png)
         2. Enter your API key (not the API hash) and click "Authorize":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg7.png?raw=true)
+            ![](./img/swagg7.png)
             Please, note that the API key on the screen is an example.  
             You need to use your API key.
         3. Click "Close":
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg8.png?raw=true)
+            ![](./img/swagg8.png)
         4. Now, you can use the private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
-            ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/swagg9.png?raw=true)   
+            ![](./img/swagg9.png)   
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
@@ -542,7 +542,7 @@ Out of all five nodes, only three node owners upgraded their nodes with the upda
 The other two nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
 Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.  
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/blockchainfork.png?raw=true)  
+![](./img/blockchainfork.png)  
   
 Eventually, the two nodes that were not updated may stop working.  
 This is why it is vital to timely update your node.  
@@ -567,7 +567,7 @@ There you may see the:
 - **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it again.
   
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/wavesgit.png?raw=true)  
+![](./img/wavesgit.png)  
   
 Once you receive a notification of a new node version release, follow the steps below to upgrade your node:  
 1. Pull the latest Docker image:
@@ -589,14 +589,14 @@ Once you receive a notification of a new node version release, follow the steps 
     There you will be able to see whether your node needs to re-import the blockchain data again.  
       
     If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:  
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/gitupdtunnsc.png?raw=true)  
+    ![](./img/gitupdtunnsc.png)  
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
     -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5. 
     
-    ![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/gitupdateneeded.png?raw=true)    
+    ![](./img/gitupdateneeded.png)    
 5. Start your node once again:    
    
    ```
@@ -655,17 +655,17 @@ Lastly, the node will be able to synchronize with the current blockchain state a
 The best way to get the idea is to watch it working on the live example.  
 We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
 A feature that was included in the update was activated at the 3000th block:    
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/3000.png?raw=true)
+![](./img/3000.png)
 
 Since we did not update our node before the feature activation, we switched to a fork.  
 At the moment of the 3002nd block, we found out that we were on the fork:  
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/3002.png?raw=true)
+![](./img/3002.png)
 
 In this situation, we will need to:
 - Update our node;
 - Roll it back from the 3002nd block to the 3000th block before the split occurred.  
     
-![](https://github.com/wavesplatform/waves-lessons/blob/template/lessons/EN/C.%20Mining%20And%20Earning%20On%20It/c.%20%5BNode%20deployment%5D%20%5Bubuntu%5D%20docker/images/3002to3000.png?raw=true)
+![](./img/3002to3000.png)
 
 ### How to rollback a node ###
 
