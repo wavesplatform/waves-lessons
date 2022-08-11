@@ -20,7 +20,7 @@ Welcome to the 1st Chapter!
 ### 1st Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
 It is the first nested chapter.  
-![Rock](./images/rock.png)  
+![Rock](./img/rock.png)  
 
 #### 1st Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
@@ -272,7 +272,7 @@ merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
 
 ## 3rd Chapter ##
 Welcome to the 3rd Chapter!  
-![cake](./images/download.jpeg)  
+![cake](./img/download.jpeg)  
 
 NEW IMAGE
 [![IMAGE ALT TEXT HERE](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDErGIJzYKrDTrQHzawz4LkDOwAt8K2fPHJ0BPmnbYAnWnoDcHxvt2GbH_eKQCVFtbo4&usqp=CAU)](https://www.youtube.com/watch?v=FMRXfttxLoo)
