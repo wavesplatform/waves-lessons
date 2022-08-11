@@ -4,11 +4,11 @@
     "description": "It is a test topic",
     "number": 0,
     "hashtags": [
-     "test",
-     "lesson",
-     "random"
-    ],
-    "ref1": "#",
-    "ref2": "#",
-    "ref3": "#"
+      "test",
+      "lesson",
+      "random"
+      ],
+    "ref1": "",
+    "ref2": "",
+    "ref3": ""
   }
