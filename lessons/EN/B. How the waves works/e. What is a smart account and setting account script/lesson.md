@@ -34,6 +34,9 @@ The topic [Programming on RIDE]() will describe the basics of the language.
 ### `Selling or buying only BTC` ###
 
 An account with the script below can make sales transactions only with BTC:  
+
+<CodeBlock> 
+
 ```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
@@ -49,6 +52,8 @@ match tx {
 }
 ```
 
+</CodeBlock>
+
 ### `Purchase of an asset` ###
 
 The script below allows making purchases from your account only:
@@ -56,6 +61,8 @@ The script below allows making purchases from your account only:
 - With a given asset;
 - With a given price;
 - With the WAVES token.
+
+<CodeBlock>
 
 ```ride
 {-# STDLIB_VERSION 6 #-}
@@ -75,6 +82,8 @@ match tx {
    case _ => sigVerify(tx.bodyBytes, tx.proofs[0], cooperPubKey )
 }
 ```
+
+</CodeBlock>
 
 ---
 
@@ -108,6 +117,9 @@ There are two major ways of smart account script installation:
   
 - [Client libraries](#XII.Libraries):  
     1. Prepare your smart account ride script:
+
+         <CodeBlock>
+
          ```
          {-# STDLIB_VERSION 5 #-}
          {-# CONTENT_TYPE EXPRESSION #-}
@@ -115,6 +127,9 @@ There are two major ways of smart account script installation:
 
          sigVerify(tx.bodyBytes, tx.proofs[0], tx.senderPublicKey)
          ```
+
+         </CodeBlock>
+
     2. Use your native programming language to:
          -  Insert the ride script as an argument of the compileScript function;
          -  Send this transaction to the node.  
@@ -123,9 +138,12 @@ There are two major ways of smart account script installation:
            
          
          This is how it can be done:   
+
+         <CodeBlock>
+
          ```js
          ```
-         ```Java
+         ```java
          // Necessary imports
          import com.wavesplatform.transactions.common.Base64String;
          import com.wavesplatform.transactions.SetScriptTransaction;
@@ -146,6 +164,9 @@ There are two major ways of smart account script installation:
          ```
          ```python
          ```
+
+         </CodeBlock>
+
 
          **Parameters Description**
          | Field | Description | Example |

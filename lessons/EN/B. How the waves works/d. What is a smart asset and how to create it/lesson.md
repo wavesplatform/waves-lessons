@@ -38,6 +38,8 @@ The topic [Programming on RIDE]() will describe the basics of the language.
 
 Once there is a certain height of the blockchain (1610000 blocks), disable all operations with the smart asset. 
 
+<CodeBlock>
+
 ```ride
 {-# STDLIB_VERSION 6 #-}
 {-# CONTENT_TYPE EXPRESSION #-}
@@ -47,9 +49,13 @@ let targetHeight = 1610000
 height >= targetHeight
 ```
 
+</CodeBlock>
+
 ### `Unburnable token` ###
 
-Make the asset unburnable, i.e., impossible to have the token amount reduced or the token to be destroyed.  
+Make the asset unburnable, i.e., impossible to have the token amount reduced or the token to be destroyed.   
+
+<CodeBlock>
 
 ```ride
 {-# STDLIB_VERSION 6 #-}
@@ -61,6 +67,8 @@ match tx {
    case _ => true
 }
 ```
+
+</CodeBlock>
 
 More about [Burn transaction](https://docs.waves.tech/en/blockchain/transaction-type/burn-transaction).  
 
@@ -91,7 +99,10 @@ There are two crucial limitations when working with smart asset creation is
 ### Writting a smart asset script ###
 
 There are two main steps to installing a smart asset script:
-1. Prepare the ride script you would like to install on an asset:
+1. Prepare the ride script you would like to install on an asset:   
+
+    <CodeBlock>
+
     ```ride
     {-# STDLIB_VERSION 6 #-}
     {-# CONTENT_TYPE EXPRESSION #-}
@@ -101,6 +112,9 @@ There are two main steps to installing a smart asset script:
         return true
     }
     ```
+
+    </CodeBlock>
+
 2. Afterward, it would be necessary to prepare a script in your native programming language that would:  
 
     - Create an asset;
@@ -108,9 +122,12 @@ There are two main steps to installing a smart asset script:
     - Send the transaction to the node.
 
     Here is how to make this:  
+
+    <CodeBlock>
+
     ```js
     ```
-    ```Java
+    ```java
     // Necessary imports
     import com.wavesplatform.transactions.common.AssetId;
     import com.wavesplatform.transactions.common.Base64String;
@@ -141,6 +158,8 @@ There are two main steps to installing a smart asset script:
     ```
     ```python
     ```
+
+    </CodeBlock>
 
     **Parameters Description**
     | Field | Description | Example |
