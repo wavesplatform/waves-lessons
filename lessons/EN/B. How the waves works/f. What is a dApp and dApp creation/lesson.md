@@ -132,7 +132,6 @@ However, there are certain limits to what those dApp callable functions are capa
 - Reading [blockchain data](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp#data-accessible-by-dapp);
 - Setting [sponsorship](https://docs.waves.tech/en/ride/structures/script-actions/sponsor-fee).
 
-
 ---
 
 ## Setting a dApp script ##
@@ -163,6 +162,9 @@ There are two ways of making your account a dApp using:
   
 - [Client libraries](#XII.Libraries):  
     1. Prepare your [dApp script](https://docs.waves.tech/en/building-apps/smart-contracts/writing-dapps):  
+        
+        <CodeBlock>
+
         ```ride
         {-# STDLIB_VERSION 3 #-}
         {-# SCRIPT_TYPE ACCOUNT #-}
@@ -200,6 +202,9 @@ There are two ways of making your account a dApp using:
             WriteSet([DataEntry((callerAddress + "_q"), question), DataEntry((callerAddress + "_a"), answer)])
             }
         ```
+
+        </CodeBlock>
+
     2. Use your native programming language to:
          -  Insert the ride script as an argument of the compileScript function;
          -  Send this transaction to the node.  
@@ -208,9 +213,12 @@ There are two ways of making your account a dApp using:
           
          
          This is how it can be done:  
+
+        <CodeBlock>
+
         ```js
         ```
-        ```Java
+        ```java
         // Necessary imports
         import com.wavesplatform.transactions.common.Base64String;
         import com.wavesplatform.transactions.SetScriptTransaction;
@@ -233,6 +241,8 @@ There are two ways of making your account a dApp using:
         ```
         ```python
         ```
+
+        </CodeBlock>
 
         **Parameters Description**
         | Field | Description | Example |

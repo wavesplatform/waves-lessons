@@ -42,6 +42,9 @@ Here we're diving one level deeper within the same semi-chapter.
 Here we're diving one level deeper within the same semi-chapter.    
 
 Nested code example (a few languages in a row):    
+
+<CodeBlock>
+
 ```java
 package com.wavesplatform.wavesj;
  
@@ -115,6 +118,7 @@ func storeData(
 }
 ```
 
+</CodeBlock>
 
 #### 3rd Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
@@ -132,6 +136,8 @@ Welcome to the 2nd Chapter!
 Watch the third video    
 [![Watch the third video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/34Na4j8AVgA)
     Here it is a separated JAVA code injected:    
+
+<CodeBlock>
 
 ```java
 package com.wavesplatform.wavesj;
@@ -167,6 +173,7 @@ private final URI uri;
 } public URI uri() { return uri; } }
 ```
 
+</CodeBlock>
 
 ---
 

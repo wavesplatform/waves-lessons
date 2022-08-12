@@ -134,6 +134,8 @@ Watch the third video
 [![Watch the third video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/34Na4j8AVgA)
   Insertion of multiple code examples:  
 
+<CodeBlock>
+
 ```js
 function getCookie(byname) // возвращает по имени значение, здесь не используется 
 
@@ -258,6 +260,8 @@ dic2={3:"Python", 4:"Programming"}
 merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
 ```
 
+</CodeBlock>
+
 ---
 
 ## 3rd Chapter ##
@@ -268,6 +272,8 @@ NEW IMAGE
 [![IMAGE ALT TEXT HERE](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDErGIJzYKrDTrQHzawz4LkDOwAt8K2fPHJ0BPmnbYAnWnoDcHxvt2GbH_eKQCVFtbo4&usqp=CAU)](https://www.youtube.com/watch?v=FMRXfttxLoo)
 
 Here is an example of ride code:
+
+<CodeBlock>
 
 ```ride
 
@@ -309,6 +315,8 @@ func storeData(
 
 }
 ```
+
+</CodeBlock>
 
 Все виды списков:
 
