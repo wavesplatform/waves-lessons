@@ -45,11 +45,15 @@ There are two necessary elements:
     - Type of the script is dApp;
     - The script will be assigned to an account (not an asset).
     
+    <CodeBlock>
+
     ```ride
     {-# STDLIB_VERSION 6 #-}
     {-# CONTENT_TYPE DAPP #-}
     {-# SCRIPT_TYPE ACCOUNT #-}
     ``` 
+    
+    </CodeBlock>
 - **<u>Callable function</u>**:    
     A callable function that is invoked externally.  
     This is the same script that another user would invoke.  
@@ -63,7 +67,9 @@ There are two necessary elements:
     It transfers 1 WAVES to an account that invoked it.  
     Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).  
     It also contains one condition: if the same account tries to invoke the script again, the callable function does nothing.  
-      
+    
+    <CodeBlock>
+
     ```ride
     @Callable(i)
     func faucet () = {
@@ -84,6 +90,8 @@ There are two necessary elements:
         else ([],unit)
     }
     ```
+
+    </CodeBlock>
 
 There are two optional elements:
 
