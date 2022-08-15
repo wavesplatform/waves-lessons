@@ -25,21 +25,21 @@ If you want to browse the Waves blockchain data, the [Waves Explorer](https://ne
 Please, keep in mind that all the blockchain data can exist within three major [Waves networks (Mainnet, Testnet, and Stagenet)]().  
 It can also be any [custom blockchain network](https://docs.waves.tech/en/waves-node/private-waves-network) you can create.  
   
-All the information you would be able to see on the screen would depend on the chosen network:    
+All the information you would be able to see on the screen would depend on the chosen network:
+
 ![](./img/wavesexp_net.png)
-    
 
 The platform has a user-friendly interface that allows you to:
-- **<u>See the Waves blockchain statistics</u>**:  
-  ![](./img/wavesexp_stat.png)  
+- **<u>See the Waves blockchain statistics</u>**:
+  ![](./img/wavesexp_stat.png)
 -  **<u>Search transactions, accounts, tokens, blocks details</u>**:
-  ![](./img/wavesexp_search.png)  
+  ![](./img/wavesexp_search.png)
 -  **<u>Get detailed information about [transactions](https://new.wavesexplorer.com/transactions)</u>**:
-  ![](./img/wavesexp_tx.png)  
+  ![](./img/wavesexp_tx.png)
 -  **<u>Get detailed information about [blocks](https://new.wavesexplorer.com/blocks)</u>**:
-  ![](./img/wavesexp_blocks.png)  
+  ![](./img/wavesexp_blocks.png)
 -  **<u>Get detailed information about [nodes](https://new.wavesexplorer.com/nodes)</u>**:
-  ![](./img/wavesexp_nodes.png)  
+  ![](./img/wavesexp_nodes.png)
 
 Try browsing blockchain data with Waves Explorer!  
 
@@ -52,10 +52,10 @@ Let's imagine that we manage an online pizza delivery.
 We do not want to accept any payments except with the WAVES cryptocurrency.  
 In case we want to receive WAVES to our crypto wallet, we have two options:
 
-- Write down the requisites of our wallet and ask a client to transfer tokens there:  
-    ![](./img/signer_no.png)  
-- Integrate a payment service that would allow clients to pay with a few clicks:  
-    ![](./img/signer_yes.png)  
+- Write down the requisites of our wallet and ask a client to transfer tokens there:
+    ![](./img/signer_no.png)
+- Integrate a payment service that would allow clients to pay with a few clicks:
+    ![](./img/signer_yes.png)
 
 As we may have guessed, the first option is an outdated method.  
 It risks our business, as some clients can change their minds to order due to payment complexity.  
@@ -79,13 +79,13 @@ This is a demonstration of the Waves IDE user interface:
 ![waves_ide](./images/waveside.png)
     
 
-It is possible to switch between different networks within the IDE, be it a default network or a custom one.    
-![](./img/waveside_nodes.png)
-    
+It is possible to switch between different networks within the IDE, be it a default network or a custom one.
 
-As well, you can check libraries that contain code examples and even a series of short tutorials:    
+![](./img/waveside_nodes.png)
+
+As well, you can check libraries that contain code examples and even a series of short tutorials:
+
 ![](./img/waveside_libs.png)
-    
 
 Read more about [Waves IDE](https://docs.waves.tech/en/building-apps/smart-contracts/tools/waves-ide).
 
@@ -122,7 +122,8 @@ If you want to use private endpoints, start [your node](https://docs.waves.tech/
   Stop, roll back, connect to other nodes.
 - `Getting debug information`
   
-For example, you can get the current node status:    
+For example, you can get the current node status:
+
 ![](./img/restapi.png)
     
 ### Software development kits ###

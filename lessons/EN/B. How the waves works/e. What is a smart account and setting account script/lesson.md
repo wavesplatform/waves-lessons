@@ -105,11 +105,10 @@ There are two major ways of smart account script installation:
     1. Write the Ride script code and click "Deploy":
     ![](./img/smartac_2.png)
     1. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
-      After this, publish the smart account script.  
+      After this, publish the smart account script.
       ![](./img/smartac_3.png)
-    2. As a result of a successful operation, you will see a similar notification:  
+    2. As a result of a successful operation, you will see a similar notification:
       ![](./img/smartac_4.png)
-
   
 - [Client libraries](#XII.Libraries):  
     1. Prepare your smart account ride script:

@@ -23,15 +23,16 @@ Even if one particular node initiates a certain action, for example, a money tra
 - There is a sufficient balance on the account.
   
 
-There are nearly hundreds of the Waves nodes across the globe:  
-![](./img/wavesmap.png)  
+There are nearly hundreds of the Waves nodes across the globe:
+
+![](./img/wavesmap.png)
 
 Nodes represent witnesses that keep an eye on all the actions completed on the blockchain.  
 They check transactions and blocks to see whether they are valid or if there is any attempt to alter the blockchain data.  
 If a node initiates a fraudulent transaction, other nodes will verify if it is a valid action.  
-Once they find out the transaction is invalid, it will be rejected and not included in a block.  
+Once they find out the transaction is invalid, it will be rejected and not included in a block.
 
-![](./img/attacker.png)  
+![](./img/attacker.png)
 
 ### Validating node ###
 
