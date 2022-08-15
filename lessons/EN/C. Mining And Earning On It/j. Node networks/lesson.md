@@ -33,8 +33,6 @@ Inter-network communication is not possible.
   
 We want to remind you of the [Waves Explorer](https://new.wavesexplorer.com/) tool, where you can browse any blockchain data in all networks.
 
----
-
 ## REST API of nodes in different networks ##
 
 In this series of lessons regarding node deployment, we installed a node within the Mainnet network and made it ready for mining.  

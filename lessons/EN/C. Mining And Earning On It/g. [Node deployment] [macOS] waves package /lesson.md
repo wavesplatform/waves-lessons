@@ -13,8 +13,6 @@ Under the bonnet, every node has:
 
 ![](./img/nodestr.png)
 
----
-
 ## Prerequisites ##
 
 Before installing a node, ensure your Waves account has a [generating balance]() at least 1000 WAVES.  
@@ -32,8 +30,6 @@ Here is how you can encode a seed phrase to Base58:
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
     ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
-
----
 
 ## Installation ##
 Waves node installation via package is a more advanced way of node deployment.  
@@ -142,7 +138,6 @@ In the [next chapter](#synchronization), we will discuss node synchronization wi
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
-
 ### Modules in the configuration file ###
 
 All the node modules are wrapped within the `Waves` configuration section.  
@@ -447,7 +442,6 @@ If so, you can skip all the instructions below and continue with the next chapte
 
 However, if you wish to speed up this process, we will concentrate on the blockchain data upload within this chapter.  
 
-
 ### Blockchain synchronization ###
 
 Follow the steps below to synchronize the current blockchain with your node:  
@@ -518,8 +512,6 @@ If your node generates a block, you will get a reward for block generation right
 Please, note that once you have a synchronized node, you can export the node's blockchain to a binary file.  
 It will allow you to deploy one more node on your host.  
 For more details, read [Export blockchain to binary file](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
-
----
 
 ## Update ##
 
@@ -645,8 +637,6 @@ Once you receive a notification of a new node version release, follow the steps 
     ```
     INFO [appender-25] c.w.s.BlockchainUpdaterImpl - New height: 10000
     ```
-
----
 
 ## Node rollback ##
 
@@ -811,4 +801,3 @@ In this situation, we will need to:
         Therefore, you restart [Blockchain synchronization](#blockchain-synchronization).  
    
 In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.  
-

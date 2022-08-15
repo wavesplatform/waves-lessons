@@ -4,16 +4,12 @@ To begin our journey to the Waves Blockchain Platform, we will first cover some 
 All the material will be given in a logical sequence to make understanding easier.  
 This course will help people even with zero knowledge about blockchain to become PRO with the Waves.
 
----
-
 ## Overview ##
 
 As a quick overview, we will first learn about the [Waves blockchain platform](#waves-blockchain-platform), its [principles of work](#principles-of-work), and its [history](#waves-history).  
 After this, we will get to know about [transactions](#transactions) as one of the significant essences that every blockchain contains.  
 The next step would be describing how transactions get wrapped in [blocks]().  
 At the end of the lesson, you will discover how all [blocks]() form into a chain, known as [blockchain]().  
-
----
 
 ## Waves blockchain platform ##
 
@@ -33,7 +29,6 @@ The platform gives access to classical P2P trading and has all necessary crypto-
 All our users may create, promote, and use their own [custom tokens](), which can be sold on the open market through crowdfunding.  
 The Waves has its token, WAVES, which can be used as a payment currency and reward for block generation and commissions.
     
-
 ### The Waves history ###
 The story of the company began in 2016.  
 With the help of the crowdfunding platform, the company received approximately 30,000 BTC for its further development.  
@@ -75,8 +70,6 @@ Generally, there are three different types of transactions in the Waves blockcha
 - [Network](https://docs.waves.tech/en/blockchain/transaction-type/#tokenization:~:text=V6%2C%20MetaMask%20support%E2%80%9D.-,Network,-Type%20ID)  
   Works with leasing or sponsorship.
   
-  
-
 For this moment, it is not necessary to study all of the transaction types.  
 Later, in the chapter [Operations with transactions](), this topic will be elaborated on in detail.  
 The essence of all transactions in the blockchain is an operation with an account or/and an asset.  
@@ -116,8 +109,6 @@ This transaction would necessarily include parameters, as shown in the table bel
   | order1, order2 | Buy and sell orders. See the  [Order](https://docs.waves.tech/en/blockchain/order). | [Example](https://docs.waves.tech/en/blockchain/transaction-type/exchange-transaction#json-representation:~:text=%22order1%22%3A,%5D%0A%20%20%7D%2C)|
 
   More about [Exchange Transaction](https://docs.waves.tech/en/blockchain/transaction-type/exchange-transaction).  
-
----
 
 ## Blocks ##
 
@@ -165,8 +156,6 @@ Regardless of how often we repeat this transformation, this phrase would always 
 In the blockchain, a hash of a block is formed from all the data that the block is contained, including the hash of the previous block.  
 This bond makes it impossible to falsify even a tiny piece of data, as it would create a different hashing sequence.  
 
----
-
 ## Blockchain ##
 
 All the blocks don't exist by themselves, and they all are a part of the big sequence of blocks.  
@@ -176,8 +165,5 @@ In this picture, you may see a representation of this idea (from left to right):
 ![](./img/blockchainexm.png)  
   
 Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes in the network.  
-  
-
+   
 In the next lesson, we will concentrate on how on [nodes of the Waves network]() function and the benefits of having one.
-
----

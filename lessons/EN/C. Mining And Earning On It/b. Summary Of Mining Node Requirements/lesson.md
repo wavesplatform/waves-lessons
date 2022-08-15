@@ -5,8 +5,6 @@ To have a mining node that would bring you an income, it is necessary to have re
 These requirements would be enough to have a validating node connected to the Waves blockchain network.  
 [Block generation requirements](#block-generation-requirements) are the necessary conditions that would enable block generation and getting a reward for it.  
 
----
-
 ### Node requirements ###
 
 To deploy a node there are no other requirements but the requirements for computer capacity:  
@@ -15,8 +13,6 @@ To deploy a node there are no other requirements but the requirements for comput
 | :---------- | :----------:  | :----------:  | :----------: |
 | [Validating node](https://docs.waves.tech/en/blockchain/node/validating-node) | 2 | 4 GB| 100 GB SSD|
 | [Generating node](https://docs.waves.tech/en/blockchain/node/mining-node) | 2+ | 4+ GB| 100+ GB SSD|
-
----
 
 ### Block generation requirements ###
 
@@ -30,8 +26,6 @@ To have a generating node, you need to have the node's account generating balanc
 We can give an example of a node that is ready for mining.  
 It can be a laptop with 2+ CPU cores, 4+GB of RAM, and 100+ GB of SSD.   
 The generating balance of this account is 1000 WAVES for the last 1000 blocks.  
-
----
 
 ## Getting started ##
 
@@ -68,4 +62,4 @@ Please, choose your OS and only one way of node deployment among the following:
   - [waves package]()
 - [Windows]:
   - [docker]()
-  - [waves package]()
+  - [waves package]()  

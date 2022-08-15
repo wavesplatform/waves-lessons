@@ -9,8 +9,6 @@ All of those devices would be considered members of the home network.
 Likewise, the Waves network has a space where independent [nodes]() are connected to one network.  
 This space allows all the nodes to be connected, forming conditions for [decentralization]().  
 
----
-
 ## Mainnet, Testnet, Stagenet ##
 
 In our platform, there are three different networks within the Waves blockchain.  
@@ -48,8 +46,6 @@ See more about [Custom blockchain](https://docs.waves.tech/en/waves-node/private
 
 You may launch your node in any of these networks, depending on the goal.  
 You can read more about it in the [Mining and earning on it]() chapter.  
-
----
 
 ## Useful network resources ##
 
@@ -95,5 +91,4 @@ For example, we may click [/node/version](https://nodes.wavesnodes.com/api-docs/
   
 The API features will be explained in more detail in the [Infrastructure products and tools]() chapter.  
   
-The next lesson’s topic will be [smart assets and how to create one]().
-
+The next lesson’s topic will be [smart assets and how to create one]().  

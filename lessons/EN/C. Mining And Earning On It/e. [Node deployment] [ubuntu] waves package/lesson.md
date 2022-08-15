@@ -13,8 +13,6 @@ Under the bonnet, every node has:
 
 ![](./img/nodestr.png)
 
----
-
 ## Prerequisites ##
 
 Before installing a node, ensure your Waves account has a [generating balance]() at least 1000 WAVES.  
@@ -32,8 +30,6 @@ Here is how you can encode a seed phrase to Base58:
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
     ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
-
----
   
 ## Installation ##
 
@@ -71,6 +67,7 @@ Follow the steps below to install a Waves node:
 3. Download the [latest version](https://github.com/wavesplatform/Waves/releases) of `waves-all-<version number>.jar` to the folder `/opt/waves-node`.
 4. Download the [sample](https://github.com/wavesplatform/Waves/blob/master/node/waves-sample.conf) configuration file to `/opt/waves-node/conf`.  
 5. Move to the folder and open the configuration file in the editor:  
+
    ```
    sudo cd /opt/waves-node/conf
    sudo nano waves-sample.conf
@@ -310,7 +307,6 @@ Here is how you can do it:
     ![](./img/swagg3.png)  
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
-
 ### Configuration file setup ###
 
 Follow the instructions below for setting up configurations:
@@ -400,8 +396,6 @@ Follow the instructions below for setting up configurations:
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
 In the next chapter, [Synchronization](#synchronization), we will move to the next step of preparations for mining.  
-
----
 
 ## Synchronization ##
 
@@ -531,8 +525,6 @@ Please, note that once you have a synchronized node, you can export the node's b
 It will allow you to deploy one more node on your host.  
 For more details, read [Export blockchain to binary file](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
  
----
-
 ## Update ##
 
 ### Necessity of upgrading your node ###
@@ -657,8 +649,6 @@ Once you receive a notification of a new node version release, follow the steps 
     ```
     INFO [appender-25] c.w.s.BlockchainUpdaterImpl - New height: 10000
     ```
-
----
 
 ## Node rollback ##
 
@@ -822,4 +812,4 @@ In this situation, we will need to:
         It will not be possible to roll back more than 2000 blocks.   
         Therefore, you restart [Blockchain synchronization](#blockchain-synchronization).  
   
-In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.
+In the next lesson, [Node networks](), we will discuss different networks, their REST API service, and their functionalities.  

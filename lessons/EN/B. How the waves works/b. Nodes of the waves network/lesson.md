@@ -55,8 +55,6 @@ You can discover more about [generator's income](https://docs.waves.tech/en/bloc
 
 See more about [block generation]().
 
----
-
 ## Node Benefits ##
 
 For every node holder, there are two ways to earn funds with the Waves blockchain:  
@@ -78,4 +76,3 @@ As a quick preview, we will mention the minimal:
     See the complete list of [node requirements](https://docs.waves.tech/en/blockchain/node/mining-node#:~:text=A%20node%20can%20generate%20blocks%20if%20the%20following%20conditions%20are%20met%3A).
 
 In the next lesson, we will describe the [Waves networks](), which connect all the nodes.  
-

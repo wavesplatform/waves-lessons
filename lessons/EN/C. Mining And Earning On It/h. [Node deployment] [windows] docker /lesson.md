@@ -13,8 +13,6 @@ Under the bonnet, every node has:
 
 ![](./img/nodestr.png)
 
----
-
 ## Prerequisites ##
 
 Before installing a node, ensure your Waves account has a [generating balance]() at least 1000 WAVES.  
@@ -32,8 +30,6 @@ Here is how you can encode a seed phrase to Base58:
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
     ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
-
----
 
 ## Installation ##
 
@@ -82,8 +78,6 @@ Please, note that mining the WAVES tokens that have value on the market is possi
 In this lesson, we will deploy our node in the Mainnet network.  
    
 In the next chapter, [Node configuration](#configuration), we will learn how to set up a configuration file of your node.  
-
----
 
 ## Configuration ##
 
@@ -342,8 +336,6 @@ Follow the instructions below for setting up configurations:
 
 In the next chapter, [Synchronization](#synchronization), we will move to the next step of preparations for mining.  
 
----
-
 ## Synchronization ##
 
 ### Synchronization process description ###
@@ -449,8 +441,6 @@ Please, note that once you have a synchronized node, you can export the node's b
 It will allow you to deploy one more node on your host.  
 For more details, read [Export blockchain to binary file](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
 
----
-
 ## Update ##
 
 ### Necessity of upgrading your node ###
@@ -553,9 +543,6 @@ Once you receive a notification of a new node version release, follow the steps 
     Messages regarding increasing blockchain height mean that everything is completed successfully:  
     ![](./img/dockerwin4.png)
   
-
----
-
 ## Node rollback ##
 
 ### Why roll back your node ###

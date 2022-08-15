@@ -9,8 +9,6 @@ If something is changed in block A, all subsequent blocks will be invalid and mu
 
 ![](./img/blockchain.png)
 
----
-
 ## Transaction ##
 
 What is a transaction?   
@@ -23,8 +21,6 @@ For example, an “asset transfer transaction” contains a timestamp, sender, r
 
 A transaction typically contains the sender’s digital **signature**.  
 Anyone can verify the integrity of the transaction data and the authenticity of the signature, so it can be ensured that the transaction’s signature matches the sender’s public key.
-
----
 
 ## Nodes ##
 
@@ -48,13 +44,11 @@ The network participants must agree on **who** is responsible for generating a n
 The participant who created the block is called a block miner, block generator, or block producer.  
 The block generation process is called mining.  
 
----
-
 ## Types of consensus ##
+
 There are many types of consensus algorithms with different advantages and disadvantages.  
 
-
-### `Proof of work (PoW)` ###
+### Proof of work (PoW) ###
 
 Proof of Work (PoW) is the first classical consensus algorithm.  
 It is based on the computation of a unique “nonce” value, which produces a hash result with a specific number of zeros.  
@@ -65,7 +59,7 @@ The computation process consumes large quantities of electricity, meaning PoW no
 
 Bitcoin and Ethereum blockchain networks are based on Proof of Work; however, Ethereum is now transitioning to Proof of Stake.  
 
-### `Proof of stake (PoS)` ###
+### Proof of stake (PoS) ###
 
 Proof of Stake (PoS) is a category of consensus algorithms that depend on a participant’s economic stake in the network.  
 Anyone who holds the blockchain’s native cryptocurrency has a chance to add a block and be rewarded.  
@@ -87,12 +81,10 @@ The probability of being a block generator is proportional to the total amount o
 Leased WAVES are locked in the user’s account and cannot be transferred or traded.  
 Still, the tokens remain in complete control of the account holder, and leases can be canceled at any time.  
 
-### `Proof of authority (PoA)` ###
+### Proof of authority (PoA) ###
 
 Proof of Authority (PoA) is an alternative consensus mechanism that relies on known and reputable validators to produce blocks.  
 PoA is geared toward enterprises or private organizations that want to build chains that are essentially closed and do not involve external participants.   
-
----
 
 ## Why blockchain is marvelous ##
 
@@ -121,4 +113,3 @@ Blockchain has several important properties:
 In this lesson, we talked about the basics of blockchain — transactions, blocks, consensus mechanisms like proof-of-work and proof-of-stake, and delegated and leased versions of proof of stake.  
   
 In the next lesson, we will give some insights into how all these blockchain properties are used in [Web3 services]().
-

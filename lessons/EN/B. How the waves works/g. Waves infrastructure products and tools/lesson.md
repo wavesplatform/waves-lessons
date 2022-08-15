@@ -121,13 +121,10 @@ If you want to use private endpoints, start [your node](https://docs.waves.tech/
 - `Node management:`  
   Stop, roll back, connect to other nodes.
 - `Getting debug information`
-
   
-
 For example, you can get the current node status:    
 ![](./img/restapi.png)
     
-
 ### Software development kits ###
 
 For developers wishing to interact with the Waves blockchain, there is a great opportunity.  
@@ -161,8 +158,6 @@ The major extension's key features are:
 
 Read more about [Visual studio code extension](https://docs.waves.tech/en/building-apps/smart-contracts/tools/ride-vscode).
   
----
-
 ## Outro ##
 
 We have managed to get basic ideas and discover some tools used in the Waves blockchain platform.  

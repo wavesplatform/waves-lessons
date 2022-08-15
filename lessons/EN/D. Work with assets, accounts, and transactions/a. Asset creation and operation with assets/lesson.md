@@ -1,5 +1,4 @@
 - [Asset definition](#asset-definition)
-- [Essential attributes of an asset creation](#essential-attributes-of-an-asset-creation)
 - [Operations with assets](#operations-with-assets)
   - [Asset creation](#asset-creation)
   - [NFT creation](#nft-creation)
@@ -40,13 +39,17 @@ If you wish to become an owner of a new cryptocurrency, you can [create it](#ass
 After creation, the destiny of this asset will be totally in your hands.    
 Likewise, you can also use assets as a ready solution for your projects.  
 
-## Essential attributes of an asset creation ##
 
-Every asset has a 
+Every asset has a set of attributes that are essential for operation with it.  
+
 
 ## Operations with assets ##
 
+
+
 ### Asset creation ###
+
+Essential attributes 
 
 ### NFT creation ###
 

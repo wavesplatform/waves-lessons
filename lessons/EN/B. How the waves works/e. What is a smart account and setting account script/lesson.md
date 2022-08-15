@@ -24,14 +24,12 @@ We will talk about dApps in the [next lesson]().
 
 Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
 
----
-
 ## Usage examples ##
 
 The examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).  
 The topic [Programming on RIDE]() will describe the basics of the language.
 
-### `Selling or buying only BTC` ###
+### Selling or buying only BTC ###
 
 An account with the script below can make sales transactions only with BTC:  
 
@@ -54,7 +52,7 @@ match tx {
 
 </CodeBlock>
 
-### `Purchase of an asset` ###
+### Purchase of an asset ###
 
 The script below allows making purchases from your account only:
 
@@ -84,8 +82,6 @@ match tx {
 ```
 
 </CodeBlock>
-
----
 
 ## Setting a smart account script ##
 
@@ -175,5 +171,4 @@ There are two major ways of smart account script installation:
            
           More about [Set script transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
   
-The next lesson will be dedicated to [dApp](), another type of account script.
-
+The next lesson will be dedicated to [dApp](), another type of account script.  

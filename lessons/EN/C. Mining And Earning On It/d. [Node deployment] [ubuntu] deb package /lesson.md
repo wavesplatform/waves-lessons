@@ -13,8 +13,6 @@ Under the bonnet, every node has:
 
 ![](./img/nodestr.png)
 
----
-
 ## Prerequisites ##
 
 Before installing a node, ensure your Waves account has a [generating balance]() at least 1000 WAVES.  
@@ -33,8 +31,6 @@ Here is how you can encode a seed phrase to Base58:
     ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
 
----
-  
 ## Installation ##
 
 Multiple Ubuntu/Debian users may install a node with deb-package.<br>
@@ -50,7 +46,6 @@ Follow the steps below to install a Waves node:
     ```
     sudo dpkg -i waves_1.4.7_all.deb
     ```
-
 3.  Study the minimum configuration parameters.  
     It will be necessary to edit the configuration file to run a node.  
     The file contains multiple parameters related to the wallet, blockchain, rest-api, etc.  
@@ -132,7 +127,6 @@ In the [next chapter](#synchronization), we will discuss node synchronization wi
 
 A configuration file is a way of setting up instructions on how a node should work.  
   
-
 ### Modules in the configuration file ###
 
 All the node modules are wrapped within the `Waves` configuration section.  
@@ -299,7 +293,6 @@ Here is how you can do it:
     ![](./img/swagg3.png)  
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
-
 ### Configuration file setup ###
 
 Follow the instructions below for setting up configurations:
@@ -382,8 +375,6 @@ Follow the instructions below for setting up configurations:
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
 In the next chapter, [Synchronization](#synchronization), we will move to the next step of preparations for mining.  
-
----
 
 ## Synchronization ##
 
@@ -510,8 +501,6 @@ Please, note that once you have a synchronized node, you can export the node's b
 It will allow you to deploy one more node on your host.  
 For more details, read [Export blockchain to binary file](https://docs.waves.tech/en/waves-node/options-for-getting-actual-blockchain/import-from-the-blockchain#export-blockchain-to-binary-file).  
 
---- 
-
 ## Update ##
 
 ### Necessity of upgrading your node ###
@@ -564,8 +553,6 @@ This is why it is vital to timely update your node.
 To avoid forks, be subscribed to the [Waves blockchain releases page](https://github.com/wavesplatform/Waves/releases/) and timely install updates.  
 In the chapter below, [Node upgrade](), we will run through all the steps of updating your node.  
 In case you did not update your node in time, in the chapter [Node rollback](), we will discuss steps to roll back your node to the working state.
-
-
 
 ### Node upgrade ###
 
@@ -647,8 +634,6 @@ Once you receive a notification of a new node version release, follow the steps 
     ```
     INFO [appender-25] c.w.s.BlockchainUpdaterImpl - New height: 10000
     ```
-
----
 
 ## Node rollback ##
 
