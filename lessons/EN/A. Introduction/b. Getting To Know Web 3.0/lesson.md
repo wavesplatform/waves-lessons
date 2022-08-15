@@ -130,4 +130,3 @@ We also discussed digital signatures and how they affect user experience with We
   
 The next topic will be an [introduction to the Waves platform]().   
 Slowly you will start receiving more practical material along with theory.  
-

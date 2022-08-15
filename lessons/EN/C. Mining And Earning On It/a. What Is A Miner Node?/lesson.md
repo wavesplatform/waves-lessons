@@ -6,8 +6,6 @@ Afterward, [rewards for block generation]() will be elaborated.
 We will learn how to [set up a node]() on your operating system.  
 By the end of this module, you would be able to deploy your node and be able to earn with mining.  
 
----
-
 ## Generating node definition ##
 
 In the lesson [Nodes of the waves network](), we defined a node and described its principal features.  
@@ -25,9 +23,6 @@ Every time there is only one block generator and not thousands of competing comp
 You may have one casual computer or a laptop on which you can deploy a node.  
 There are certain [requirements for block generation]() that you need to satisfy to generate a block.  
 If your node generates a block, you receive a [reward](#rewards-for-blocks-generation) for it in the wallet of that node.  
-
-
----
 
 ## Rewards for blocks generation ##
 
@@ -67,4 +62,3 @@ In the real world with the Waves blockchain, there are differences in numbers:
     This interval is not static and may differ from time to time.  
  
 The next lesson will cover the [requirements]() for deploying a node and block generation.  
-

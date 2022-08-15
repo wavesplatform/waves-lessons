@@ -25,8 +25,6 @@ There are three different possible results of the asset script invocation:
 
 Read more about [smart asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset).
 
----
-
 ## Usage examples ##
 
 All of the possible usage scenarios depend on the ingenuity of the asset creator.  
@@ -34,7 +32,7 @@ We will demonstrate very few basic examples for the sake of simplicity.
 These examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).  
 The topic [Programming on RIDE]() will describe the basics of the language.  
 
-### `Token usage freeze` ###
+### Token usage freeze ###
 
 Once there is a certain height of the blockchain (1610000 blocks), disable all operations with the smart asset. 
 
@@ -51,7 +49,7 @@ height >= targetHeight
 
 </CodeBlock>
 
-### `Unburnable token` ###
+### Unburnable token ###
 
 Make the asset unburnable, i.e., impossible to have the token amount reduced or the token to be destroyed.   
 
@@ -71,8 +69,6 @@ match tx {
 </CodeBlock>
 
 More about [Burn transaction](https://docs.waves.tech/en/blockchain/transaction-type/burn-transaction).  
-
----
 
 ## Setting an asset script ##
 
@@ -167,5 +163,4 @@ There are two main steps to installing a smart asset script:
     | assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
     | script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
   
-In the next lesson, we will discuss another type of smart contract, called [smart account]().
-
+In the next lesson, we will discuss another type of smart contract, called [smart account]().  

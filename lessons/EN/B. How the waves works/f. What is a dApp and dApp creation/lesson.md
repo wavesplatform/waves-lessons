@@ -63,9 +63,7 @@ There are two necessary elements:
     It transfers 1 WAVES to an account that invoked it.  
     Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).  
     It also contains one condition: if the same account tries to invoke the script again, the callable function does nothing.  
-
       
-
     ```ride
     @Callable(i)
     func faucet () = {
@@ -119,8 +117,6 @@ There are two optional elements:
     asset.isDefined()
     ```
 
----
-
 ## Usage examples ##
 
 Depending on a developer’s creativity, dApp usage results can be completely diverse.    
@@ -131,8 +127,6 @@ However, there are certain limits to what those dApp callable functions are capa
   (Transferring, Issuing, Reissuing, Burning);
 - Reading [blockchain data](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp#data-accessible-by-dapp);
 - Setting [sponsorship](https://docs.waves.tech/en/ride/structures/script-actions/sponsor-fee).
-
----
 
 ## Setting a dApp script ##
 
@@ -209,9 +203,7 @@ There are two ways of making your account a dApp using:
          -  Insert the ride script as an argument of the compileScript function;
          -  Send this transaction to the node.  
             (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
-        
           
-         
          This is how it can be done:  
 
         <CodeBlock>
@@ -253,4 +245,4 @@ There are two ways of making your account a dApp using:
       
     3. Once the transaction is sent to the node successfully, the account will become a dApp.
   
-The next lesson will give more information about multiple products and tools of the [Waves infrastructure]().
+The next lesson will give more information about multiple products and tools of the [Waves infrastructure]().  
