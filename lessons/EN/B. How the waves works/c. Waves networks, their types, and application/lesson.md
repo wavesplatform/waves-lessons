@@ -36,7 +36,7 @@ This chain ID is used in account address formation, making inter-network operati
 It will not be possible to use the same address account in different networks or transfer funds from one network to another.
 
 | Network Name | Chain ID|
-| ------ | ------ |
+| --- | --- |
 | Mainnet | W or 87 (ASCII code of W) |
 | Testnet | T or 84 (ASCII code of T) |
 | Stagenet | S or 83 (ASCII code of S) |

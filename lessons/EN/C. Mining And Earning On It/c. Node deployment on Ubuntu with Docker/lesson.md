@@ -149,7 +149,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Wallet parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | password | Random password a user sets. Encodes your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
     | seed | Connects your wallet to your node via the [wallet seed Base58 encoded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in [REST API]() using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
@@ -169,7 +169,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Blockchain parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | type | Selects the blockchain type: [MAINNET, STAGENET, TESTNET](), or [CUSTOM](https://docs.waves.tech/en/waves-node/private-waves-network). | MAINNET | 
 
     Read more about [Blockchain settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
@@ -195,7 +195,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     REST API parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
     | bind-address | Network address where the REST API accepts incoming connections.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 0.0.0.0 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
@@ -218,7 +218,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Network parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | node-name | Sets the name of your node visible to other participants of the P2P network.<br>The name is transmitted during the initial handshake. | waves-node | 
     | bind-address | Sets the IP address of the local network interface on which Waves Node will accept incoming connections.<br>By default, node binds to 0.0.0.0 that means that it will listen on all available network adapters. | 0.0.0.0 | 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside. Otherwise, your node will connect to the P2P network using only outgoing connections.<br>If other applications use this port, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 
