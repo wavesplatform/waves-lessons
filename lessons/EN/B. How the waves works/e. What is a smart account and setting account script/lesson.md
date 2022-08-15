@@ -1,32 +1,32 @@
 ## Smart account definition ##
 
-On the Waves platform, it is possible to create a regular account.  
-With a regular account, you can send any transactions manually.  
-The only verification completed automatically is checking that the transaction was sent from this account and had an available balance.  
-For example, sending money from one wallet to another.   
+On the Waves platform, it is possible to create a regular account.
+With a regular account, you can send any transactions manually.
+The only verification completed automatically is checking that the transaction was sent from this account and had an available balance.
+For example, sending money from one wallet to another. 
 Auto-verification will check if the account owner indeed initiated this transaction and if he has enough of the balance. 
-  
-A smart account is an account that has an add-on verifying that an issued transaction satisfies all conditions of the script.  
-For example, sending money from one wallet to another only if the account balance is not less than 20 WAVES.  
-Therefore an account that contains a script that checks all outgoing transactions whether they meet all requirements or not is called a smart account.  
-  
-A smart account's script can contain one or many functions (sets of rules).  
-Only if a transaction meets the requirements of all the functions of the script it can be permitted.  
+
+A smart account is an account that has an add-on verifying that an issued transaction satisfies all conditions of the script.
+For example, sending money from one wallet to another only if the account balance is not less than 20 WAVES.
+Therefore an account that contains a script that checks all outgoing transactions whether they meet all requirements or not is called a smart account.
+
+A smart account's script can contain one or many functions (sets of rules).
+Only if a transaction meets the requirements of all the functions of the script it can be permitted.
 The possible result of the smart account's script compilation can be:
 
 - **<u>Permitted transaction</u>**;
 - **<u>Declined transaction</u>**;
 - **<u>Error of compilation</u>**.
 
-Another type of account script is called [dApp]().  
-A dApp works with incoming transactions, while a smart account operates with outgoing transactions.  
+Another type of account script is called [dApp]().
+A dApp works with incoming transactions, while a smart account operates with outgoing transactions.
 We will talk about dApps in the [next lesson]().
 
 Read more about [smart account](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-account).
 
 ## Usage examples ##
 
-The examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).  
+The examples will be written in the [Ride programming language](https://docs.waves.tech/en/ride/).
 The topic [Programming on RIDE]() will describe the basics of the language.
 
 ### Selling or buying only BTC ###
@@ -69,7 +69,7 @@ The script below allows making purchases from your account only:
 
 let myAssetId = base58'8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS'
 let cooperPubKey = base58'BVqYXrapgJP9atQccdBPAgJPwHDKkh6A8'
-  
+
 match tx {
    case o: Order =>
       sigVerify(o.bodyBytes, o.proofs[0], cooperPubKey ) && 
@@ -104,13 +104,13 @@ There are two major ways of smart account script installation:
     ![](./img/smartac_1.png)
     1. Write the Ride script code and click "Deploy":
     ![](./img/smartac_2.png)
-    1. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
+    1. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
       After this, publish the smart account script.
       ![](./img/smartac_3.png)
     2. As a result of a successful operation, you will see a similar notification:
       ![](./img/smartac_4.png)
   
-- [Client libraries](#XII.Libraries):  
+- [Client libraries](#XII.Libraries):
     1. Prepare your smart account ride script:
 
          <CodeBlock>
@@ -127,12 +127,12 @@ There are two major ways of smart account script installation:
 
     2. Use your native programming language to:
          -  Insert the ride script as an argument of the compileScript function;
-         -  Send this transaction to the node.  
+         -  Send this transaction to the node.
             (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
             
            
          
-         This is how it can be done:   
+         This is how it can be done:
 
          <CodeBlock>
 
@@ -147,7 +147,7 @@ There are two major ways of smart account script installation:
          // Make sure to insert your ride script between the brackets below
          Base64String script = node.compileScript("{-# SCRIPT_TYPE ACCOUNT #-} true").script();
          SetScriptTransaction tx = SetScriptTransaction.builder(script).getSignedWith(alice);
-            
+         
          // Sending the transaction to the node
          node.waitForTransaction(node.broadcast(tx).id());
          ```
@@ -170,4 +170,4 @@ There are two major ways of smart account script installation:
            
           More about [Set script transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
   
-The next lesson will be dedicated to [dApp](), another type of account script.  
+The next lesson will be dedicated to [dApp](), another type of account script.
