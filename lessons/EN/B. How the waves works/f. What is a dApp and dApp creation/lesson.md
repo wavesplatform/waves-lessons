@@ -1,36 +1,36 @@
 ## DApp definition ##
 
-A dApp is a Waves account with an attached script.  
-In the previous chapter, [What is a smart account and setting account script](), we discussed the differences between a regular and a [smart account](#smartaccountdefinition).  
-It will not be superfluous to remember that a dApp works with incoming transactions while a smart account operates with outgoing transactions.  
+A dApp is a Waves account with an attached script.
+In the previous chapter, [What is a smart account and setting account script](), we discussed the differences between a regular and a [smart account](#smartaccountdefinition).
+It will not be superfluous to remember that a dApp works with incoming transactions while a smart account operates with outgoing transactions.
 
-For us, as users, it may be clear what it means to operate with outgoing transactions.  
-We control our account, where we set a script that automates some actions.  
-It is a way of account management that makes the account owner’s life easier.  
-  
-Yet, it may be a bit ambiguous what an incoming transaction is.  
+For us, as users, it may be clear what it means to operate with outgoing transactions.
+We control our account, where we set a script that automates some actions.
+It is a way of account management that makes the account owner’s life easier.
+
+Yet, it may be a bit ambiguous what an incoming transaction is.
 Let's give it a try to grasp the idea with the following diagram example:
 
 ![](./img/dapp_diagram.png)
 
-The blue block user is our dApp account.  
-We are the creators of a token called "SAMPLE" that became popular in the imaginary world.  
-Due to the token anniversary, we decided to arrange a giveaway of 10 tokens to 10 unique users.  
-To get one free token, any user should "contact" a dApp via [invoke script transaction](https://docs.waves.tech/en/blockchain/transaction-type/invoke-script-transaction)  
-(will be explained in detail in the [Operations with transactions]() chapter).  
-  
-The green block user is a random user that decided to participate in the giveaway and receive 1 SAMPLE for free.  
-This user "contacts" our dApp account via the invoke script transaction, which launches a script in the dApp.  
-The script makes all necessary calculations on whether it was a unique user who received the reward for the first time.  
-Since all the script conditions were true (a unique user within the first ten reward claimers), the dApp credited 1 SAMPLE to that account.  
-  
-Let's recap the dApp definition.  
-A dApp is a Waves account with an attached script that allows invoking the script externally.  
+The blue block user is our dApp account.
+We are the creators of a token called "SAMPLE" that became popular in the imaginary world.
+Due to the token anniversary, we decided to arrange a giveaway of 10 tokens to 10 unique users.
+To get one free token, any user should "contact" a dApp via [invoke script transaction](https://docs.waves.tech/en/blockchain/transaction-type/invoke-script-transaction)
+(will be explained in detail in the [Operations with transactions]() chapter).
+
+The green block user is a random user that decided to participate in the giveaway and receive 1 SAMPLE for free.
+This user "contacts" our dApp account via the invoke script transaction, which launches a script in the dApp.
+The script makes all necessary calculations on whether it was a unique user who received the reward for the first time.
+Since all the script conditions were true (a unique user within the first ten reward claimers), the dApp credited 1 SAMPLE to that account.
+
+Let's recap the dApp definition.
+A dApp is a Waves account with an attached script that allows invoking the script externally.
 Read more about [dApp](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-a-dapp).
 
 ### DApp structure ###
 
-The structure of a dApp may seem a bit more complex than the smart account's, so we will dedicate a chapter to it.  
+The structure of a dApp may seem a bit more complex than the smart account's, so we will dedicate a chapter to it.
 Below you can see the basic structure of dApp.
 
 ![](./img/dapp_structure.png)
@@ -38,7 +38,7 @@ Below you can see the basic structure of dApp.
 There are two necessary elements:
 
 - **<u>Directives</u>**:  
-    It is a set of basic configurations written in the [Ride programming language](#ridechappter).  
+    It is a set of basic configurations written in the [Ride programming language](#ridechappter).
     They "inform" a compiler that we:
     
     - Use the Standard library of the 6th version;
@@ -55,25 +55,25 @@ There are two necessary elements:
     
     </CodeBlock>
 - **<u>Callable function</u>**:    
-    A callable function that is invoked externally.  
-    This is the same script that another user would invoke.  
-    It is necessary that a dApp would have at least one callable function.  
-    Also, you may write multiple callable functions within one dApp.  
+    A callable function that is invoked externally.
+    This is the same script that another user would invoke.
+    It is necessary that a dApp would have at least one callable function.
+    Also, you may write multiple callable functions within one dApp.
 
-    The callable function should be marked with the `@Callable(i)` annotation.  
+    The callable function should be marked with the `@Callable(i)` annotation.
     The `i` is an [Invocation](https://docs.waves.tech/en/ride/structures/common-structures/invocation) structure that contains invoke script transaction fields available to the callable function.
 
-    Below you can see an example of a callable function.  
-    It transfers 1 WAVES to an account that invoked it.  
-    Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).  
-    It also contains one condition: if the same account tries to invoke the script again, the callable function does nothing.  
+    Below you can see an example of a callable function.
+    It transfers 1 WAVES to an account that invoked it.
+    Afterward, it records the request information in the [account data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage).
+    It also contains one condition: if the same account tries to invoke the script again, the callable function does nothing.
     
     <CodeBlock>
 
     ```ride
     @Callable(i)
     func faucet () = {
-        let isKnownCaller =  match getBoolean(this, toBase58String(i.caller.bytes)) {
+        let isKnownCaller = match getBoolean(this, toBase58String(i.caller.bytes)) {
             case hist: Boolean =>
                 hist
             case _ =>
@@ -96,11 +96,11 @@ There are two necessary elements:
 There are two optional elements:
 
 - **<u>Verifier function</u>**:  
-    By default, every dApp has a built-in verifier function that verifies if this account signed order or a transaction.  
-    A verifier function cannot be invoked externally, i.e., another user cannot invoke it the same way as a callable function.  
-    Likewise, you may also add a verifier function.  
-    In the example below, the verifier function allows transfer transactions and denies orders and other transaction types.  
-    The [match](https://docs.waves.tech/en/ride/operators/match-case) operator is used to specify verification rules depending on the order/transaction type.  
+    By default, every dApp has a built-in verifier function that verifies if this account signed order or a transaction. 
+    A verifier function cannot be invoked externally, i.e., another user cannot invoke it the same way as a callable function.
+    Likewise, you may also add a verifier function.
+    In the example below, the verifier function allows transfer transactions and denies orders and other transaction types.
+    The [match](https://docs.waves.tech/en/ride/operators/match-case) operator is used to specify verification rules depending on the order/transaction type.
 
     <CodeBlock>
 
@@ -116,12 +116,12 @@ There are two optional elements:
 
     </CodeBlock>
 - **<u>Script context</u>**:  
-    A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.  
-    The Waves already created necessary functions and variables that you may use within your dApp.  
-    If you declare a variable or function within a particular callable function, it will only be available within that callable function.  
-    If you want to declare a global variable or a global function, make sure you write the code in the global dApp scope.  
+    A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.
+    The Waves already created necessary functions and variables that you may use within your dApp.
+    If you declare a variable or function within a particular callable function, it will only be available within that callable function.
+    If you want to declare a global variable or a global function, make sure you write the code in the global dApp scope.
 
-    For example, the [assetInfo function](https://docs.waves.tech/en/ride/functions/built-in-functions/#account-data-storage-functions:~:text=assetInfo(ByteVector)%3A%20Asset,15) requests information about the token by its ID.  
+    For example, the [assetInfo function](https://docs.waves.tech/en/ride/functions/built-in-functions/#account-data-storage-functions:~:text=assetInfo(ByteVector)%3A%20Asset,15) requests information about the token by its ID.
     After this, [isDefined function](https://docs.waves.tech/en/ride/functions/built-in-functions/#string-functions:~:text=isDefined%28T%7CUnit,1) checks that a token with this ID exists on the blockchain.
 
     <CodeBlock>
@@ -145,7 +145,7 @@ There are two optional elements:
 
 ## Usage examples ##
 
-Depending on a developer’s creativity, dApp usage results can be completely diverse.    
+Depending on a developer’s creativity, dApp usage results can be completely diverse.
 However, there are certain limits to what those dApp callable functions are capable of:
 
 - Editing [data storage](https://docs.waves.tech/en/blockchain/account/account-data-storage) entries;
@@ -165,7 +165,7 @@ See the complete list of possible [limitations](https://docs.waves.tech/en/ride/
 
 ### DApp script installation ###
 
-Keep in mind that the fee for the dApp Script installation is 0.01 WAVES.  
+Keep in mind that the fee for the dApp Script installation is 0.01 WAVES.
 There are two ways of making your account a dApp using:
 
 - [Waves IDE](#wavesidechapterreference):
@@ -174,14 +174,14 @@ There are two ways of making your account a dApp using:
     ![](./img/dApp_setup_1.png)
     3. Write the Ride script code and click "Deploy":
     ![](./img/dapp_setup_2.png)
-    4. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
-    After this, publish the dApp script.  
+    4. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).
+    After this, publish the dApp script.
     ![](./img/dapp_setup_3.png)
     5. As a result of a successful operation, you will see a similar notification:
     ![](./img/dapp_setup_success.png)
   
-- [Client libraries](#XII.Libraries):  
-    1. Prepare your [dApp script](https://docs.waves.tech/en/building-apps/smart-contracts/writing-dapps):  
+- [Client libraries](#XII.Libraries):
+    1. Prepare your [dApp script](https://docs.waves.tech/en/building-apps/smart-contracts/writing-dapps):
         
         <CodeBlock>
 
@@ -227,10 +227,10 @@ There are two ways of making your account a dApp using:
 
     2. Use your native programming language to:
          -  Insert the ride script as an argument of the compileScript function;
-         -  Send this transaction to the node.  
+         -  Send this transaction to the node.
             (Read more about [creating and broadcasting transactions](https://docs.waves.tech/en/building-apps/how-to/basic/transaction))
           
-         This is how it can be done:  
+         This is how it can be done:
 
         <CodeBlock>
 
@@ -270,5 +270,5 @@ There are two ways of making your account a dApp using:
         Read more about [set account script transaction]().
       
     3. Once the transaction is sent to the node successfully, the account will become a dApp.
-  
-The next lesson will give more information about multiple products and tools of the [Waves infrastructure]().  
+
+The next lesson will give more information about multiple products and tools of the [Waves infrastructure]().
