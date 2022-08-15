@@ -48,12 +48,11 @@ Follow the steps below to install a Waves node:
     ![](./img/dockerwin.png)
 5. The app will require you to fill in the settings of the container that is about to run:
     | ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg) | 
-    | :-----: | :-----: |
 
     It will be necessary to fill the following fields:
 
     | Field Name | Description | Example |
-    | :----- | :----- | :----- |
+    | :--- | :--- | :--- |
     | Container Name | Gives a name to a Docker container. | wavesnode |
     | Host Port | The port that will enable the REST API service on your localhost, for example, 127.0.0.1:6869.<br>In the next chapter, [Configuration](#configuration), we will configure the REST API of your node.  | 6869 |
     | Volumes<br>(Host Path - Container Path) | [Docker volumes](https://docs.docker.com/storage/volumes/) are intended for "connecting" the data stored locally on our host with the storage of the container.<br>It is necessary to do it for both directories that store the blockchain data (`C:\wavesnode\data`) and the configuration file (`C:\wavesnode\conf`).<br>It will "link" the data from your host to the container's storage to:<br>- `/var/lib/waves` for the blockchain data;<br>- `/etc/waves` for the configuration file.<br> If your docker container gets accidentally deleted, your node configurations and the blockchain copy will not be lost.<br>You can deploy a node once again with the stored local data, so the progress will be resumed right from where it stopped. | Host Path:<br>`C:\wavesnode\data`<br>Container Path:<br>`etc/waves`<br><br>Host Path:<br>`C:\wavesnode\conf`<br>Container Path:<br>`var/lib/waves`| 
@@ -135,7 +134,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Wallet parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | password | Random password a user sets. Encodes your seed Base58 string in the `wallet.dat` file. | RandomPassword_ |
     | seed | Connects your wallet to your node via the [wallet seed Base58 encoded]().<br><br>If you don’t have any existing wallet, comment out this parameter and start a node.<br>During the first run, the application will create a new wallet with a random seed for you.<br>In this case, the seed will be displayed in the application log.<br>If you miss it or if you don’t want to check the log files, it will also be available in [REST API]() using the `wallet/seed` method.|  K6XzUChB6DwTYCM1WxtVrv1BM6jTdcaBJrn6vkB3cK7qXCnqLV |
 
@@ -155,7 +154,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Blockchain parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | type | Selects the blockchain type: [MAINNET, STAGENET, TESTNET]() or [CUSTOM](https://docs.waves.tech/en/waves-node/private-waves-network). | MAINNET | 
 
     Read more about [Blockchain settings](https://docs.waves.tech/en/waves-node/node-configuration#blockchain-settings).
@@ -181,7 +180,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     REST API parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | enable | Activates REST API.<br>If you want to deactivate REST API, change the default value to no. | yes |
     | bind-address | Network address where the REST API accepts incoming connections.<br>Please, use the 0.0.0.0 address when deploying a node with Docker.<br>Use [Nginx’s proxy pass module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html) or [SSH port forwarding](https://blog.trackets.com/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html) for external access. | 127.0.0.1 |
     | port | Port number where the REST API accepts incoming connections. | 6869 |
@@ -204,7 +203,7 @@ For the sake of simplicity, we will concentrate on the same modules as the ones 
 
     Network parameters:  
     | Name | Description | Example |
-    | :---- | :---- | :---- |
+    | :--- | :--- | :--- |
     | node-name | Sets the name of your node visible to other participants of the P2P network.<br>The name is transmitted during the initial handshake. | waves-node | 
     | bind-address | Sets the IP address of the local network interface on which Waves Node will accept incoming connections.<br>By default, node binds to 0.0.0.0 that means that it will listen on all available network adapters. | 0.0.0.0 | 
     | port | Sets the network port number to which other Waves nodes will connect.<br>Check that the port is reachable from outside. Otherwise, your node will connect to the P2P network using only outgoing connections.<br>If other applications use this port, your node won’t start.<br>For example:<br>-6868 for Mainnet<br>-6863 for Testnet<br>-6862 for Stagenet| 6868 | 

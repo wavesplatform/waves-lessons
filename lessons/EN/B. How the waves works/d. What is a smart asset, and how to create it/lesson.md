@@ -159,7 +159,7 @@ There are two main steps to installing a smart asset script:
 
     **Parameters Description**
     | Field | Description | Example |
-    | ----------- | ----------- | ----------- |
+    | --- | --- | --- |
     | assetId | Token ID base58 encoded. | 7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv |
     | script | Compiled asset script, up to 8192 bytes, base64 encoded. | base64:AQa3b8tH |
   

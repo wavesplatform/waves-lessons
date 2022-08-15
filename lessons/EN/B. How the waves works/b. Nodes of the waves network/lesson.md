@@ -69,7 +69,7 @@ As a quick preview, we will mention the minimal:
 - System requirements:  
     
     | CPU | RAM | SSD | 
-    | :----------:  | :----------:  | :----------: 
+    | :---:  | :---:  | :---: | 
     | 2+ | 4+ GB| 100+ GB SSD|
 
 - Node Requirements:  

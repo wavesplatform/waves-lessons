@@ -76,8 +76,7 @@ In the Waves IDE, you can work with [dApps](#dapptopic), [smart accounts](#smart
 
 This is a demonstration of the Waves IDE user interface:
     
-![waves_ide](./images/waveside.png)
-    
+![](./images/waveside.png)
 
 It is possible to switch between different networks within the IDE, be it a default network or a custom one.
 

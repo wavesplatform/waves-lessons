@@ -87,7 +87,7 @@ For example, we can transfer 10 WAVES from account "alice" to account "bob".
 This transaction would necessarily include parameters, as shown in the table below.
 
   | Field | Description | Example |
-  | ----------- | ----------- | ----------- |
+  | --- | --- | --- |
   | assetId | Token ID base58 encoded.<br>null means to transfer in WAVES. | 7uncmN7dZfV3fYVvNdYTngrrbamPYMgwpDnYG1bGy6nA |
   | amount | Amount of token to transfer:<br> an integer value specified in the minimum fraction (“cents”) of the token.| 1000 |
   | recipient | Recipient address base58 encoded or recipient [alias](https://docs.waves.tech/en/blockchain/account/alias) with alias:<chain_id>:prefix.<br>For example alias:T:merry (see [Chain ID](https://docs.waves.tech/en/blockchain/blockchain-network/#chain-id)) | 3PFmoN5YLoPNsL4cmNGkRxbUKrUVntwyAhf |
@@ -101,14 +101,14 @@ This transaction would necessarily include parameters, as shown in the table bel
   It has the following parameters:
 
   | Field | Description | Example |
-  | ----------- | ----------- | ----------- |
+  | --- | --- | --- |
   | amount | Amount of the amount asset:<br> an integer value specified in the minimum fraction (“cent”) of asset | 1000 |
   | price | Price for the amount asset nominated in the price asset, multiplied by the factor:<br>- 10<sup>8</sup> for the Exchange transaction version 3;<br>- 10<sup>8 + priceAssetDecimals – amountAssetDecimals,<br>where amountAssetDecimals, priceAssetDecimals are decimals of the assets, for the Exchange transaction version 2 or 1.</sup>| 1134500 |
   | buyMatcherFee | Matcher fee for the buy order execution. The fee token ID is indicated in the buy order. | 300000 |
   | sellMatcherFee | Matcher fee for the sell order execution. The fee token ID is indicated in the sell order. | 750 | 
   | order1, order2 | Buy and sell orders. See the  [Order](https://docs.waves.tech/en/blockchain/order). | [Example](https://docs.waves.tech/en/blockchain/transaction-type/exchange-transaction#json-representation:~:text=%22order1%22%3A,%5D%0A%20%20%7D%2C)|
 
-  More about [Exchange Transaction](https://docs.waves.tech/en/blockchain/transaction-type/exchange-transaction).  
+  More about [Exchange transaction](https://docs.waves.tech/en/blockchain/transaction-type/exchange-transaction).  
 
 ## Blocks ##
 
