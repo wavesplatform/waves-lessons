@@ -160,7 +160,7 @@ This bond makes it impossible to falsify even a tiny piece of data, as it would 
 
 All the blocks don't exist by themselves, and they all are a part of the big sequence of blocks.  
 This sequence of blocks is called a blockchain.  
-In this picture, you may see a representation of this idea (from left to right):  
+In this picture, you may see a representation of this idea (from left to right):
 
 ![](./img/blockchainexm.png)
 

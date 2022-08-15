@@ -19,14 +19,14 @@ Before installing a node, ensure your Waves account has a [generating balance]()
 Also, it would be necessary to keep on hand a Base58 encoded string of the seed phrase of your account.  
 Here is how you can encode a seed phrase to Base58:  
 1. Open the [Waves IDE](https://waves-ide.com/);
-2. Click "RideREPL" down the screen:  
-    ![](./img/repl1.png)  
+2. Click "RideREPL" down the screen:
+    ![](./img/repl1.png)
 3. Insert in the function your seed phrase:  
     `"your-seed-phrase".toBytes().toBase58String()`    
     For example:  
     `"surround fever above evil walk slam left thought credit pinch life follow arch work stock".toBytes().toBase58String()`
-4. Copy the function with your seed phrase to the console:  
-    ![](./img/repl2.png)  
+4. Copy the function with your seed phrase to the console: 
+    ![](./img/repl2.png)
 5. Click "Enter" to get a Base58 encoded string of your seed phrase:
     ![](./img/repl3.png)
 6. Save this Base58 encoded string, as we will use it later for node installation.  
@@ -66,7 +66,7 @@ Follow the steps below to install a Waves node:
     ![](./img/dockerwin3.png)
     You will see multiple lines of logs.  
     Please, note that it may take a few moments to deploy a node. 
-    Once you see notifications about the height of the blockchain, it means everything is working properly:  
+    Once you see notifications about the height of the blockchain, it means everything is working properly:
     ![](./img/dockerwin4.png)
    
 
@@ -250,13 +250,13 @@ These methods can be:
 The chapter goal is to get this API key and API key hash to operate with your node’s private methods.  
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
-2. Click "Try it out":  
-    ![](./img/swagg1.png)  
+2. Click "Try it out":
+    ![](./img/swagg1.png)
 3. Enter any random string value and click "Execute":
-    ![](./img/swagg2.png)  
+    ![](./img/swagg2.png)
     Please do not use the example in the screenshot, as it is only for demonstration purposes.
 4. In the response section below, you will receive a hash:
-    ![](./img/swagg3.png)  
+    ![](./img/swagg3.png)
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
 ### Configuration file setup ###
@@ -266,8 +266,8 @@ Follow the instructions below for setting up configurations:
     Go to the directory with the configuration file (`C:\wavesnode\conf\waves-sample.conf`).
 2.  Edit the configuration file.  
     [In the previous chapter](#installation), we deployed a docker container with the Base58 encoded seed and the password as environment variables.  
-    It looked something like this but with your seed and password: 
-    ![](./img/dockerwin.png)  
+    It looked something like this but with your seed and password:
+    ![](./img/dockerwin.png)
     
     We will write these details in the configuration file within the `waves.wallet` module.  
     Add `wallet`, `blockchain`, `rest-api`, and `network` modules to the file.    
@@ -303,16 +303,16 @@ Follow the instructions below for setting up configurations:
         }
     }
     ```
-3. Save the file and deploy a node once again by restarting a container:  
-    ![](./img/noderestart.png)  
+3. Save the file and deploy a node once again by restarting a container:
+    ![](./img/noderestart.png)
     Please, wait a few moments for the node to restart.  
 4. Check your deployed node’s [REST API interface](http://localhost:6869/api-docs/index.html).  
     There you could see multiple methods to interact with your node.  
     For instance, you can try a:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods do not require any additional authorization.  
-        For example, the `/addresses/` method will return the address of your node wallet.  
-        ![](./img/swaggadd.png) 
+        For example, the `/addresses/` method will return the address of your node wallet.
+        ![](./img/swaggadd.png)
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
@@ -330,7 +330,7 @@ Follow the instructions below for setting up configurations:
             ![](./img/swagg8.png)
         4. Now, you can use the private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
-            ![](./img/swagg9.png)   
+            ![](./img/swagg9.png)
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).   
 
@@ -422,15 +422,14 @@ Follow the steps below to synchronize the current blockchain with your node:
     ```    
     The hash of the `blockchain_last.tar` file must match the content inside the `blockchain_last.tar.SHA1SUM` file.  
     In our example, we receive the hash ` f464c9da265077063f68e3f097cd9b0337b148e5` after running both commands.
-6. Restart the node:  
-      
+6. Restart the node:
     ![](./img/restartnode.png)
 7. Check the logs of the running container.  
-    Click on the container name:  
+    Click on the container name:
     ![](./img/winlogs0.png)  
  
-    You will see the height of the blockchain increasing rapidly:  
-    ![](./img/nodelogswin.png)  
+    You will see the height of the blockchain increasing rapidly:
+    ![](./img/nodelogswin.png)
     Please, note that the complete synchronization may take up to 1-3 days and depends on your CPU frequency. 
 
 
@@ -484,9 +483,10 @@ We publish the update of the node version, 1.1, and require all the node owners 
 Out of all five nodes, only three node owners upgraded their nodes with the update.  
 The other two nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
-Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.  
-![](./img/blockchainfork.png)  
-  
+Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.
+
+![](./img/blockchainfork.png)
+
 Eventually, the two nodes that were not updated may stop working.  
 This is why it is vital to timely update your node.  
   
@@ -509,38 +509,37 @@ There you may see the:
     Update description gives details of what exactly has been implemented within this release.
 - **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it again.
-  
-![](./img/wavesgit.png)  
-  
+
+![](./img/wavesgit.png)
+
 Once you receive a notification of a new node version release, follow the steps below to upgrade your node:  
 1. Pull the latest Docker image:
 
     ```
     docker pull wavesplatform/wavesnode
     ```
-2. Stop the currently running node container:  
+2. Stop the currently running node container:
     ![](./img/stpcontdock.png)
-3. Remove the "old "node container:  
+3. Remove the "old "node container:
     ![](./img/rmcontdock.png)
 4. On the [page with the latest release](https://github.com/wavesplatform/Waves/releases/), take a look at the "Update notes" section.  
     There you will be able to see whether your node needs to re-import the blockchain data again.  
       
-    If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:  
-    ![](./img/gitupdtunnsc.png)  
+    If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:
+    ![](./img/gitupdtunnsc.png)
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
-    -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5. 
-    
-    ![](./img/gitupdateneeded.png)    
+    -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5.
+    ![](./img/gitupdateneeded.png)
 5. Start your node once again:    
    ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg)| 
 6. Check the logs of the running node container.  
-    Click on the container name:  
-    ![](./img/dockerwin3.png)  
+    Click on the container name:
+    ![](./img/dockerwin3.png)
     It may take a few moments before the node is running.   
-    Messages regarding increasing blockchain height mean that everything is completed successfully:  
+    Messages regarding increasing blockchain height mean that everything is completed successfully: 
     ![](./img/dockerwin4.png)
   
 ## Node rollback ##
@@ -574,17 +573,19 @@ Lastly, the node will be able to synchronize with the current blockchain state a
 
 The best way to get the idea is to watch it working on the live example.  
 We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
-A feature that was included in the update was activated at the 3000th block:    
+A feature that was included in the update was activated at the 3000th block:
+
 ![](./img/3000.png)
 
 Since we did not update our node before the feature activation, we switched to a fork.  
-At the moment of the 3002nd block, we found out that we were on the fork:  
+At the moment of the 3002nd block, we found out that we were on the fork:
+
 ![](./img/3002.png)
 
 In this situation, we will need to:
 - Update our node;
 - Roll it back from the 3002nd block to the 3000th block before the split occurred.  
-    
+
 ![](./img/3002to3000.png)
 
 ### How to rollback a node ###

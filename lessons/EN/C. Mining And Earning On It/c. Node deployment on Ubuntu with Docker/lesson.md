@@ -265,12 +265,12 @@ The chapter goal is to get this API key and API key hash to operate with your no
 Here is how you can do it:
 1. Open [`/utils/hash/secure`](https://nodes.wavesnodes.com/api-docs/index.html#/utils/hashSecure) in the Swagger REST API node interface.
 2. Click "Try it out":  
-    ![](./img/swagg1.png)  
+    ![](./img/swagg1.png)
 3. Enter any random string value and click "Execute":
-    ![](./img/swagg2.png)  
+    ![](./img/swagg2.png)
     Please do not use the example in the screenshot, as it is only for demonstration purposes.
 4. In the response section below, you will receive a hash:
-    ![](./img/swagg3.png)  
+    ![](./img/swagg3.png)
 5. Save both the original phrase you entered (API key) and its hash (API key hash) as we will use them for interaction with private node methods in this lesson.
 
 ### Configuration file setup ###
@@ -336,8 +336,8 @@ Follow the instructions below for setting up configurations:
     For instance, you can try a:
     - [Public method](http://127.0.0.1:6869/api-docs/index.html#/addresses):  
         All public methods do not require any additional authorization.  
-        For example, the `/addresses/` method will return the address of your node wallet.  
-        ![](./img/swaggadd.png) 
+        For example, the `/addresses/` method will return the address of your node wallet.
+        ![](./img/swaggadd.png)
     - [Private method](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig):  
         All private methods require authorization with an API key and API key hash.    
         Kindly note that the API key hash inserted in the configuration file does not equal the API key.  
@@ -355,7 +355,7 @@ Follow the instructions below for setting up configurations:
             ![](./img/swagg8.png)
         4. Now, you can use the private methods of your node.  
             For example, the [`/configInfo`](http://127.0.0.1:6869/api-docs/index.html#/debug/getConfig) method will return configurations of the currently running node.
-            ![](./img/swagg9.png)   
+            ![](./img/swagg9.png)
       
     Read more about [Node REST API](https://docs.waves.tech/en/waves-node/node-api/).  
 
@@ -529,9 +529,10 @@ We publish the update of the node version, 1.1, and require all the node owners 
 Out of all five nodes, only three node owners upgraded their nodes with the update.  
 The other two nodes remained with the older node version.  
 After this, the blockchain has split into two different chains:  
-Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.  
-![](./img/blockchainfork.png)  
-  
+Three nodes remained with the original blockchain, installing all necessary updates, while two other nodes switched to the fork.
+
+![](./img/blockchainfork.png)
+
 Eventually, the two nodes that were not updated may stop working.  
 This is why it is vital to timely update your node.  
   
@@ -554,9 +555,9 @@ There you may see the:
     Update description gives details of what exactly has been implemented within this release.
 - **<u>Update notes</u>**:  
     Update notes inform a node owner whether he needs to re-import the blockchain data and synchronize it again.
-  
-![](./img/wavesgit.png)  
-  
+
+![](./img/wavesgit.png)
+
 Once you receive a notification of a new node version release, follow the steps below to upgrade your node:  
 1. Pull the latest Docker image:
 
@@ -576,15 +577,14 @@ Once you receive a notification of a new node version release, follow the steps 
 4. On the [page with the latest release](https://github.com/wavesplatform/Waves/releases/), take a look at the "Update notes" section.  
     There you will be able to see whether your node needs to re-import the blockchain data again.  
       
-    If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:  
+    If the blockchain re-import is not needed, it will be enough to start a new container with the freshly downloaded image:
     ![](./img/gitupdtunnsc.png)  
       
     If there is a re-import requirement note, make sure to re-import the blockchain database.  
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
-    -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5. 
-    
-    ![](./img/gitupdateneeded.png)    
+    -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5.
+    ![](./img/gitupdateneeded.png)
 5. Start your node once again:    
    
    ```
@@ -640,17 +640,19 @@ Lastly, the node will be able to synchronize with the current blockchain state a
 
 The best way to get the idea is to watch it working on the live example.  
 We will return to our fictional blockchain instance, where the blockchain split into two chains at the 3000th block.  
-A feature that was included in the update was activated at the 3000th block:    
+A feature that was included in the update was activated at the 3000th block:
+
 ![](./img/3000.png)
 
 Since we did not update our node before the feature activation, we switched to a fork.  
-At the moment of the 3002nd block, we found out that we were on the fork:  
+At the moment of the 3002nd block, we found out that we were on the fork:
+
 ![](./img/3002.png)
 
 In this situation, we will need to:
 - Update our node;
-- Roll it back from the 3002nd block to the 3000th block before the split occurred.  
-    
+- Roll it back from the 3002nd block to the 3000th block before the split occurred.
+
 ![](./img/3002to3000.png)
 
 ### How to rollback a node ###

@@ -9,9 +9,10 @@ We control our account, where we set a script that automates some actions.
 It is a way of account management that makes the account owner’s life easier.  
   
 Yet, it may be a bit ambiguous what an incoming transaction is.  
-Let's give it a try to grasp the idea with the following diagram example:    
+Let's give it a try to grasp the idea with the following diagram example:
+
 ![](./img/dapp_diagram.png)
-    
+
 The blue block user is our dApp account.  
 We are the creators of a token called "SAMPLE" that became popular in the imaginary world.  
 Due to the token anniversary, we decided to arrange a giveaway of 10 tokens to 10 unique users.  
@@ -30,10 +31,9 @@ Read more about [dApp](https://docs.waves.tech/en/building-apps/smart-contracts/
 ### DApp structure ###
 
 The structure of a dApp may seem a bit more complex than the smart account's, so we will dedicate a chapter to it.  
-Below you can see the basic structure of dApp.  
-  
+Below you can see the basic structure of dApp.
+
 ![](./img/dapp_structure.png)
-    
 
 There are two necessary elements:
 
@@ -172,12 +172,12 @@ There are two ways of making your account a dApp using:
     1. Open the [Waves IDE](https://waves-ide.com/) with a signed-in account;
     2. Click "+" in the right corner of the IDE, select "dApp script":
     ![](./img/dApp_setup_1.png)
-    1. Write the Ride script code and click "Deploy":
+    3. Write the Ride script code and click "Deploy":
     ![](./img/dapp_setup_2.png)
-    1. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
+    4. Select the account and the tool with which you would sign this [transaction](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction).  
     After this, publish the dApp script.  
     ![](./img/dapp_setup_3.png)
-    1. As a result of a successful operation, you will see a similar notification:  
+    5. As a result of a successful operation, you will see a similar notification:
     ![](./img/dapp_setup_success.png)
   
 - [Client libraries](#XII.Libraries):  
