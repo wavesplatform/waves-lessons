@@ -116,7 +116,7 @@ There are two major ways of smart account script installation:
 
          <CodeBlock>
 
-         ```
+         ```ride
          {-# STDLIB_VERSION 5 #-}
          {-# CONTENT_TYPE EXPRESSION #-}
          {-# SCRIPT_TYPE ACCOUNT #-}
