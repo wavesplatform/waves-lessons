@@ -46,7 +46,7 @@ The block generation process is called mining.
 
 ## Types of consensus ##
 
-There are many types of consensus algorithms with different advantages and disadvantages.  
+There are many types of consensus algorithms with different advantages and disadvantages.
 
 ### Proof of work (PoW) ###
 
@@ -79,12 +79,12 @@ The Waves blockchain uses **Leased Proof of Stake (LPoS)** consensus instead.
 Rather than selecting a limited number of block producers, LPoS users can lease (not transfer) an amount of Waves tokens to nodes they like or trust.  
 The probability of being a block generator is proportional to the total amount of tokens leased to that account.  
 Leased WAVES are locked in the user’s account and cannot be transferred or traded.  
-Still, the tokens remain in complete control of the account holder, and leases can be canceled at any time.  
+Still, the tokens remain in complete control of the account holder, and leases can be canceled at any time.
 
 ### Proof of authority (PoA) ###
 
 Proof of Authority (PoA) is an alternative consensus mechanism that relies on known and reputable validators to produce blocks.  
-PoA is geared toward enterprises or private organizations that want to build chains that are essentially closed and do not involve external participants.   
+PoA is geared toward enterprises or private organizations that want to build chains that are essentially closed and do not involve external participants.
 
 ## Why blockchain is marvelous ##
 
