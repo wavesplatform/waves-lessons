@@ -102,6 +102,8 @@ There are two optional elements:
     In the example below, the verifier function allows transfer transactions and denies orders and other transaction types.  
     The [match](https://docs.waves.tech/en/ride/operators/match-case) operator is used to specify verification rules depending on the order/transaction type.  
 
+    <CodeBlock>
+
     ```ride
     @Verifier(tx)
     func verify() = {
@@ -111,6 +113,8 @@ There are two optional elements:
         }
     }
     ```
+
+    </CodeBlock>
 - **<u>Script context</u>**:  
     A script context is a set of [built-in variables](https://docs.waves.tech/en/ride/variables/built-in-variables) and [built-in functions](https://docs.waves.tech/en/ride/functions/built-in-functions) available for usage within a dApp script.  
     The Waves already created necessary functions and variables that you may use within your dApp.  
@@ -120,10 +124,24 @@ There are two optional elements:
     For example, the [assetInfo function](https://docs.waves.tech/en/ride/functions/built-in-functions/#account-data-storage-functions:~:text=assetInfo(ByteVector)%3A%20Asset,15) requests information about the token by its ID.  
     After this, [isDefined function](https://docs.waves.tech/en/ride/functions/built-in-functions/#string-functions:~:text=isDefined%28T%7CUnit,1) checks that a token with this ID exists on the blockchain.
 
-    ```
+    <CodeBlock>
+
+    ```js
     let asset = assetInfo(base58'8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS')
     asset.isDefined()
     ```
+    ```java
+    ```
+    ```php
+    ```
+    ```csharp
+    ```
+    ```go
+    ```
+    ```python
+    ```
+    
+    </CodeBlock>
 
 ## Usage examples ##
 
