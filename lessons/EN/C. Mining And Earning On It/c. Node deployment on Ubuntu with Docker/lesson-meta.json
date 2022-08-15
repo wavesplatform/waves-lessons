@@ -1,6 +1,6 @@
 {
     "guid": "890f0c02-dc10-41a1-b5dc-6eb8b2eeefc8",
-    "title": "[Node deployment][ubuntu] docker",
+    "title": "Node deployment on Ubuntu with Docker",
     "description": "In this lesson, we will deploy a node in the Mainnet network ready for mining, using Docker on Ubuntu",
     "number": 3,
     "doclink": "https://docs.waves.tech/en/waves-node/waves-node-in-docker",
