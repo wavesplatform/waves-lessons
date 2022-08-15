@@ -31,7 +31,6 @@ It will also use the benefits of emerging technologies like the Internet of Thin
 
 ![](./img/web3.png)
 
-
 ## Web services now and web3 architecture ##
 
 Web3 is different from the previous shift from Web1 to Web2.  
@@ -55,7 +54,7 @@ When a user opens a page in his browser, the server responds with a Web Page wit
 Once a user interacts with the UI components of the web page – for example, buttons and forms – the JavaScript code creates a new request to the server: to fetch data to display or to write some data to the database on the server.  
 
 The server processes the request and returns as a response HTML, XML, or JSON data.  
-The JavaScript in a browser uses this data to change the client’s application state and view.  
+The JavaScript in a browser uses this data to change the client’s application state and view.
 
 ![](./img/web3-2.png)
 
@@ -72,7 +71,7 @@ The main difference is that the data can be read by anyone and is public on popu
 
 All updates to the blockchain network must be submitted using transactions.  
 The blockchain network determines that a transaction is valid only if a valid digital signature is provided.  
-You may not be familiar with digital signatures, so let’s dive deeper into it.  
+You may not be familiar with digital signatures, so let’s dive deeper into it.
 
 ![](./img/web3-3.png)
 
@@ -99,7 +98,7 @@ On the other hand, the network address is obtained directly from the public key 
 All these transformations are **one-directional**.  
 The opposite direction is very hard in terms of required computations.
 
-It implies an astronomical value (~2<sup>25</sup>) of computations required!  
+It implies an astronomical value (~2<sup>25</sup>) of computations required!
 
 ![](./img/curve.png)
 

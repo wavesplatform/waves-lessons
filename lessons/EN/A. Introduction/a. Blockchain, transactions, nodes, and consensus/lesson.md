@@ -30,7 +30,7 @@ A node is a computer that stores the blockchain data or just their hashes, valid
 
 Let’s imagine we have hundreds and thousands of copies of this data distributed on different computers across many countries and continents.  
 We have to rewrite the blocks on most of these copies to change the block history.  
-That is why you might have heard that blockchain can ensure data is **immutable** for a long time.  
+That is why you might have heard that blockchain can ensure data is **immutable** for a long time.
 
 ![](./img/nodes.png)
 

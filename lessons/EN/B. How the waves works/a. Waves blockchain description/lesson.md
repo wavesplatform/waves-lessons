@@ -144,10 +144,10 @@ These "containers" have:
 - **<u>Transaction list</u>**  
   List of all transactions inside the particular block.
   
-This concept can be displayed with the following picture:  
+This concept can be displayed with the following picture:
 
-![](./img/blockstr.png) 
-  
+![](./img/blockstr.png)
+
 An essential element in a block is a hash.  
 <u>Hash</u> is a result of mathematical algorithms that converts an input value of any size to a specific combination of letters and numbers of a fixed size.  
 For example, if we take the phrase "I love Waves", with the magic help of the SHA256 algorithm, this phrase would turn into the hash:  
@@ -161,9 +161,9 @@ This bond makes it impossible to falsify even a tiny piece of data, as it would 
 All the blocks don't exist by themselves, and they all are a part of the big sequence of blocks.  
 This sequence of blocks is called a blockchain.  
 In this picture, you may see a representation of this idea (from left to right):  
-  
-![](./img/blockchainexm.png)  
-  
+
+![](./img/blockchainexm.png)
+
 Since blockchain is decentralized, this chain of blocks is stored simultaneously at multiple independent nodes in the network.  
    
 In the next lesson, we will concentrate on how on [nodes of the Waves network]() function and the benefits of having one.
