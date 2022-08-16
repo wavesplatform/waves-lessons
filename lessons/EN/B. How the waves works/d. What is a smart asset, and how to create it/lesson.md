@@ -8,7 +8,6 @@ All the tokens can be either regular assets or smart assets.
 A smart asset is an asset to which a script is attached.
 It is one of 3 types of [smart contracts](https://docs.waves.tech/en/building-apps/smart-contracts/waves-smart-contracts-overview) along with [dApp]() and [smart account]().
 Using an asset script allows a transaction with that asset or rejects it.
-
 For example, we may create a smart asset with a script that blocks operations with this asset for specific users.
 
 There are three different possible results of the asset script invocation:
