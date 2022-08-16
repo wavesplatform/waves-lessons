@@ -99,7 +99,7 @@ The Waves team supports node pools with public API endpoints accessible to anyon
 - [Testnet](https://nodes-testnet.wavesnodes.com)
 - [Stagenet](https://nodes-stagenet.wavesnodes.com)
 
-With the help of the Swagger user interface, you can work with:
+With the help of the Swagger user interface, you can work with:  
 **<u>Public methods</u>**:  
   - `Reading blockchain data:`   
     Information about accounts, transactions, tokens, blocks, etc.
@@ -108,7 +108,6 @@ With the help of the Swagger user interface, you can work with:
   - `Working with utilities:`  
     Random seed generation, checking the validity of an address, etc. 
   
-
 The Waves team does not provide the API key for public nodes.
 If you want to use private endpoints, start [your node](https://docs.waves.tech/en/waves-node/private-waves-network).
 

@@ -45,7 +45,7 @@ Also, you may create your custom network.
 See more about [Custom blockchain](https://docs.waves.tech/en/waves-node/private-waves-network#deploy-node-with-custom-blockchain-in-docker).
 
 You may launch your node in any of these networks, depending on the goal.
-You can read more about it in the [Mining and earning on it]() chapter.
+Read more about it in the [Mining and earning on it]() chapter.
 
 ## Useful network resources ##
 

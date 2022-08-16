@@ -506,11 +506,11 @@ Due to this, the Waves team publishes updates of the blockchain that all the nod
 These updates expand nodes’ functionality, offer new transaction types, can fix bugs, etc. 
 
 There are two types of updates:
-- **<u>The ones that can be implemented right away</u>**  
+- **<u>The ones that can be implemented right away</u>**:  
     Usually, it is minor bug fixes or slight changes.
     Once you update your node with them, the new functionality will become available for you right away.
     If you do not update your node with such a release, it will not cause a [fork](#fork-of-blockchain).
-- **<u>The ones that take time to be implemented</u>**  
+- **<u>The ones that take time to be implemented</u>**:  
     Extensive updates may include consensus changes or any other significant changes.
     On the node releases page, node owners are warned about the upcoming switch to the new changes.
     For example, an update may be published on the 1st of September, but in the comments of the release, it is mentioned:

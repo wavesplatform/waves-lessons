@@ -90,14 +90,12 @@ Anyone with Bob’s public key can verify that Bob’s private key signed a part
 This is known as asymmetric cryptography.
 
 Here is an important note:
-
 > A private key can be generated from random seed phrases using hashing functions.
 The public key is obtained from the private key by using an elliptic curve multiplication.
 On the other hand, the network address is obtained directly from the public key using hashing functions.
 
 All these transformations are **one-directional**.
 The opposite direction is very hard in terms of required computations.
-
 It implies an astronomical value (~2<sup>25</sup>) of computations required!
 
 ![](./img/curve.png)

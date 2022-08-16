@@ -505,11 +505,11 @@ Due to this, the Waves team publishes updates of the blockchain that all the nod
 These updates expand nodes’ functionality, offer new transaction types, can fix bugs, etc. 
 
 There are two types of updates:
-- **<u>The ones that can be implemented right away</u>**  
+- **<u>The ones that can be implemented right away</u>**:  
     Usually, it is minor bug fixes or slight changes.
     Once you update your node with them, the new functionality will become available for you right away.
     If you do not update your node with such a release, it will not cause a [fork](#fork-of-blockchain).
-- **<u>The ones that take time to be implemented</u>**  
+- **<u>The ones that take time to be implemented</u>**:  
     Extensive updates may include consensus changes or any other significant changes.
     On the node releases page, node owners are warned about the upcoming switch to the new changes.
     For example, an update may be published on the 1st of September, but in the comments of the release, it is mentioned:
@@ -739,11 +739,11 @@ In this situation, we will need to:
 5. Compare the block signatures of the blockchain and our node blockchain.
 
     Two scenarios are possible:
-    - **<u>The signatures match.</u>**  
+    - **<u>The signatures match</u>**.  
         If the signatures match, your node is up to date.
         You will not need to update and roll it back for now.
         You can skip all the steps of the instruction below and go directly to the [Node networks]() chapter.
-    - **<u>The signatures do not match.</u>**  
+    - **<u>The signatures do not match</u>**.  
         If the signatures do not match, it will be necessary to repeat steps №3 and №4 in 20 minutes. 
 
         The reason why we are doing this is the following:

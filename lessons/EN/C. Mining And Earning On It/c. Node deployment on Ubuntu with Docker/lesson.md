@@ -495,11 +495,11 @@ Due to this, the Waves team publishes updates of the blockchain that all the nod
 These updates expand nodes’ functionality, offer new transaction types, can fix bugs, etc. 
 
 There are two types of updates:
-- **<u>The ones that can be implemented right away</u>**   
+- **<u>The ones that can be implemented right away</u>**:   
     Usually, it is minor bug fixes or slight changes.
     Once you update your node with them, the new functionality will become available for you right away.
     If you do not update your node with such a release, it will not cause a [fork](#fork-of-blockchain).
-- **<u>The ones that take time to be implemented</u>**  
+- **<u>The ones that take time to be implemented</u>**:  
     Extensive updates may include consensus changes or any other significant changes.
     On the node releases page, node owners are warned about the upcoming switch to the new changes.
     For example, an update may be published on the 1st of September, but in the comments of the release, it is mentioned:
@@ -664,14 +664,14 @@ In this situation, we will need to:
     ```
 2. Check the blockchain height of your node via the [REST API of your node](http://localhost:6869/blocks/height).
     Two scenarios are possible:
-    - Your blockchain height is the same or is different for a few blocks.
+    - **<u>Your blockchain height is the same or is different for a few blocks</u>**.
         It can look something like this:
 
         ```
         {"height":2999}
         ```
         In such a case, please, continue with step №3 of this instruction.
-    - Your blockchain height is significantly far behind the blockchain's height.
+    - **<u>Your blockchain height is significantly far behind the blockchain's height</u>**.
         It can look something like this:
         
         ```
