@@ -7,13 +7,6 @@
 
 ## Asset definition ##
 
-In the topic [How the Waves works](), we covered the lesson on smart assets, [What is a smart asset, and how to create it]().
-That lesson was a simple particular demonstration of what a smart asset is and how it could be created.
-Let's repeat what we have learned about smart assets. A smart asset is an asset to which a script is attached. As an instance of a smart asset, we may create a smart asset with a script that blocks operations with this asset for specific users. 
-
-Now we have more advanced knowledge of the Waves blockchain, so we can take it to a higher level and expand our understanding of assets.
-This lesson aims to explain the concept of regular assets in general.
-
 An asset (or a token) is a digital resource that can be used as:
 - **<u>Cryptocurrency</u>**:  
         Aside from the main Waves blockchain cryptocurrency, WAVES, you can create your own cryptocurrency.
@@ -30,7 +23,7 @@ An asset (or a token) is a digital resource that can be used as:
         The best way to grasp this idea is to see it working on the live example.
         For instance, you can create a cookery game, using the Waves blockchain as your database.
         In that game your goal is to generate recipes.
-        Every account of the game is the Waves blockchain account.
+        Every account of the game is the Waves blockchain [account]().
         To generate a recipe, you spin a wheel and receive a reward recipe.
         Every wheel spin costs one [token that we created](#asset-creation).
         All users can receive three free tokens every 24 hours.
@@ -41,11 +34,12 @@ If you wish to become an owner of a new cryptocurrency, you can [create it](#ass
 After creation, the destiny of this asset will be totally in your hands.
 Likewise, you can also use assets as a ready solution for your projects.
 
-Every asset has a set of attributes that are essential for operation with it.
+In the topic [How the Waves works](), we covered the lesson on smart assets, [What is a smart asset, and how to create it]().
+That lesson was a simple particular demonstration of what a smart asset is and how it could be created. The difference between a regular asset and a smart asset is that a smart asset has an additional configuration, defining rules of work of the asset. 
 
 ## Operations with assets ##
 
-
+Every asset has a set of attributes that are essential for operation with it.
 
 ### Asset creation ###
 
