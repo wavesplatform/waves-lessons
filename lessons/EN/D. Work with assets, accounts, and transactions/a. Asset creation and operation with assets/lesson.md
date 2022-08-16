@@ -7,9 +7,12 @@
 
 ## Asset definition ##
 
-In the topic [How the Waves works](), we covered the lesson, dedicated to smart assets, [What is a smart asset and how to create it]().
+In the topic [How the Waves works](), we covered the lesson on smart assets, [What is a smart asset, and how to create it]().
 That lesson was a simple particular demonstration of what a smart asset is and how it could be created.
-Now we do have a more advanced knowledge of the Waves blockchain, so we can take it to a higher level and expand our understanding of assets.
+Let's repeat what we have learned about smart assets. A smart asset is an asset to which a script is attached. As an instance of a smart asset, we may create a smart asset with a script that blocks operations with this asset for specific users. 
+
+Now we have more advanced knowledge of the Waves blockchain, so we can take it to a higher level and expand our understanding of assets.
+This lesson aims to explain the concept of regular assets in general.
 
 An asset (or a token) is a digital resource that can be used as:
 - **<u>Cryptocurrency</u>**:  
@@ -34,14 +37,11 @@ An asset (or a token) is a digital resource that can be used as:
         Here we use tokens that we created on the Waves blockchain as an object in the game that we created.
 
 Therefore, we can make a conclusion that an asset can be either a cryptocurrency or an object within your program.
-
 If you wish to become an owner of a new cryptocurrency, you can [create it](#asset-creation) on the Waves blockchain.
 After creation, the destiny of this asset will be totally in your hands.
 Likewise, you can also use assets as a ready solution for your projects.
 
-
 Every asset has a set of attributes that are essential for operation with it.
-
 
 ## Operations with assets ##
 
