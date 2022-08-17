@@ -198,7 +198,7 @@ There are two ways of making your account a dApp using:
         "As I see it, yes.", 
         "My reply is no.", 
         "My sources say no.",
-         "Very doubtful."]
+        "Very doubtful."]
 
         func getAnswer (question,previousAnswer) = {
             let hash = sha256(toBytes((question + previousAnswer)))
@@ -206,14 +206,12 @@ There are two ways of making your account a dApp using:
         answers[(index % answersCount)]
             }
 
-
         func getPreviousAnswer (address) = match getString(this, (address + "_a")) {
             case a: String => 
                 a
             case _ => 
                 address
         }
-
 
         @Callable(i)
         func tellme (question) = {

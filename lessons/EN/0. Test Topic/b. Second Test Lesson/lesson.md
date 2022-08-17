@@ -1,19 +1,3 @@
-
-  - [1st Chapter](#1st-chapter)
-    - [1st Semi-chapter of the 1st Chapter](#1st-semi-chapter-of-the-1st-chapter)
-      - [1st Semi-chapter of the 1st semi-chapter](#1st-semi-chapter-of-the-1st-semi-chapter)
-      - [2nd Semi-chapter of the 1st semi-chapter](#2nd-semi-chapter-of-the-1st-semi-chapter)
-      - [3rd Semi-chapter of the 1st semi-chapter](#3rd-semi-chapter-of-the-1st-semi-chapter)
-    - [2nd Semi-chapter of the 1st Chapter](#2nd-semi-chapter-of-the-1st-chapter)
-    - [3rd Semi-chapter of the 1st Chapter](#3rd-semi-chapter-of-the-1st-chapter)
-      - [1st Semi-chapter of the 2nd semi-chapter](#1st-semi-chapter-of-the-2nd-semi-chapter)
-      - [2nd Semi-chapter of the 2nd semi-chapter](#2nd-semi-chapter-of-the-2nd-semi-chapter)
-      - [3rd Semi-chapter of the 2nd semi-chapter](#3rd-semi-chapter-of-the-2nd-semi-chapter)
-    - [3rd Semi-chapter of the 1st Chapter](#3rd-semi-chapter-of-the-1st-chapter-1)
-  - [2nd Chapter](#2nd-chapter)
-  - [3rd Chapter](#3rd-chapter)
-
-
 ## 1st Chapter ##
 Welcome to the 1st Chapter!
 
@@ -96,8 +80,7 @@ func storeData(
     throw("key already exists") # Stop the script and throw an exception if the key is used
 } else {
   [ IntegerEntry(newKey, newValue), # Writing data to a key-value store
-  StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique
-  ]
+  StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique ]
   }
 }
 ```
