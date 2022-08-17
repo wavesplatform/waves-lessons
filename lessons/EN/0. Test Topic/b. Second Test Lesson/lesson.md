@@ -31,33 +31,20 @@ Nested code example (a few languages in a row):
 
 ```java
 package com.wavesplatform.wavesj;
- 
 import java.net.URI;
- 
 import java.net.URISyntaxException;
- 
 public enum Profile {
- 
      MAINNET("https://nodes.wavesnodes.com/%22),
- 
      TESTNET("https://nodes-testnet.wavesnodes.com/%22),
- 
      STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
- 
      LOCAL("http://127.0.0.1:6869/%22);
  
 private final URI uri;
- 
    Profile(String url) {
- 
        try {
- 
           this.uri = new URI(url);
- 
       } catch (URISyntaxException e) {
- 
          throw new RuntimeException(e);
- 
    }
  
 } public URI uri() { return uri; } }
@@ -108,33 +95,20 @@ Watch the third video
 
 ```java
 package com.wavesplatform.wavesj;
- 
 import java.net.URI;
- 
 import java.net.URISyntaxException;
- 
 public enum Profile {
- 
      MAINNET("https://nodes.wavesnodes.com/%22),
- 
      TESTNET("https://nodes-testnet.wavesnodes.com/%22),
- 
      STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
- 
      LOCAL("http://127.0.0.1:6869/%22);
  
 private final URI uri;
- 
    Profile(String url) {
- 
        try {
- 
           this.uri = new URI(url);
- 
       } catch (URISyntaxException e) {
- 
          throw new RuntimeException(e);
- 
    }
  
 } public URI uri() { return uri; } }
