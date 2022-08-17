@@ -25,7 +25,7 @@
         "package",
         "jar"
     ],
-    "ref1": "5cb7375c-a546-4dcb-8a7f-89a402f2211e",
-    "ref2": "22002fb9-b3c0-4c43-b6ca-5d2d1c55e883",
-    "ref3": ""
+    "topic_ref1": "5cb7375c-a546-4dcb-8a7f-89a402f2211e",
+    "topic_ref2": "22002fb9-b3c0-4c43-b6ca-5d2d1c55e883",
+    "topic_ref3": ""
 }
