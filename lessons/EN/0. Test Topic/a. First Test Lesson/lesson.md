@@ -78,41 +78,25 @@ Nested code example (a few languages in a row):
   ```
   ```ride
 # An example of writing data as a result of a script
- 
 # with protection against changing the value through the script
  
-{-# STDLIB_VERSION 5 #-}
- 
+{-# STDLIB_VERSION 5 #-} 
 {-# CONTENT_TYPE DAPP #-}
- 
 {-# SCRIPT_TYPE ACCOUNT #-}
  
 @Callable(i)
- 
 func storeData(
- 
   newKey: String,
- 
   newValue: Int
- 
 ) = {
- 
  let slot = getInteger(this, newKey) # Read value by key
- 
  if (isDefined(slot)) then { # Checking the value
- 
     throw("key already exists") # Stop the script and throw an exception if the key is used
- 
 } else {
- 
   [ IntegerEntry(newKey, newValue), # Writing data to a key-value store
- 
   StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique
- 
   ]
- 
   }
- 
 }
 ```
 </CodeBlock>
@@ -266,7 +250,7 @@ merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
 
 ## 3rd Chapter ##
 Welcome to the 3rd Chapter!  
-![cake](./img/download.jpeg)  
+![cake](./img/download.png)  
 
 NEW IMAGE
 [![IMAGE ALT TEXT HERE](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXDErGIJzYKrDTrQHzawz4LkDOwAt8K2fPHJ0BPmnbYAnWnoDcHxvt2GbH_eKQCVFtbo4&usqp=CAU)](https://www.youtube.com/watch?v=FMRXfttxLoo)
@@ -278,41 +262,25 @@ Here is an example of ride code:
 ```ride
 
 # An example of writing data as a result of a script
-
 # with protection against changing the value through the script
 
 {-# STDLIB_VERSION 5 #-}
-
 {-# CONTENT_TYPE DAPP #-}
-
 {-# SCRIPT_TYPE ACCOUNT #-}
 
 @Callable(i)
-
 func storeData(  
-
    newKey: String,  
-
    newValue: Int
-
 ) = { 
-
    let slot = getInteger(this, newKey) # Read value by key  
-
    if (isDefined(slot)) then { # Checking the value    
-
           throw("key already exists") # Stop the script and throw an exception if the key is used
-
 } else {  
-
       [ IntegerEntry(newKey, newValue), # Writing data to a key-value store  
-
      StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique   
-
      ]  
-
      }
-
 }
 ```
 

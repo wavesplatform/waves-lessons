@@ -47,7 +47,7 @@ Follow the steps below to install a Waves node:
 4. Open the Docker desktop app in the "Images" section and click "Run":
     ![](./img/dockerwin.png)
 5. The app will require you to fill in the settings of the container that is about to run:
-    | ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg) | 
+    | ![](./img/dockerwin1.png) | ![](./img/dockerwin2.png) | 
 
     It will be necessary to fill the following fields:
 
@@ -531,7 +531,7 @@ Once you receive a notification of a new node version release, follow the steps 
     - After the node is synchronized, run a new docker container to start a node, as mentioned in step №5.
     ![](./img/gitupdateneeded.png)
 5. Start your node once again:
-   ![](./img/dockerwin1.png) | ![](./img/dockerwin2.jpeg)| 
+   ![](./img/dockerwin1.png) | ![](./img/dockerwin2.png)| 
 6. Check the logs of the running node container.
     Click on the container name:
     ![](./img/dockerwin3.png)
