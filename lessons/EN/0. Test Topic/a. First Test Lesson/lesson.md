@@ -30,33 +30,19 @@ Nested code example (a few languages in a row):
 
   ```java
   package com.wavesplatform.wavesj;
-  
   import java.net.URI;
-  
   import java.net.URISyntaxException;
-  
   public enum Profile {
-  
       MAINNET("https://nodes.wavesnodes.com/%22),
-  
       TESTNET("https://nodes-testnet.wavesnodes.com/%22),
-  
       STAGENET("https://nodes-stagenet.wavesnodes.com/%22),
-  
       LOCAL("http://127.0.0.1:6869/%22);
-  
   private final URI uri;
-  
     Profile(String url) {
-  
         try {
-  
             this.uri = new URI(url);
-  
         } catch (URISyntaxException e) {
-  
           throw new RuntimeException(e);
-  
     }
   
   } public URI uri() { return uri; } }
@@ -107,62 +93,37 @@ Watch the third video
 
 ```js
 function getCookie(byname) // возвращает по имени значение, здесь не используется 
-
         {byname=byname+"="; 
-
          nlen = byname.length; 
-
            fromN = document.cookie.indexOf(byname)+0; 
-
            if((fromN) != -1) 
-
                 {fromN +=nlen 
-
                  toN=document.cookie.indexOf(";",fromN)+0; 
-
                  if(toN == -1) {toN=document.cookie.length;} 
-
                  return unescape(document.cookie.substring(fromN,toN)); 
-
                  } 
-
             return null; 
          }
 
 ```
 ```java
 package com.wavesplatform.wavesj;
-
 import java.net.URI;
-
 import java.net.URISyntaxException;
-
 public enum Profile {
-
     MAINNET("https://nodes.wavesnodes.com/%22),      
-
     TESTNET("https://nodes-testnet.wavesnodes.com/%22),      
-
     STAGENET("https://nodes-stagenet.wavesnodes.com/%22),      
-
     LOCAL("http://127.0.0.1:6869/%22);
 
 private final URI uri;    
-
     Profile(String url) {        
-
       try {          
-
        this.uri = new URI(url);      
-
       } catch (URISyntaxException e) {          
-
        throw new RuntimeException(e);    
-
       }
-
   } public URI uri() { return uri; }
-
 }
 ```
 ```php
@@ -190,10 +151,8 @@ import (
 )
 
 func main() {
-
           c1 := make(chan string)
           c2 := make(chan string)
-
           go func() {
            time.Sleep(1 * time.Second)
            c1 <- "one"
@@ -202,7 +161,6 @@ func main() {
            time.Sleep(2 * time.Second)
            c2 <- "two"
 }()
-
          for i := 0; i < 2; i++ {
            select {
            case msg1 := <-c1:
@@ -215,17 +173,12 @@ func main() {
 ```
 ```python
 def merge(dic1,dic2):
-
     dic3=dic1.copy()
-
     dic3.update(dic2)
-
     return dic3
 
 dic1={1:"hello", 2:"world"}
-
 dic2={3:"Python", 4:"Programming"}
-
 merge(dic1,dic2) # {1: 'hello', 2: 'world', 3: 'Python', 4: 'Programming'}
 
 ```
