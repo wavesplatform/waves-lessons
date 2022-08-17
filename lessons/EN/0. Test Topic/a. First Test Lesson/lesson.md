@@ -44,7 +44,6 @@ Nested code example (a few languages in a row):
         } catch (URISyntaxException e) {
           throw new RuntimeException(e);
     }
-  
   } public URI uri() { return uri; } }
   ```
   ```ride
