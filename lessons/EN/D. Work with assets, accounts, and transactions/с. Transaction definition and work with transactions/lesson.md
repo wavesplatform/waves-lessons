@@ -11,7 +11,9 @@ Every transaction goes through different stages, from its initiation to the fina
 
 ## Stages of a transaction formation ##
 
-Once a us
+Before a transaction gets into the blockchain, it has to pass all necessary stages
+
+![](./img/txstages.png)
 
 ## Transaction fees ##
 

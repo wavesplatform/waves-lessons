@@ -80,41 +80,25 @@ private final URI uri;
 ```
 ```ride
 # An example of writing data as a result of a script
- 
 # with protection against changing the value through the script
  
 {-# STDLIB_VERSION 5 #-}
- 
 {-# CONTENT_TYPE DAPP #-}
- 
 {-# SCRIPT_TYPE ACCOUNT #-}
  
 @Callable(i)
- 
 func storeData(
- 
   newKey: String,
- 
   newValue: Int
- 
 ) = {
- 
  let slot = getInteger(this, newKey) # Read value by key
- 
  if (isDefined(slot)) then { # Checking the value
- 
     throw("key already exists") # Stop the script and throw an exception if the key is used
- 
 } else {
- 
   [ IntegerEntry(newKey, newValue), # Writing data to a key-value store
- 
   StringEntry(newKey + "_should_be_unique", newKey) # Key must be unique
- 
   ]
- 
   }
- 
 }
 ```
 
@@ -179,4 +163,4 @@ private final URI uri;
 
 ## 3rd Chapter ##
 Welcome to the 3rd Chapter!    
-![cake](./img/shrek.jpeg)    
+![cake](./img/shrek.png)    
