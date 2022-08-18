@@ -94,29 +94,29 @@ For more details on all transaction types, refer to the [complete documentation]
 
 All transaction types that exist within the Waves blockchain can be split into five modules:
 1. **<u>Work with assets</u>**
-    - Issue
-    - Reissue
-    - Update asset info
-    - Burn
-    - Set asset script
-    - Set sponsorship
+   - [Issue transaction]()  
+        Creates a new token.
+   - [Reissue transaction]()  
+        Increases the amount of a token on the blockchain and/or prohibits its reissue.
+   - [Update asset info transaction]()  
+        Modifies the name and description of a token.
+   - [Burn transaction]()  
+        Decreases the amount of a token on a sender's account and thereby the total amount of the token on the blockchain.
+   - [Set asset script transaction]()  
+        Replaces an asset script.
+   - [Sponsor Fee Transaction]()  
+        Enables or disables sponsorship that allows any user to pay a fee in the sponsored asset instead of WAVES.
 2. **<u>Work with accounts</u>**
-  - Alias
-  - Data
-  - Set script
-  - Invoke script
+   - [Alias]()
+   - [Data]()
+   - [Set script]()
+   - [Invoke script]()
 3. **<u>Performing transfers</u>**
-  - Transfer
-  - Mass transfer
-  - Exchange
+   - [Transfer]()
+   - [Mass transfer]()
+   - [Exchange]()
 4. **<u>Leasing</u>**
-  - Lease
-  - Lease cancel
+   - [Lease]()
+   - [Lease cancel]()
 5. **<u>Ethereum transaction</u>**
-
-
-
-6. Tx can be viewed in Waves Exp or rest api swagger?
-- If swagger used, it will look like JSON
-- If Waves Exp - human readable format
-- If libs?
+    

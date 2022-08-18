@@ -1,0 +1,30 @@
+{
+    "documentation":
+    [
+        {
+        "number": 0, 
+        "guid": "8492d6fc-b776-4b5c-b5fc-7dedb8620efe",
+        "title": "Test topic"
+        },
+        {
+        "number": 1, 
+        "guid": "22002fb9-b3c0-4c43-b6ca-5d2d1c55e883",
+        "title": "Introduction"
+        },
+        {
+        "number": 2, 
+        "guid": "5cb7375c-a546-4dcb-8a7f-89a402f2211e",
+        "title": "How the Waves work"
+        },
+        {
+        "number": 3, 
+        "guid": "5278fddd-fd57-4763-8ff2-8fd14eace3bf",
+        "title": "Earn with mining"
+        },
+        {
+        "number": 4, 
+        "guid": "ab9d16e7-6793-42a9-acdc-4b738b58b105",
+        "title": "Assets, accounts, transactions"
+        }
+    ]     
+}
