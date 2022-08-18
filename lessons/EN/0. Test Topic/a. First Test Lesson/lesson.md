@@ -80,8 +80,6 @@ It is the third nested chapter.
 Watch the second video  
 [![Watch the second video](https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2022/02/dotnet7-preview1.jpg)](https://youtu.be/T-D1KVIuvjA)
 
----
-
 ## 2nd Chapter ##
 Welcome to the 2nd Chapter!  
 Watch the third video  
@@ -244,12 +242,12 @@ func storeData(
 
 
 | Minimum Requirements | CPU | RAM | SSD | 
-| :---------- | :----------:  | :----------:  | :----------: |
+| :---: | :---:  | :---:  | :---: |
 | [Validating node](https://docs.waves.tech/en/blockchain/node/validating-node) | 2 | 4 GB| 100 GB SSD|
 | [Generating node](https://docs.waves.tech/en/blockchain/node/mining-node) | 2+ | 4+ GB| 100+ GB SSD|
 
 
 | Minimum  | 1 | 2 | 3 | 
-| :----: | :-------:  | ----:  | :----------: |
+| :---: | :---:  | ---:  | :---: |
 | [Van | 2 | 4 GB| 100 GB SSD|
 |  node]| 23+ | 21314+ GB| 1003221+ GB SSD|
