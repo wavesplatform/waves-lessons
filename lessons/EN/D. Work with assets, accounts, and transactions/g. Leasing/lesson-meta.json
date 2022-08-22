@@ -1,0 +1,10 @@
+{
+    "guid": "db6469a4-26e3-4661-8f56-5eb2ae33304c",
+    "title": "Leasing",
+    "description": "Test desc",
+    "number": 7,
+    "doclink": "https://docs.waves.tech/en/blockchain/transaction-type/",
+    "hashtags": [
+        "leasing"
+    ]
+}
