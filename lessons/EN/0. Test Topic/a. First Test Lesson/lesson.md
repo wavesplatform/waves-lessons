@@ -19,11 +19,15 @@ Watch the first video
 Lorem ipsum lorem ipsum!
 It is the second nested chapter.
 
+[](2da2634f-3fd6-4f4e-b50f-68f9c78541e5#chapter)
+
 ### 3rd Semi-chapter of the 1st Chapter ###
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.  
+Here we're diving one level deeper within the same semi-chapter.
+
+[](5ad92cb9-2725-43dd-b1d2-cf680a1040d2)
 
 Nested code example (a few languages in a row):  
 <CodeBlock>
