@@ -17,7 +17,7 @@ The Waves is a [blockchain](#blockchain) platform for issuing cryptographic toke
 The company offers everyone an open blockchain protocol that works with [decentralized](#decentralizationfirstchapter) solutions.
 
 ### Principles of work ###
-The platform operates based on the [LPoS consensus]().
+The platform operates based on the [LPoS consensus](https://docs.waves.tech/en/blockchain/leasing).
 It is a modification of the [Proof-of-stake consensus]().
 The difference between PoS and LPoS is that LPoS has the ability for users to transfer their balances to mining nodes.
 Such a deal grants the lessor a portion of the profit for block generation by lessee nodes.
