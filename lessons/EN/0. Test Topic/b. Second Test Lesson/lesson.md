@@ -27,6 +27,8 @@ Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.    
 
+#### Random forth level header ####
+
 Nested code example (a few languages in a row):    
 
 <CodeBlock>
