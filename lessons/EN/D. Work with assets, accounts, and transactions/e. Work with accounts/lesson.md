@@ -1,10 +1,10 @@
 ## Transactions of work with accounts ##  
 
 As we mentioned in [Transaction types]() of the lesson [Transaction definition and work with transactions](), there are four transactions types that can be classified as transactions intended for work with accounts:
-- [Create alias transaction]()
-- [Data transaction]()  
-- [Set script transaction]()  
-- [Invoke script transaction]()  
+- [Create alias transaction](#create-alias-transaction)
+- [Data transaction](#data-transaction)  
+- [Set script transaction](#set-script-transaction)  
+- [Invoke script transaction](#invoke-script-transaction)  
 
 Within this lesson, we will describe these transaction types in detail. Firstly, we will discuss what a transaction is intended for. Secondly, transaction attributes will be explained. Lastly, a demonstration of how this transaction is created in different programming languages (Javascript, Java, PHP, C#, Go, Python).
 
