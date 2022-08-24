@@ -119,12 +119,12 @@ All transaction types that exist within the Waves blockchain can be split into f
    - [Exchange transaction]()  
         Exchanges two different tokens between two accounts.
 4. **<u>Leasing</u>**
-   - [Lease]()  
+   - [Lease transaction]()  
         Leases WAVES to another account.
-   - [Lease cancel]()  
+   - [Lease cancel transaction]()  
         Cancels leasing.
-5. **<u>Ethereum transactions</u>**  
-   - [Ethereum transfer transaction]()  
+5. **<u>Ethereum transaction</u>**  
+   - [Ethereum transfer]()  
          A MetaMask user can sign an Ethereum transaction that transfers a token and send the transaction to the Waves blockchain.
    - [Ethereum dApp script invocation]()  
          A MetaMask user can sign an Ethereum transaction that invokes a dApp script and send the transaction to the Waves blockchain.

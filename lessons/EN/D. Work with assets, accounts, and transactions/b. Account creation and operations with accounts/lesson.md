@@ -36,6 +36,23 @@ There are multiple different operations that we can perform with with an account
 
 Essential attributes
 
+<CodeBlock>
+
+```js
+```
+```java
+```
+```php
+```
+```csharp
+```
+```go
+```
+```python
+```
+
+</CodeBlock>
+
 ### Different methods ###
 
 
