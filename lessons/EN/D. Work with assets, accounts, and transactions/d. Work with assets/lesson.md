@@ -8,7 +8,7 @@ As we mentioned in [Transaction types]() of the lesson [Transaction definition a
 - [Set asset script transaction](#set-asset-script-transaction)  
 - [Sponsor fee transaction](#sponsor-fee-transaction)
 
-Within this lesson, we will describe these transaction types in detail. Firstly, we will discuss what a transaction is intended for. Secondly, transaction attributes will be explained. Lastly, a demonstration of how this transaction is created in different programming languages (Javascript, Java, PHP, C#, Go, Python).
+Within this lesson, we will describe these transaction types in detail. Firstly, we will discuss what a transaction is intended for. Secondly, transaction attributes will be explained. Lastly, a demonstration of how this transaction is created in different programming languages (Javascript, Java, PHP, C#, Go, Python) will be given.
 
 ## Issue transaction ##
 
