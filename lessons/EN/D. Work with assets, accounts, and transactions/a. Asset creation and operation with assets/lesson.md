@@ -39,13 +39,45 @@ That lesson was a simple particular demonstration of what a smart asset is and h
 
 ## Operations with assets ##
 
-Every asset has a set of attributes that are essential for operation with it.
+<!-- Every asset has a set of attributes that are essential for operation with it. -->
 
 ### Asset creation ###
 
-Essential attributes 
+<CodeBlock>
+
+```js
+```
+```java
+```
+```php
+```
+```csharp
+```
+```go
+```
+```python
+```
+
+</CodeBlock>
 
 ### NFT creation ###
+
+<CodeBlock>
+
+```js
+```
+```java
+```
+```php
+```
+```csharp
+```
+```go
+```
+```python
+```
+
+</CodeBlock>
 
 ### Different methods ###
 
