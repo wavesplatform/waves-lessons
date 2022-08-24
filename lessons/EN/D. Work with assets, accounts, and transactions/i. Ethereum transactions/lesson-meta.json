@@ -1,10 +1,10 @@
 {
-    "guid": "db6469a4-26e3-4661-8f56-5eb2ae33304c",
-    "title": "Leasing",
+    "guid": "f0c3eaa0-5824-42e4-b37c-db09d761fcca",
+    "title": "Ethereum transactions",
     "description": "Test desc",
-    "number": 7,
+    "number": 9,
     "doclink": "https://docs.waves.tech/en/blockchain/transaction-type/",
     "hashtags": [
-        "leasing"
+        "ethereum"
     ]
 }

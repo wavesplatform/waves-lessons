@@ -1,10 +1,10 @@
 {
-    "guid": "f0c3eaa0-5824-42e4-b37c-db09d761fcca",
-    "title": "Ethereum transactions",
+    "guid": "9f686afd-ccfe-4e54-8fb5-156d824a73e2",
+    "title": "Work with assets",
     "description": "Test desc",
-    "number": 8,
+    "number": 5,
     "doclink": "https://docs.waves.tech/en/blockchain/transaction-type/",
     "hashtags": [
-        "ethereum"
+        "assets"
     ]
 }

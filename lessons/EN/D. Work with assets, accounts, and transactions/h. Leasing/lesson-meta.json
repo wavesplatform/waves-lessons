@@ -1,10 +1,10 @@
 {
-    "guid": "9f686afd-ccfe-4e54-8fb5-156d824a73e2",
-    "title": "Work with assets",
+    "guid": "db6469a4-26e3-4661-8f56-5eb2ae33304c",
+    "title": "Leasing",
     "description": "Test desc",
-    "number": 4,
+    "number": 8,
     "doclink": "https://docs.waves.tech/en/blockchain/transaction-type/",
     "hashtags": [
-        "assets"
+        "leasing"
     ]
 }
