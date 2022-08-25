@@ -129,8 +129,18 @@ func main() {
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // New Issue Transaction
-    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "asset", "description",
-        1000_00, 2, true, nil, ts, 1*waves)
+    tx := proto.NewUnsignedIssueWithProofs(
+        3, 
+        proto.TestNetScheme, 
+        pk, 
+        "asset", 
+        "description",
+        1000_00, 
+        2, 
+        true, 
+        nil, 
+        ts, 
+        1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
     if err != nil {
