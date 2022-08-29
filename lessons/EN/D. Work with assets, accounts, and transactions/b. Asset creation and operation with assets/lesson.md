@@ -2,7 +2,6 @@
 - [Operations with assets](#operations-with-assets)
   - [Asset creation](#asset-creation)
   - [NFT creation](#nft-creation)
-  - [Different methods](#different-methods)
 
 
 ## Asset definition ##
@@ -22,28 +21,47 @@ An asset (or a token) is a digital resource that can be used as:
         An object can be represented as an auxiliatry tool.
         The best way to grasp this idea is to see it working on the live example.
         For instance, you can create a cookery game, using the Waves blockchain as your database.
-        In that game your goal is to generate recipes.
-        Every account of the game is the Waves blockchain [account]().
+        The goal of the game is recipes generation.
+        Every account of the game is a Waves blockchain [account]().
         To generate a recipe, you spin a wheel and receive a reward recipe.
         Every wheel spin costs one [token that we created](#asset-creation).
         All users can receive three free tokens every 24 hours.
         Here we use tokens that we created on the Waves blockchain as an object in the game that we created.
 
 Therefore, we can make a conclusion that an asset can be either a cryptocurrency or an object within your program.
-If you wish to become an owner of a new cryptocurrency, you can [create it](#asset-creation) on the Waves blockchain.
-After creation, the destiny of this asset will be totally in your hands.
-Likewise, you can also use assets as a ready solution for your projects.
+If you wish to become an owner of a new cryptocurrency or use an asset as a ready solution for your project, you can [create it](#asset-creation) in the Waves blockchain.
 
 In the topic [How the Waves works](), we covered the lesson on smart assets, [What is a smart asset, and how to create it]().
 That lesson was a simple particular demonstration of what a smart asset is and how it could be created. The difference between a regular asset and a smart asset is that a smart asset has an additional configuration, defining rules of work of the asset. 
 
 ## Operations with assets ##
 
-<!-- Every asset has a set of attributes that are essential for operation with it. -->
+This chapter will distinguish operations with assets among many possible actions on the Waves blockchain.   
+All operations with assets can be groupped by two categories:
+- **<u>Transactions</u>**   
+    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related to assset. The lesson [Work with assets]() will be dedicated to all transactions interacting with assets.
+- **<u>REST API methods</u>**   
+    As well, it is possible to interact with REST API methods to get some information about assets, for example:
+    * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`
+        Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit` (read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)), 1000 by default. For pagination, use the field `{after}`.
+    * **GET** `/assets/balance/{address}`  
+        Get account balances in all or specified assets (excluding WAVES) at a given address. Please, note, the full portfolio also excludes [NFTs](#nft-creation).
+    * **GET** `/assets/balance/{address}/{assetId}`  
+        Get the account balance of a given asset.
+    * **GET** `/assets/details/{assetId}`  
+        Get detailed information about a given asset.
+    * **GET** `/assets/nft/{address}/limit/{limit}`  
+        Get a list of non-fungible tokens at a given address. Maximum for 1000 tokens. For pagination, use the field `{after}`.
+
+In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
 ### Asset creation ###
 
 <CodeBlock>
+
+As previously mentioned in [Functions parameters](), every function has a set of arguments passed on. Below you can find the list of arguments necessary to be filled within the [asset creation](#asset-creation) function:
+
+| | | |
 
 ```js
 ```
@@ -129,18 +147,8 @@ func main() {
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // New Issue Transaction
-    tx := proto.NewUnsignedIssueWithProofs(
-        3, 
-        proto.TestNetScheme, 
-        pk, 
-        "asset", 
-        "description",
-        1000_00, 
-        2, 
-        true, 
-        nil, 
-        ts, 
-        1*waves)
+    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "asset", "description",
+        1000_00, 2, true, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
     if err != nil {
@@ -165,8 +173,6 @@ func main() {
 ```
 
 </CodeBlock>
-
-
 
 ### NFT creation ###
 
@@ -256,18 +262,8 @@ func main() {
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // New Issue Transaction
-    tx := proto.NewUnsignedIssueWithProofs(
-        3, 
-        proto.TestNetScheme, 
-        pk, 
-        "some NFT", 
-        "nft example",
-        1, 
-        0, 
-        false, 
-        nil, 
-        ts, 
-        1*waves)
+    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "some NFT", "nft example",
+        1, 0, false, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
     if err != nil {
@@ -292,6 +288,3 @@ func main() {
 ```
 
 </CodeBlock>
-
-### Different methods ###
-
