@@ -55,13 +55,10 @@ All operations with assets can be groupped by two categories:
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
-### Asset creation ###
+## Asset creation ##
+
 
 <CodeBlock>
-
-As previously mentioned in [Functions parameters](), every function has a set of arguments passed on. Below you can find the list of arguments necessary to be filled within the [asset creation](#asset-creation) function:
-
-| | | |
 
 ```js
 ```
@@ -174,7 +171,7 @@ func main() {
 
 </CodeBlock>
 
-### NFT creation ###
+## NFT creation ##
 
 <CodeBlock>
 
