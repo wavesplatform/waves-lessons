@@ -59,6 +59,10 @@ In this lesson, we will demonstrate an instance of the asset operations with an 
 
 <CodeBlock>
 
+As previously mentioned in [Functions parameters](), every function has a set of arguments passed on. Below you can find the list of arguments necessary to be filled within the [asset creation](#asset-creation) function:
+
+| | | |
+
 ```js
 ```
 ```java
@@ -169,8 +173,6 @@ func main() {
 ```
 
 </CodeBlock>
-
-
 
 ### NFT creation ###
 

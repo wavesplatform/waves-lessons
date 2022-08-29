@@ -257,12 +257,12 @@ func storeData(
 
 **Отсылки на другие мд-файлы**
 
-1. Ссылаемся на другой урок [Waves blockchain description](https://EN/lessons/ef741d9b-752d-4497-9b63-cf3ba5099e77).
-2. Ссылаемся на еще один урок [Node deployment on Ubuntu with the Waves package](https://EN/lessons/20f4c1b6-eb61-4b2a-a5ef-130f90e5fca0).
+1. Ссылаемся на другой урок [Waves blockchain description](ef741d9b-752d-4497-9b63-cf3ba5099e77).
+2. Ссылаемся на еще один урок [Node deployment on Ubuntu with the Waves package](20f4c1b6-eb61-4b2a-a5ef-130f90e5fca0).
 
 **Отсылки на главы других мд-файлов**
 
-1. Отсылка на заголовок 2-го уровня - [Node deployment on Ubuntu with Docker - Installation](https://EN/lessons/90f0c02-dc10-41a1-b5dc-6eb8b2eeefc8#installation)
-2. Отсылка на заголовок 3-го уровня - [Node deployment on macOS with Docker - Why roll back your node](https://EN/lessons/63591417-09c6-40bf-ae1e-221de605ba5d#why-roll-back-your-node)
-3. Отсылка на заголовок 4-го уровня - [Second test lessons - random forth level header](https://EN/lessons/148f6915-ee2b-42e6-a74b-80a1f3ef5737#random-forth-level-header)
+1. Отсылка на заголовок 2-го уровня - [Node deployment on Ubuntu with Docker - Installation](90f0c02-dc10-41a1-b5dc-6eb8b2eeefc8#installation)
+2. Отсылка на заголовок 3-го уровня - [Node deployment on macOS with Docker - Why roll back your node](63591417-09c6-40bf-ae1e-221de605ba5d#why-roll-back-your-node)
+3. Отсылка на заголовок 4-го уровня - [Second test lessons - random forth level header](148f6915-ee2b-42e6-a74b-80a1f3ef5737#random-forth-level-header)
 
