@@ -18,14 +18,3 @@ In the lesson [Asset creation and operation with assets](), we will talk about a
 ### Functions parameters ###
 
 Behind every action on the blockchain, for instance, creating an asset/account or sending a transaction to a node, there is a function that runs a particular script. The result of a script compilation is a particular action made on the blockchain. All functions have arguments that are passed on. For example, if we are to run a [function that creates an asset](), we need to fill in necessary arguments, such as the name we want to assign to the asset, its quantity, description, and so on. Likewise, all functions have their own sets of parameters. Some functions may have matching parameters. For instance, if we are working with a [Transfer transaction]() and a [Mass transfer transaction](), in both cases, we would need to specify an `assetId` that we want to transfer. Yet, simultaneously, there will be unique parameters inherent only to a particular function. In the case with our example above, it would be `amount` that defines the sum of our transfer within [Transfer transaction]() and `totalAmount` that defines the sum of all funds we transfer to multiple users within [Mass transfer transaction](). All functions covered in this module will be given a list of relevant parameters with their explanation.
-
-### Two important steps of every operation in the blockchain ### 
-
-
-
-<!-- ### Two important steps of every operation in the blockchain ### 
-
-ref to [Stages of a transaction formation]()
-
-
-3. All tx have both broadcasting and creation -->

@@ -28,12 +28,108 @@ The minimum fee for an issue transaction is 1 WAVES, in case of issue of a non-f
 ```js
 ```
 ```java
+package com.wavesplatform.examples;
+import com.wavesplatform.transactions.account.PrivateKey;
+import com.wavesplatform.transactions.IssueTransaction;
+import com.wavesplatform.wavesj.Node;
+import com.wavesplatform.wavesj.Profile;
+import com.wavesplatform.wavesj.exceptions.NodeException;
+import com.wavesplatform.wavesj.info.IssueTransactionInfo;
+import java.io.IOException;
+
+public class WavesExample {
+    public static void main(String[] args) throws NodeException, IOException {
+        // Create a node instance
+        Node node = new Node(Profile.TESTNET);
+        // Create the private key from a seed
+        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+        // Create an Issue transaction
+        IssueTransaction tx = new IssueTransaction(
+                privateKey.publicKey(),
+                "sampleasset", 
+                "description of the asset", 
+                1000, 
+                2, 
+                false,
+                null) 
+                .addProof(privateKey); 
+        // Broadcast the transaction and wait for it to be included in the blockchain
+        node.waitForTransaction(node.broadcast(tx).id());
+        // Get the transaction info from a node
+        IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
+        // Pritn all the information
+        System.out.println("type:" + txInfo.tx().type());
+        System.out.println("id:" + txInfo.tx().id());
+        System.out.println("fee:" + txInfo.tx().fee().value());
+        System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
+        System.out.println("timestamp:" + txInfo.tx().timestamp());
+        System.out.println("version:" + txInfo.tx().version());
+        System.out.println("chainId:" + txInfo.tx().chainId());
+        System.out.println("sender:" + txInfo.tx().sender().address().encoded());
+        System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
+        System.out.println("proofs:" + txInfo.tx().proofs());
+        System.out.println("assetId:" + txInfo.tx().assetId().encoded());
+        System.out.println("name:" + txInfo.tx().name());
+        System.out.println("quantity:" + txInfo.tx().quantity());
+        System.out.println("reissuable:" + txInfo.tx().reissuable());
+        System.out.println("decimals:" + txInfo.tx().decimals());
+        System.out.println("description:" + txInfo.tx().description());
+        System.out.println("script:" + txInfo.tx().script().encoded());
+        System.out.println("height:" + txInfo.height());
+        System.out.println("applicationStatus:" + txInfo.applicationStatus());
+    }
+}
 ```
 ```php
 ```
 ```csharp
 ```
 ```go
+package main
+
+import (
+    "context"
+    "net/http"
+    "time"
+    "github.com/wavesplatform/gowaves/pkg/client"
+    "github.com/wavesplatform/gowaves/pkg/crypto"
+    "github.com/wavesplatform/gowaves/pkg/proto"
+)
+
+const waves = 100_000_000
+
+func main() {
+    // Create the sender's private key from a BASE58 string
+    sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
+    if err != nil {
+        panic(err)
+    }
+    // Generate the public key from the private key
+    pk := crypto.GeneratePublicKey(sk)
+    // Current time in milliseconds
+    ts := uint64(time.Now().UnixMilli())
+    // Creating an Issue transaction
+    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "sampleasset", "description of the asset",
+        1000_00, 2, false, nil, ts, 1*waves)
+    // Sing the transaction with the private key
+    err = tx.Sign(proto.TestNetScheme, sk)
+    if err != nil {
+        panic(err)
+    }
+    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
+    cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
+    if err != nil {
+        panic(err)
+    }
+    // Context to cancel the request execution on timeout
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+    // Broadcast the transaction to the network
+    _, err = cl.Transactions.Broadcast(ctx, tx)
+    if err != nil {
+        panic(err)
+    }
+}
 ```
 ```python
 ```
@@ -57,12 +153,121 @@ The minimum fee for a reissue transaction is 0.001 WAVES. Read more about [Reiss
 ```js
 ```
 ```java
+package com.wavesplatform.examples;
+import com.wavesplatform.transactions.ReissueTransaction;
+import com.wavesplatform.transactions.account.PrivateKey;
+import com.wavesplatform.transactions.IssueTransaction;
+import com.wavesplatform.transactions.common.Amount;
+import com.wavesplatform.transactions.common.AssetId;
+import com.wavesplatform.transactions.common.Base64String;
+import com.wavesplatform.wavesj.Node;
+import com.wavesplatform.wavesj.Profile;
+import com.wavesplatform.wavesj.exceptions.NodeException;
+import com.wavesplatform.wavesj.info.IssueTransactionInfo;
+import com.wavesplatform.wavesj.info.ReissueTransactionInfo;
+import java.io.IOException;
+
+public class WavesExample {
+    public static void main(String[] args) throws NodeException, IOException {
+        // Create a node instance
+        Node node = new Node(Profile.TESTNET);
+        // Create the private key from a seed
+        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+        // Create an Issue transaction
+        IssueTransaction tx = new IssueTransaction(
+                privateKey.publicKey(),
+                "asset",
+                "description",
+                1000,
+                2,
+                true,
+                Base64String.empty())
+                .addProof(privateKey);
+        // Get the asset id of the created transaction
+        AssetId assetId = node.waitForTransaction(node.broadcast(tx).id(), IssueTransactionInfo.class).tx().assetId();
+        // Create a Reissue transaction
+        ReissueTransaction rtx = new ReissueTransaction(
+                privateKey.publicKey(),
+                Amount.of(1000, assetId),
+                true
+        ).addProof(privateKey);
+        // Broadcast the transaction and wait for it to be included in the blockchain
+        node.waitForTransaction(node.broadcast(rtx).id());
+        // Get the transaction info from a node
+        ReissueTransactionInfo txInfo = node.getTransactionInfo(rtx.id(), ReissueTransactionInfo.class);
+        // Print all the information
+        System.out.println("type:" + txInfo.tx().type());
+        System.out.println("id:" + txInfo.tx().id());
+        System.out.println("fee:" + txInfo.tx().fee().value());
+        System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
+        System.out.println("timestamp:" + txInfo.tx().timestamp());
+        System.out.println("version:" + txInfo.tx().version());
+        System.out.println("chainId:" + txInfo.tx().chainId());
+        System.out.println("sender:" + txInfo.tx().sender().address().encoded());
+        System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
+        System.out.println("proofs:" + txInfo.tx().proofs());
+        System.out.println("assetId:" + txInfo.tx().amount().assetId().encoded());
+        System.out.println("quantity:" + txInfo.tx().amount().value());
+        System.out.println("reissuable:" + txInfo.tx().reissuable());
+        System.out.println("height:" + txInfo.height());
+        System.out.println("applicationStatus:" + txInfo.applicationStatus());
+    }
+} 
 ```
 ```php
 ```
 ```csharp
 ```
 ```go
+package main
+
+import (
+    "context"
+    "net/http"
+    "time"
+    "github.com/wavesplatform/gowaves/pkg/client"
+    "github.com/wavesplatform/gowaves/pkg/crypto"
+    "github.com/wavesplatform/gowaves/pkg/proto"
+)
+
+const waves = 100_000_000
+
+func main() {
+    // Create the sender's private key from a BASE58 string
+    sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
+    if err != nil {
+        panic(err)
+    }
+    // Generate the public key from the private key
+    pk := crypto.GeneratePublicKey(sk)
+    // Current time in milliseconds
+    ts := uint64(time.Now().UnixMilli())
+    // Create the asset ID from a string
+    assetID, err := crypto.NewDigestFromBase58("<your-asset-id-base58>")
+    if err != nil {
+        panic(err)
+    }
+    // Create a Reissue transaction
+    tx := proto.NewUnsignedReissueWithProofs(3, proto.TestNetScheme, pk, assetID, 100_00, false, ts, 1*waves)
+    // Sing the transaction with the private key
+    err = tx.Sign(proto.TestNetScheme, sk)
+    if err != nil {
+        panic(err)
+    }
+    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
+    cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
+    if err != nil {
+        panic(err)
+    }
+    // Context to cancel the request execution on timeout
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+    // Broadcast the transaction to the network
+    _, err = cl.Transactions.Broadcast(ctx, tx)
+    if err != nil {
+        panic(err)
+    }
+} 
 ```
 ```python
 ```
@@ -121,12 +326,119 @@ The minimum fee for a burn transaction is 0.001 WAVES, in case of burning a smar
 ```js
 ```
 ```java
+package com.wavesplatform.examples;
+import com.wavesplatform.transactions.BurnTransaction;
+import com.wavesplatform.transactions.account.PrivateKey;
+import com.wavesplatform.transactions.IssueTransaction;
+import com.wavesplatform.transactions.common.Amount;
+import com.wavesplatform.transactions.common.AssetId;
+import com.wavesplatform.transactions.common.Base64String;
+import com.wavesplatform.wavesj.Node;
+import com.wavesplatform.wavesj.Profile;
+import com.wavesplatform.wavesj.exceptions.NodeException;
+import com.wavesplatform.wavesj.info.BurnTransactionInfo;
+import com.wavesplatform.wavesj.info.IssueTransactionInfo;
+import java.io.IOException;
+
+public class WavesExample {
+    public static void main(String[] args) throws NodeException, IOException {
+        // Create a node instance
+        Node node = new Node(Profile.TESTNET);
+        // Create the private key from a seed
+        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+        // Create an Issue transaction
+        IssueTransaction tx = new IssueTransaction(
+                privateKey.publicKey(),
+                "asset",
+                "description",
+                1000,
+                2,
+                true,
+                Base64String.empty())
+                .addProof(privateKey);
+        // Get the asset id of the created transaction
+        AssetId assetId = node.waitForTransaction(node.broadcast(tx).id(), IssueTransactionInfo.class).tx().assetId();
+        // Create a Burn transaction
+        BurnTransaction btx = new BurnTransaction(
+                privateKey.publicKey(),
+                new Amount(100, assetId)
+        ).addProof(privateKey);
+        // Broadcast the transaction and wait for it to be included in the blockchain
+        node.waitForTransaction(node.broadcast(btx).id());
+        // Get transaction info from a node
+        BurnTransactionInfo txInfo = node.getTransactionInfo(btx.id(), BurnTransactionInfo.class);
+        // Print all the information about transaction
+        System.out.println("type:" + txInfo.tx().type());
+        System.out.println("id:" + txInfo.tx().id());
+        System.out.println("fee:" + txInfo.tx().fee().value());
+        System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
+        System.out.println("timestamp:" + txInfo.tx().timestamp());
+        System.out.println("version:" + txInfo.tx().version());
+        System.out.println("chainId:" + txInfo.tx().chainId());
+        System.out.println("sender:" + txInfo.tx().sender().address().encoded());
+        System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
+        System.out.println("proofs:" + txInfo.tx().proofs());
+        System.out.println("assetId:" + txInfo.tx().amount().assetId().encoded());
+        System.out.println("amount:" + txInfo.tx().amount().value());
+        System.out.println("height:" + txInfo.height());
+        System.out.println("applicationStatus:" + txInfo.applicationStatus());
+    }
+}
 ```
 ```php
 ```
 ```csharp
 ```
 ```go
+package main
+
+import (
+    "context"
+    "net/http"
+    "time"
+    "github.com/wavesplatform/gowaves/pkg/client"
+    "github.com/wavesplatform/gowaves/pkg/crypto"
+    "github.com/wavesplatform/gowaves/pkg/proto"
+)
+
+const waves = 100_000_000
+
+func main() {
+    // Create the sender's private key from a BASE58 string
+    sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
+    if err != nil {
+        panic(err)
+    }
+    // Generate the public key from the private key
+    pk := crypto.GeneratePublicKey(sk)
+    // Current time in milliseconds
+    ts := uint64(time.Now().UnixMilli())
+    // Create the asset ID from a string
+    assetID, err := crypto.NewDigestFromBase58("<your-asset-id-base58>")
+    if err != nil {
+        panic(err)
+    }
+    // Create a Burn transaction
+    tx := proto.NewUnsignedBurnWithProofs(3, proto.TestNetScheme, pk, assetID, 500_00, ts, 1*waves)
+    // Sing the transaction with the private key
+    err = tx.Sign(proto.TestNetScheme, sk)
+    if err != nil {
+        panic(err)
+    }
+    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
+    cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
+    if err != nil {
+        panic(err)
+    }
+    // Context to cancel the request execution on timeout
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+    // Broadcast the transaction to the network
+    _, err = cl.Transactions.Broadcast(ctx, tx)
+    if err != nil {
+        panic(err)
+    }
+} 
 ```
 ```python
 ```

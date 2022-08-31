@@ -49,20 +49,19 @@ import com.wavesplatform.transactions.common.ChainId;
 import com.wavesplatform.wavesj.Node;
 import com.wavesplatform.wavesj.Profile;
 import com.wavesplatform.wavesj.exceptions.NodeException;
-
 import java.io.IOException;
 
 public class WavesExample {
     public static void main(String[] args) throws NodeException, IOException {
-        // create a node instance
+        // Create a node instance
         Node node = new Node(Profile.TESTNET);
-        // create private key from seed
+        // Create the private key from a seed
         PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // get public key from private key
+        // Get the public key from the private key
         PublicKey publicKey = PublicKey.from(privateKey);
-        // get address by public key
+        // Get an address from the public key
         Address address = Address.from(ChainId.TESTNET, publicKey);
-        // print address
+        // Print the address
         System.out.println(address.encoded());
     }
 } 
@@ -86,7 +85,6 @@ import (
 )
 
 func main() {
-    // This is a simple example of how to create a new key pair. Get an address for it. And request a balance.
     // Generate a new random entropy bytes
     entropy, err := bip39.NewEntropy(160)
     if err != nil {
@@ -99,12 +97,12 @@ func main() {
     }
     fmt.Println("Seed:", mnemonic)
     // Generate a key pair for the seed phrase
-    // The secret key is not used later, so omit it (first return value)
+    // The private key (first value returned) is not used later, so it can be omitted
     _, pk, err := crypto.GenerateKeyPair([]byte(mnemonic))
     if err != nil {
         panic(err)
     }
-    // Make an address for the public key and Testnet
+    // Make an address from the public key witin the Testnet network
     addr, err := proto.NewAddressFromPublicKey(proto.TestNetScheme, pk)
     if err != nil {
         panic(err)
