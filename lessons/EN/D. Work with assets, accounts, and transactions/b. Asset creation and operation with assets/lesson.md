@@ -1,9 +1,3 @@
-- [Asset definition](#asset-definition)
-- [Operations with assets](#operations-with-assets)
-  - [Asset creation](#asset-creation)
-  - [NFT creation](#nft-creation)
-
-
 ## Asset definition ##
 
 An asset (or a token) is a digital resource that can be used as:
@@ -55,8 +49,20 @@ All operations with assets can be groupped by two categories:
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
-## Asset creation ##
+### Assets arguments ###
 
+As previously mentioned in [Functions parameters](), every function has a set of arguments passed on. Below you can find the list of arguments necessary to be filled within the [asset creation](#asset-creation) function and with the [NFT creation](#nft-creation), both of which are varieties of different arguements within the [Issue transaction]():
+
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| name | Token name. <br>From 4 to 16 bytes (1 character can take up to 4 bytes).| sampleasset |
+| quantity | Token quantity.<br> An integer value specified in the minimum fraction (“cents”), that is, the real quantity multiplied by 10<sup>decimals</sup>.<br>From 1 to 9,223,372,036,854,775,807.<br>1 for NFT.| 1000 |
+| decimals | Number of decimal places, from 0 to 8.<br>0 for NFT.| 2 |
+| description | Token description. From 0 to 1000 bytes.| description of the asset |
+| reissuable | Reissue availability flag, see the [Reissue Transaction]() article.<br>`false` for NFT. | false |
+| script | For a smart asset: a compiled asset script, up to 8192 bytes, base64 encoded.<br>For a token without a script: `null`.<br>The token issued without a script cannot be converted to a smart asset. | null |
+
+## Asset creation ##
 
 <CodeBlock>
 
@@ -74,25 +80,25 @@ import java.io.IOException;
 
 public class WavesExample {
     public static void main(String[] args) throws NodeException, IOException {
-        // create a node instance
+        // Create a node instance
         Node node = new Node(Profile.TESTNET);
-        // create private key from seed
+        // Create the private key from a seed
         PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // create IssueTransaction
+        // Create an Issue transaction
         IssueTransaction tx = new IssueTransaction(
                 privateKey.publicKey(),
-                "asset", 
-                "description", 
+                "sampleasset", 
+                "description of the asset", 
                 1000, 
                 2, 
                 false,
                 null) 
                 .addProof(privateKey); 
-        // publish the transaction and wait for it to be included in the blockchain
+        // Broadcast the transaction and wait for it to be included in the blockchain
         node.waitForTransaction(node.broadcast(tx).id());
-        // get transaction info from node
+        // Get the transaction info from a node
         IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
-        // print all information
+        // Pritn all the information
         System.out.println("type:" + txInfo.tx().type());
         System.out.println("id:" + txInfo.tx().id());
         System.out.println("fee:" + txInfo.tx().fee().value());
@@ -134,24 +140,24 @@ import (
 const waves = 100_000_000
 
 func main() {
-    // Create sender's private key from BASE58 string
+    // Create the sender's private key from a BASE58 string
     sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
     if err != nil {
         panic(err)
     }
-    // Generate public key from secret key
+    // Generate the public key from the private key
     pk := crypto.GeneratePublicKey(sk)
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
-    // New Issue Transaction
-    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "asset", "description",
-        1000_00, 2, true, nil, ts, 1*waves)
+    // Creating an Issue transaction
+    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "sampleasset", "description of the asset",
+        1000_00, 2, false, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
     if err != nil {
         panic(err)
     }
-    // Create new HTTP client to send the transaction to public TestNet nodes
+    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
     cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
     if err != nil {
         panic(err)
@@ -159,7 +165,7 @@ func main() {
     // Context to cancel the request execution on timeout
     ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
     defer cancel()
-    // Send the transaction to the network
+    // Broadcast the transaction to the network
     _, err = cl.Transactions.Broadcast(ctx, tx)
     if err != nil {
         panic(err)
@@ -189,25 +195,25 @@ import java.io.IOException;
 
 public class WavesExample {
     public static void main(String[] args) throws NodeException, IOException {
-        // create a node instance
+        // Create a node instance
         Node node = new Node(Profile.TESTNET);
-        // create private key from seed
+        // Create the private key from a seed
         PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // create IssueTransaction (non-fungible token, NFT): quantity=1, decimals=0, reissuable=false
+        // Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
         IssueTransaction tx = new IssueTransaction(
                 privateKey.publicKey(),
-                "some NFT", 
-                "nft example", 
+                "sampleasset", 
+                "description of the asset", 
                 1, 
                 0, 
                 false,
                 null) 
                 .addProof(privateKey); 
-        // publish the transaction and wait for it to be included in the blockchain
+        // Broadcast the transaction and wait for it to be included in the blockchain
         node.waitForTransaction(node.broadcast(tx).id());
-        // get transaction info from node
+        // Get the transaction info from a node
         IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
-        // print all information
+        // Print all the information
         System.out.println("type:" + txInfo.tx().type());
         System.out.println("id:" + txInfo.tx().id());
         System.out.println("fee:" + txInfo.tx().fee().value());
@@ -249,24 +255,24 @@ import (
 const waves = 100_000_000
 
 func main() {
-    // Create sender's private key from BASE58 string
+    // Create the sender's private key from a BASE58 string
     sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
     if err != nil {
         panic(err)
     }
-    // Generate public key from secret key
+    // Generate the public key from the private key
     pk := crypto.GeneratePublicKey(sk)
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
-    // New Issue Transaction
-    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "some NFT", "nft example",
+    // Create an Issue transaction
+    tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "sampleasset", "description of the asset",
         1, 0, false, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
     if err != nil {
         panic(err)
     }
-    // Create new HTTP client to send the transaction to public TestNet nodes
+    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
     cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
     if err != nil {
         panic(err)
@@ -274,7 +280,7 @@ func main() {
     // Context to cancel the request execution on timeout
     ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
     defer cancel()
-    // Send the transaction to the network
+    // Broadcast the transaction to the network
     _, err = cl.Transactions.Broadcast(ctx, tx)
     if err != nil {
         panic(err)
