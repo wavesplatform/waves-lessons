@@ -53,13 +53,13 @@ For every OS, there can be different ways of deployment offered.
 The Waves team suggests using Docker on your OS for a better experience.
 However, you are free to use any of the suggested methods below.
 Please, choose your OS and only one way of node deployment among the following:
-- [Ubuntu]:
+- **<u>Ubuntu</u>**:
   - [Docker]()
   - [Deb package]()
   - [The Waves package]()
-- [MacOS]:
+- **<u>MacOS</u>**:
   - [Docker]()
   - [The Waves package]()
-- [Windows]:
+- **<u>Windows</u>**:
   - [Docker]()
   - [The Waves package]()
