@@ -1,5 +1,6 @@
 URL="https://$1/sync"
 echo "sending GET $URL"
+exit -1
 RESPONSE=$(curl --connect-timeout 5 --no-keepalive -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
