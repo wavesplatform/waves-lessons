@@ -1,7 +1,8 @@
 URL="https://$1/sync"
 echo "sending GET $URL"
 date
-RESPONSE=$(curl --connection-timeout 3 --max-time 180 -X 'GET' "$URL" \
+curl --version
+RESPONSE=$(curl --connect-timeout 3 --max-time 180 -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
 date
