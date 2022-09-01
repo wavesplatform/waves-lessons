@@ -1,6 +1,6 @@
 URL="https://$1/sync"
 echo "sending GET $URL"
-RESPONSE=$(curl -X 'GET' "$URL" \
+RESPONSE=$(curl --max-time 180 -X 'GET' "$URL" \
   -H 'accept: */*' \
   -H "secret: $2")
 STATUS=$(jq -r '.status' <<<"$RESPONSE")
