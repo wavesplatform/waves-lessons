@@ -4,7 +4,7 @@ An asset (or a token) is a digital resource that can be used as:
 - **<u>Cryptocurrency</u>**:  
         Aside from the main Waves blockchain cryptocurrency, WAVES, you can create your own cryptocurrency.
         If you manage to promote your token in the market, it can become a valuable currency. 
-        To give a hint on how to make your currency valuable, take a look at dollars.
+        To give a hint on how to make your token valuable, take a look at dollars.
         Why do we use dollars and think of them as of something that has a value?
         Why, at the same time, do we never use leaves from trees as a currency, though it may have a relatively the same composition?
         Dollars managed to be credited to accounts of many different holders, and the holders had no other goal but to use these dollars.
@@ -33,8 +33,17 @@ That lesson was a simple particular demonstration of what a smart asset is and h
 This chapter will distinguish operations with assets among many possible actions on the Waves blockchain.   
 All operations with assets can be groupped by two categories:
 - **<u>Transactions</u>**   
-    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related to assset. The lesson [Work with assets]() will be dedicated to all transactions interacting with assets.
+    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related interaction with assets:
+    - [Issue transaction]()
+    - [Reissue transaction]()
+    - [Update asset info transaction]()
+    - [Burn transaction]()
+    - [Set asset script transaction]()
+    - [Sponsor fee transaction]()
+
+    The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transactions.
 - **<u>REST API methods</u>**   
+    <!-- VERY IMPORTANT TO ADD HERE METHO FUNCTIONS  -->
     As well, it is possible to interact with REST API methods to get some information about assets, for example:
     * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`
         Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit` (read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)), 1000 by default. For pagination, use the field `{after}`.
@@ -64,62 +73,31 @@ As previously mentioned in [Functions parameters](), every function has a set of
 
 ## Asset creation ##
 
+Firstly, it is necessary 
+
 <CodeBlock>
 
 ```js
 ```
 ```java
-package com.wavesplatform.examples;
-import com.wavesplatform.transactions.account.PrivateKey;
-import com.wavesplatform.transactions.IssueTransaction;
-import com.wavesplatform.wavesj.Node;
-import com.wavesplatform.wavesj.Profile;
-import com.wavesplatform.wavesj.exceptions.NodeException;
-import com.wavesplatform.wavesj.info.IssueTransactionInfo;
-import java.io.IOException;
-
-public class WavesExample {
-    public static void main(String[] args) throws NodeException, IOException {
-        // Create a node instance
-        Node node = new Node(Profile.TESTNET);
-        // Create the private key from a seed
-        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // Create an Issue transaction
-        IssueTransaction tx = new IssueTransaction(
-                privateKey.publicKey(),
-                "sampleasset", 
-                "description of the asset", 
-                1000, 
-                2, 
-                false,
-                null) 
-                .addProof(privateKey); 
-        // Broadcast the transaction and wait for it to be included in the blockchain
-        node.waitForTransaction(node.broadcast(tx).id());
-        // Get the transaction info from a node
-        IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
-        // Pritn all the information
-        System.out.println("type:" + txInfo.tx().type());
-        System.out.println("id:" + txInfo.tx().id());
-        System.out.println("fee:" + txInfo.tx().fee().value());
-        System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
-        System.out.println("timestamp:" + txInfo.tx().timestamp());
-        System.out.println("version:" + txInfo.tx().version());
-        System.out.println("chainId:" + txInfo.tx().chainId());
-        System.out.println("sender:" + txInfo.tx().sender().address().encoded());
-        System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
-        System.out.println("proofs:" + txInfo.tx().proofs());
-        System.out.println("assetId:" + txInfo.tx().assetId().encoded());
-        System.out.println("name:" + txInfo.tx().name());
-        System.out.println("quantity:" + txInfo.tx().quantity());
-        System.out.println("reissuable:" + txInfo.tx().reissuable());
-        System.out.println("decimals:" + txInfo.tx().decimals());
-        System.out.println("description:" + txInfo.tx().description());
-        System.out.println("script:" + txInfo.tx().script().encoded());
-        System.out.println("height:" + txInfo.height());
-        System.out.println("applicationStatus:" + txInfo.applicationStatus());
-    }
-} 
+// Node instance creation
+Node node = new Node(Profile.TESTNET);
+// Create the private key from a seed
+PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+// Create an Issue transaction
+IssueTransaction tx = new IssueTransaction(
+        privateKey.publicKey(),
+        "sampleasset", 
+        "description of the asset", 
+        1000, 
+        2, 
+        false,
+        null) 
+        .addProof(privateKey); 
+// Broadcast the transaction and wait for it to be included in the blockchain
+node.waitForTransaction(node.broadcast(tx).id());
+// Get the transaction info from a node
+IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
 ```
 ```php
 ```
