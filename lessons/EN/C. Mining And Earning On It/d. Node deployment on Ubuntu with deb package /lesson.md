@@ -599,7 +599,7 @@ Once you receive a notification of a new node version release, follow the steps 
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
     -  After the node is synchronized, install the deb package update, as mentioned in step №5.
-    ![](./img/gitupdateneeded.png)
+         ![](./img/gitupdateneeded.png)
 5. Update the deb package. 
     Replace `X.Y.Z.` with the latest update version number you encountered in step №3:
 
