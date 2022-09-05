@@ -23,7 +23,7 @@ It is the second nested chapter.
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.
+Here we're diving one level deeper within the same semi-chapter
 Nested code example (a few languages in a row):  
 
 <CodeBlock>
