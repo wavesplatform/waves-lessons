@@ -13,7 +13,7 @@ Here we're diving one level deeper within the same semi-chapter.
 #### 3rd Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.  
 Watch the first video  
-[![Watch the first video](https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
+[![Watch the first video](https://formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
 
 ### 2nd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
@@ -23,9 +23,9 @@ It is the second nested chapter.
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.
-
+Here we're diving one level deeper within the same semi-chapter
 Nested code example (a few languages in a row):  
+
 <CodeBlock>
 
   ```java
@@ -241,7 +241,7 @@ func storeData(
 Пример таблицы:
 
 
-| Minimum Requirements | CPU | RAM | SSD | 
+| Minimum Requirements [10%]| CPU [25%] | RAM [30%]| SSD [35%]| 
 | :---: | :---:  | :---:  | :---: |
 | [Validating node](https://docs.waves.tech/en/blockchain/node/validating-node) | 2 | 4 GB| 100 GB SSD|
 | [Generating node](https://docs.waves.tech/en/blockchain/node/mining-node) | 2+ | 4+ GB| 100+ GB SSD|
@@ -251,6 +251,14 @@ func storeData(
 | :---: | :---:  | ---:  | :---: |
 | [Van | 2 | 4 GB| 100 GB SSD|
 |  node]| 23+ | 21314+ GB| 1003221+ GB SSD|
+
+
+| Minimum  | 1 | 2 | 3 | 
+| :---: | :---: | ---:  | :---: |
+| [Van | 2 | 4 GB| 100 GB SSD|
+|  node]| 23+ | 21314+ GB| 1003221+ GB SSD|
+| fdfdfdf | fdfdf | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:<br> |
+
 
 
 Примеры отсылок на другие md-файлы:

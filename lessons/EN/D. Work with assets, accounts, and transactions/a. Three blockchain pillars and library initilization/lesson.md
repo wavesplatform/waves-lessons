@@ -30,6 +30,7 @@ To initilaze a library, it is important to create a node instance first. Node in
 <Message type="warning">
 
 In the following lessons, we will be sticking to using the Tesnet network, as it is intended for tests and does not require using real funds. However, if you wish to operate in the main network, please, select the Mainnet netowrk type when creating a node instance. Please, note that for every operation in every network there is a fee charged. Therefore, if you are using the Mainnet network, please, make sure you have a sufficient balance on the account. In case you wish to operate in Testnet or Stagenet, you can top up your balance for free via Faucet: [Tesnet Faucet](https://testnet.wavesexplorer.com/faucet), [Stagenet Faucet](https://stagenet.wavesexplorer.com/faucet).
+
 </Message>
 
 <CodeBlock>
@@ -57,4 +58,30 @@ if err != nil {
 
 </CodeBlock>
 
-After
+As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](9712c088-674b-45f4-9c2e-b30ac67f05bb#account-definition). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. 
+
+<CodeBlock>
+
+```js
+```
+```java
+// Create the private key from a seed
+PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+```
+```php
+```
+```csharp
+```
+```go
+// Create the sender's private key from a BASE58 string
+sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
+if err != nil {
+    panic(err)
+}
+// Generate the public key from the private key
+pk := crypto.GeneratePublicKey(sk)
+```
+```python
+```
+
+</CodeBlock>
