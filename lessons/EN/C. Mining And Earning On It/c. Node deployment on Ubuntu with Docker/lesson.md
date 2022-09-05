@@ -583,8 +583,7 @@ Once you receive a notification of a new node version release, follow the steps 
     It would be necessary to:
     -  Repeat the same steps of node synchronization as in the chapter [Synchronization]().
     -  After the node is synchronized, run a new docker container to start a node, as mentioned in step №5.
-
-    ![](./img/gitupdateneeded.png)
+        ![](./img/gitupdateneeded.png)
 5. Start your node once again:
    
    ```
