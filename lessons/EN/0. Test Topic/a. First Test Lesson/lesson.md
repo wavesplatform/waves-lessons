@@ -13,7 +13,7 @@ Here we're diving one level deeper within the same semi-chapter.
 #### 3rd Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.  
 Watch the first video  
-[![Watch the first video](https://www.formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
+[![Watch the first video](https://formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
 
 ### 2nd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
@@ -23,8 +23,7 @@ It is the second nested chapter.
 #### 1st Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
-Here we're diving one level deeper within the same semi-chapter.  
-
+Here we're diving one level deeper within the same semi-chapter.
 Nested code example (a few languages in a row):  
 <CodeBlock>
 
