@@ -59,7 +59,7 @@ Follow the steps below to initialize a library:
 
     </CodeBlock>
 
-2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](9712c088-674b-45f4-9c2e-b30ac67f05bb#account-definition). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. Later on, the lesson [Account creation and operations with accounts](9712c088-674b-45f4-9c2e-b30ac67f05bb) will describe two core entities: a private and a public keys.
+2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](9712c088-674b-45f4-9c2e-b30ac67f05bb#account-definition). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. Later on, the lesson [Account creation and operations with accounts]() will describe two core entities: a private and a public keys.
 
     <CodeBlock>
 
