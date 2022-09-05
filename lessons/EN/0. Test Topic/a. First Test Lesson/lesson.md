@@ -27,8 +27,6 @@ Here we're diving one level deeper within the same semi-chapter.
 #### 2nd Semi-chapter of the 2nd semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.
 
-[](5ad92cb9-2725-43dd-b1d2-cf680a1040d2)
-
 Nested code example (a few languages in a row):  
 <CodeBlock>
 
