@@ -47,9 +47,13 @@ Follow the steps below to initialize a library:
     ```csharp
     ```
     ```go
-    // Create a new HTTP client to broadcast a transaction to a node in the given network
-    // MAINNET (https://nodes.wavesnodes.com/), TESTNET (https://nodes-testnet.wavesnodes.com/), STAGENET (https://nodes-stagenet.wavesnodes.com/)
-    cl, err := client.NewClient(client.Options{BaseUrl: "https://nodes-testnet.wavesnodes.com/", Client: &http.Client{}})
+    /* Create a new HTTP client in the given network
+    MAINNET (https://nodes.wavesnodes.com/)
+    TESTNET (https://nodes-testnet.wavesnodes.com/)
+    STAGENET (https://nodes-stagenet.wavesnodes.com/)*/
+    cl, err := client.NewClient(client.Options{
+        BaseUrl: "https://nodes-testnet.wavesnodes.com/", 
+        Client: &http.Client{}})
     if err != nil {
         panic(err)
     }
