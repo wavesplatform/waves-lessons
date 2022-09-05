@@ -80,8 +80,6 @@ Firstly, it is necessary
 ```js
 ```
 ```java
-// Create the private key from a seed
-PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
 // Create an Issue transaction
 IssueTransaction tx = new IssueTransaction(
         privateKey.publicKey(),
@@ -105,13 +103,7 @@ IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionI
 const waves = 100_000_000
 
 func main() {
-    // Create the sender's private key from a BASE58 string
-    sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
-    if err != nil {
-        panic(err)
-    }
-    // Generate the public key from the private key
-    pk := crypto.GeneratePublicKey(sk)
+ 
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // Creating an Issue transaction
