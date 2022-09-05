@@ -80,8 +80,6 @@ Firstly, it is necessary
 ```js
 ```
 ```java
-// Node instance creation
-Node node = new Node(Profile.TESTNET);
 // Create the private key from a seed
 PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
 // Create an Issue transaction
@@ -104,17 +102,6 @@ IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionI
 ```csharp
 ```
 ```go
-package main
-
-import (
-    "context"
-    "net/http"
-    "time"
-    "github.com/wavesplatform/gowaves/pkg/client"
-    "github.com/wavesplatform/gowaves/pkg/crypto"
-    "github.com/wavesplatform/gowaves/pkg/proto"
-)
-
 const waves = 100_000_000
 
 func main() {
