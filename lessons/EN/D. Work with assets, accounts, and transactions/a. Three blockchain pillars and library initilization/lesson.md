@@ -25,7 +25,6 @@ The Waves team created client libraries in popular programming languages to inte
 ### How to initialize a library to start operating with the Waves blockchain ###
 
 Follow the steps below to initialize a library:
-
 1. To initilaze a library, it is important to create a node instance first. Node instance creation allows you to perform all actions within a selected [network](). 
 
     <Message type="warning">
@@ -62,15 +61,14 @@ Follow the steps below to initialize a library:
     ```
 
     </CodeBlock>
-
-2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. Later on, the lesson [Account creation and operations with accounts]() will describe two core entities: a private and a public keys.
+2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. In the next lesson, [Account creation, and operations with accounts](), will describe two core entities: a private and a public keys.
 
     <CodeBlock>
 
     ```js
     ```
     ```java
-    // Create the private key from a seed
+    // Create the sender's private key from a seed
     PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
     ```
     ```php
@@ -90,8 +88,3 @@ Follow the steps below to initialize a library:
     ```
 
     </CodeBlock>
-
-<!-- 3. The next step is writting the function that we want to execute. The following lessons will include all relevant code examples, however, at this step we will only concentrate on the concept of how a transaction we are about to perform should be made.
-
- -->
-
