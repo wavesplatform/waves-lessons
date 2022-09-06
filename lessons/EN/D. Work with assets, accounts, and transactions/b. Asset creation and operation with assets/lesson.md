@@ -9,7 +9,7 @@ An asset (or a token) is a digital resource that can be used as:
         Why, at the same time, do we never use leaves from trees as a currency, though it may have a relatively the same composition?
         Dollars managed to be credited to accounts of many different holders, and the holders had no other goal but to use these dollars.
         As people searched for ways to use dollars, they started exchanging them for goods and services.
-        The more people and the more frequent dollars are used, the bigger its value is becoming.
+        The more frequent dollars are used, the bigger its value is becoming.
         The rest depends on the currency creator.
 - **<u>Object</u>**:  
         An object can be represented as an auxiliatry tool.
@@ -20,7 +20,7 @@ An asset (or a token) is a digital resource that can be used as:
         To generate a recipe, you spin a wheel and receive a reward recipe.
         Every wheel spin costs one [token that we created](#asset-creation).
         All users can receive three free tokens every 24 hours.
-        Here we use tokens that we created on the Waves blockchain as an object in the game that we created.
+        Here we use tokens that we created on the Waves blockchain as an object in a game.
 
 Therefore, we can make a conclusion that an asset can be either a cryptocurrency or an object within your program.
 If you wish to become an owner of a new cryptocurrency or use an asset as a ready solution for your project, you can [create it](#asset-creation) in the Waves blockchain.
@@ -30,20 +30,19 @@ That lesson was a simple particular demonstration of what a smart asset is and h
 
 ## Operations with assets ##
 
-This chapter will distinguish operations with assets among many possible actions on the Waves blockchain.   
+This chapter will help to distinguish operations with assets among many possible actions on the Waves blockchain.   
 All operations with assets can be groupped by two categories:
 - **<u>Transactions</u>**   
-    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related interaction with assets:
-    - [Issue transaction]()
-    - [Reissue transaction]()
-    - [Update asset info transaction]()
-    - [Burn transaction]()
-    - [Set asset script transaction]()
-    - [Sponsor fee transaction]()
+    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related to interaction with assets:
+    * [Issue transaction]()
+    * [Reissue transaction]()
+    * [Update asset info transaction]()
+    * [Burn transaction]()
+    * [Set asset script transaction]()
+    * [Sponsor fee transaction]()
 
     The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transactions.
-- **<u>REST API methods</u>**   
-    <!-- VERY IMPORTANT TO ADD HERE METHO FUNCTIONS  -->
+- **<u>REST API methods</u>**
     As well, it is possible to interact with REST API methods to get some information about assets, for example:
     * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`
         Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit` (read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)), 1000 by default. For pagination, use the field `{after}`.
@@ -73,7 +72,7 @@ As previously mentioned in [Functions parameters](), every function has a set of
 
 ## Asset creation ##
 
-Firstly, it is necessary 
+Asset creation transaction allows creating a regular asset. 
 
 <CodeBlock>
 
@@ -135,6 +134,13 @@ func main() {
 </CodeBlock>
 
 ## NFT creation ##
+
+A non-fungible token or NFT is a special type of a token, that represents some unique object. Each NFT has its own unique identifier. See the Non-fungible Token article for more information.
+
+To issue an NFT, you can use any of the methods described above. Specify the following parameters of token:
+* "quantity": 1
+* "decimals": 0
+* "reissuable": false
 
 <CodeBlock>
 

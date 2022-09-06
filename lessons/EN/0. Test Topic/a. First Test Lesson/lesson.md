@@ -13,7 +13,7 @@ Here we're diving one level deeper within the same semi-chapter.
 #### 3rd Semi-chapter of the 1st semi-chapter ####
 Here we're diving one level deeper within the same semi-chapter.  
 Watch the first video  
-[![Watch the first video](https://formula1.com/content/dam/fom-website/manual/Misc/2022manual/F1Manager/F1Manager2022_Key_Art_4K.jpg)](https://youtu.be/ZRrwjiUkUWk)
+[![Watch the first video](https://cdn.mos.cms.futurecdn.net/uxdsce4CMFwqPDRKEKvbX4-1200-80.jpeg)](https://youtu.be/ZRrwjiUkUWk)
 
 ### 2nd Semi-chapter of the 1st Chapter ###
 Lorem ipsum lorem ipsum!
@@ -305,3 +305,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     - <Message type="error">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </Message>
+
+---
+
+BASH
+```bash 
+mkdir new_Directory
+```
+
+SHELL script
+```shell script
+echo "hello"
+```

@@ -1,8 +1,8 @@
 ## Three blockchain pillars ##
 
-Within the Waves blockchain, there are three important pillars upon which the blockchain stands:
+There are three important pillars upon which the Waves blockchain stands:
 - [Account]()  
-   An account is a subject **WHICH** that makes an action on the blockchain. It is not possible to make any blockchain action without an account. 
+   An account is a subject **WHICH** makes an action on the blockchain. It is not possible to make any blockchain action without an account. 
 - [Asset]()  
     An asset is **WHAT** often happens to be the object of this action. Yet, certain operations do not necessarily interact with assets. For example, an account can [create an alias](), where any action with an asset is absent. Nevertheless, the central goal of a blockchain is to be an immutable ledger, where the indispensable element is an asset. 
 - [Transaction]()  
@@ -25,7 +25,7 @@ The Waves team created client libraries in popular programming languages to inte
 ### How to initialize a library to start operating with the Waves blockchain ###
 
 Follow the steps below to initialize a library:
-1. To initialize a library, it is essential to create a node instance first. Node instance creation allows you to perform all actions within a selected [network](). 
+1. Primarily, it is essential to create a node instance first. Node instance creation allows you to perform all actions within a selected [network](). 
 
     <Message type="warning">
 
@@ -61,7 +61,7 @@ Follow the steps below to initialize a library:
     ```
 
     </CodeBlock>
-2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to all the functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe two core entities: private and public keys.
+2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe two core entities: private and public keys.
 
     <CodeBlock>
 
