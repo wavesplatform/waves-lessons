@@ -42,9 +42,9 @@ All operations with assets can be groupped by two categories:
     * [Sponsor fee transaction]()
 
     The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transactions.
-- **<u>REST API methods</u>**
+- **<u>REST API methods</u>**  
     As well, it is possible to interact with REST API methods to get some information about assets, for example:
-    * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`
+    * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`  
         Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit` (read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)), 1000 by default. For pagination, use the field `{after}`.
     * **GET** `/assets/balance/{address}`  
         Get account balances in all or specified assets (excluding WAVES) at a given address. Please, note, the full portfolio also excludes [NFTs](#nft-creation).
@@ -57,7 +57,7 @@ All operations with assets can be groupped by two categories:
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
-### Assets arguments ###
+## Assets arguments ##
 
 As previously mentioned in [Functions parameters](), every function has a set of arguments passed on. Below you can find the list of arguments necessary to be filled within the [asset creation](#asset-creation) function and with the [NFT creation](#nft-creation), both of which are varieties of different arguements within the [Issue transaction]():
 
@@ -91,6 +91,8 @@ IssueTransaction tx = new IssueTransaction(
         .addProof(privateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction
+IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
 ```
 ```php
 ```
@@ -100,7 +102,6 @@ node.waitForTransaction(node.broadcast(tx).id());
 const waves = 100_000_000
 
 func main() {
- 
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // Creating an Issue transaction
@@ -108,11 +109,6 @@ func main() {
         1000_00, 2, false, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
-    if err != nil {
-        panic(err)
-    }
-    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
-    cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
     if err != nil {
         panic(err)
     }
@@ -133,9 +129,7 @@ func main() {
 
 ## NFT creation ##
 
-A non-fungible token or NFT is a special type of a token, that represents some unique object. Each NFT has its own unique identifier. See the Non-fungible Token article for more information.
-
-To issue an NFT, you can use any of the methods described above. Specify the following parameters of token:
+A non-fungible token or NFT is a particular type of token representing some unique object. The difference between a regular asset and an NFT is that an NFT is an asset with a quantity equal to one that cannot be reissued. Therefore, it is necessary to specify the following parameters of a token we create:
 * "quantity": 1
 * "decimals": 0
 * "reissuable": false
@@ -190,3 +184,5 @@ func main() {
 ```
 
 </CodeBlock>
+
+Read more about [NFT](https://docs.waves.tech/en/blockchain/token/non-fungible-token).
