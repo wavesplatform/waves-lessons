@@ -46,7 +46,7 @@ Follow the steps below to initialize a library:
     ```csharp
     ```
     ```go
-    /* Create a new HTTP    client in the given network
+    /* Create a new HTTP client in the given network
     Mainnet (https://nodes.wavesnodes.com/)
     Testnet (https://nodes-testnet.wavesnodes.com/)
     Stagenet (https://nodes-stagenet.wavesnodes.com/)*/

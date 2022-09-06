@@ -28,20 +28,20 @@ The minimum fee for an issue transaction is 1 WAVES, in case of issue of a non-f
 ```js
 ```
 ```java
-        // Create an Issue transaction
-        IssueTransaction tx = new IssueTransaction(
-                privateKey.publicKey(),
-                "sampleasset", 
-                "description of the asset", 
-                1000, 
-                2, 
-                false,
-                null) 
-                .addProof(privateKey); 
-        // Broadcast the transaction and wait for it to be included in the blockchain
-        node.waitForTransaction(node.broadcast(tx).id());
-        // Get the transaction info from a node
-        IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
+// Create an Issue transaction
+IssueTransaction tx = new IssueTransaction(
+        privateKey.publicKey(),
+        "sampleasset", 
+        "description of the asset", 
+        1000, 
+        2, 
+        false,
+        null) 
+        .addProof(privateKey); 
+// Broadcast the transaction and wait for it to be included in the blockchain
+node.waitForTransaction(node.broadcast(tx).id());
+// Get the transaction info from a node
+IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
 ```
 ```php
 ```

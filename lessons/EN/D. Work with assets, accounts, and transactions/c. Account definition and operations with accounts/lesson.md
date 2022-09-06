@@ -36,49 +36,22 @@ Essential attributes
 ```js
 ```
 ```java
-package com.wavesplatform.examples;
-import com.wavesplatform.transactions.account.Address;
-import com.wavesplatform.transactions.account.PrivateKey;
-import com.wavesplatform.transactions.account.PublicKey;
-import com.wavesplatform.transactions.common.ChainId;
-import com.wavesplatform.wavesj.Node;
-import com.wavesplatform.wavesj.Profile;
-import com.wavesplatform.wavesj.exceptions.NodeException;
-import java.io.IOException;
-
-public class WavesExample {
-    public static void main(String[] args) throws NodeException, IOException {
-        // Create a node instance
-        Node node = new Node(Profile.TESTNET);
-        // Create the private key from a seed
-        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // Get the public key from the private key
-        PublicKey publicKey = PublicKey.from(privateKey);
-        // Get an address from the public key
-        Address address = Address.from(ChainId.TESTNET, publicKey);
-        // Print the address
-        System.out.println(address.encoded());
-    }
-} 
+// Create a node instance
+Node node = new Node(Profile.TESTNET);
+// Create the private key from a seed
+PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+// Get the public key from the private key
+PublicKey publicKey = PublicKey.from(privateKey);
+// Get an address from the public key
+Address address = Address.from(ChainId.TESTNET, publicKey);
+// Print the address
+System.out.println(address.encoded());
 ```
 ```php
 ```
 ```csharp
 ```
 ```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "net/http"
-    "time"
-    "github.com/tyler-smith/go-bip39"
-    "github.com/wavesplatform/gowaves/pkg/client"
-    "github.com/wavesplatform/gowaves/pkg/crypto"
-    "github.com/wavesplatform/gowaves/pkg/proto"
-)
-
 func main() {
     // Generate a new random entropy bytes
     entropy, err := bip39.NewEntropy(160)
