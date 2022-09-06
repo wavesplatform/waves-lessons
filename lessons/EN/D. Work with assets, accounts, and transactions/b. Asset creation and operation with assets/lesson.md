@@ -72,7 +72,7 @@ As previously mentioned in [Functions parameters](), every function has a set of
 
 ## Asset creation ##
 
-Asset creation transaction allows creating a regular asset. 
+Asset creation transaction allows creating a regular asset.
 
 <CodeBlock>
 
@@ -91,8 +91,6 @@ IssueTransaction tx = new IssueTransaction(
         .addProof(privateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
-// Get the transaction info from a node
-IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
 ```
 ```php
 ```
@@ -147,84 +145,27 @@ To issue an NFT, you can use any of the methods described above. Specify the fol
 ```js
 ```
 ```java
-package com.wavesplatform.examples;
-import com.wavesplatform.transactions.account.PrivateKey;
-import com.wavesplatform.transactions.IssueTransaction;
-import com.wavesplatform.wavesj.Node;
-import com.wavesplatform.wavesj.Profile;
-import com.wavesplatform.wavesj.exceptions.NodeException;
-import com.wavesplatform.wavesj.info.IssueTransactionInfo;
-import java.io.IOException;
-
-public class WavesExample {
-    public static void main(String[] args) throws NodeException, IOException {
-        // Create a node instance
-        Node node = new Node(Profile.TESTNET);
-        // Create the private key from a seed
-        PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
-        // Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
-        IssueTransaction tx = new IssueTransaction(
-                privateKey.publicKey(),
-                "sampleasset", 
-                "description of the asset", 
-                1, 
-                0, 
-                false,
-                null) 
-                .addProof(privateKey); 
-        // Broadcast the transaction and wait for it to be included in the blockchain
-        node.waitForTransaction(node.broadcast(tx).id());
-        // Get the transaction info from a node
-        IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
-        // Print all the information
-        System.out.println("type:" + txInfo.tx().type());
-        System.out.println("id:" + txInfo.tx().id());
-        System.out.println("fee:" + txInfo.tx().fee().value());
-        System.out.println("feeAssetId:" + txInfo.tx().fee().assetId().encoded());
-        System.out.println("timestamp:" + txInfo.tx().timestamp());
-        System.out.println("version:" + txInfo.tx().version());
-        System.out.println("chainId:" + txInfo.tx().chainId());
-        System.out.println("sender:" + txInfo.tx().sender().address().encoded());
-        System.out.println("senderPublicKey:" + txInfo.tx().sender().encoded());
-        System.out.println("proofs:" + txInfo.tx().proofs());
-        System.out.println("assetId:" + txInfo.tx().assetId().encoded());
-        System.out.println("name:" + txInfo.tx().name());
-        System.out.println("quantity:" + txInfo.tx().quantity());
-        System.out.println("reissuable:" + txInfo.tx().reissuable());
-        System.out.println("decimals:" + txInfo.tx().decimals());
-        System.out.println("description:" + txInfo.tx().description());
-        System.out.println("script:" + txInfo.tx().script().encoded());
-        System.out.println("height:" + txInfo.height());
-        System.out.println("applicationStatus:" + txInfo.applicationStatus());
-    }
-} 
+// Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
+IssueTransaction tx = new IssueTransaction(
+        privateKey.publicKey(),
+        "sampleasset", 
+        "description of the asset", 
+        1, 
+        0, 
+        false,
+        null) 
+        .addProof(privateKey); 
+// Broadcast the transaction and wait for it to be included in the blockchain
+node.waitForTransaction(node.broadcast(tx).id());
 ```
 ```php
 ```
 ```csharp
 ```
 ```go
-package main
-
-import (
-    "context"
-    "net/http"
-    "time"
-    "github.com/wavesplatform/gowaves/pkg/client"
-    "github.com/wavesplatform/gowaves/pkg/crypto"
-    "github.com/wavesplatform/gowaves/pkg/proto"
-)
-
 const waves = 100_000_000
 
 func main() {
-    // Create the sender's private key from a BASE58 string
-    sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
-    if err != nil {
-        panic(err)
-    }
-    // Generate the public key from the private key
-    pk := crypto.GeneratePublicKey(sk)
     // Current time in milliseconds
     ts := uint64(time.Now().UnixMilli())
     // Create an Issue transaction
@@ -232,11 +173,6 @@ func main() {
         1, 0, false, nil, ts, 1*waves)
     // Sing the transaction with the private key
     err = tx.Sign(proto.TestNetScheme, sk)
-    if err != nil {
-        panic(err)
-    }
-    // Create a new HTTP client to broadcast the transaction to public TestNet nodes
-    cl, err := client.NewClient(client.Options{BaseUrl: "https://testnodes.wavesnodes.com", Client: &http.Client{}})
     if err != nil {
         panic(err)
     }
