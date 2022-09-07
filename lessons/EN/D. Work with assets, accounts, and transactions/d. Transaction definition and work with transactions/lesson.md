@@ -6,22 +6,116 @@ Every transaction goes through different formation stages, from its initiation t
 
 ## Stages of a transaction formation ##
 
+<Message info="info">
+
+Kindly note that [initializing the library](b36f01e4-ac85-4aa4-8a7f-9fe6a5fc26f8#how-to-initialize-a-library-to-start-operating-with-the-waves-blockchain) is vital before beginning working with transactions. 
+</Message>
+
 Before a transaction gets into the blockchain, it has to pass all necessary stages of transaction formation. At the illustration below you may see five major steps that every transaction goes through:
 
 ![](./img/txstages.png)
 
 There are five important steps:
 1. **<u>Transaction initilization</u>**  
-    During this step, an account initiates a transaction, specifying all necessary parameters. Once all parameters are specified, the transaction has to be signed with a [private key]() of that account. The signature represents proof that the account owner initiated the transaction. For example, we can refer to an [Issue transaction]() that issues a new asset, where a user needs to specify the name of the asset, its quantity, reissuability, etc. Afterward, the transaction gets signed by the account owner.
+    During this step, an account initiates a transaction, specifying all necessary parameters. Once all parameters are specified, the transaction has to be signed with a [private key]() of that account. The signature represents proof that the account owner initiated the transaction. 
+    For example, we can refer to an [Issue transaction]() that issues a new asset, where a user needs to specify the name of the asset, its quantity, reissuability, etc. Afterward, the transaction gets signed by the account owner.
+
+    <CodeBlock>
+
+    ```js
+    ```
+    ```java
+    // Create an Issue transaction
+    IssueTransaction tx = new IssueTransaction(
+            privateKey.publicKey(),
+            "sampleasset", 
+            "description of the asset", 
+            1000, 
+            2, 
+            false,
+            null) 
+            .addProof(privateKey); 
+    ```
+    ```php
+    ```
+    ```csharp
+    ```
+    ```go
+    ```
+    ```python
+    ```
+
+    </CodeBlock>
 2. **<u>Transaction broadcasting</u>**  
     A signed transaction has to be broadcasted to a node, which means sending to a node an information about the signed transaction. For example, it can be done via the [REST API](http://127.0.0.1:6869/api-docs/index.html#/transactions/broadcastSignedTx) service of your node with a [JSON transaction representation](https://docs.waves.tech/en/blockchain/transaction/#json-representation). Also, if a user is more interface-oriented, another example can be given: once an account in [Waves Exchange](https://waves.exchange/) goes to the [WAVES withdrawal page](https://waves.exchange/withdraw/WAVES) and transfers WAVES to another wallet, the transaction will be broadcasted to a node.
+
+
+    <CodeBlock>
+
+    ```js
+    ```
+    ```java
+    // Broadcast the transaction and wait for it to be included in the blockchain
+    node.waitForTransaction(node.broadcast(tx).id())
+    ```
+    ```php
+    ```
+    ```csharp
+    ```
+    ```go
+    // Context to cancel the request execution on timeout
+    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer cancel()
+    // Broadcast the transaction to the network
+    _, err = cl.Transactions.Broadcast(ctx, tx)
+    if err != nil {
+        panic(err)
+    }
+    ```
+    ```python
+    ```
+
+    </CodeBlock>
 3. **<u>UTX pool</u>**  
     A node that received a broadcasted transaction will send this transaction to the UTX pool (Unconfirmed Transaction Pool). This is a place, where all transactions are temporarily stored and checked whether they are valid before it is decided if this transaction can be included in the blockchain. A real life comparison can be a conveyer that operates with car parts and separates all working parts from defective ones. 
 4. **<u>Transaction validation</u>**  
     Multiple nodes in the network are working with the UTX pool and verifying transactions. The verification process includes such elements as checking if an account truly initiated the transaction and signed it with a valid private key, if the account had a sufficient available balance, and so on. Different [transaction types](#transaction-types) have different parameters to be verified. 
 5. **<u>Saving into the blockchain</u>**  
     In the module [Mining and earning on it](), we installed a node that is ready for mining. In this final step, a node that will generate the next block will include a transaction in the blockchain if it was verified by nodes within the verification step out of the UTX pool. The transaction data will be stored in binary format (bytes) in the blockchain.
-     
+
+An example of a fully working transaction will all the pieces of code combined together would look like this:
+
+<CodeBlock>
+
+```js
+```
+```java
+Node node = new Node(Profile.TESTNET);
+PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+IssueTransaction tx = new IssueTransaction(
+        privateKey.publicKey(),
+        "asset", 
+        "description", 
+        1000, 
+        2, 
+        false,
+        null) 
+        .addProof(privateKey); 
+node.waitForTransaction(node.broadcast(tx).id());
+```
+```php
+```
+```csharp
+```
+```go
+```
+```python
+```
+
+</CodeBlock>
+
+## How to view transaction details ##
+
 All information about completed transactions, both accepted or declined, unless failed, can be viewed three ways:
 - [Waves Explorer](https://new.wavesexplorer.com/)  
     To find a transaction and view it in a user-friendly interface, you can use [Waves Explplorer](https://new.wavesexplorer.com/). It will be possible to find a transaction by its ID. 

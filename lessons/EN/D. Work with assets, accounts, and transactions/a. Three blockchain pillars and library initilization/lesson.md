@@ -83,6 +83,9 @@ Follow the steps below to initialize a library:
     }
     // Generate the public key from the private key
     pk := crypto.GeneratePublicKey(sk)
+
+    // Current time in milliseconds
+    ts := uint64(time.Now().UnixMilli())
     ```
     ```python
     ```
