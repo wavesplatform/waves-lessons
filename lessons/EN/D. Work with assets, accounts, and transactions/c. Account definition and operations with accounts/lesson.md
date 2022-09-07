@@ -25,7 +25,7 @@ In the lessons, [What is a smart account and setting account script]() and [What
 This chapter will help to distinguish operations with accounts among many possible actions on the Waves blockchain.   
 All operations with assets can be groupped by two categories:
 - **<u>Transactions</u>**   
-    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately ащгк of them that are related to interaction with accounts:
+    Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately four of them that are related to interaction with accounts:
     * [Create alias transaction]()
     * [Data transaction]()  
     * [Set script transaction]()  
@@ -62,7 +62,7 @@ All operations with assets can be groupped by two categories:
         Get an account script meta data.
     * **GET** `/addresses/validate/{address}`  
         Verify whether an account address is valid.
-    * **GET** `/addresses/publicKey/{publicKey}`
+    * **GET** `/addresses/publicKey/{publicKey}`  
         Generate an account address from a given public key.
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
