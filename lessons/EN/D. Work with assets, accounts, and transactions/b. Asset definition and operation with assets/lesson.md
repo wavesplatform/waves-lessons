@@ -90,9 +90,7 @@ IssueTransaction tx = new IssueTransaction(
         null) 
         .addProof(privateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
-node.waitForTransaction(node.broadcast(tx).id());
-// Get information about the transaction
-IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
+node.waitForTransaction(node.broadcast(tx).id())
 ```
 ```php
 ```
@@ -102,8 +100,6 @@ IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionI
 const waves = 100_000_000
 
 func main() {
-    // Current time in milliseconds
-    ts := uint64(time.Now().UnixMilli())
     // Creating an Issue transaction
     tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "sampleasset", "description of the asset",
         1000_00, 2, false, nil, ts, 1*waves)
@@ -160,8 +156,6 @@ node.waitForTransaction(node.broadcast(tx).id());
 const waves = 100_000_000
 
 func main() {
-    // Current time in milliseconds
-    ts := uint64(time.Now().UnixMilli())
     // Create an Issue transaction
     tx := proto.NewUnsignedIssueWithProofs(3, proto.TestNetScheme, pk, "sampleasset", "description of the asset",
         1, 0, false, nil, ts, 1*waves)
