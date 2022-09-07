@@ -27,14 +27,14 @@ There are five important steps:
     ```java
     // Create an Issue transaction
     IssueTransaction tx = new IssueTransaction(
-            privateKey.publicKey(),
+            senderPublicKey,
             "sampleasset", 
             "description of the asset", 
             1000, 
             2, 
             false,
             null) 
-            .addProof(privateKey); 
+            .addProof(senderPrivateKey); 
     ```
     ```php
     ```

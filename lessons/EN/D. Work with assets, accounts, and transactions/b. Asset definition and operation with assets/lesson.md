@@ -45,7 +45,7 @@ All operations with assets can be groupped by two categories:
 - **<u>REST API methods</u>**  
     As well, it is possible to interact with REST API methods to get some information about assets, for example:
     * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`  
-        Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit` (read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings)), 1000 by default. For pagination, use the field `{after}`.
+        Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit`, 1000 by default. Read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings). For pagination, use the field `{after}`.
     * **GET** `/assets/balance/{address}`  
         Get account balances in all or specified assets (excluding WAVES) at a given address. Please, note, the full portfolio also excludes [NFTs](#nft-creation).
     * **GET** `/assets/balance/{address}/{assetId}`  
@@ -64,9 +64,9 @@ As previously mentioned in [Functions parameters](), every function has a set of
 | Arguement | Description | Example |
 | :--- | :--- | :--- |
 | name | Token name. <br>From 4 to 16 bytes (1 character can take up to 4 bytes).| sampleasset |
+| description | Token description. From 0 to 1000 bytes.| description of the asset |
 | quantity | Token quantity.<br> An integer value specified in the minimum fraction (“cents”), that is, the real quantity multiplied by 10<sup>decimals</sup>.<br>From 1 to 9,223,372,036,854,775,807.<br>1 for NFT.| 1000 |
 | decimals | Number of decimal places, from 0 to 8.<br>0 for NFT.| 2 |
-| description | Token description. From 0 to 1000 bytes.| description of the asset |
 | reissuable | Reissue availability flag, see the [Reissue Transaction]() article.<br>`false` for NFT. | false |
 | script | For a smart asset: a compiled asset script, up to 8192 bytes, base64 encoded.<br>For a token without a script: `null`.<br>The token issued without a script cannot be converted to a smart asset. | null |
 
@@ -81,14 +81,14 @@ Asset creation transaction allows creating a regular asset.
 ```java
 // Create an Issue transaction
 IssueTransaction tx = new IssueTransaction(
-        privateKey.publicKey(),
+        senderPublicKey,
         "sampleasset", 
         "description of the asset", 
         1000, 
         2, 
         false,
         null) 
-        .addProof(privateKey); 
+        .addProof(senderPrivateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id())
 ```
@@ -125,10 +125,7 @@ func main() {
 
 ## NFT creation ##
 
-A non-fungible token or NFT is a particular type of token representing some unique object. The difference between a regular asset and an NFT is that an NFT is an asset with a quantity equal to one that cannot be reissued. Therefore, it is necessary to specify the following parameters of a token we create:
-* "quantity": 1
-* "decimals": 0
-* "reissuable": false
+A non-fungible token or NFT is a particular type of token representing some unique object. The difference between a regular asset and an NFT is that an NFT is an asset with a quantity equal to one that cannot be reissued. 
 
 <CodeBlock>
 
@@ -137,14 +134,14 @@ A non-fungible token or NFT is a particular type of token representing some uniq
 ```java
 // Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
 IssueTransaction tx = new IssueTransaction(
-        privateKey.publicKey(),
+        senderPublicKey,
         "sampleasset", 
         "description of the asset", 
         1, 
         0, 
         false,
         null) 
-        .addProof(privateKey); 
+        .addProof(senderPrivateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
 ```
