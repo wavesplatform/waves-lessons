@@ -61,22 +61,24 @@ Follow the steps below to initialize a library:
     ```
 
     </CodeBlock>
-2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe two core entities: private and public keys.
+2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe two account core entities: private and public keys.
 
     <CodeBlock>
 
     ```js
     ```
     ```java
-    // Create the sender's private key from a seed
-    PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
+    // Create a private key from a seed
+    PrivateKey senderPrivateKey = PrivateKey.fromSeed("seed phrase");
+    // Create the public key from the private key
+    PublicKey senderPublicKey =  privateKey.publicKey();
     ```
     ```php
     ```
     ```csharp
     ```
     ```go
-    // Create the sender's private key from a BASE58 string
+    // Create a private key from a BASE58 string
     sk, err := crypto.NewSecretKeyFromBase58("<your-private-key>")
     if err != nil {
         panic(err)
