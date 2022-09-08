@@ -4,7 +4,7 @@ An asset (or a token) is a digital resource that can be used as:
 - **<u>Cryptocurrency</u>**:  
         Aside from the main Waves blockchain cryptocurrency, WAVES, you can create your own cryptocurrency.
         If you manage to promote your token in the market, it can become a valuable currency. 
-        To give a hint on how to make your token valuable, take a look at dollars.
+        To get a hint on how to make your token valuable, take a look at dollars.
         Why do we use dollars and think of them as of something that has a value?
         Why, at the same time, do we never use leaves from trees as a currency, though it may have a relatively the same composition?
         Dollars managed to be credited to accounts of many different holders, and the holders had no other goal but to use these dollars.
@@ -23,15 +23,14 @@ An asset (or a token) is a digital resource that can be used as:
         Here we use tokens that we created on the Waves blockchain as an object in a game.
 
 Therefore, we can make a conclusion that an asset can be either a cryptocurrency or an object within your program.
-If you wish to become an owner of a new cryptocurrency or use an asset as a ready solution for your project, you can [create it](#asset-creation) in the Waves blockchain.
+If you wish to become an owner of a new cryptocurrency or use an asset as a ready solution for your project, [create it](#asset-creation) with a client library.
 
 In the topic [How the Waves works](), we covered the lesson on smart assets, [What is a smart asset, and how to create it]().
-That lesson was a simple particular demonstration of what a smart asset is and how it could be created. The difference between a regular asset and a smart asset is that a smart asset has an additional configuration, defining rules of work of the asset. 
+That lesson was a simple particular demonstration of what a smart asset is and how it could be created. The difference between a regular asset and a smart asset is that the smart asset has an additional configuration, defining the rules of its work. 
 
 ## Operations with assets ##
 
-This chapter will help to distinguish operations with assets among many possible actions on the Waves blockchain.   
-All operations with assets can be groupped by two categories:
+This chapter will help to distinguish operations with assets among many possible actions on the Waves blockchain. All operations with assets can be groupped by two categories:
 - **<u>Transactions</u>**:   
     Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related to interaction with assets:
     * [Issue transaction]()
@@ -68,7 +67,7 @@ All operations with assets can be groupped by two categories:
         ```python
         ```
         </CodeBlock>
-    * **`getAssetsBalance`**
+    * **`getAssetsBalance`**  
         Get account balances in all or specified assets (excluding WAVES) at a given address. 
         
         <CodeBlock>
@@ -88,10 +87,10 @@ All operations with assets can be groupped by two categories:
         ```python
         ```
         </CodeBlock>
-    * **`getAssetDetails`**
+    * **`getAssetDetails`**  
         Get detailed information about a given asset.
-    * **`getNft`**
-         Get a list of non-fungible tokens at a given address.
+    * **`getNft`**  
+        Get a list of non-fungible tokens at a given address.
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
@@ -103,7 +102,7 @@ As previously mentioned in [Functions parameters](), every function has a set of
 | :--- | :--- | :--- |
 | name | Token name. <br>From 4 to 16 bytes (1 character can take up to 4 bytes).| sampleasset |
 | description | Token description. From 0 to 1000 bytes.| description of the asset |
-| quantity | Token quantity.<br> An integer value specified in the minimum fraction (“cents”), that is, the real quantity multiplied by 10<sup>decimals</sup>.<br>From 1 to 9,223,372,036,854,775,807.<br>1 for NFT.| 1000 |
+| quantity | Token quantity.<br> An integer value specified in the minimum fraction (“cents”), that is, the real quantity multiplied by 10<sup>decimals</sup>.<br>From 1 to 9,223,372,036,854,775,807.<br>1 for [NFT](#nft-creation).| 1000 |
 | decimals | Number of decimal places, from 0 to 8.<br>0 for NFT.| 2 |
 | reissuable | Reissue availability flag, see the [Reissue Transaction]() article.<br>`false` for NFT. | false |
 | script | For a smart asset: a compiled asset script, up to 8192 bytes, base64 encoded.<br>For a token without a script: `null`.<br>The token issued without a script cannot be converted to a smart asset. | null |
@@ -117,7 +116,7 @@ Asset creation transaction allows creating a regular asset.
 ```js
 ```
 ```java
-// Create an Issue transaction
+// Create an issue transaction
 IssueTransaction tx = new IssueTransaction(
         publicKey,
         "sampleasset", 
@@ -163,18 +162,23 @@ func main() {
 
 ## NFT creation ##
 
-A non-fungible token or NFT is a particular type of token representing some unique object. The difference between a regular asset and an NFT is that an NFT is an asset with a quantity equal to one that cannot be reissued. 
+A non-fungible token or NFT is a particular type of [token](https://docs.waves.tech/en/blockchain/token/) representing some unique object. The difference between a regular asset and an NFT is that an NFT is an asset that cannot be reissued and has a quantity equal to one.
+
+Specify the following parameters of the function below:
+- `quantity`: 1
+- `decimals`: 0
+- `reissuable`: false
 
 <CodeBlock>
 
 ```js
 ```
 ```java
-// Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
+// Create an issue transaction
 IssueTransaction tx = new IssueTransaction(
         publicKey,
-        "sampleasset", 
-        "description of the asset", 
+        "testNFT", 
+        "description of the NFT", 
         1, 
         0, 
         false,
