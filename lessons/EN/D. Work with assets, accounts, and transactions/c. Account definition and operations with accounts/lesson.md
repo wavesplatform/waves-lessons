@@ -24,7 +24,7 @@ In the lessons, [What is a smart account and setting account script]() and [What
 
 This chapter will help to distinguish operations with accounts among many possible actions on the Waves blockchain.   
 All operations with assets can be groupped by two categories:
-- **<u>Transactions</u>**   
+- **<u>Transactions</u>**:   
     Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately four of them that are related to interaction with accounts:
     * [Create alias transaction]()
     * [Data transaction]()  
@@ -32,38 +32,21 @@ All operations with assets can be groupped by two categories:
     * [Invoke script transaction]()  
 
     The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transactions.
-- **<u>REST API methods</u>**  
-    As well, it is possible to interact with REST API methods to get some information about assets, for example:
-    * **GET** `/addresses`  
+- **<u>Node object methods</u>**:  
+    * **`getAddresses`**  
         Get a list of account addresses in the [node wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet).
-    * **GET** `/addresses/seq/{from}/{to}`  
-        Get a list addresses in the [node wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet) by a given range of indices. The max range `{from}`-`{to}` is 100 addresses.
-    * **POST** `/addresses/balance`  
-        Get regular balances for multiple addresses. The max number of addresses is set by `waves.rest-api.transactions-by-address-limit`, 1000 by default. Read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings).
-    * **GET** `/addresses/balance/{address}`  
+    * **`getBalance`**  
         Get the regular balance in WAVES at a given address. Read more about [account balance types](https://docs.waves.tech/en/blockchain/account/account-balance).
-    * **GET** `/addresses/balance/{address}/{confirmations}`  
-        Get the minimum regular balance at a given address for `{confirmations}` blocks back from the current height. The max number of confirmations is set by `waves.db.max-rollback-depth`, 2000 by default. Read more about [DB Settings](https://docs.waves.tech/en/waves-node/node-configuration#db-settings) and [account balance types](https://docs.waves.tech/en/blockchain/account/account-balance).
-    * **GET** `/addresses/balance/details/{address}`  
+    * **`getBalanceDetails`**  
         Get [available, regular, generating, and effective account balances](https://docs.waves.tech/en/blockchain/account/account-balance#account-balance-in-waves).
-    * **GET** `/addresses/data/{address}`  
-        Read account data entries by given keys or a regular expression.
-    * **POST** `/addresses/data/{address}`  
-        Read account data entries by given keys.
-    * **GET** `/addresses/data/{address}/{key}`  
-        Read account data entries by a given key.
-    * **GET** `/addresses/effectiveBalance/{address}`  
-        Get the effective balance in WAVES at a given address. Read more about [account balance types](https://docs.waves.tech/en/blockchain/account/account-balance).
-    * **GET** `/addresses/effectiveBalance/{address}/{confirmations}`  
-        Get the minimum effective balance at a given address for `{confirmations}` blocks from the current height. The max number of confirmations is set by `waves.db.max-rollback-depth`, 2000 by default. Read more about [DB Settings](https://docs.waves.tech/en/waves-node/node-configuration#db-settings) and [account balance types](https://docs.waves.tech/en/blockchain/account/account-balance).
-    * **GET** `/addresses/scriptInfo/{address}`  
-        Get an account script or a dApp script information by a given address.
-    * **GET** `/addresses/scriptInfo/{address}/meta`  
-        Get an account script meta data.
-    * **GET** `/addresses/validate/{address}`  
-        Verify whether an account address is valid.
-    * **GET** `/addresses/publicKey/{publicKey}`  
-        Generate an account address from a given public key.
+    * **`getBalances`**  
+        Get regular balances for multiple addresses. Read more about [account balance types](https://docs.waves.tech/en/blockchain/account/account-balance).
+    * **`getData`**  
+        Read account [data entries](https://docs.waves.tech/en/blockchain/account/account-data-storage) by given keys.
+    * **`getScriptInfo`**          
+        Get an [account script]() or a [dApp script]() information by a given address.
+    * **`getScriptMeta`**  
+        Get an [account script]() meta data.
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
