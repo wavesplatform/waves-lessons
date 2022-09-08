@@ -22,7 +22,7 @@ The minimum fee for a Lease transaction is 0.001 WAVES. Read more about [Lease t
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 
 <CodeBlock>
@@ -52,7 +52,7 @@ Read more about [Lease cancel transaction](https://docs.waves.tech/en/blockchain
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 

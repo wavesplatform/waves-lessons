@@ -81,14 +81,14 @@ Asset creation transaction allows creating a regular asset.
 ```java
 // Create an Issue transaction
 IssueTransaction tx = new IssueTransaction(
-        senderPublicKey,
+        publicKey,
         "sampleasset", 
         "description of the asset", 
         1000, 
         2, 
         false,
         null) 
-        .addProof(senderPrivateKey); 
+        .addProof(privateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id())
 ```
@@ -134,14 +134,14 @@ A non-fungible token or NFT is a particular type of token representing some uniq
 ```java
 // Create an Issue transaction (non-fungible token, NFT: quantity=1, decimals=0, reissuable=false)
 IssueTransaction tx = new IssueTransaction(
-        senderPublicKey,
+        publicKey,
         "sampleasset", 
         "description of the asset", 
         1, 
         0, 
         false,
         null) 
-        .addProof(senderPrivateKey); 
+        .addProof(privateKey); 
 // Broadcast the transaction and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
 ```

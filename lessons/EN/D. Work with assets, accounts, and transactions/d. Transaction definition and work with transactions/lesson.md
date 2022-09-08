@@ -6,7 +6,7 @@ Every transaction goes through different formation stages, from its initiation t
 
 ## Stages of a transaction formation ##
 
-<Message info="info">
+<Message type="info">
 
 Kindly note that [initializing the library](b36f01e4-ac85-4aa4-8a7f-9fe6a5fc26f8#how-to-initialize-a-library-to-start-operating-with-the-waves-blockchain) is vital before beginning working with transactions. 
 </Message>

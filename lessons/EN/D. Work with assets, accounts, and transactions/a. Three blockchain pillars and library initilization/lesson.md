@@ -69,9 +69,9 @@ Follow the steps below to initialize a library:
     ```
     ```java
     // Create a private key from a seed
-    PrivateKey senderPrivateKey = PrivateKey.fromSeed("seed phrase");
+    PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
     // Create the public key from the private key
-    PublicKey senderPublicKey =  privateKey.publicKey();
+    PublicKey publicKey =  privateKey.publicKey();
     ```
     ```php
     ```
