@@ -77,7 +77,7 @@ Also, make sure to save the [address](#account-address-creation) of an account t
 
 ### Private key creation ###
 
-There are six different methods to create a private key via:
+You can use any of the six methods to create a private key via:
 
 1. **Given seed phrase**:  
     It is possible to create an account via a manually written seed phrase. We used this way of an account creation in the [library initialization chapter](b36f01e4-ac85-4aa4-8a7f-9fe6a5fc26f8#how-to-initialize-a-library-to-start-operating-with-the-waves-blockchain). 
@@ -242,6 +242,8 @@ PublicKey publicKey =  privateKey.publicKey();
 </CodeBlock>
 
 ### Account address creation ###
+
+Receive the address from the [public key](#public-key-creation):
 
 <CodeBlock>
 
