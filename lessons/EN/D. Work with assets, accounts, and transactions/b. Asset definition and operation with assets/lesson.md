@@ -32,7 +32,7 @@ That lesson was a simple particular demonstration of what a smart asset is and h
 
 This chapter will help to distinguish operations with assets among many possible actions on the Waves blockchain.   
 All operations with assets can be groupped by two categories:
-- **<u>Transactions</u>**   
+- **<u>Transactions</u>**:   
     Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately six of them that are related to interaction with assets:
     * [Issue transaction]()
     * [Reissue transaction]()
@@ -42,18 +42,56 @@ All operations with assets can be groupped by two categories:
     * [Sponsor fee transaction]()
 
     The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transactions.
-- **<u>REST API methods</u>**  
-    As well, it is possible to interact with REST API methods to get some information about assets, for example:
-    * **GET** `/assets/{assetId}/distribution/{height}/limit/{limit}`  
-        Get asset balance distribution by [account]() addresses at a given height. The maximum number of addresses is set by `waves.rest-api.distribution-address-limit`, 1000 by default. Read more about [node rest api configruations](https://docs.waves.tech/en/waves-node/node-configuration#rest-api-settings). For pagination, use the field `{after}`.
-    * **GET** `/assets/balance/{address}`  
-        Get account balances in all or specified assets (excluding WAVES) at a given address. Please, note, the full portfolio also excludes [NFTs](#nft-creation).
-    * **GET** `/assets/balance/{address}/{assetId}`  
-        Get the account balance of a given asset.
-    * **GET** `/assets/details/{assetId}`  
+- **<u>Node object methods</u>**:  
+    Client libraries offer invoking different node object methods:
+    * **`getAssetDistribution`**  
+        Get asset balance distribution by [account]() addresses.
+
+        <CodeBlock>
+
+        ```js
+        ```
+        ```java
+        // Specify the assetId and the given height.
+        node.getAssetDistribution(assetId, height) 
+        // Specify the assetId, the given height and the limit
+        node.getAssetDistribution(assetId, height, limit)
+        // Specify the assetId, the given height, the limit, and afterAddress
+        node.getAssetDistribution(assetId, height, limit, afterAddress) 
+        ```
+        ```php
+        ```
+        ```csharp
+        ```
+        ```go
+        ```
+        ```python
+        ```
+        </CodeBlock>
+    * **`getAssetsBalance`**
+        Get account balances in all or specified assets (excluding WAVES) at a given address. 
+        
+        <CodeBlock>
+
+        ```js
+        ```
+        ```java
+        // Get information about the account balance by a given address
+        node.getAssetsBalance(address)
+        ```
+        ```php
+        ```
+        ```csharp
+        ```
+        ```go
+        ```
+        ```python
+        ```
+        </CodeBlock>
+    * **`getAssetDetails`**
         Get detailed information about a given asset.
-    * **GET** `/assets/nft/{address}/limit/{limit}`  
-        Get a list of non-fungible tokens at a given address. Maximum for 1000 tokens. For pagination, use the field `{after}`.
+    * **`getNft`**
+         Get a list of non-fungible tokens at a given address.
 
 In this lesson, we will demonstrate an instance of the asset operations with an [Asset creation](#asset-creation) and an [NFT creation](#nft-creation). 
 
