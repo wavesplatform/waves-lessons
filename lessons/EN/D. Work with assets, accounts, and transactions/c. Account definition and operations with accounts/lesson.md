@@ -1,8 +1,11 @@
 ## Account definition ##
 
-An account is a unique record on the platform where its management is available only to its creator. Every person can create an account on the Waves blockchain platform and manage resources. Previously, we mentioned seed phrases and private and public keys in the lesson [Getting to know web 3.0](#Digitalsignatureschapter). Now we can connect all this knowledge into one whole piece. The main goal of an account is to provide resource management available only to the account owner. Nowadays, the security and safety of your funds are critically vital. Therefore if one is to have a private account, one has to ensure the account will be secured and the funds will remain safe and untouched by malefactors. Blockchain cryptography offers a solution to account security that makes it impossible to hack it.
+An account is a unique record on the platform where its management is available only to its creator. 
+Every person can create an account on the Waves blockchain platform and manage resources. 
+In the lesson [Getting to know web 3.0](#Digitalsignatureschapter), we mentioned seed phrases and private and public keys.
+This lesson's material will give a broader understanding of how to create a private and a public keys, using client libraries.
 
-Let's run through the stages of account creation to understand why it is safe. Schematically, it would look like this:
+Let's run through the stages of an account creation:
 ![](./img/curve.png)
 
 1. **<u>Account creation from a seed phrase</u>**   

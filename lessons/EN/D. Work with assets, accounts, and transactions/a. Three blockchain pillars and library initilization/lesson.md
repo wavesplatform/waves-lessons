@@ -16,7 +16,7 @@ The first step into this module will be [getting to know what stands behind ever
 
 ## How are all actions made on the blockchain? ##
 
-Behind every action on the blockchain, for instance, creating an asset/account or sending a transaction to a node, there is a function that runs a particular script. The result of a script compilation is a specific action made on the blockchain. All functions have arguments that are passed on. For example, if we are to run a [function that creates an asset](), we need to fill in necessary arguments, such as the name we want to assign to the asset, its quantity, description, and so on. Likewise, all functions have their own sets of parameters. Some functions may have matching parameters. For instance, if we are working with a [Transfer transaction]() and a [Mass transfer transaction](), in both cases, we would need to specify an `assetId` that we want to transfer. Yet, simultaneously, there will be unique parameters inherent only to a particular function. In the case of our example above, it would be `amount` that defines the sum of our transfer within [Transfer transaction]() and `totalAmount` that defines the sum of all funds we transfer to multiple users within [Mass transfer transaction](). All functions covered in this module will be written with the help of [client libraries](#client-libraries) with a list of relevant parameters and their description.
+Behind every action on the blockchain, for instance, creating an asset or an account, there is a function that runs a particular script. The result of a script compilation is a specific action made on the blockchain. All functions have arguments that are passed on. For example, if we are to run a [function that creates an asset](), we need to fill in necessary arguments, such as the name we want to assign to the asset, its quantity, description, and so on. Likewise, all functions have their own sets of parameters. Some functions may have matching parameters. For instance, if we are working with a [Transfer transaction]() and a [Mass transfer transaction](), in both cases, we would need to specify an `assetId` that we want to transfer. Yet, simultaneously, there will be unique parameters inherent only to a particular function. In the case of our example above, it would be `amount` that defines the sum of our transfer within [Transfer transaction]() and `totalAmount` that defines the sum of all funds we transfer to multiple users within [Mass transfer transaction](). All functions covered in this module will be written with the help of [client libraries](#client-libraries) with a list of relevant parameters and their description.
 
 ## Why and how to use client libraries for blockchain interaction? ##
 
@@ -29,7 +29,7 @@ Follow the steps below to initialize a library:
 
     <Message type="warning">
 
-    In the following lessons, we will be sticking to using the Tesnet network, as it is intended for tests and does not require using real funds. However, if you wish to operate in the main network, please, select the Mainnet network type when creating a node instance. Please, note that for every operation in every network, there is a fee charged. Therefore, if you are using the Mainnet network, please ensure you have a sufficient balance on the account. In case you wish to operate in Testnet or Stagenet, you can top up your balance for free via Faucet: [Tesnet Faucet](https://testnet.wavesexplorer.com/faucet), [Stagenet Faucet](https://stagenet.wavesexplorer.com/faucet).
+    In the following lessons, we will be sticking to using the Tesnet network, as it is intended for tests and does not require using real funds. However, if you wish to operate in the main network, select the Mainnet network type when creating a node instance. Please, note that for every operation in every network, there is a fee charged. Therefore, if you are using the Mainnet network, ensure you have a sufficient balance on the account. In case you wish to operate in Testnet or Stagenet, you can top up your balance for free via Faucet: [Tesnet Faucet](https://testnet.wavesexplorer.com/faucet), [Stagenet Faucet](https://stagenet.wavesexplorer.com/faucet).
 
     </Message>
 
@@ -61,7 +61,7 @@ Follow the steps below to initialize a library:
     ```
 
     </CodeBlock>
-2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe two account core entities: private and public keys.
+2. As we mentioned in the [beginning of this lesson](#three-blockchain-pillars), no action on the blockchain can be done without an [account](). Therefore it is necessary to "connect" an account to functions operating with the blockchain. The next lesson, [Account creation and operations with accounts](), will describe three account core entities: private and public keys and an account address.
 
     <CodeBlock>
 
@@ -72,6 +72,9 @@ Follow the steps below to initialize a library:
     PrivateKey privateKey = PrivateKey.fromSeed("seed phrase");
     // Create the public key from the private key
     PublicKey publicKey =  privateKey.publicKey();
+    /* Get the account address from the public key
+    Specify the same network as used with the node instance */
+    Address address = Address.from(ChainId.TESTNET, publicKey);
     ```
     ```php
     ```
