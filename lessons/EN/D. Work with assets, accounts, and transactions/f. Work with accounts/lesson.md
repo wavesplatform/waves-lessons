@@ -18,7 +18,7 @@ The minimum fee for a Create Alias transaction is 0.001 WAVES. Read more about [
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 
 <CodeBlock>
@@ -54,7 +54,7 @@ The minimum fee for a Data transaction is 0.001 WAVES per kilobyte, the size is 
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 
@@ -83,7 +83,7 @@ The minimum fee for a set script transaction is based on the script size: 0.001 
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 
@@ -119,7 +119,7 @@ Read more about [Invoke script transaction](https://docs.waves.tech/en/blockchai
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 

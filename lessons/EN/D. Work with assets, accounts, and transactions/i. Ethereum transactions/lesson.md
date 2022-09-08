@@ -16,7 +16,7 @@ The minimum fee for an Ethereum transaction is equal to the [Transfer transactio
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 
 <CodeBlock>
@@ -52,4 +52,4 @@ The minimum fee for a Lease transaction is 0.001 WAVES. Read more about [Lease t
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###

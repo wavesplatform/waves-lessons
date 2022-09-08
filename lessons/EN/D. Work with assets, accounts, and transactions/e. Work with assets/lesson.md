@@ -20,27 +20,35 @@ The minimum fee for an issue transaction is 1 WAVES, in case of issue of a non-f
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| name | Token name. <br>From 4 to 16 bytes (1 character can take up to 4 bytes).| sampleasset |
+| description | Token description. From 0 to 1000 bytes.| description of the asset |
+| quantity | Token quantity.<br> An integer value specified in the minimum fraction (“cents”), that is, the real quantity multiplied by 10<sup>decimals</sup>.<br>From 1 to 9,223,372,036,854,775,807.<br>1 for NFT.| 1000 |
+| decimals | Number of decimal places, from 0 to 8.<br>0 for NFT.| 2 |
+| reissuable | Reissue availability flag, see the [Reissue Transaction]() article.<br>`false` for NFT. | false |
+| script | For a smart asset: a compiled asset script, up to 8192 bytes, base64 encoded.<br>For a token without a script: `null`.<br>The token issued without a script cannot be converted to a smart asset. | null |
 
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
-// Create an Issue transaction
+// Create an issue transaction
 IssueTransaction tx = new IssueTransaction(
-        privateKey.publicKey(),
+        senderPublicKey,
         "sampleasset", 
         "description of the asset", 
         1000, 
         2, 
         false,
         null) 
-        .addProof(privateKey); 
-// Broadcast the transaction and wait for it to be included in the blockchain
+        .addProof(senderPrivateKey); 
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
-// Get the transaction info from a node
+// Get information about the transaction from a node
 IssueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), IssueTransactionInfo.class);
 ```
 ```php
@@ -86,20 +94,29 @@ The minimum fee for a reissue transaction is 0.001 WAVES. Read more about [Reiss
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| quantity | Amount of token to reissue: an integer value specified in the minimum fraction (“cents”) of token.<br>The total quantity of token as a result of the reissue should not exceed 9,223,372,036,854,775,807. | 1000 |
+| assetId | Token ID base58 encoded. | `GSFk5Ziwx33g8KuMyh6wYerxJcHXdcGgXFiBYXH58AE6` |
+| reissuable | 	Reissue availability flag. | `true` |
+
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
+// Create a lease transaction
 ReissueTransaction tx = new ReissueTransaction(
         senderPublicKey,
         Amount.of(1000, assetId),
         true
 ).addProof(senderPrivateKey);
- 
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction from a node
+ReissueTransactionInfo txInfo = node.getTransactionInfo(tx.id(), ReissueTransactionInfo.class);
 ```
 ```php
 ```
@@ -155,20 +172,30 @@ The minimum fee for an update asset info transaction is 0.001 WAVES, in case of 
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| assetId | Token ID base58 encoded. | `syXBywr2HVY7wxqkaci1jKY73KMpoLh46cp1peJAZNJ` |
+| name | Token name. From 4 to 16 bytes. | New Asset |
+| description | Token description. From 0 to 1000 bytes. | New description |
+
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
+// Create an update asset info transaction
 UpdateAssetInfoTransaction tx = new UpdateAssetInfoTransaction(
-        alice.publicKey(),
+        senderPublicKey,
         assetId,
         "New Asset",
         "New description"
-).addProof(alice);
+).addProof(senderPrivateKey);
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction from a node
+UpdateAssetInfoTransactionInfo txInfo = node.getTransactionInfo(tx.id(), UpdateAssetInfoTransactionInfo.class);
 ```
 ```php
 ```
@@ -191,19 +218,27 @@ The minimum fee for a burn transaction is 0.001 WAVES, in case of burning a smar
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| amount | Amount of token to burn: an integer value specified in the minimum fraction (“cents”) of token. | 1000 |
+| assetId | Token ID base 58 encoded. | `GSFk5Ziwx33g8KuMyh6wYerxJcHXdcGgXFiBYXH58AE6`|
+
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
+// Create a burn transaction
 BurnTransaction tx = new BurnTransaction(
-        alice.publicKey(),
-        new Amount(100, assetId)
-).addProof(alice);
- 
-node.waitForTransaction(node.broadcast(tx).id())
+        senderPublicKey,
+        new Amount(1000, assetId)
+).addProof(senderPrivateKey);
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
+node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction from a node
+BurnTransactionInfo txInfo = node.getTransactionInfo(tx.id(), BurnTransactionInfo.class);
 ```
 ```php
 ```
@@ -257,19 +292,29 @@ The minimum fee for a set asset script transaction is 1 WAVES. Read more about [
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| assetId | Token ID base58 encoded. | `7qJUQFxniMQx45wk12UdZwknEW9cDgvfoHuAvwDNVjYv` |
+| script | Compiled [asset script](https://docs.waves.tech/en/ride/script/script-types/asset-script), up to 8192 bytes, base64 encoded.| `base64:AQa3b8tH` |
+
+
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
+// Create a set asset script transaction
 SetAssetScriptTransaction tx = new SetAssetScriptTransaction(
-    alice.publicKey(), 
-    assetId, 
-    script)
-    .addProof(alice);
+    senderPublicKey,
+    assetId,
+    script
+).addProof(senderPrivateKey);
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction from a node
+SetAssetScriptTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SetAssetScriptTransactionInfo.class);
 ```
 ```php
 ```
@@ -296,19 +341,28 @@ Read more about [Sponsor fee transaction](https://docs.waves.tech/en/blockchain/
 
 ### Attributes ###
 
-### Transaction example ###
+| Arguement | Description | Example |
+| :--- | :--- | :--- |
+| assetId | Token ID base58 encoded. | `p1vuxnGyfH9VFiuyKmsh25rn6MedjGbQu7d6Zt1sY4U` |
+| minSponsoredAssetFee | Amount of asset that is equivalent to 0.001 WAVES (100,000 WAVELET):<br>an integer value specified in the minimum fraction (“cents”) of asset.<br>null – disable sponsorship. | 5 |
+
+### Example ###
 
 <CodeBlock>
 
 ```js
 ```
 ```java
+// Create a sponsor fee transaction
 SponsorFeeTransaction tx = new SponsorFeeTransaction(
     senderPublicKey,
     assetId,
     5
-).addProof(alice);
+).addProof(senderPrivateKey);
+// Broadcast the transaction to a node and wait for it to be included in the blockchain
 node.waitForTransaction(node.broadcast(tx).id());
+// Get information about the transaction from a node
+SponsorFeeTransactionInfo txInfo = node.getTransactionInfo(tx.id(), SponsorFeeTransactionInfo.class);
 ```
 ```php
 ```

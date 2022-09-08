@@ -17,7 +17,7 @@ The minimum fee for a Transfer transaction is 0.001 WAVES, in case of transferri
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 
 <CodeBlock>
@@ -47,7 +47,7 @@ The minimum fee for a Mass Transfer transaction is `0.001 + 0.0005 × N WAVES`, 
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 
@@ -76,7 +76,7 @@ The minimum fee for an exchange transaction is 0.003 WAVES. Read more about [fee
 
 ### Attributes ###
 
-### Transaction example ###
+### Example ###
 
 <CodeBlock>
 
