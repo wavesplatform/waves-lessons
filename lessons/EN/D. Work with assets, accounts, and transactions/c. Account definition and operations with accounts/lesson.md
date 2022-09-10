@@ -119,7 +119,6 @@ Aside from using a seed phrase as the foundation of account creation, there are 
 
     </CodeBlock>
 2. **Randomly generated seed phrase**:  
-    
     When creating an account from a randomly generated seed phrase, you can specify the optional parameter of a [`nonce`](https://ru.wikipedia.org/wiki/Nonce) step.
 
     <CodeBlock>
@@ -235,7 +234,7 @@ Aside from using a seed phrase as the foundation of account creation, there are 
 
 ### Public key creation ###
 
-Invoke the publicKey method from the [private key](#private-key-creation) to create a public key:
+Invoke the `publicKey` method from the [private key](#private-key-creation) to create a public key:
 
 <CodeBlock>
 
