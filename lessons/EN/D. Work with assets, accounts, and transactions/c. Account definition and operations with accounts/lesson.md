@@ -6,11 +6,18 @@ In the lesson [Getting to know web 3.0](#Digitalsignatureschapter), we mentioned
 This lesson's material will give a broader understanding of how to create a private and a public keys, using client libraries.
 
 Let's run through the stages of an account creation:
+
+<Message type="warning">
+
+The stages described below will be a demonstration of the most common way of an account creation, i.e., via a seed phrase.
+However, it is also possible to create via five different methods. Read about [all possible methods of how to create an account](#different-methods-of-account-creation).
+</Message>
+
 ![](./img/curve.png)
 
 1. **<u>Account creation from a seed phrase</u>**   
 If we were to create an account on any social media, most likely, we would be asked to use our phone number, nickname, or email and enter a password. On our platform, it is possible to create an account from a seed phrase. A seed phrase is a set of different words that will be encoded into a hash with the help of the SHA256 algorithm. Users can either type any seed phrase manually or receive a random unique seed phrase during registration. As an example, the phrase `I love Waves` will turn into a hash `0da73e9fd2df9630bcb689f5b66e76b7d1809d71ea841f7e075b8b82bd05a155`. It will be impossible to calculate it backwards that the hash `0da73e9fd2df9630bcb689f5b66e76b7d1809d71ea841f7e075b8b82bd05a155` is equal to `I love Waves`. The probability of generating two identical seed phrases is 1/2048<sup>15</sup> that even after millions of years and the heat death of the universe, a hacker would not be able to get access to the seed.
-1. **<u>Private key generation from the seed</u>**  
+2. **<u>Private key generation from the seed</u>**  
 A private key is intended for transaction signature. It is automatically generated after an account is created with the seed phrase. Every account has only one private key. The mission of a private key is to sign transactions or orders. For instance, if someone wants to send money from an A account to a B account, he must prove ownership of the A account, so the private key plays the role of such an approver. No one except the account owner can receive access to this private key. A private key can look like this: `6yCStrsBs4VgTmYcSgF37pmQhCo6t9LZk5bQqUyUNSAs`.
 3. **<u>Public key generation from the private key</u>**  
 A public key is intended for transaction verification. From the received private key, a unique public key is automatically generated. Every account has one unique public key. After a [transaction]() is signed by an account, it has to be verified by [multiple nodes](nodesofthewaves) as a valid one. Since network nodes do not have access to private keys, they can only check the [transaction signature](https://docs.waves.tech/en/blockchain/transaction/transaction-proof) against the public key. The result of such a verification function can be either `true`, meaning the user who initiated the transaction has a valid private key so that the transaction can be permitted, or `false`, meaning the user does not have a valid private key for this transaction initiation, and the transaction will be declined. A public key example: `5cqzmxsmFPBHm4tb7D8DMA7s5eutLXTDnnNMQKy2AYxh`.
