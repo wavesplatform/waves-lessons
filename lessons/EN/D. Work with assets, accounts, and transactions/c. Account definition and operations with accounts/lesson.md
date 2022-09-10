@@ -3,13 +3,13 @@
 An account is a unique record on the platform where its management is available only to its creator. 
 Every person can create an account on the Waves blockchain platform and manage resources. 
 In the lesson [Getting to know web 3.0](#Digitalsignatureschapter), we mentioned essential account entities: a seed phrase, private and public keys, and an address.
-This lesson's material will provide a broader understanding of how to create a private and a public keys, using client libraries.
+This lesson's material will provide a broader understanding of creating a private/public key and an account address using client libraries.
 
-Let's run through the stages of an account creation:
+Let's run through the stages of account creation:
 
 <Message type="warning">
 
-The stages described below will be a demonstration of the most common way of an account creation, i.e., via a manually specified seed phrase.
+The stages described below will demonstrate the most common way of account creation, i.e., via a manually specified seed phrase.
 However, it is also possible to create an account via five different methods:
 1. **Randomly generated seed phrase**;  
 2. **Given bytes set of seed phrase**;
@@ -24,7 +24,7 @@ Read about [all possible methods of account creation](#different-methods-of-acco
 
 1. **<u>Account creation from a seed phrase</u>**   
 If we were to create an account on any social media, most likely, we would be asked to use our phone number, nickname, or email and enter a password.
-On our platform, it is possible to create an account from a seed phrase, which is a much more secure way. 
+On our platform, it is possible to create an account from a seed phrase, providing a much higher level of account security. 
 A seed phrase is a set of different words that will be encoded into a hash with the help of the SHA256 algorithm.
 As an example, the phrase `I love Waves` will turn into a hash `0da73e9fd2df9630bcb689f5b66e76b7d1809d71ea841f7e075b8b82bd05a155`. 
 It will be impossible to calculate it backwards that the hash `0da73e9fd2df9630bcb689f5b66e76b7d1809d71ea841f7e075b8b82bd05a155` is equal to `I love Waves`.
@@ -35,33 +35,33 @@ The probability of generating two identical seed phrases is 1/2048<sup>15</sup> 
 A private key is intended for transaction and order signature. 
 In other words, it is a way to prove that you are the account owner authorized to perform transactions. 
 Every account has only one private key that cannot be changed. 
-For instance, if someone wants to send money from an A account to a B account, he must prove ownership of the account A. Signing a transaction with the private key plays the role of such an approver. No one except the account owner can receive access to this private key. 
+For instance, if someone wants to send money from an A to a B account, he must prove ownership of the account A. Signing a transaction with the private key plays the role of such an approver. No one except the account owner can receive access to this private key. 
 A private key can look like this: `6yCStrsBs4VgTmYcSgF37pmQhCo6t9LZk5bQqUyUNSAs`.
 At this step, a cryptographic algorithm transforms your seed phrase into the private key of your account.
 3. **<u>Public key generation from the private key</u>**  
 A public key is intended for transaction verification. 
 Every account has one unique public key that cannot be changed. 
 After a [transaction]() is signed by an account with a private key, it has to be verified by [multiple nodes](nodesofthewaves) as a valid one. 
-Since network nodes do not have access to private keys, they can only check the [transaction signature](https://docs.waves.tech/en/blockchain/transaction/transaction-proof) against the public key. 
+Since network nodes do not have access to private keys, they can only check a [transaction signature](https://docs.waves.tech/en/blockchain/transaction/transaction-proof) against a public key. 
 The result of such a verification function can be either `true`, meaning the user who initiated the transaction has a valid private key so that the transaction can be permitted, or `false`, meaning the user does not have a valid private key for this transaction initiation, and the transaction will be declined. 
 A public key example: `5cqzmxsmFPBHm4tb7D8DMA7s5eutLXTDnnNMQKy2AYxh`.
 At this step, a cryptographic algorithm transforms your private account key into the public account key.
 4. **<u>Account address generation from the public key</u>**  
 The final step of account generation is account address generation. 
 An account address is generated from the public key of the account. 
-Everyone can see the address of your account as it is public information, yet, it has no disclosure of your identity and any personal data. 
+Everyone can see the address of your account as it is public information, yet, it has no disclosure of your identity or personal data. 
 An account address instance: `3PDfnPknnYrg2k2HMvkNLDb3Y1tDTtEnp9X`.
 
-This subsequential chain of steps of a seed phrase transformation into private/public keys and an account address is one-sided. It will not be possible to calculate from an account address, a public or a private key what your seed phrase was. The only possible scenario is if a hacker would overtake all world's computers and concentrate on attempting to hack a particular account for the next thousands centuries without any guarantees to succeed. Therefore keeping a seed phrase in secret is a way to protect an account.
+This sequential chain of steps of a seed phrase transformation into private/public keys and an account address is one-sided. It will not be possible to calculate from an account address, a public or a private key what your seed phrase was. The only likely scenario is if a hacker would overtake all world's computers and concentrate on attempting to hack a particular account for the next thousands of centuries without any guarantees to succeed. Therefore keeping a seed phrase secret is a way to protect an account.
 
 ![](./img/keyswaves.png)
 
-In the lessons, [What is a smart account and setting account script]() and [What is a dApp and dApp creation]() we covered definition of a smart account and a dApp. A smart account or a dApp are also considered accounts, yet with an additional configuration that regular accounts do not have.
+In the lessons [What is a smart account and setting account script]() and [What is a dApp and dApp creation](), we covered the definition of a smart account and a dApp. A smart account or a dApp are also considered accounts with an additional configuration that regular accounts do not have.
 
 ## Operations with accounts ##
 
 This chapter will help to distinguish operations with accounts among many possible actions on the Waves blockchain.   
-All operations with assets can be groupped by two categories:
+All operations with assets can be grouped into two categories:
 - **<u>Transactions</u>**:   
     Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately four of them that are related to interaction with accounts:
     * [Create alias transaction]()
@@ -69,7 +69,7 @@ All operations with assets can be groupped by two categories:
     * [Set script transaction]()  
     * [Invoke script transaction]()  
 
-    The lesson [Work with assets]() will be dedicated to a detailed elaboration of these transaction types.
+    The lesson [Work with assets]() will be dedicated to elaborating on these transaction types.
 - **<u>Node object methods</u>**:  
     * **`getAddresses`**  
         Get a list of account addresses in the [node wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet).
@@ -95,7 +95,7 @@ To create an [account](#account-definition), you will need to obtain:
 
 ### Private key creation ###
 
-You can use any of the six methods to create a private key via:
+Aside from using a seed phrase as the foundation of account creation, there are also different methods where the function of a seed phrase is performed by an array of bytes or a base8 encoded string. You can use any of the six ways to create a private key via:
 
 1. **Given seed phrase**:  
     It is possible to create an account via a manually written seed phrase. We used this way of an account creation in the [library initialization chapter](b36f01e4-ac85-4aa4-8a7f-9fe6a5fc26f8#how-to-initialize-a-library-to-start-operating-with-the-waves-blockchain). 
@@ -120,7 +120,7 @@ You can use any of the six methods to create a private key via:
     </CodeBlock>
 2. **Randomly generated seed phrase**:  
     
-    You can specify the optional parameter of [`nonce`](https://ru.wikipedia.org/wiki/Nonce) step when creating an account from a randomly generated seed phrase.
+    When creating an account from a randomly generated seed phrase, you can specify the optional parameter of a [`nonce`](https://ru.wikipedia.org/wiki/Nonce) step.
 
     <CodeBlock>
 
