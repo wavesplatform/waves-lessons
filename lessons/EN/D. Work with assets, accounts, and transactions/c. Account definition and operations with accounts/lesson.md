@@ -34,7 +34,7 @@ The probability of generating two identical seed phrases is 1/2048<sup>15</sup> 
 2. **<u>Private key generation from the seed</u>**  
 A private key is intended for transaction and order signature. 
 In other words, it is a way to prove that you are the account owner authorized to perform transactions. 
-Every account has only one private key that cannot be changed. 
+Every account has one unique private key that cannot be changed. 
 For instance, if someone wants to send money from an A to a B account, he must prove ownership of the account A. Signing a transaction with the private key plays the role of such an approver. No one except the account owner can receive access to this private key. 
 A private key can look like this: `6yCStrsBs4VgTmYcSgF37pmQhCo6t9LZk5bQqUyUNSAs`.
 At this step, a cryptographic algorithm transforms your seed phrase into the private key of your account.
@@ -52,16 +52,15 @@ An account address is generated from the public key of the account.
 Everyone can see the address of your account as it is public information, yet, it has no disclosure of your identity or personal data. 
 An account address instance: `3PDfnPknnYrg2k2HMvkNLDb3Y1tDTtEnp9X`.
 
-This sequential chain of steps of a seed phrase transformation into private/public keys and an account address is one-sided. It will not be possible to calculate from an account address, a public or a private key what your seed phrase was. The only likely scenario is if a hacker would overtake all world's computers and concentrate on attempting to hack a particular account for the next thousands of centuries without any guarantees to succeed. Therefore keeping a seed phrase secret is a way to protect an account.
-
 ![](./img/keyswaves.png)
+
+This sequential chain of steps of a seed phrase transformation into private/public keys and an account address is one-sided. It will not be possible to calculate from an account address, a public or a private key what your seed phrase was. The only likely scenario is if a hacker would overtake all world's computers and concentrate on attempting to hack a particular account for the next thousands of centuries without any guarantees to succeed. Therefore keeping a seed phrase secret is a way to protect an account.
 
 In the lessons [What is a smart account and setting account script]() and [What is a dApp and dApp creation](), we covered the definition of a smart account and a dApp. A smart account or a dApp are also considered accounts with an additional configuration that regular accounts do not have.
 
 ## Operations with accounts ##
 
-This chapter will help to distinguish operations with accounts among many possible actions on the Waves blockchain.   
-All operations with assets can be grouped into two categories:
+This chapter will help to distinguish operations with accounts among many possible actions on the Waves blockchain. All operations with assets can be grouped into two categories:
 - **<u>Transactions</u>**:   
     Out of [various transaction types](https://docs.waves.tech/en/blockchain/transaction-type/), there are approximately four of them that are related to interaction with accounts:
     * [Create alias transaction]()
