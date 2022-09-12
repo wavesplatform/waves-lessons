@@ -82,7 +82,7 @@ There are five important steps:
 4. **<u>Transaction validation</u>**  
     Multiple nodes in the network are working with the UTX pool and verifying transactions. The verification process includes such elements as checking if an account truly initiated the transaction and signed it with a valid [private key](), if the account had a sufficient available balance, and so on. Different [transaction types](#transaction-types) have different parameters to be verified. 
 5. **<u>Saving a transaction into the blockchain</u>**  
-    If nodes approve a transaction during the verification step in the UTX pool, a node owner who generates the next block will include a transaction in the blockchain. The blockchain will store the transaction data in binary format (bytes). If you wish to earn a reward for mining a block, read the module [Mining and earning on it]() to discover the steps to make it.
+    If nodes approve a transaction during the verification step in the UTX pool, a node owner who generates the next block will include a transaction in the blockchain. The blockchain will store the transaction data in binary format (bytes). If you wish to earn a reward for generating a block, read the module [Mining and earning on it]() to discover the steps to make it.
 
 An example of a complete transaction (from its initiation to broadcasting to a node) can look like this:
 
@@ -133,9 +133,12 @@ All information about completed transactions, both accepted or declined unless f
     ![](./img/search.png)
 - [REST API UI]()  
     With [REST API of your node](https://docs.waves.tech/en/waves-node/node-api/) or the [Mainnet REST API](https://nodes.wavesnodes.com/) use the following methods:
-    * **GET** `/transactions/info/{id}` returns transaction data by transaction ID.
-    * **GET** `/transactions/address/{address}/limit/{limit}` returns the list of transactions where the specified address is involved.
-    * **GET** `/blocks/at/{height}` returns block data at the specified height, including all transactions in the block.
+    * **GET** `/transactions/info/{id}`  
+        Returns transaction data by transaction ID.
+    * **GET** `/transactions/address/{address}/limit/{limit}`  
+        Returns the list of transactions where the specified address is involved.
+    * **GET** `/blocks/at/{height}`  
+        Returns block data at the specified height, including all transactions in the block.
 
     As an output, you will see a JSON representation of the requested data, for example:
 
@@ -166,7 +169,7 @@ All information about completed transactions, both accepted or declined unless f
     ```
 - [Client libraries]()  
    After every listed transaction, we will provide a variable that enables logging information about it. 
-   You can see an [example](issuetx) of a variable that is intended for logging:
+   You can see an [example](issuetx) with a variable that is intended for logging transaction information:
 
    <CodeBlock>
 
@@ -189,7 +192,7 @@ All information about completed transactions, both accepted or declined unless f
 
 ## Transaction fees ##
 
-All transactions on the Waves blockchain charge a fee. A fee is paid by an account owner that initiated a transaction. The bigger the fee is, the quicker a transaction will be added to a new block. Transaction fees in the Waves blockchain are ultimately cheap. Below you can see a table with the fee amount for a few transaction types:
+Transactions performance on the Waves blockchain is charged with a fee. A fee is paid by an account owner that initiated a transaction. The bigger the fee is, the quicker a transaction will be added to a new block. Transaction fees in the Waves blockchain are ultimately cheap. Below you can see a table with the fee amount for a few transaction types:
 
 | Transaction type | Transaction type ID | Minimum transaction fee in WAVES |
 | :--- | :--- | :--- |
@@ -202,7 +205,7 @@ For more details on all transaction types, refer to the [complete documentation]
 ## Transaction types ##
 
 All transaction types that exist within the Waves blockchain can be split into five modules:
-1. **<u>Work with assets</u>**
+1. **<u>[Work with assets]()</u>**
    - [Issue transaction]()  
         Creates a new token.
    - [Reissue transaction]()  
@@ -215,7 +218,7 @@ All transaction types that exist within the Waves blockchain can be split into f
         Replaces an asset script.
    - [Sponsor fee transaction]()  
         Enables or disables sponsorship that allows users to pay a fee in the sponsored asset instead of WAVES.
-2. **<u>Work with accounts</u>**
+2. **<u>[Work with accounts]()</u>**
    - [Create alias transaction]()  
         Creates an alias for a sender's address.
    - [Data transaction]()  
@@ -224,22 +227,22 @@ All transaction types that exist within the Waves blockchain can be split into f
         Assigns a dApp script or an account script to the sender's account.
    - [Invoke script transaction]()  
         Invokes a callable function of a dApp.
-3. **<u>Performing transfers</u>**
+3. **<u>[Performing transfers]()</u>**
    - [Transfer transaction]()  
         Transfers a certain amount of a token to another account.
    - [Mass transfer transaction]()  
         Transfers a token to several accounts (from 1 to 100).
    - [Exchange transaction]()  
         Exchanges two different tokens between two accounts.
-4. **<u>Leasing</u>**
+4. **<u>[Leasing]()</u>**
    - [Lease transaction]()  
         Leases WAVES to another account.
    - [Lease cancel transaction]()  
         Cancels leasing.
-5. **<u>Ethereum transaction</u>**  
+5. **<u>[Ethereum transaction]()</u>**  
    - [Ethereum transfer]()  
          A MetaMask user can sign an Ethereum transaction that transfers a token and sends the transaction to the Waves blockchain.
    - [Ethereum dApp script invocation]()  
          A MetaMask user can sign an Ethereum transaction that invokes a dApp script and send the transaction to the Waves blockchain.
 
-We will dedicate a lesson to each transaction type with its detailed description and code examples.
+Every transaction type will be described in the relevant transaction module with its detailed description and code examples.
